@@ -1,0 +1,41 @@
+{
+  "scripts": [
+    "https://static.addtoany.com/menu/page.js",
+    "https://lobataccessories.com/wp-includes/js/jquery/jquery.min.js",
+    "https://lobataccessories.com/wp-includes/js/jquery/jquery-migrate.min.js",
+    "https://lobataccessories.com/wp-content/plugins/add-to-any/addtoany.min.js",
+    "https://lobataccessories.com/wp-content/themes/Lobat/assets/js/frontend-ajax.js",
+    "https://www.googletagmanager.com/gtag/js?id=G-W7325B2D3H",
+    "https://static.addtoany.com/menu/modules/core.bycdb5qo.js",
+    "https://lobataccessories.com/wp-content/themes/Lobat/assets/js/jQuery.min.js",
+    "https://lobataccessories.com/wp-content/themes/Lobat/assets/js/gsap.min.js",
+    "https://lobataccessories.com/wp-content/themes/Lobat/assets/js/swiper-bundle.min.js",
+    "https://lobataccessories.com/wp-content/themes/Lobat/assets/js/plyr.js",
+    "https://lobataccessories.com/wp-content/themes/Lobat/assets/js/popper.min.js",
+    "https://lobataccessories.com/wp-content/themes/Lobat/assets/js/bootstrap.min.js",
+    "https://lobataccessories.com/wp-content/themes/Lobat/assets/js/bundle.js",
+    "https://lobataccessories.com/wp-content/themes/Lobat/assets/js/jquery.hoverplay.js",
+    "https://lobataccessories.com/wp-content/themes/Lobat/assets/js/locomotive-scroll.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.6.0/polyfill.min.js",
+    "https://lobataccessories.com/",
+    "https://lobataccessories.com/wp-content/themes/Lobat/assets/js/index.js",
+    "https://lobataccessories.com/wp-content/themes/Lobat/assets/js/back-script.js",
+    "https://lobataccessories.com/wp-content/themes/Lobat/assets/js/script.js",
+    "https://lobataccessories.com/wp-content/plugins/scroll-top/assets/js/jquery.scrollUp.min.js",
+    "https://lobataccessories.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js",
+    "https://lobataccessories.com/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js",
+    "https://lobataccessories.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js",
+    "https://lobataccessories.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js",
+    "https://lobataccessories.com/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js",
+    "https://lobataccessories.com/wp-content/plugins/mailchimp-for-woocommerce/public/js/mailchimp-woocommerce-public.min.js",
+    "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496"
+  ],
+  "detected": {
+    "gsap": 35,
+    "ScrollTrigger": 2,
+    "locomotive-scroll": 6,
+    "swiper": 195,
+    "webgl-shader": 14,
+    "react/next": 34
+  }
+}

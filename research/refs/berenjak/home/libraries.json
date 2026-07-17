@@ -1,0 +1,39 @@
+{
+  "scripts": [
+    "https://web-static.archive.org/_static/js/bundle-playback.js?v=2N_sDSC0",
+    "https://web-static.archive.org/_static/js/wombat.js?v=o9P2E1FK",
+    "https://web-static.archive.org/_static/js/ruffle/ruffle.js",
+    "https://berenjak.com/_next/static/chunks/157b3f09-5df79a03963a9a7a.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/0e0d9379-774849dcb7a5f740.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/304-b6c1704d57935685.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/main-app-0f842300ea6cc783.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/6575-70e45b9fe54d39bd.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/5158-41e0af199f04e758.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/9283-343506af1c191543.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/762-d252bfca4f936a8e.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/5315-7cbf77cdabc1e2c8.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/1991-bf5d4f0f61c5e76e.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/9874-0eff8d64b1c1b995.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/7631-10a197b3089563e8.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/1836-1654bfc50aee808c.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/app/(frontend)/layout-d5d1814b31b43e78.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/6154c7f8-6ca22338ad7edf28.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/32dee7a6-394ac3669016ad31.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/5166-bc78902a9baa200a.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/692-857ff176ac8d0e25.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/3089-89d86f75b98601c0.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/reactPlayerMux-3fe961f25f1461c0.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/4393-c1165e72668e37c4.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/8797-30eb1d074d537341.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/5275-3aa1ad75a9fbf6be.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/2888-f736c9075ed08628.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/2174-41a48cda021fe4be.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/5180-c6d6a77a45395c42.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/app/(frontend)/page-b27d67ea0dc5eeaf.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/polyfills-42372ed130431b0a.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf",
+    "https://berenjak.com/_next/static/chunks/webpack-4ae43ec13904b2fc.js?dpl=dpl_UBrKn94Cf7SRZBDjhmrCabbH2hSf"
+  ],
+  "detected": {
+    "react/next": 90
+  }
+}

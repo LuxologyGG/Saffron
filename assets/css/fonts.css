@@ -1,0 +1,60 @@
+/* Saffron and Rice, self-hosted type. Zero external font requests.
+   Display: Cormorant Garamond (OFL). Body: Manrope (OFL).
+   Mono: IBM Plex Mono (OFL). Persian script accent: Gulzar (OFL). */
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url(../fonts/cormorant-garamond-latin-400-normal.woff2) format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url(../fonts/cormorant-garamond-latin-500-normal.woff2) format('woff2');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url(../fonts/cormorant-garamond-latin-500-italic.woff2) format('woff2');
+  font-weight: 500; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url(../fonts/cormorant-garamond-latin-600-normal.woff2) format('woff2');
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url(../fonts/manrope-latin-400-normal.woff2) format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url(../fonts/manrope-latin-500-normal.woff2) format('woff2');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url(../fonts/manrope-latin-600-normal.woff2) format('woff2');
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url(../fonts/manrope-latin-700-normal.woff2) format('woff2');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url(../fonts/ibm-plex-mono-latin-400-normal.woff2) format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url(../fonts/ibm-plex-mono-latin-500-normal.woff2) format('woff2');
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Gulzar';
+  src: url(../fonts/gulzar-arabic-400-normal.woff2) format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFF, U+200C-200E;
+}

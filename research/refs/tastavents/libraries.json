@@ -1,0 +1,16 @@
+{
+  "scripts": [
+    "https://consent.cookiebot.com/65a68cb8-c6ea-48bc-8a4e-3a612ae18edc/cc.js?renew=false&referer=tastavents.com&dnt=false&init=false",
+    "https://consentcdn.cookiebot.com/consentconfig/65a68cb8-c6ea-48bc-8a4e-3a612ae18edc/tastavents.com/configuration.js",
+    "https://consent.cookiebot.com/uc.js",
+    "https://tastavents.com/assets/themes/tastavents.com/loader-6d8e9784.js",
+    "https://tastavents.com/assets/themes/tastavents.com/app-33d544c6.js"
+  ],
+  "detected": {
+    "gsap": 75,
+    "ScrollTrigger": 7,
+    "locomotive-scroll": 1,
+    "swiper": 109,
+    "react/next": 41
+  }
+}
