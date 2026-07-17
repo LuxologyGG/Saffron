@@ -54,9 +54,8 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "Restaurant",
     "name": "Saffron & Rice",
-    "description": "Persian and Middle Eastern deli and catering kitchen in Torrance, California. Formerly a Persian market at the same address, now cooking kabab, stews, and saffron rice under new management.",
     "url": "https://saffron-and-rice.vercel.app/about.html",
     "image": "https://saffron-and-rice.vercel.app/assets/img/about-hero.jpg",
     "telephone": "+13105040310",
@@ -225,7 +224,18 @@
         <div class="ab-cook" data-cook-cols data-reveal-group></div>
         <hr class="chapter__rule">
         <div class="ab-actions" data-reveal="fade">
-          <a class="btn btn--solid" href="menu.html"><span class="btn__text">See the full menu</span></a>
+          <a class="button-070 is-accent" href="menu.html">
+            <span class="button-070__bg-wrap">
+              <span class="button-070__corner-wrap">
+                <span class="button-070__corner is--top-left"></span>
+                <span class="button-070__corner is--top-right"></span>
+                <span class="button-070__corner is--bottom-left"></span>
+                <span class="button-070__corner is--bottom-right"></span>
+              </span>
+              <span class="button-070__bg"></span>
+            </span>
+            <span class="button-070__inner"><span class="button-070__text">See the full menu</span></span>
+          </a>
         </div>
         <p class="chapter__foot">Names first. Prices live on the menu page.</p>
       </div>
@@ -389,8 +399,18 @@
           <p class="ab-visit__hours" data-bind="company.hours.label"></p>
           <p class="ab-visit__note" data-bind="company.hours.note"></p>
           <div class="ab-visit__ctas">
-            <a class="btn btn--solid" data-bind-href="company.phoneHref">
-              <span class="btn__text" data-bind="company.phone">Call us</span></a>
+            <a class="button-070 is-accent" data-bind-href="company.phoneHref">
+              <span class="button-070__bg-wrap">
+                <span class="button-070__corner-wrap">
+                  <span class="button-070__corner is--top-left"></span>
+                  <span class="button-070__corner is--top-right"></span>
+                  <span class="button-070__corner is--bottom-left"></span>
+                  <span class="button-070__corner is--bottom-right"></span>
+                </span>
+                <span class="button-070__bg"></span>
+              </span>
+              <span class="button-070__inner"><span class="button-070__text" data-bind="company.phone">Call us</span></span>
+            </a>
             <a class="btn" href="menu.html"><span class="btn__text">See the menu</span></a>
             <a class="btn" data-bind-href="orderLinks.0.href" target="_blank" rel="noopener">
               <span class="btn__text" data-bind="orderLinks.0.label">Order online</span></a>

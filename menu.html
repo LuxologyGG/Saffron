@@ -129,7 +129,7 @@
           <h1 class="mhero__title" data-mhero-title>The <em>Menu</em></h1>
           <div class="script-line mhero__script">
             <span class="script-fa" lang="fa" dir="rtl" aria-hidden="true" data-bind="company.scriptFa"></span>
-            <span class="translit">Za&rsquo;faran o berenj, saffron and rice</span>
+            <span class="translit" data-bind="company.scriptFaTranslit">Za&rsquo;faran o berenj, saffron and rice</span>
           </div>
           <p class="mhero__note">Kabab off the flame, stews from the morning
             pots, saffron rice under everything. Read it the way we cook it,
@@ -213,8 +213,18 @@
           Pickup, delivery, and a catered sofreh when the table grows.
           Call ahead and we will have it packed and ready.</p>
         <div class="mcta__ctas" data-reveal="fade">
-          <a class="btn btn--solid" data-bind-href="orderLinks.0.href" target="_blank" rel="noopener">
-            <span class="btn__text" data-bind="orderLinks.0.label">Order online</span></a>
+          <a class="button-070 is-accent" data-bind-href="orderLinks.0.href" target="_blank" rel="noopener">
+            <span class="button-070__bg-wrap">
+              <span class="button-070__corner-wrap">
+                <span class="button-070__corner is--top-left"></span>
+                <span class="button-070__corner is--top-right"></span>
+                <span class="button-070__corner is--bottom-left"></span>
+                <span class="button-070__corner is--bottom-right"></span>
+              </span>
+              <span class="button-070__bg"></span>
+            </span>
+            <span class="button-070__inner"><span class="button-070__text" data-bind="orderLinks.0.label">Order online</span></span>
+          </a>
           <a class="btn btn--price" data-bind-href="company.phoneHref">
             <span class="btn__text" data-bind="company.phone">Call us</span></a>
         </div>

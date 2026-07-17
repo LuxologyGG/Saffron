@@ -55,11 +55,13 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "Restaurant",
     "name": "Saffron & Rice",
     "url": "https://saffron-and-rice.vercel.app/catering.html",
     "image": "https://saffron-and-rice.vercel.app/assets/img/catering-hero.jpg",
     "telephone": "+13105040310",
+    "servesCuisine": ["Persian", "Middle Eastern"],
+    "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "3801 Pacific Coast Hwy",
@@ -88,7 +90,7 @@
     <nav class="nav__right" aria-label="Primary">
       <ul class="nav__links">
         <li><a class="nav__link" href="menu.html">Menu</a></li>
-        <li><a class="nav__link is-active" href="catering.html">Catering</a></li>
+        <li><a class="nav__link is-active" href="catering.html" aria-current="page">Catering</a></li>
         <li><a class="nav__link" href="about.html">About</a></li>
         <li><a class="nav__link" href="contact.html">Contact</a></li>
       </ul>
@@ -287,8 +289,18 @@
               <span data-bind="company.hours.note"></span>
             </p>
             <div class="cta-dome__ctas">
-              <a class="btn btn--solid" data-bind-href="orderLinks.0.href" target="_blank" rel="noopener">
-                <span class="btn__text" data-bind="orderLinks.0.label">Order online</span></a>
+              <a class="button-070 is-accent" data-bind-href="orderLinks.0.href" target="_blank" rel="noopener">
+                <span class="button-070__bg-wrap">
+                  <span class="button-070__corner-wrap">
+                    <span class="button-070__corner is--top-left"></span>
+                    <span class="button-070__corner is--top-right"></span>
+                    <span class="button-070__corner is--bottom-left"></span>
+                    <span class="button-070__corner is--bottom-right"></span>
+                  </span>
+                  <span class="button-070__bg"></span>
+                </span>
+                <span class="button-070__inner"><span class="button-070__text" data-bind="orderLinks.0.label">Order online</span></span>
+              </a>
               <a class="btn" href="menu.html"><span class="btn__text">See the full menu</span></a>
             </div>
           </div>

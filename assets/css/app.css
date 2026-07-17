@@ -200,10 +200,12 @@ body.menu-open .menu { display: flex; }
 .menu__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
 
 /* ------------------------------------------------------ buttons */
-/* Hairline house button: saffron tick + letter-swap label.
+/* Hairline SECONDARY button: saffron tick + letter-swap label.
    Markup: <a class="btn" href><span class="btn__text">Label</span></a>
-   app.js wraps .btn__text content for the swap. Variants:
-   .btn--solid (accent fill), .btn--price (pomegranate tick). */
+   app.js wraps .btn__text content for the swap. Variant: .btn--price
+   (pomegranate tick). The PRIMARY CTA site-wide is button-070, the
+   corner-bracket component defined below; do not use .btn for a
+   primary action. */
 .btn {
   position: relative; display: inline-flex; align-items: center; gap: .9em;
   min-height: 46px; padding: 2px clamp(18px, 1.6vw, 26px) 0;
@@ -234,20 +236,80 @@ body.menu-open .menu { display: flex; }
   .btn__text > .swap { transition: transform .5s var(--e-power); }
   .btn:hover .btn__text > .swap { transform: translateY(-105%); }
 }
-.btn--solid {
-  background: var(--accent); border-color: var(--accent);
-  color: var(--accent-ink);
-}
-.btn--solid::before { background: var(--accent-ink); }
-.btn--solid:hover {
-  background: var(--accent-1); border-color: var(--accent-1);
-  color: var(--accent-ink);
-}
-.on-dark .btn--solid:hover, .on-teal .btn--solid:hover {
-  background: color-mix(in srgb, var(--accent) 86%, var(--paper));
-  border-color: transparent;
-}
 .btn--price::before { background: var(--price); }
+
+/* --------------------------------------------- button-070 (house CTA) */
+/* The site-wide PRIMARY button: Osmo button-070, corner-bracket, adapted
+   to our tokens. Rest state is a plain outlined label with four small
+   L-bracket corners; on hover the corners spread outward and a fill
+   scales in behind the label. Motion is pure CSS, gated behind
+   hover:hover + pointer:fine + prefers-reduced-motion:no-preference, so
+   touch and reduced-motion visitors get a static, fully legible button.
+   Secondary actions stay the hairline .btn above; do not use button-070
+   for them.
+   Markup (verbatim, corner-wrap nests INSIDE bg-wrap, before bg):
+     <a class="button-070 is-accent" href="...">
+       <span class="button-070__bg-wrap">
+         <span class="button-070__corner-wrap">
+           <span class="button-070__corner is--top-left"></span>
+           <span class="button-070__corner is--top-right"></span>
+           <span class="button-070__corner is--bottom-left"></span>
+           <span class="button-070__corner is--bottom-right"></span>
+         </span>
+         <span class="button-070__bg"></span>
+       </span>
+       <span class="button-070__inner"><span class="button-070__text">Label</span></span>
+     </a>
+   Variants: .is-accent (the house primary: accent-text corners/label at
+   rest, fills to accent with accent-ink label on hover; --accent-text
+   and --accent already re-point per .on-dark/.on-teal, so this ONE
+   variant is correct on paper, ink, or teal grounds with no extra class).
+   .is-ink and the unmarked default (paper) ship for any future light or
+   dark neutral use. */
+.button-070 {
+  --b070-fill: var(--paper);
+  --b070-ink:  var(--ink);
+  position: relative; z-index: 0; isolation: isolate;
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 46px; padding: 2px clamp(22px, 1.8vw, 32px) 0;
+  border-radius: 0;
+  font-family: var(--font-mono); font-size: var(--fs-mono); font-weight: 500;
+  letter-spacing: var(--tracking-mono); text-transform: uppercase;
+  color: var(--paper); white-space: nowrap; cursor: pointer;
+  transition: color var(--t-med) var(--e-power);
+}
+.button-070.is-ink    { color: var(--ink); --b070-fill: var(--ink); --b070-ink: var(--paper); }
+.button-070.is-accent { color: var(--accent-text); --b070-fill: var(--accent); --b070-ink: var(--accent-ink); }
+
+.button-070__bg-wrap {
+  position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none;
+}
+.button-070__bg {
+  position: absolute; inset: 0; background: var(--b070-fill);
+  transform: scaleX(0); transform-origin: left center;
+}
+.button-070__corner-wrap { position: absolute; inset: 0; pointer-events: none; }
+.button-070__corner {
+  position: absolute; width: 11px; height: 11px;
+  border: 1px solid currentColor;
+}
+.button-070__corner.is--top-left     { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
+.button-070__corner.is--top-right    { top: -1px; right: -1px; border-left: 0; border-bottom: 0; }
+.button-070__corner.is--bottom-left  { bottom: -1px; left: -1px; border-right: 0; border-top: 0; }
+.button-070__corner.is--bottom-right { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
+.button-070__inner { position: relative; z-index: 1; display: block; }
+.button-070__text  { display: block; }
+
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .button-070__bg { transition: transform .5s var(--e-power); }
+  .button-070__corner { transition: transform .45s var(--e-power); }
+  .button-070:hover { color: var(--b070-ink); }
+  .button-070:hover .button-070__bg { transform: scaleX(1); }
+  .button-070:hover .button-070__corner.is--top-left     { transform: translate(-4px, -4px); }
+  .button-070:hover .button-070__corner.is--top-right    { transform: translate(4px, -4px); }
+  .button-070:hover .button-070__corner.is--bottom-left  { transform: translate(-4px, 4px); }
+  .button-070:hover .button-070__corner.is--bottom-right { transform: translate(4px, 4px); }
+}
 
 /* Retracting-underline text link (mono caps) */
 .tlink {
@@ -279,6 +341,15 @@ body.menu-open .menu { display: flex; }
        <p class="chapter__foot">footnote</p>
      </div>
    </section> */
+/* Defensive default: a bare class="section chapter on-dark" (or
+   on-teal) paints correctly even if the page-specific stylesheet
+   forgets to repeat background/color on its own section class. Every
+   page-specific rule setting the same pair (.ch-fire, .cat-hero, etc.)
+   sets identical values, so which one wins the cascade never matters;
+   a page can still override with a HIGHER-specificity rule (e.g. an
+   id or a multi-class selector) for a bespoke shape. */
+.section.on-dark, .section.on-teal { background: var(--bg); color: var(--fg); }
+
 .chapter__head { position: relative; margin-bottom: clamp(14px, 1.8vw, 26px); }
 /* Ghost numeral rides in flow: the tracked eyebrow hangs off its
    baseline, the serif title sets underneath. */

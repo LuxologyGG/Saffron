@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://saffron-and-rice.vercel.app/sitemap.xml

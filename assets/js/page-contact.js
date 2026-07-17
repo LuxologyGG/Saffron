@@ -87,7 +87,8 @@
     var insta = (SITE.social && SITE.social[0]) || null;
     var html = "";
     if (order) {
-      html += '<a class="btn btn--solid" href="' + esc(order.href) + '" target="_blank" rel="noopener">' +
+      html += SR && SR.button070 ? SR.button070({ href: order.href, blank: true, label: order.label }) :
+        '<a class="btn" href="' + esc(order.href) + '" target="_blank" rel="noopener">' +
         '<span class="btn__text">' + esc(order.label) + "</span></a>";
     }
     if (insta) {
