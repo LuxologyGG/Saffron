@@ -1,0 +1,254 @@
+/* =============================================================
+   Saffron and Rice, contact page compositions.
+   Loads after app.css; linked ONLY on contact.html.
+   Tokens only, no raw hex, no raw font names.
+
+   HERO: HUD-style info readout. A blueprint grid sits on the paper
+   ground, a mono coordinate/hours dl scrambles in on the left, a
+   drawn-on compass rose points toward a labeled PCH tick, and the
+   arch-masked interior photo sits right with viewfinder corner ticks.
+   House rule: no em dashes anywhere, in copy or comments.
+   ============================================================= */
+
+/* ------------------------------------------------------- hero */
+.c-hero {
+  position: relative; overflow: clip;
+  background: var(--bg); color: var(--fg);
+  padding-top: clamp(112px, 15vh, 168px);
+  padding-bottom: clamp(48px, 7vh, 88px);
+}
+/* Faint blueprint grid backdrop, reinforces the instrument-panel read. */
+.c-hero::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    repeating-linear-gradient(0deg, var(--line-soft) 0 1px, transparent 1px 88px),
+    repeating-linear-gradient(90deg, var(--line-soft) 0 1px, transparent 1px 88px);
+}
+.c-hero__inner {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: 1.05fr .95fr;
+  gap: clamp(30px, 5vw, 80px); align-items: start;
+}
+.c-hero__hud { display: flex; flex-direction: column; align-items: flex-start; }
+.c-hero__title { max-width: 15ch; margin-top: clamp(10px, 1.4vw, 18px); }
+.c-hero__line { display: block; }
+.c-hero__script { margin-top: clamp(12px, 1.6vw, 20px); }
+.c-hero__script .script-fa { color: var(--accent-text); }
+
+/* ---------------------------------------------- hud coordinate dl */
+.hud-grid {
+  width: 100%; margin-top: clamp(22px, 3vw, 38px);
+  border-top: 1px solid var(--line);
+}
+.hud-row {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: clamp(12px, 2vw, 24px);
+  padding-block: clamp(11px, 1.5vh, 16px);
+  border-bottom: 1px solid var(--line);
+}
+.hud-row__k {
+  margin: 0; flex: none;
+  font-family: var(--font-mono); font-size: var(--fs-eyebrow); font-weight: 500;
+  letter-spacing: var(--tracking-mono); text-transform: uppercase;
+  color: var(--fg-faint);
+}
+.hud-row__v {
+  margin: 0; text-align: right;
+  font-family: var(--font-mono); font-size: var(--fs-mono); font-weight: 500;
+  color: var(--fg);
+}
+
+/* ------------------------------------------------------ compass */
+.c-hero__compass-block {
+  margin-top: clamp(28px, 3.4vw, 46px);
+  display: flex; align-items: center; gap: clamp(16px, 2vw, 26px);
+}
+.c-hero__compass-wrap {
+  position: relative; flex: none;
+  width: clamp(86px, 8vw, 116px); height: clamp(86px, 8vw, 116px);
+}
+.c-hero__compass-svg { width: 100%; height: 100%; color: var(--accent-text); display: block; }
+.c-hero__compass-n {
+  position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em;
+  color: var(--fg-faint);
+}
+.c-hero__compass-pch {
+  position: absolute; right: -4px; bottom: 16%;
+  font-family: var(--font-mono); font-size: 10px; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--accent-text);
+}
+.c-hero__compass-cap {
+  margin: 0; max-width: 24ch;
+  font-family: var(--font-mono); font-size: var(--fs-eyebrow);
+  letter-spacing: .02em; line-height: 1.6;
+  color: var(--fg-faint);
+}
+
+/* -------------------------------------------------- arch photo */
+.c-hero__media { margin-top: clamp(6px, 1vh, 18px); }
+.c-hero__frame { position: relative; padding: 18px; }
+.c-hero__frame::before {
+  content: ""; position: absolute; top: 0; left: 0; width: 22px; height: 22px;
+  border-top: 1px solid var(--accent-text); border-left: 1px solid var(--accent-text);
+}
+.c-hero__frame::after {
+  content: ""; position: absolute; bottom: 0; right: 0; width: 22px; height: 22px;
+  border-bottom: 1px solid var(--accent-text); border-right: 1px solid var(--accent-text);
+}
+.c-hero__ph { aspect-ratio: 4 / 5; width: 100%; }
+.c-hero__ph img { object-position: 50% 38%; }
+
+/* --------------------------------------------- 01 the essentials */
+.essentials {
+  margin-top: clamp(30px, 3.6vw, 54px);
+  display: grid; grid-template-columns: minmax(230px, 340px) 1fr;
+  gap: clamp(28px, 4vw, 64px); align-items: start;
+}
+.essentials__call {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 10px;
+  padding-top: clamp(14px, 2vw, 22px); border-top: 1px solid var(--line);
+}
+.essentials__kick::before { background: var(--price); }
+.essentials__tel {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: clamp(38px, 4.6vw, 78px); line-height: 1;
+  letter-spacing: var(--tracking-display); color: var(--price);
+  white-space: nowrap;
+  display: inline-flex; align-items: center; min-height: 44px;
+  transition: color var(--t-fast) var(--e-out);
+}
+.essentials__tel:hover { color: var(--accent-text); }
+.essentials__note {
+  font-family: var(--font-mono); font-size: var(--fs-eyebrow);
+  letter-spacing: .08em; color: var(--fg-faint); max-width: 34ch;
+}
+
+.essentials__grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: clamp(20px, 2.6vw, 36px);
+}
+.essentials__block {
+  border-top: 1px solid var(--line); padding-top: clamp(14px, 1.8vw, 22px);
+  display: flex; flex-direction: column; gap: 10px;
+}
+.essentials__label {
+  display: inline-flex; align-items: center; gap: .8em;
+  font-family: var(--font-mono); font-size: var(--fs-eyebrow); font-weight: 500;
+  letter-spacing: var(--tracking-mono); text-transform: uppercase;
+  color: var(--fg-faint);
+}
+.essentials__label::before { content: ""; width: 5px; height: 5px; background: var(--accent); flex: none; }
+.essentials__address { font-style: normal; color: var(--fg-soft); line-height: 1.75; }
+.essentials__hours { color: var(--fg); font-weight: 500; }
+.essentials__hours-note {
+  font-family: var(--font-mono); font-size: var(--fs-eyebrow); color: var(--fg-faint);
+}
+.essentials__services { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.essentials__services li {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-mono); font-size: var(--fs-mono); color: var(--fg-soft);
+}
+.essentials__services li::before { content: ""; width: 5px; height: 5px; flex: none; background: var(--accent); }
+.essentials__actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* ------------------------------------------------------ 02 map */
+.mappanel {
+  margin-top: clamp(30px, 3.6vw, 54px);
+  display: grid; grid-template-columns: minmax(260px, 420px) 1fr;
+  gap: clamp(26px, 3.4vw, 56px); align-items: start;
+}
+.mappanel__frame {
+  position: relative; aspect-ratio: 1 / 1; width: 100%; overflow: hidden;
+  background: color-mix(in srgb, var(--fg) 8%, var(--bg));
+}
+.mappanel__layer {
+  position: absolute; inset: 0; opacity: 0; pointer-events: none;
+  transition: opacity .5s var(--e-out);
+}
+.mappanel__layer.is-active { opacity: 1; pointer-events: auto; }
+.mappanel__layer img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.mappanel__pin {
+  position: absolute; transform: translate(-50%, -50%);
+  width: 15px; height: 15px; border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--ink) 55%, transparent);
+}
+.mappanel__pin::after {
+  content: ""; position: absolute; inset: -9px; border-radius: 50%;
+  border: 1px solid var(--accent);
+  animation: k-blink 1.8s var(--e-inout) infinite;
+}
+.mappanel__side {
+  display: flex; flex-direction: column; align-items: flex-start;
+  gap: clamp(14px, 1.8vh, 20px);
+  padding-top: clamp(6px, 1vh, 14px);
+}
+.mappanel__toggle {
+  display: inline-flex; align-items: center; gap: 10px;
+  min-height: 44px; padding: 0 16px;
+  border: 1px solid color-mix(in srgb, currentColor 38%, transparent);
+  font-family: var(--font-mono); font-size: var(--fs-mono); font-weight: 500;
+  letter-spacing: var(--tracking-mono); text-transform: uppercase;
+  color: var(--fg-soft); cursor: pointer;
+  transition: border-color var(--t-fast) var(--e-out), color var(--t-fast) var(--e-out);
+}
+.mappanel__toggle:hover,
+.mappanel__toggle[aria-pressed="true"] { border-color: var(--fg); color: var(--fg); }
+.mappanel__toggle-dot { width: 6px; height: 6px; flex: none; background: var(--accent); }
+.mappanel__caption {
+  margin: 0;
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: .03em;
+  color: var(--fg-faint);
+}
+
+/* ----------------------------------------- 03 call or walk in */
+.ch-call { position: relative; }
+.call-panel {
+  margin-top: clamp(28px, 3.4vw, 46px);
+  display: flex; flex-direction: column; align-items: flex-start; gap: 10px;
+  max-width: 560px; padding: clamp(26px, 3vw, 44px);
+  border: 1px solid var(--line);
+}
+.call-panel__kick::before { background: var(--price); }
+.call-panel__phone {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: clamp(38px, 4.4vw, 70px); line-height: 1;
+  letter-spacing: var(--tracking-display); color: var(--price);
+  white-space: nowrap;
+  display: inline-flex; align-items: center; min-height: 44px;
+  transition: color var(--t-fast) var(--e-out);
+}
+.call-panel__phone:hover { color: var(--accent-text); }
+.call-panel__hours {
+  font-family: var(--font-mono); font-size: var(--fs-mono); color: var(--fg-soft);
+}
+.call-panel__note {
+  font-family: var(--font-mono); font-size: var(--fs-eyebrow); letter-spacing: .08em;
+  color: var(--fg-faint);
+}
+.call-panel__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+
+/* --------------------------------------------------- responsive */
+@media (max-width: 1080px) {
+  .essentials__tel { font-size: clamp(34px, 6vw, 64px); }
+}
+@media (max-width: 900px) {
+  .c-hero { padding-top: clamp(100px, 14vh, 140px); }
+  .c-hero__inner { grid-template-columns: 1fr; }
+  .c-hero__media { max-width: 420px; }
+  .c-hero__compass-block { margin-top: clamp(22px, 5vh, 36px); }
+
+  .essentials { grid-template-columns: 1fr; gap: clamp(24px, 5vh, 36px); }
+  .essentials__grid { grid-template-columns: 1fr; }
+
+  .mappanel { grid-template-columns: 1fr; }
+  .mappanel__frame { max-width: 440px; }
+
+  .call-panel__phone { font-size: clamp(32px, 9vw, 52px); }
+}
+@media (max-width: 560px) {
+  .hud-row { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .hud-row__v { text-align: left; }
+}

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact &amp; Hours, Saffron &amp; Rice Torrance</title>
+  <meta name="description" content="Call, order, or visit Saffron &amp; Rice on Pacific Coast Highway in Torrance. Address, hours, a self-hosted map, and every way to reach our kitchen.">
+
+  <link rel="canonical" href="https://saffron-and-rice.vercel.app/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://saffron-and-rice.vercel.app/contact.html">
+  <meta property="og:title" content="Contact &amp; Hours, Saffron &amp; Rice Torrance">
+  <meta property="og:description" content="Address, hours, phone, and a map to our kitchen on Pacific Coast Highway in Torrance.">
+  <meta property="og:image" content="https://saffron-and-rice.vercel.app/assets/img/contact-hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact &amp; Hours, Saffron &amp; Rice Torrance">
+  <meta name="twitter:image" content="https://saffron-and-rice.vercel.app/assets/img/contact-hero.jpg">
+  <meta name="theme-color" content="#0f0d0c">
+
+  <link rel="icon" href="assets/img/brand/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/img/brand/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/brand/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/img/brand/favicon-192.png">
+
+  <link rel="preload" as="image" href="assets/img/contact-hero.jpg" fetchpriority="high">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/cormorant-garamond-latin-500-normal.woff2" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="assets/css/page-contact.css">
+
+  <script>
+    /* Boot shim: html.js gate, paint-blocking cover for the loader and
+       page arrivals, and a watchdog that clears everything if app.js
+       never boots. No facts, no content, shell state only. */
+    (function () {
+      var de = document.documentElement;
+      de.classList.add("js");
+      var red = false;
+      try { red = window.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch (e) {}
+      var seen = false, arrive = false;
+      try {
+        seen = sessionStorage.getItem("srSeen") === "1";
+        arrive = sessionStorage.getItem("srArrive") === "1";
+      } catch (e) {}
+      if (!red && (!seen || arrive)) de.classList.add("sr-cover");
+      setTimeout(function () {
+        if (!window.__SR_BOOTED) { de.classList.remove("sr-cover"); de.classList.add("sr-noboot"); }
+      }, 4000);
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Saffron & Rice",
+    "url": "https://saffron-and-rice.vercel.app/contact.html",
+    "image": "https://saffron-and-rice.vercel.app/assets/img/contact-hero.jpg",
+    "telephone": "+13105040310",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3801 Pacific Coast Hwy",
+      "addressLocality": "Torrance",
+      "addressRegion": "CA",
+      "postalCode": "90505",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.8107,
+      "longitude": -118.3494
+    },
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=Saffron%20and%20Rice%203801%20Pacific%20Coast%20Hwy%20Torrance%20CA%2090505",
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "11:00",
+      "closes": "20:00"
+    }]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" data-nav>
+    <a class="nav__brand" href="index.html" aria-label="Saffron and Rice, home">
+      <span class="nav__seal"><img src="assets/img/brand/emblem.png" alt="" width="34" height="23"></span>
+      <span class="nav__word">Saffron &amp; Rice</span>
+    </a>
+    <nav class="nav__right" aria-label="Primary">
+      <ul class="nav__links">
+        <li><a class="nav__link" href="menu.html">Menu</a></li>
+        <li><a class="nav__link" href="catering.html">Catering</a></li>
+        <li><a class="nav__link" href="about.html">About</a></li>
+        <li><a class="nav__link is-active" href="contact.html">Contact</a></li>
+      </ul>
+      <a class="btn nav__call" data-bind-href="company.phoneHref">
+        <span class="btn__text" data-bind="company.phone">Call us</span></a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false"
+              aria-controls="site-menu" data-menu-toggle>
+        <span class="nav__toggle-bar"></span><span class="nav__toggle-bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- HERO: HUD info readout. Blueprint grid on paper, a mono
+         coordinate/hours dl that scrambles in, a drawn-on compass
+         rose pointing toward a labeled PCH tick, and the arch-masked
+         interior photo with viewfinder corner ticks. -->
+    <section class="c-hero">
+      <div class="wrap c-hero__inner">
+        <div class="c-hero__hud">
+          <p class="eyebrow" data-scramble>Coordinates and hours</p>
+          <h1 class="h1 c-hero__title" data-c-title>
+            <span class="c-hero__line">On Pacific Coast Highway,</span>
+            <span class="c-hero__line"><em>Torrance</em></span>
+          </h1>
+          <div class="script-line c-hero__script">
+            <span class="script-fa" lang="fa" dir="rtl" aria-hidden="true" data-bind="company.scriptFa"></span>
+            <span class="translit" data-bind="company.scriptFaTranslit"></span>
+          </div>
+
+          <dl class="hud-grid" data-hud-rows data-reveal-group></dl>
+
+          <div class="c-hero__compass-block">
+            <div class="c-hero__compass-wrap">
+              <svg class="c-hero__compass-svg" viewBox="0 0 132 132" fill="none" stroke="currentColor"
+                   stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" data-draw aria-hidden="true">
+                <circle cx="66" cy="66" r="54"/>
+                <circle cx="66" cy="66" r="2.4" fill="currentColor" stroke="none"/>
+                <line x1="66" y1="6" x2="66" y2="18"/>
+                <line x1="66" y1="114" x2="66" y2="126"/>
+                <line x1="6" y1="66" x2="18" y2="66"/>
+                <line x1="114" y1="66" x2="126" y2="66"/>
+                <line x1="103.8" y1="28.2" x2="96.6" y2="35.4"/>
+                <line x1="28.2" y1="28.2" x2="35.4" y2="35.4"/>
+                <line x1="103.8" y1="103.8" x2="96.6" y2="96.6"/>
+                <line x1="28.2" y1="103.8" x2="35.4" y2="96.6"/>
+                <line x1="66" y1="66" x2="95" y2="95" stroke-width="1.8"/>
+                <polyline points="89,83 95,95 83,89"/>
+              </svg>
+              <span class="c-hero__compass-n" aria-hidden="true">N</span>
+              <span class="c-hero__compass-pch" aria-hidden="true">PCH</span>
+            </div>
+            <p class="c-hero__compass-cap">Pacific Coast Highway runs right past our door.</p>
+          </div>
+        </div>
+
+        <figure class="c-hero__media">
+          <div class="c-hero__frame">
+            <div class="c-hero__ph ph arch">
+              <img src="assets/img/contact-hero.jpg" width="1800" height="1200" fetchpriority="high"
+                   alt="Warm, wood toned restaurant interior with round tables, representative photography">
+            </div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 01 THE ESSENTIALS: phone, address, hours, services, order and follow -->
+    <section class="section chapter" id="essentials">
+      <div class="wrap">
+        <div class="chapter__head">
+          <span class="chapter__num" aria-hidden="true">01</span>
+          <p class="eyebrow" data-scramble>The essentials</p>
+          <h2 class="h2 chapter__title" data-reveal>Everything to <em>reach</em> us</h2>
+        </div>
+        <div class="essentials">
+          <div class="essentials__call">
+            <p class="eyebrow eyebrow--plain essentials__kick">Call ahead</p>
+            <a class="essentials__tel" data-bind-href="company.phoneHref" data-bind="company.phone">(310) 504-0310</a>
+            <p class="essentials__note" data-bind="company.hours.note"></p>
+          </div>
+          <div class="essentials__grid" data-reveal-group>
+            <div class="essentials__block" data-reveal-item>
+              <p class="essentials__label">Address</p>
+              <address class="essentials__address">
+                <span data-bind="company.address.street"></span><br>
+                <span data-bind="company.address.city"></span>,
+                <span data-bind="company.address.state"></span>
+                <span data-bind="company.address.zip"></span>
+              </address>
+              <a class="tlink" data-bind-href="company.address.mapsUrl" target="_blank" rel="noopener">Open in Google Maps</a>
+            </div>
+            <div class="essentials__block" data-reveal-item>
+              <p class="essentials__label">Hours</p>
+              <p class="essentials__hours" data-bind="company.hours.label"></p>
+              <p class="essentials__hours-note" data-bind="company.hours.note"></p>
+            </div>
+            <div class="essentials__block" data-reveal-item>
+              <p class="essentials__label">Services</p>
+              <ul class="essentials__services" data-c-services></ul>
+            </div>
+            <div class="essentials__block" data-reveal-item>
+              <p class="essentials__label">Order and follow</p>
+              <div class="essentials__actions" data-c-actions></div>
+            </div>
+          </div>
+        </div>
+        <hr class="chapter__rule">
+        <p class="chapter__foot">Dine in, pick up, delivery, or a catered sofreh, call and we will point you the right way.</p>
+      </div>
+    </section>
+
+    <!-- 02 THE MAP: self-hosted static images, no iframe, no live tiles -->
+    <section class="section chapter" id="map">
+      <div class="wrap">
+        <div class="chapter__head">
+          <span class="chapter__num" aria-hidden="true">02</span>
+          <p class="eyebrow" data-scramble>Find us</p>
+          <h2 class="h2 chapter__title" data-reveal>The corner of <em>PCH</em></h2>
+        </div>
+        <p class="lead measure" data-reveal="fade">You will find us in the plaza at
+          <span data-bind="company.address.street"></span>, right on Pacific Coast Highway
+          in <span data-bind="company.address.city"></span>. Pull in, park, and look for
+          the saffron marker below.</p>
+
+        <div class="mappanel" data-mappanel data-reveal="fade">
+          <div class="mappanel__frame arch">
+            <div class="mappanel__layer is-active" data-map-layer="local">
+              <img src="assets/img/map-local.png" width="768" height="768" loading="lazy"
+                   alt="Close map of Saffron and Rice's location on Pacific Coast Highway in Torrance, marked with a saffron pin">
+              <span class="mappanel__pin" style="left: 38.3%; top: 36.2%" aria-hidden="true"></span>
+            </div>
+            <div class="mappanel__layer" data-map-layer="area">
+              <img src="assets/img/map-area.png" width="768" height="768" loading="lazy"
+                   alt="Wider area map of Torrance showing Saffron and Rice's location near Pacific Coast Highway, marked with a saffron pin">
+              <span class="mappanel__pin" style="left: 63%; top: 54.4%" aria-hidden="true"></span>
+            </div>
+          </div>
+          <div class="mappanel__side">
+            <button class="mappanel__toggle" type="button" data-map-toggle aria-pressed="false">
+              <span class="mappanel__toggle-dot" aria-hidden="true"></span>
+              <span data-map-toggle-label>Show the area map</span>
+            </button>
+            <p class="mappanel__caption">Map data &copy; OpenStreetMap contributors</p>
+            <a class="tlink" data-bind-href="company.address.mapsUrl" target="_blank" rel="noopener">Open in Google Maps</a>
+          </div>
+        </div>
+
+        <hr class="chapter__rule">
+        <p class="chapter__foot">A simple map to get you here, self-hosted, no live tiles, no trackers.</p>
+      </div>
+    </section>
+
+    <!-- 03 CALL OR WALK IN: no contact form, no email on file -->
+    <section class="section section--sm chapter on-teal ch-call" id="visit-us">
+      <div class="wrap">
+        <div class="chapter__head">
+          <span class="chapter__num" aria-hidden="true">03</span>
+          <p class="eyebrow" data-scramble>Call or walk in</p>
+          <h2 class="h2 chapter__title" data-reveal>No forms, just <em>fire</em></h2>
+        </div>
+        <p class="lead measure" data-reveal="fade">We do not run a contact form. Pick up the
+          phone or walk in the door on Pacific Coast Highway and we will take it from there.</p>
+        <div class="call-panel" data-reveal="fade">
+          <p class="eyebrow call-panel__kick">Ring the kitchen</p>
+          <a class="call-panel__phone" data-bind-href="company.phoneHref" data-bind="company.phone">(310) 504-0310</a>
+          <p class="call-panel__hours" data-bind="company.hours.label"></p>
+          <p class="call-panel__note" data-bind="company.hours.note"></p>
+          <div class="call-panel__ctas">
+            <a class="btn btn--solid" data-bind-href="orderLinks.0.href" target="_blank" rel="noopener">
+              <span class="btn__text" data-bind="orderLinks.0.label">Order online</span></a>
+            <a class="btn" href="menu.html"><span class="btn__text">See the menu</span></a>
+          </div>
+        </div>
+        <hr class="chapter__rule">
+        <p class="chapter__foot">Address, hours, and every fact on this page come straight from our printed menu and live ordering profiles.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer on-dark" data-site-footer data-nav-theme="dark"></footer>
+
+  <script src="assets/js/vendor/gsap.min.js"></script>
+  <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/js/vendor/CustomEase.min.js"></script>
+  <script src="assets/js/vendor/SplitText.min.js"></script>
+  <script src="assets/js/vendor/ScrambleTextPlugin.min.js"></script>
+  <script src="assets/js/vendor/DrawSVGPlugin.min.js"></script>
+  <script src="assets/js/vendor/lenis.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/page-contact.js"></script>
+</body>
+</html>
