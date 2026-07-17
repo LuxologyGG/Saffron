@@ -80,6 +80,7 @@ window.SITE = {
         id: "appetizers",
         title: "Appetizers",
         fa: "پیش غذا",
+        translit: "Pish ghaza",
         photo: "menu-appetizers.jpg",
         items: [
           { id: "ash-e-jo", name: "Ash-e-Jo", price: 10.99, desc: "Barley, fresh herbs, whey." },
@@ -102,6 +103,7 @@ window.SITE = {
         id: "kababs",
         title: "Grill & Kababs",
         fa: "کباب",
+        translit: "Kabab",
         photo: "menu-kabab.jpg",
         note: "Served off the flame.",
         items: [
@@ -123,6 +125,7 @@ window.SITE = {
         id: "stews",
         title: "Home Style Stews",
         fa: "خورش",
+        translit: "Khoresh",
         photo: "menu-stew.jpg",
         note: "The second price is the vegetarian version.",
         items: [
@@ -142,6 +145,7 @@ window.SITE = {
         id: "rice",
         title: "Rice",
         fa: "برنج",
+        translit: "Berenj",
         photo: "menu-rice.jpg",
         items: [
           { id: "baghali-polo", name: "Baghali Polo", price: 11.99, desc: "Rice, fava beans, dill." },
@@ -153,6 +157,7 @@ window.SITE = {
         id: "sandwiches",
         title: "Sandwiches",
         fa: "ساندویچ",
+        translit: "Sandevich",
         photo: "menu-appetizers.jpg",
         note: "Wrap or soft baguette.",
         items: [
@@ -169,6 +174,7 @@ window.SITE = {
         id: "platters",
         title: "Party Platters",
         fa: "مهمانی",
+        translit: "Mehmani",
         photo: "catering-platters.jpg",
         items: [
           { id: "family-combo", name: "Family Combo", price: 69.99, desc: "6 koobideh, 1 boneless. Serves 3 to 4.", serves: "3-4" },

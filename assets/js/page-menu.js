@@ -78,7 +78,7 @@
       (sec.fa ?
         '<div class="script-line msec__script" data-reveal="fade">' +
           '<span class="script-fa" lang="fa" dir="rtl" aria-hidden="true">' + esc(sec.fa) + "</span>" +
-          (sec.note ? '<span class="translit">' + esc(sec.note) + "</span>" : "") +
+          (sec.translit ? '<span class="translit">' + esc(sec.translit) + "</span>" : "") +
         "</div>" : "") +
     "</header>";
   }
@@ -126,6 +126,7 @@
       '<section class="msec" id="' + esc(sec.id) + '" aria-labelledby="msec-t-' + esc(sec.id) + '">' +
         headHtml(sec, i) +
         '<ul class="mlist">' + sec.items.map(rowHtml).join("") + "</ul>" +
+        (sec.note ? '<p class="chapter__foot msec__foot">' + esc(sec.note) + "</p>" : "") +
         (sec.id === "kababs" ? halalHtml() : "") +
       "</section>";
   }

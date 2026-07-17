@@ -12,6 +12,21 @@
    House rule: no em dashes anywhere, in copy or comments.
    ============================================================= */
 
+/* -------------------------------------------------- no-JS notice */
+/* Only rendered in the browser's <noscript> path; the menu list
+   itself is fully prerendered, this just points JS-off visitors to
+   a live phone line and the order link. */
+.noscript-note {
+  padding-block: 14px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+.noscript-note .mono {
+  font-family: var(--font-mono); font-size: var(--fs-mono);
+  color: var(--fg-soft);
+}
+.noscript-note a { color: var(--accent-text); text-underline-offset: .2em; }
+
 /* ------------------------------------------------ hero: calm base */
 .mhero {
   position: relative; overflow: clip;
@@ -47,7 +62,7 @@
 .mhero__meta-item {
   font-size: var(--fs-eyebrow); font-weight: 500;
   letter-spacing: var(--tracking-mono); text-transform: uppercase;
-  color: var(--fg-faint);
+  color: var(--fg-soft);
 }
 
 .mhero__strip {
@@ -113,7 +128,7 @@
 .mhero__hours {
   font-size: var(--fs-eyebrow); font-weight: 500;
   letter-spacing: var(--tracking-mono); text-transform: uppercase;
-  color: var(--fg-faint);
+  color: var(--fg-soft);
 }
 
 /* --------------------------------------------------- menu body */
@@ -166,6 +181,7 @@
   border-bottom: 1px solid var(--line);
   margin-top: clamp(10px, 1.4vw, 18px);
 }
+.msec__foot { margin-top: clamp(14px, 1.8vw, 24px); }
 .mrow { padding-block: clamp(15px, 1.9vw, 24px); }
 .mrow + .mrow { border-top: 1px solid var(--line-soft); }
 .mrow__line {
