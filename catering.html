@@ -189,6 +189,19 @@
       </div>
     </section>
 
+    <!-- BR-4 / VS1: a low-key crocus thread ornament fills the gap
+         between two same-background chapters instead of leaving it
+         dead, drawn on scroll, resting fully drawn by default. -->
+    <div class="ch-gap" aria-hidden="true">
+      <svg class="ornament ch-gap__thread" data-draw viewBox="0 0 220 40" width="220" height="40"
+           fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+           stroke-linejoin="round">
+        <path d="M4 30 C40 8 72 34 106 18 C140 4 180 32 216 12" />
+        <path d="M58 22 C62 16 68 14 74 15" />
+        <path d="M148 20 C152 26 158 28 164 27" />
+      </svg>
+    </div>
+
     <!-- 02 STEWS AND FAMILY COMBOS -->
     <section class="section chapter" id="combos">
       <div class="wrap">
@@ -200,6 +213,13 @@
         <p class="lead measure" data-reveal="fade">
           Not every gathering needs thirty plates. The combos feed a
           family straight from our kitchen.</p>
+        <figure class="cat-band" data-reveal="clip">
+          <div class="ph arch cat-band__arch">
+            <img src="assets/img/menu-stew.jpg" width="1463" height="1800" loading="lazy"
+                 alt="A pot of home style Persian stew simmering, ready to spoon over rice for the family combos">
+          </div>
+          <figcaption class="cat-band__cap">From the stew pots</figcaption>
+        </figure>
         <div class="combos" data-combo-cards data-reveal-group></div>
         <hr class="chapter__rule">
         <p class="chapter__foot">Call and we will match the combo to your table.</p>
@@ -207,7 +227,7 @@
     </section>
 
     <!-- 03 HOW IT WORKS -->
-    <section class="section chapter ch-how" id="how">
+    <section class="section chapter ch-how chapter--tight" id="how">
       <div class="wrap">
         <div class="chapter__head">
           <span class="chapter__num" aria-hidden="true">03</span>
@@ -216,26 +236,33 @@
         </div>
         <ol class="steps" data-reveal-group>
           <li class="step" data-reveal-item>
-            <span class="step__num" aria-hidden="true">1</span>
+            <span class="step__num" aria-hidden="true">01</span>
             <h3 class="h4 step__title">Call us</h3>
             <p class="step__body">Tell us the date, the headcount, and how your crowd
               eats. We will point you to the right tray.</p>
             <a class="tlink" data-bind-href="company.phoneHref" data-bind="company.phone"></a>
           </li>
           <li class="step" data-reveal-item>
-            <span class="step__num" aria-hidden="true">2</span>
+            <span class="step__num" aria-hidden="true">02</span>
             <h3 class="h4 step__title">Choose platters and stews</h3>
             <p class="step__body">Pick your platters and combos, then the stews that ride
               along, one, two, or three depending on the tray.</p>
           </li>
           <li class="step" data-reveal-item>
-            <span class="step__num" aria-hidden="true">3</span>
+            <span class="step__num" aria-hidden="true">03</span>
             <h3 class="h4 step__title">Pick up or we deliver</h3>
             <p class="step__body">Pick up at the deli on Pacific Coast Highway, or ask
               about delivery when you call.</p>
             <ul class="cat-services" data-cat-services></ul>
           </li>
         </ol>
+        <figure class="cat-band" data-reveal="clip">
+          <div class="ph arch cat-band__arch">
+            <img src="assets/img/home-menu-teaser.jpg" width="1350" height="1800" loading="lazy"
+                 alt="Trays of kabab, tahdig, and stew packed and ready for pickup">
+          </div>
+          <figcaption class="cat-band__cap">Packed and ready</figcaption>
+        </figure>
         <hr class="chapter__rule">
         <p class="chapter__foot">No order forms, no portals. A phone call and a headcount is all we need.</p>
       </div>
@@ -243,7 +270,7 @@
 
     <!-- 04 HALAL SOURCING: verbatim claims on the teal stage -->
     <section class="section section--sm chapter on-teal ch-halal" id="halal">
-      <p class="ch-halal__ghost script-fa" aria-hidden="true">حلال</p>
+      <p class="ch-halal__ghost script-fa" lang="fa" dir="rtl" aria-hidden="true">حلال</p>
       <div class="wrap">
         <div class="chapter__head">
           <span class="chapter__num" aria-hidden="true">04</span>
@@ -267,12 +294,19 @@
           <p class="eyebrow" data-scramble>Before you call</p>
           <h2 class="h2 chapter__title" data-reveal>Asked and <em>answered</em></h2>
         </div>
+        <figure class="cat-band" data-reveal="clip">
+          <div class="ph arch cat-band__arch">
+            <img src="assets/img/menu-kabab.jpg" width="1013" height="1800" loading="lazy"
+                 alt="Koobideh skewers cooking over glowing coals">
+          </div>
+          <figcaption class="cat-band__cap">Off the flame</figcaption>
+        </figure>
         <dl class="faq" data-cat-faq data-reveal-group></dl>
       </div>
     </section>
 
     <!-- 06 CLOSE: word of mouth + the order lockup -->
-    <section class="section chapter" id="order">
+    <section class="section chapter chapter--tight" id="order">
       <div class="wrap">
         <div class="chapter__head">
           <span class="chapter__num" aria-hidden="true">06</span>

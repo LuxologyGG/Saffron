@@ -94,14 +94,49 @@
   color: var(--fg-soft);
 }
 
+/* VS1 / BR-4: the hairline thread ornament standing between the
+   platters and combos chapters, filling what would otherwise be a
+   dead, unornamented same-background gap. Stroked with the crocus
+   token so it reads as the site's dedicated ornament family, not
+   another accent-gold mark. Reduced motion / no JS: the path is
+   already fully drawn (see app.js initDraw), so the ornament simply
+   sits there finished. */
+.ch-gap {
+  display: flex; align-items: center; justify-content: center;
+  max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter);
+  padding-block: clamp(18px, 2.6vw, 34px);
+}
+.ch-gap__thread { width: min(220px, 42vw); height: auto; color: var(--crocus-lite); opacity: .7; }
+
+/* BM04: a single supporting photo per photo-less chapter (02/03/05),
+   reusing the catering shoot, arch-masked to match the site's image
+   language. <figure class="cat-band"><div class="ph arch
+   cat-band__arch"><img></div><figcaption>...</figcaption></figure> */
+.cat-band {
+  margin: clamp(30px, 3.6vw, 54px) auto 0;
+  display: flex; flex-direction: column; align-items: center; gap: 14px;
+}
+.cat-band__arch { position: relative; width: min(100%, 440px); aspect-ratio: 4 / 4.7; }
+.cat-band__arch img { object-position: 50% 38%; }
+.cat-band__cap {
+  display: inline-flex; align-items: center; gap: .8em;
+  font-family: var(--font-mono); font-size: var(--fs-eyebrow); font-weight: 500;
+  letter-spacing: var(--tracking-mono); text-transform: uppercase;
+  color: var(--fg-faint);
+}
+.cat-band__cap::before { content: ""; width: 5px; height: 5px; flex: none; background: var(--accent); transform: rotate(45deg); }
+
 /* -------------------------------------- 01 the party platters */
 .plist { margin-top: clamp(30px, 3.6vw, 54px); border-top: 1px solid var(--line); }
 .platter {
-  display: grid; grid-template-columns: clamp(130px, 15vw, 220px) 1fr auto;
+  display: grid;
+  grid-template-columns: clamp(56px, 5.6vw, 80px) clamp(130px, 15vw, 220px) 1fr auto;
   gap: clamp(18px, 3vw, 56px); align-items: start;
   padding-block: clamp(26px, 3.2vw, 46px);
   border-bottom: 1px solid var(--line);
 }
+/* BM06: the repeating arch unit, one small dome per tray. */
+.platter__ph { width: 100%; aspect-ratio: 1 / 1.18; align-self: start; margin-top: 4px; }
 .platter__serves { display: flex; flex-direction: column; gap: 8px; }
 .platter__count {
   font-family: var(--font-mono); font-weight: 500;
@@ -177,10 +212,15 @@
   border-top: 1px solid var(--line); padding-top: clamp(16px, 2vw, 26px);
   display: flex; flex-direction: column; align-items: flex-start; gap: 12px;
 }
+/* VS3: mono, double-digit numerals ("01" not "1") so the standalone
+   glyph can never misread as a capital I, and the steps carry the same
+   HUD/technical voice as the rest of the site's mono readouts. */
 .step__num {
-  font-family: var(--font-display); font-weight: 400;
-  font-size: var(--fs-h2); line-height: .8;
-  color: color-mix(in srgb, var(--fg) 14%, transparent);
+  font-family: var(--font-mono); font-weight: 500;
+  font-size: clamp(30px, 3.6vw, 48px); line-height: .8;
+  letter-spacing: var(--tracking-mono);
+  font-variant-numeric: tabular-nums;
+  color: color-mix(in srgb, var(--fg) 20%, transparent);
   user-select: none;
 }
 .step__body { color: var(--fg-soft); max-width: 34ch; }
@@ -299,6 +339,7 @@
   .cat-arch__num { font-size: clamp(26px, 8vw, 44px); }
 
   .platter { grid-template-columns: 1fr; gap: 12px; }
+  .platter__ph { display: none; }
   .platter__serves { flex-direction: row; align-items: baseline; gap: 14px; }
   .platter__count { font-size: clamp(46px, 14vw, 72px); }
   .platter__price { padding-top: 2px; }

@@ -94,8 +94,8 @@
         <li><a class="nav__link" href="about.html">About</a></li>
         <li><a class="nav__link" href="contact.html">Contact</a></li>
       </ul>
-      <a class="btn nav__call" data-bind-href="company.phoneHref">
-        <span class="btn__text" data-bind="company.phone">Call us</span></a>
+      <a class="btn nav__call" href="tel:+13105040310" data-bind-href="company.phoneHref">
+        <span class="btn__text" data-bind="company.phone">(310) 504-0310</span></a>
       <button class="nav__toggle" aria-label="Open menu" aria-expanded="false"
               aria-controls="site-menu" data-menu-toggle>
         <span class="nav__toggle-bar"></span><span class="nav__toggle-bar"></span>
@@ -111,14 +111,14 @@
       <div class="hero__inner wrap">
         <div class="hero__copy">
           <p class="hero__kicker eyebrow">
-            <span data-bind="company.tagline"></span>
+            <span data-bind="company.tagline">Persian, Middle Eastern Kitchen</span>
           </p>
           <h1 class="hero__title" data-hero-title>
             <span class="hero__line">Off the flame,</span>
             <span class="hero__line">under the <em>saffron</em></span>
           </h1>
           <div class="script-line hero__script">
-            <span class="script-fa" lang="fa" dir="rtl" aria-hidden="true" data-bind="company.scriptFa"></span>
+            <span class="script-fa" lang="fa" dir="rtl" aria-hidden="true" data-bind="company.scriptFa">زعفران و برنج</span>
             <span class="translit" data-bind="company.scriptFaTranslit">Za&rsquo;faran o berenj, saffron and rice</span>
           </div>
           <div class="hero__ctas">
@@ -134,10 +134,12 @@
               </span>
               <span class="button-070__inner"><span class="button-070__text">See the menu</span></span>
             </a>
-            <a class="btn" data-bind-href="company.phoneHref">
-              <span class="btn__text" data-bind="company.phone">Call us</span></a>
+            <a class="btn" href="tel:+13105040310" data-bind-href="company.phoneHref">
+              <span class="btn__text" data-bind="company.phone">(310) 504-0310</span></a>
           </div>
+          <p class="hero__mission" data-bind="company.story">Under new management. The market that stood here for years now cooks. Same address, new fire.</p>
         </div>
+        <p class="hero__ghost script-fa" lang="fa" dir="rtl" aria-hidden="true">زعفران</p>
         <figure class="hero__arch arch--ogee">
           <div class="hero__arch-mask ph">
             <img src="assets/img/home-hero.jpg" width="1200" height="1800" fetchpriority="high"
@@ -151,7 +153,7 @@
             <path d="M5 1v9M1.5 7 5 10.5 8.5 7" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </span>
-        <span class="hero__hours mono" data-bind="company.hours.short"></span>
+        <span class="hero__hours mono" data-bind="company.hours.short">Daily 11 AM to 8 PM</span>
       </div>
     </section>
 
@@ -199,16 +201,26 @@
 
     <!-- 02 FROM THE FIRE: dark band, proves nav theming -->
     <section class="section chapter on-dark ch-fire" id="fire">
-      <p class="ch-fire__ghost script-fa" aria-hidden="true" data-fa-of="kababs"></p>
+      <p class="ch-fire__ghost script-fa" lang="fa" dir="rtl" aria-hidden="true" data-fa-of="kababs"></p>
       <div class="wrap">
-        <div class="chapter__head">
-          <span class="chapter__num" aria-hidden="true">02</span>
-          <p class="eyebrow" data-scramble>From the fire</p>
-          <h2 class="h2 chapter__title" data-reveal>Koobideh, barg, <em>soltani</em></h2>
-          <div class="script-line">
-            <span class="script-fa" lang="fa" dir="rtl" aria-hidden="true" data-fa-of="kababs"></span>
-            <span class="translit" data-kabab-note></span>
+        <div class="ch-fire__grid">
+          <div class="ch-fire__copy">
+            <div class="chapter__head">
+              <span class="chapter__num" aria-hidden="true">02</span>
+              <p class="eyebrow" data-scramble>From the fire</p>
+              <h2 class="h2 chapter__title" data-reveal>Koobideh, barg, <em>soltani</em></h2>
+              <div class="script-line">
+                <span class="script-fa" lang="fa" dir="rtl" aria-hidden="true" data-fa-of="kababs"></span>
+                <span class="translit" data-kabab-note></span>
+              </div>
+            </div>
           </div>
+          <figure class="ch-fire__media arch" data-reveal="clip">
+            <div class="ph ch-fire__media-ph">
+              <img src="assets/img/menu-kabab.jpg" width="1013" height="1800" loading="lazy"
+                   alt="Skewers of koobideh grilling over glowing coals">
+            </div>
+          </figure>
         </div>
         <div class="kcards" data-kabab-cards data-reveal-group></div>
         <hr class="chapter__rule">
@@ -233,11 +245,14 @@
       </div>
       <div class="band ch-sofreh__band" data-reveal="clip">
         <div class="band__media ph">
-          <img src="assets/img/home-menu-teaser.jpg" width="1350" height="1800" loading="lazy"
+          <img src="assets/img/home-menu-teaser.jpg" width="880" height="1340" loading="lazy"
                data-parallax="0.16"
                alt="A spread of Persian dishes, rice, herbs, and flatbread laid out to share">
         </div>
-        <p class="band__caption">From our kitchen</p>
+        <blockquote class="ch-sofreh__quote">
+          <p>&ldquo;Same address, new fire. We simmer the stews all morning and send every platter out the way we would set our own table.&rdquo;</p>
+          <cite>From our kitchen</cite>
+        </blockquote>
       </div>
       <div class="marquee marquee--display" data-marquee data-marquee-speed="70">
         <div class="marquee__track" data-dish-marquee></div>
@@ -270,8 +285,8 @@
             </span>
             <span class="button-070__inner"><span class="button-070__text">Catering</span></span>
           </a>
-          <a class="btn" data-bind-href="company.phoneHref">
-            <span class="btn__text" data-bind="company.phone">Call us</span></a>
+          <a class="btn" href="tel:+13105040310" data-bind-href="company.phoneHref">
+            <span class="btn__text" data-bind="company.phone">(310) 504-0310</span></a>
         </div>
         <p class="chapter__foot">Call ahead and we will have it packed and ready.</p>
       </div>
@@ -291,6 +306,13 @@
       </div>
     </section>
 
+    <!-- VS1: authored gap between two same-background chapters -->
+    <div class="gap-ornament" aria-hidden="true">
+      <span class="gap-ornament__line"></span>
+      <span class="gap-ornament__mark"></span>
+      <span class="gap-ornament__line"></span>
+    </div>
+
     <!-- 06 VISIT -->
     <section class="section chapter ch-visit" id="visit">
       <div class="wrap">
@@ -303,24 +325,26 @@
           <div class="visit-col" data-reveal="fade">
             <p class="eyebrow eyebrow--plain visit-label">Address</p>
             <address class="visit-address">
-              <span data-bind="company.address.street"></span><br>
-              <span data-bind="company.address.city"></span>,
-              <span data-bind="company.address.state"></span>
-              <span data-bind="company.address.zip"></span>
+              <span data-bind="company.address.street">3801 Pacific Coast Hwy</span><br>
+              <span data-bind="company.address.city">Torrance</span>,
+              <span data-bind="company.address.state">CA</span>
+              <span data-bind="company.address.zip">90505</span>
             </address>
-            <a class="tlink" data-bind-href="company.address.mapsUrl" target="_blank" rel="noopener">Directions</a>
+            <a class="tlink" href="https://www.google.com/maps/search/?api=1&amp;query=Saffron%20and%20Rice%203801%20Pacific%20Coast%20Hwy%20Torrance%20CA%2090505" data-bind-href="company.address.mapsUrl" target="_blank" rel="noopener">Directions</a>
           </div>
           <div class="visit-col" data-reveal="fade">
             <p class="eyebrow eyebrow--plain visit-label">Hours</p>
-            <p class="visit-hours" data-bind="company.hours.label"></p>
-            <p class="visit-note" data-bind="company.hours.note"></p>
-            <ul class="visit-services" data-services></ul>
+            <p class="visit-hours" data-bind="company.hours.label">Open daily, 11:00 AM to 8:00 PM</p>
+            <p class="visit-note" data-bind="company.hours.note">Call to confirm holiday hours.</p>
+            <ul class="visit-services" data-services>
+              <li>Dine-in</li><li>Pickup</li><li>Delivery</li><li>Catering</li>
+            </ul>
           </div>
           <div class="visit-col" data-reveal="fade">
             <p class="eyebrow eyebrow--plain visit-label">Order</p>
-            <a class="visit-phone" data-bind-href="company.phoneHref" data-bind="company.phone"></a>
+            <a class="visit-phone" href="tel:+13105040310" data-bind-href="company.phoneHref" data-bind="company.phone">(310) 504-0310</a>
             <div class="ch-actions">
-              <a class="button-070 is-accent" data-bind-href="orderLinks.0.href" target="_blank" rel="noopener">
+              <a class="button-070 is-accent" href="https://www.grubhub.com/restaurant/south-bay-food-hall-3801-pacific-coast-hwy-torrance/7933240" data-bind-href="orderLinks.0.href" target="_blank" rel="noopener">
                 <span class="button-070__bg-wrap">
                   <span class="button-070__corner-wrap">
                     <span class="button-070__corner is--top-left"></span>

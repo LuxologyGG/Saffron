@@ -43,7 +43,29 @@
 .ab-dusk__stage.is-pinned {
   position: sticky; top: 0; height: 100svh; /* JS overrides with a pixel value */
 }
+/* BM03: a photographic layer bled to the stage's right edge, behind the
+   copy. Default (no JS, reduced motion) rests at its final, most-visible
+   opacity, matching the stage's default ink/night ground. page-about.js's
+   render(t) dims it toward the day state and brings it back up as the
+   ground darkens, the same one-way "only brighten toward day when motion
+   is allowed" rule the ground-color scrub already follows. */
+.ab-dusk__photo {
+  position: absolute; inset: 0; z-index: 0;
+  pointer-events: none; overflow: hidden;
+}
+.ab-dusk__photo img {
+  position: absolute; top: 0; right: 0; height: 100%;
+  width: min(48vw, 640px); object-fit: cover; object-position: 62% 40%;
+  filter: saturate(.88) brightness(.9);
+  opacity: .5; /* fallback / reduced-motion final state */
+}
+.ab-dusk__photo::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(100deg,
+    var(--bg) 0%, color-mix(in srgb, var(--bg) 62%, transparent) 30%, transparent 60%);
+}
 .ab-dusk__inner {
+  position: relative; z-index: 1;
   display: flex; flex-direction: column;
   gap: clamp(34px, 5.4vh, 64px);
   padding-block: clamp(96px, 15vh, 170px) clamp(70px, 11vh, 120px);
@@ -85,6 +107,7 @@
 
 .ab-dusk__hud {
   position: absolute; left: 0; right: 0; bottom: clamp(20px, 3.2vh, 36px);
+  z-index: 1;
   padding-inline: var(--gutter);
   display: flex; align-items: center; justify-content: space-between;
   gap: 12px; flex-wrap: wrap;
@@ -177,7 +200,11 @@
   font-family: var(--font-display); font-weight: 500;
   font-size: clamp(20px, 2.1vw, 30px); line-height: 1.42;
 }
-.ab-cred__div { width: 60px; height: 1px; border: 0; margin-inline: auto; background: var(--line); }
+/* BR-4: the crocus/thread ornament standing in for the old plain hr
+   divider between the two halal claims. Stroked with the crocus token,
+   not the shared .ornament accent-text color, so it reads as the site's
+   dedicated ornament family rather than another accent mark. */
+.ab-cred__thread { align-self: center; width: min(160px, 40vw); height: auto; color: var(--crocus-lite); opacity: .8; }
 .ab-halal__foot { text-align: center; margin-inline: auto; }
 
 /* -------------------------------------------- 05 what we believe */
@@ -231,4 +258,11 @@
   .ab-dusk__inner { padding-block: clamp(84px, 17vh, 130px) 40px; }
   .ab-dusk__head, .ab-dusk__title { max-width: 100%; }
   .ab-cred { padding: clamp(28px, 8vw, 40px) 20px; }
+  /* Narrow viewport: the photo becomes a full-bleed low wash behind the
+     copy instead of a right-side panel, with a stronger scrim so the
+     fallback (opacity .5) still clears text contrast at every step. */
+  .ab-dusk__photo img { width: 100%; object-position: 50% 38%; }
+  .ab-dusk__photo::after {
+    background: color-mix(in srgb, var(--bg) 72%, transparent);
+  }
 }

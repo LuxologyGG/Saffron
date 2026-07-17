@@ -92,6 +92,7 @@
     var darkzone = $(".ab-dusk__darkzone", outer);
     var bar = $("[data-dusk-bar]");
     var steps = $$("[data-dusk-step]");
+    var photo = $(".ab-dusk__photo img", outer);
 
     /* Pixel heights, not vh/svh. A full-page screenshot tool can
        briefly resize the real viewport to match the whole document
@@ -154,6 +155,10 @@
       stage.style.setProperty("--fg-faint", css(mix(faintLight, faintDark, t)));
       stage.style.setProperty("--accent-text", css(mix(accentDeep, accentLite, t)));
       if (bar) bar.style.width = (t * 100).toFixed(1) + "%";
+      /* BM03: the interior photo darkens/reveals in step with the
+         ground, a low ambient wash by day, closer to its full CSS
+         fallback opacity (.5) by night. */
+      if (photo) photo.style.opacity = (.08 + t * .42).toFixed(2);
       steps.forEach(function (el, i) {
         if (i === 0) { el.style.opacity = "1"; el.style.transform = "none"; return; }
         var start = i === 1 ? .32 : .66;

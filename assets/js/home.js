@@ -48,6 +48,7 @@
       var it = item(sec, id);
       if (!it) return "";
       return '<article class="kcard" data-reveal-item>' +
+        '<span class="kcard__arch arch" aria-hidden="true"></span>' +
         '<p class="kcard__idx">0' + (i + 1) + "</p>" +
         '<h3 class="kcard__name">' + esc(it.name) + "</h3>" +
         (it.desc ? '<p class="kcard__desc">' + esc(it.desc) + "</p>" : "") +
@@ -105,7 +106,7 @@
   }
   function fillReviews() {
     var mount = $("[data-review-cards]");
-    var reviews = (SITE.reviews || []).slice(0, 3);
+    var reviews = (SITE.reviews || []).slice(0, 4);
     if (!mount || !reviews.length) return;
     mount.innerHTML = reviews.map(function (r) {
       var stars = "";

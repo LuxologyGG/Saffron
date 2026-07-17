@@ -56,6 +56,16 @@
   }
 
   /* ------------------------------------ 01 the party platter bands */
+  /* BM06 / item 31: repeat the dome-arch mask as a real grid unit (one
+     small arch photo per tray) instead of a single one-off hero frame,
+     reusing this page's own triptych photography, decorative repeats
+     so they carry aria-hidden + empty alt (the hero triptych above
+     already names each photo for screen readers). */
+  var platterPhotos = {
+    "platter-10": "assets/img/catering-platters.jpg",
+    "platter-20": "assets/img/home-menu-teaser.jpg",
+    "platter-30": "assets/img/menu-kabab.jpg"
+  };
   function fillPlatters() {
     var mount = $("[data-platter-bands]");
     if (!mount || !platterSec) return;
@@ -66,7 +76,9 @@
       var lines = String(it.desc || "").replace(/\.$/, "").split(", ").map(function (ln) {
         return "<li>" + esc(ln) + "</li>";
       }).join("");
+      var photo = platterPhotos[id];
       return '<article class="platter" data-reveal-item>' +
+        (photo ? '<div class="ph arch platter__ph" aria-hidden="true"><img src="' + esc(photo) + '" loading="lazy" alt=""></div>' : "") +
         '<div class="platter__serves">' +
           '<span class="platter__count"><span data-count="' + esc(it.serves) + '" data-plain>' + esc(it.serves) + "</span></span>" +
           '<span class="platter__unit">serves</span>' +

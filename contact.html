@@ -124,11 +124,32 @@
             <span class="c-hero__line"><em>Torrance</em></span>
           </h1>
           <div class="script-line c-hero__script">
-            <span class="script-fa" lang="fa" dir="rtl" aria-hidden="true" data-bind="company.scriptFa"></span>
-            <span class="translit" data-bind="company.scriptFaTranslit"></span>
+            <span class="script-fa" lang="fa" dir="rtl" aria-hidden="true" data-bind="company.scriptFa">زعفران و برنج</span>
+            <span class="translit" data-bind="company.scriptFaTranslit">Za'faran o berenj, saffron and rice</span>
           </div>
 
-          <dl class="hud-grid" data-hud-rows data-reveal-group></dl>
+          <dl class="hud-grid" data-hud-rows data-reveal-group>
+            <div class="hud-row" data-reveal-item>
+              <dt class="hud-row__k">Coordinates</dt>
+              <dd class="hud-row__v" data-scramble>33.8107° N, 118.3494° W</dd>
+            </div>
+            <div class="hud-row" data-reveal-item>
+              <dt class="hud-row__k">Address</dt>
+              <dd class="hud-row__v" data-scramble>3801 Pacific Coast Hwy, Torrance, CA 90505</dd>
+            </div>
+            <div class="hud-row" data-reveal-item>
+              <dt class="hud-row__k">Hours</dt>
+              <dd class="hud-row__v" data-scramble>Daily 11 AM to 8 PM</dd>
+            </div>
+            <div class="hud-row" data-reveal-item>
+              <dt class="hud-row__k">Phone</dt>
+              <dd class="hud-row__v" data-scramble>(310) 504-0310</dd>
+            </div>
+            <div class="hud-row" data-reveal-item>
+              <dt class="hud-row__k">Services</dt>
+              <dd class="hud-row__v" data-scramble>Dine-in, Pickup, Delivery, and Catering</dd>
+            </div>
+          </dl>
 
           <div class="c-hero__compass-block">
             <div class="c-hero__compass-wrap">
@@ -176,32 +197,40 @@
         <div class="essentials">
           <div class="essentials__call">
             <p class="eyebrow eyebrow--plain essentials__kick">Call ahead</p>
-            <a class="essentials__tel" data-bind-href="company.phoneHref" data-bind="company.phone">(310) 504-0310</a>
-            <p class="essentials__note" data-bind="company.hours.note"></p>
+            <a class="essentials__tel" href="tel:+13105040310" data-bind-href="company.phoneHref" data-bind="company.phone">(310) 504-0310</a>
+            <p class="essentials__note" data-bind="company.hours.note">Call to confirm holiday hours.</p>
           </div>
           <div class="essentials__grid" data-reveal-group>
             <div class="essentials__block" data-reveal-item>
               <p class="essentials__label">Address</p>
               <address class="essentials__address">
-                <span data-bind="company.address.street"></span><br>
-                <span data-bind="company.address.city"></span>,
-                <span data-bind="company.address.state"></span>
-                <span data-bind="company.address.zip"></span>
+                <span data-bind="company.address.street">3801 Pacific Coast Hwy</span><br>
+                <span data-bind="company.address.city">Torrance</span>,
+                <span data-bind="company.address.state">CA</span>
+                <span data-bind="company.address.zip">90505</span>
               </address>
-              <a class="tlink" data-bind-href="company.address.mapsUrl" target="_blank" rel="noopener">Open in Google Maps</a>
+              <a class="tlink" href="https://www.google.com/maps/search/?api=1&amp;query=Saffron%20and%20Rice%203801%20Pacific%20Coast%20Hwy%20Torrance%20CA%2090505" data-bind-href="company.address.mapsUrl" target="_blank" rel="noopener">Open in Google Maps</a>
             </div>
             <div class="essentials__block" data-reveal-item>
               <p class="essentials__label">Hours</p>
-              <p class="essentials__hours" data-bind="company.hours.label"></p>
-              <p class="essentials__hours-note" data-bind="company.hours.note"></p>
+              <p class="essentials__hours" data-bind="company.hours.label">Open daily, 11:00 AM to 8:00 PM</p>
+              <p class="essentials__hours-note" data-bind="company.hours.note">Call to confirm holiday hours.</p>
             </div>
             <div class="essentials__block" data-reveal-item>
               <p class="essentials__label">Services</p>
-              <ul class="essentials__services" data-c-services></ul>
+              <ul class="essentials__services" data-c-services>
+                <li>Dine-in</li>
+                <li>Pickup</li>
+                <li>Delivery</li>
+                <li>Catering</li>
+              </ul>
             </div>
             <div class="essentials__block" data-reveal-item>
               <p class="essentials__label">Order and follow</p>
-              <div class="essentials__actions" data-c-actions></div>
+              <div class="essentials__actions" data-c-actions>
+                <a class="btn" href="https://www.grubhub.com/restaurant/south-bay-food-hall-3801-pacific-coast-hwy-torrance/7933240" target="_blank" rel="noopener"><span class="btn__text">Order on Grubhub</span></a>
+                <a class="btn" href="https://www.instagram.com/saffronfmb/" target="_blank" rel="noopener"><span class="btn__text">Instagram</span></a>
+              </div>
             </div>
           </div>
         </div>
@@ -211,7 +240,7 @@
     </section>
 
     <!-- 02 THE MAP: self-hosted static images, no iframe, no live tiles -->
-    <section class="section chapter" id="map">
+    <section class="section chapter chapter--tight" id="map">
       <div class="wrap">
         <div class="chapter__head">
           <span class="chapter__num" aria-hidden="true">02</span>
@@ -219,8 +248,8 @@
           <h2 class="h2 chapter__title" data-reveal>The corner of <em>PCH</em></h2>
         </div>
         <p class="lead measure" data-reveal="fade">You will find us in the plaza at
-          <span data-bind="company.address.street"></span>, right on Pacific Coast Highway
-          in <span data-bind="company.address.city"></span>. Pull in, park, and look for
+          <span data-bind="company.address.street">3801 Pacific Coast Hwy</span>, right on Pacific Coast Highway
+          in <span data-bind="company.address.city">Torrance</span>. Pull in, park, and look for
           the saffron marker below.</p>
 
         <div class="mappanel" data-mappanel data-reveal="fade">
@@ -242,7 +271,7 @@
               <span data-map-toggle-label>Show the area map</span>
             </button>
             <p class="mappanel__caption">Map data &copy; OpenStreetMap contributors</p>
-            <a class="tlink" data-bind-href="company.address.mapsUrl" target="_blank" rel="noopener">Open in Google Maps</a>
+            <a class="tlink" href="https://www.google.com/maps/search/?api=1&amp;query=Saffron%20and%20Rice%203801%20Pacific%20Coast%20Hwy%20Torrance%20CA%2090505" data-bind-href="company.address.mapsUrl" target="_blank" rel="noopener">Open in Google Maps</a>
           </div>
         </div>
 
@@ -263,11 +292,11 @@
           phone or walk in the door on Pacific Coast Highway and we will take it from there.</p>
         <div class="call-panel" data-reveal="fade">
           <p class="eyebrow call-panel__kick">Ring the kitchen</p>
-          <a class="call-panel__phone" data-bind-href="company.phoneHref" data-bind="company.phone">(310) 504-0310</a>
-          <p class="call-panel__hours" data-bind="company.hours.label"></p>
-          <p class="call-panel__note" data-bind="company.hours.note"></p>
+          <a class="call-panel__phone" href="tel:+13105040310" data-bind-href="company.phoneHref" data-bind="company.phone">(310) 504-0310</a>
+          <p class="call-panel__hours" data-bind="company.hours.label">Open daily, 11:00 AM to 8:00 PM</p>
+          <p class="call-panel__note" data-bind="company.hours.note">Call to confirm holiday hours.</p>
           <div class="call-panel__ctas">
-            <a class="button-070 is-accent" data-bind-href="orderLinks.0.href" target="_blank" rel="noopener">
+            <a class="button-070 is-accent" href="https://www.grubhub.com/restaurant/south-bay-food-hall-3801-pacific-coast-hwy-torrance/7933240" data-bind-href="orderLinks.0.href" target="_blank" rel="noopener">
               <span class="button-070__bg-wrap">
                 <span class="button-070__corner-wrap">
                   <span class="button-070__corner is--top-left"></span>
@@ -277,7 +306,7 @@
                 </span>
                 <span class="button-070__bg"></span>
               </span>
-              <span class="button-070__inner"><span class="button-070__text" data-bind="orderLinks.0.label">Order online</span></span>
+              <span class="button-070__inner"><span class="button-070__text" data-bind="orderLinks.0.label">Order on Grubhub</span></span>
             </a>
             <a class="btn" href="menu.html"><span class="btn__text">See the menu</span></a>
           </div>
