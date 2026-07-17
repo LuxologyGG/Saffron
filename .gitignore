@@ -4,3 +4,4 @@ research/refs/*/styles.css
 review/capture/
 node_modules/
 __pycache__/
+review/round-*/capture/
