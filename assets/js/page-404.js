@@ -162,6 +162,26 @@
     SR.mountCanvas(cv, draw, { host: host, staticT: 5200 });
   });
 
+  /* ------------------------------------- core message: fast reveal */
+  /* The "404" numeral and "Page not found" kicker are the message a
+     lost visitor actually needs. They run on their own short timeline
+     started at boot, decoupled from the shared loader/curtain chain
+     and from the slower staged hero-intro below, so they resolve in
+     well under 1.5s regardless of how long the ambient scatter-canvas
+     or the rest of the entrance choreography takes. Reduced motion:
+     no tween runs, so the CSS default (visible) already reads as the
+     finished state. */
+  SR.onBoot(function () {
+    if (SR.reduce || typeof window.gsap === "undefined") return;
+    var g = window.gsap;
+    var num = $(".nf-hero__num");
+    var kicker = $(".nf-hero__kicker");
+    if (!num && !kicker) return;
+    var tl = g.timeline({ defaults: { ease: "sr" } });
+    if (num) tl.from(num, { opacity: 0, y: 22, duration: .5 }, 0);
+    if (kicker) tl.from(kicker, { y: 14, opacity: 0, duration: .45 }, .12);
+  });
+
   /* --------------------------------------------- hero intro */
   SR.onBoot(function () {
     if (SR.reduce || typeof window.gsap === "undefined") return;
@@ -172,18 +192,16 @@
     SR.ready(function () {
       var run = function () {
         var tl = g.timeline({ defaults: { ease: "sr" } });
-        tl.from(".nf-hero__num", { opacity: 0, y: 26, duration: 1.1 }, .05)
-          .from(".nf-hero__kicker", { y: 16, opacity: 0, duration: .7 }, .3);
         if (window.SplitText) {
           var split = new window.SplitText(title, { type: "lines", mask: "lines", linesClass: "sl" });
-          tl.from(split.lines, { yPercent: 118, filter: "blur(7px)", duration: 1.1, stagger: .12 }, .4);
+          tl.from(split.lines, { yPercent: 118, filter: "blur(7px)", duration: 1.1, stagger: .12 }, 0);
         } else {
-          tl.from(title, { y: 40, opacity: 0, duration: 1.1 }, .4);
+          tl.from(title, { y: 40, opacity: 0, duration: 1.1 }, 0);
         }
-        tl.from(".nf-hero__script", { y: 14, opacity: 0, duration: .7 }, .7)
-          .from(".nf-hero__lead", { y: 16, opacity: 0, duration: .7 }, .85)
-          .from(".nf-door", { y: 20, opacity: 0, duration: .8 }, 1.0)
-          .from(".nf-hero__quick", { y: 12, opacity: 0, duration: .6 }, 1.15);
+        tl.from(".nf-hero__script", { y: 14, opacity: 0, duration: .7 }, .3)
+          .from(".nf-hero__lead", { y: 16, opacity: 0, duration: .7 }, .45)
+          .from(".nf-door", { y: 20, opacity: 0, duration: .8 }, .6)
+          .from(".nf-hero__quick", { y: 12, opacity: 0, duration: .6 }, .75);
       };
       if (d.fonts && d.fonts.ready) d.fonts.ready.then(run); else run();
     });

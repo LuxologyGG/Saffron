@@ -96,6 +96,16 @@ body.menu-open .nav.nav--over-dark {
   -webkit-backdrop-filter: none; backdrop-filter: none;
   border-bottom-color: transparent;
 }
+/* AX1: the brand logo must not render (or be reachable) above the open
+   paper panel. .nav__toggle stays visible and on top, it is the close
+   control; .nav (position:fixed + z-index) establishes its own
+   stacking context, so a descendant's z-index can never outrank a
+   higher-z-index sibling of .nav (the .menu overlay) no matter how
+   high it is set, only DOM removal from the header can. app.js also
+   marks .nav__brand (and, defensively, .nav__links/.nav__call) inert
+   while open so it drops out of the Tab order, not just the paint
+   order. visibility:hidden (not display:none) keeps layout stable. */
+body.menu-open .nav__brand { visibility: hidden; }
 
 .nav__brand {
   display: inline-flex; align-items: center; gap: 13px;
@@ -378,6 +388,56 @@ body.menu-open .menu { display: flex; }
   letter-spacing: var(--tracking-mono); text-transform: uppercase;
   color: var(--fg-faint);
 }
+/* On-teal contrast audit (see AX2): --fg-faint is mixed against
+   --teal-deep, so it fails 4.5:1 (3.70:1, measured live) wherever an
+   on-teal scope paints its --bg-2 ground instead, e.g. menu.html's
+   pinned .mhero__carta. --fg-soft clears both --bg and --bg-2 teal
+   stops (7.27:1 / 5.47:1), scoped override only. */
+.on-teal .translit { color: var(--fg-soft); }
+
+/* ------------------------------------- VS1: same-bg chapter joins */
+/* Two consecutive .chapter sections sharing one background stack
+   their two padding-block halves into a 270-350px dead gap with no
+   ornament, rule, or numeral to read while scrolling through it (see
+   VS1). Two tools, pick whichever reads better at a given join, or
+   combine them. Neither is wired into any page from this file, page
+   fixers add the class/markup at each listed join:
+     index #reviews -> #visit, catering #platters -> #combos ->
+     #how -> #faq -> #order, about's chapter joins, contact
+     #essentials -> #map.
+
+   1) .chapter--tight: add alongside .section.chapter (and .on-dark/
+      .on-teal if present) on the SECOND of a same-background pair to
+      halve its lead-in only; the pair's total rhythm and the gap
+      before the chapter that follows it are untouched.
+        <section class="section chapter chapter--tight" id="visit"> */
+.chapter--tight { padding-block-start: var(--sect-sm); }
+
+/* 2) .gap-ornament: a standalone hairline thread with a saffron tick,
+      centered in the gap, aria-hidden. Drop it as a sibling BETWEEN
+      the two <section class="chapter"> elements, not inside either
+      one's .wrap. It reads off whatever --fg/--accent are in scope at
+      that point in the page, so wrap it in the same on-dark/on-teal
+      class as its neighbors when the join sits on a dark or teal
+      ground.
+        <div class="gap-ornament" aria-hidden="true">
+          <span class="gap-ornament__line"></span>
+          <span class="gap-ornament__mark"></span>
+          <span class="gap-ornament__line"></span>
+        </div> */
+.gap-ornament {
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+  max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter);
+  padding-block: clamp(20px, 3vw, 40px);
+}
+.gap-ornament__line {
+  flex: 1 1 auto; height: 1px; max-width: 220px;
+  background: color-mix(in srgb, var(--fg) 22%, transparent);
+}
+.gap-ornament__mark {
+  flex: none; width: 7px; height: 7px;
+  background: var(--accent); transform: rotate(45deg);
+}
 
 /* --------------------------------------------- media + blur-up */
 /* Wrap every content photo: <figure class="ph arch">...<img></figure>
@@ -504,6 +564,11 @@ body.menu-open .menu { display: flex; }
   font-family: var(--font-mono); font-size: var(--fs-mono);
   color: var(--price);
 }
+/* AX2: --price (pomegranate-lite) resolves to 4.04:1 on .on-teal's
+   --bg (teal-deep), under the 4.5:1 AA floor for small mono text,
+   even though the same token passes fine on .on-dark (ink). Scoped
+   override only, .on-dark/.on-teal elsewhere keep --price as-is. */
+.on-teal .stat__price { color: var(--fg-soft); }
 
 /* ------------------------------------------------------- footer */
 /* Rendered by app.js into <footer class="footer on-dark" data-site-footer>. */
@@ -553,6 +618,13 @@ body.menu-open .menu { display: flex; }
   color: var(--fg-soft); transition: color var(--t-fast) var(--e-out);
 }
 .footer__col a:hover { color: var(--accent-text); }
+/* AX5: "Menu"/"About" alone render at 28px/35px wide at 390px, under
+   the 44px tap-target floor; the other footer links (address,
+   Grubhub, Instagram, longer page names) already clear it on text
+   width alone. Scoped to the page-nav <li><a> app.js marks
+   .footer__navlink, so unrelated footer links keep their natural
+   width. */
+.footer__navlink { min-width: 44px; }
 .footer__phone {
   font-family: var(--font-display); font-size: clamp(22px, 1.9vw, 30px);
   color: var(--fg); margin-top: 4px;
@@ -632,8 +704,11 @@ body.menu-open .menu { display: flex; }
 .curtain {
   position: fixed; left: 0; top: 0; width: 100%; height: 100vh;
   z-index: var(--z-transition); background: var(--ink);
-  transform: translateY(115%); pointer-events: none;
+  pointer-events: none;
   display: none; /* app.js shows it only while covering or revealing */
+  /* Parked position (yPercent: 115) is set by app.js buildCurtain()/
+     parkCurtain(), the sole source of truth, so the CSS starting
+     transform and the JS tween starting point never double up. */
 }
 .curtain.is-active { display: block; }
 .curtain::before {
@@ -654,6 +729,9 @@ body.menu-open .menu { display: flex; }
   letter-spacing: var(--tracking-mono); text-transform: uppercase;
   color: var(--fg-faint);
 }
+/* Same on-teal audit fix as .translit above: menu.html's pinned
+   .mhero__carta sits on --bg-2, where --fg-faint fails (3.70:1). */
+.on-teal .scrollcue { color: var(--fg-soft); }
 .scrollcue svg { display: block; animation: k-chev 2.1s var(--e-inout) infinite; }
 
 /* ------------------------------------------------- ornaments */
@@ -665,7 +743,8 @@ body.menu-open .menu { display: flex; }
 
 /* ---------------------------------------------- reveal helpers */
 /* GSAP sets initial states from tweens, so nothing is CSS-hidden
-   and a JS failure leaves the page complete. The only html.js hook
-   is the SplitText mask overflow. */
+   and a JS failure leaves the page complete. SplitText's own
+   mask: "lines" option wraps each .sl line in its overflow-hidden
+   mask element, so the only html.js hook left here is the transform
+   perf hint. */
 html.js .sl { will-change: transform; }
-.split-mask { overflow: hidden; }

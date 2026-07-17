@@ -209,7 +209,6 @@ h1, h2, h3, h4 { font-weight: 500; line-height: var(--lh-snug); }
 }
 
 /* ============================ Type utilities ============================ */
-.display { font-family: var(--font-display); font-weight: 500; }
 .mono    { font-family: var(--font-mono); }
 .script-fa {
   font-family: var(--font-script);
@@ -236,7 +235,6 @@ h1, h2, h3, h4 { font-weight: 500; line-height: var(--lh-snug); }
 
 .h1 { font-family: var(--font-display); font-size: var(--fs-h1); line-height: var(--lh-tight); font-weight: 500; letter-spacing: var(--tracking-display); }
 .h2 { font-family: var(--font-display); font-size: var(--fs-h2); line-height: var(--lh-tight); font-weight: 500; letter-spacing: var(--tracking-display); }
-.h3 { font-family: var(--font-display); font-size: var(--fs-h3); line-height: var(--lh-snug); font-weight: 500; }
 .h4 { font-family: var(--font-display); font-size: var(--fs-h4); line-height: 1.16; font-weight: 600; }
 .h1 em, .h2 em, .h3 em { font-style: italic; font-weight: 500; }  /* italic emphasis words */
 .lead { font-size: var(--fs-lead); line-height: 1.5; color: var(--fg-soft); font-weight: 400; }
@@ -246,17 +244,6 @@ h1, h2, h3, h4 { font-weight: 500; line-height: var(--lh-snug); }
 .wrap    { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter); }
 .section { padding-block: var(--sect); position: relative; }
 .section--sm { padding-block: var(--sect-sm); }
-.grid    { display: grid; gap: clamp(20px, 2.4vw, 40px); }
-.cols-2  { grid-template-columns: repeat(2, 1fr); }
-.cols-3  { grid-template-columns: repeat(3, 1fr); }
-.cols-4  { grid-template-columns: repeat(4, 1fr); }
-.flex    { display: flex; }
-.between { justify-content: space-between; }
-.items-end { align-items: flex-end; }
-@media (max-width: 900px) {
-  .cols-2, .cols-3, .cols-4 { grid-template-columns: 1fr; }
-  .cols-3.keep-2, .cols-4.keep-2 { grid-template-columns: repeat(2, 1fr); }
-}
 
 /* The arch: the single curved form in the language.
    .arch = round dome mask for imagery. .arch--ogee = pointed Persian

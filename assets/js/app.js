@@ -160,14 +160,14 @@
     var insta = (SITE.social && SITE.social[0]) || null;
     var a = c.address || {};
     var pageLinks = NAV_LINKS.map(function (l) {
-      return '<li><a href="' + l.href + '">' + esc(l.label) + "</a></li>";
+      return '<li><a class="footer__navlink" href="' + l.href + '">' + esc(l.label) + "</a></li>";
     }).join("");
     host.innerHTML =
       '<div class="wrap">' +
         '<div class="footer__top">' +
           '<div class="footer__seal">' +
             '<img src="assets/img/brand/logo-lockup.png" ' +
-                 'alt="' + esc(c.name) + ", " + esc(c.tagline) + '" loading="lazy" width="692" height="484">' +
+                 'alt="' + esc(c.name) + ", " + esc(c.tagline) + '" loading="lazy" width="800" height="910">' +
           "</div>" +
           '<div class="footer__lede">' +
             '<p class="script-fa footer__fa" lang="fa" dir="rtl" aria-hidden="true">' + esc(c.scriptFa) + "</p>" +
@@ -265,7 +265,12 @@
     d.body.classList.toggle("menu-open", open);
     toggleEl.setAttribute("aria-expanded", String(open));
     toggleEl.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-    [$("#main"), $("[data-site-footer]")].forEach(function (el) {
+    /* Seal off every landmark outside the overlay so Tab cannot escape
+       into it: main content, the footer, and the header's own brand
+       link and nav (the toggle itself stays reachable, it is the
+       close control). .nav__links/.nav__call are already display:none
+       at the width the overlay opens, so inert on them is defensive. */
+    [$("#main"), $("[data-site-footer]"), $(".nav__brand"), $(".nav__links"), $(".nav__call")].forEach(function (el) {
       if (el) { if (open) el.setAttribute("inert", ""); else el.removeAttribute("inert"); }
     });
     if (window.lenisRef) { if (open) window.lenisRef.stop(); else window.lenisRef.start(); }
@@ -376,8 +381,11 @@
     g.killTweensOf(curtain);
     curtain.classList.add("is-active");
     g.set(curtain, { yPercent: 0 });
+    /* Reveal is already in motion (the cover already fully hid the
+       page), so it wants a settle, not an ease-in: srSoft over
+       srInOut here, "motion that settles like steam". */
     g.to(curtain, {
-      yPercent: -115, duration: .9, ease: "srInOut", delay: .08,
+      yPercent: -115, duration: .9, ease: "srSoft", delay: .08,
       onStart: notifyReady,
       onComplete: parkCurtain
     });
@@ -432,12 +440,17 @@
       "</div>";
     d.body.appendChild(el);
     /* Inline the vector wordmark so its letterforms can stroke-draw.
-       Local same-origin fetch; the text word stays as the fallback. */
+       Local same-origin fetch; the text word stays as the fallback.
+       el._started (set by runLoader's go(), CP-6) flags that the
+       180ms fallback already kicked the timeline off with the plain
+       text word; if the fetch lands after that we skip the swap
+       entirely rather than pop a fully-inked, never-drawn SVG in
+       mid-animation. */
     if (window.fetch) {
       el._markReady = fetch("assets/img/brand/logo-text.svg")
         .then(function (r) { return r.ok ? r.text() : null; })
         .then(function (txt) {
-          if (!txt) return false;
+          if (!txt || el._started) return false;
           var slot = $(".loader__mark", el);
           if (!slot || !el.isConnected) return false;
           slot.innerHTML = txt;
@@ -467,6 +480,7 @@
     function go() {
       if (started) return;
       started = true;
+      loader._started = true;
       runLoaderTimeline(loader);
     }
     if (loader._markReady) {

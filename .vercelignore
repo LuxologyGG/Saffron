@@ -1,0 +1,9 @@
+# Saffron and Rice, deploy exclusions.
+# Everything below is source material, review artifacts, or local
+# tooling, never part of the served site. Keep this list in sync if
+# new top-level non-deploy directories show up.
+research/
+review/
+tools/
+verification/
+node_modules/
