@@ -49,6 +49,19 @@ Run started: 2026-07-17. Orchestrator: Claude Code (remote session), branch `cla
   DrawSVG + Lenis 1.3, self-hosted. assets/img/: 15 optimized production photos (QA crops done).
 
 ## Phase 3 - EXECUTION: in progress
+
+- Run 1 (wf_6ea7685f-f33): shell+home, menu, catering built and self-checked (silent console,
+  a11y probes pass). about/contact/404/integration failed at spawn: "Usage credits are required
+  for this model." about.html was left on disk without its css/js.
+- Skill update received mid-run: camron-website-create now ships reference 10, a mandated
+  resources contract. Compliance review: self-hosting, systems-only adaptation, vendored
+  GSAP/Lenis, self-hosted fonts, real-first photography, provenance: already compliant.
+  Folded into the resumed integration pass: Osmo button-070 corner-bracket CTA as the house
+  primary button, dead-vendor-file check, display-font preload, scriptFaTranslit data binding.
+- Higgsfield mandate: balance checked = 2 credits (free plan); a hero clip runs about 6. Per the
+  cost rule: no generation attempted, no credits burned, cinematic-still fallback kept, shortfall
+  and exact top-up documented in DELIVERY-NOTES.md item 8.
+- Resume (same run id, cached prefix): about/contact/404 + integration re-running on sonnet.
 ## Phase 3 - EXECUTION: not started
 ## Phase 4 - REVIEW: not started
 ## Phase 5 - DEPLOY AND VERIFY: not started

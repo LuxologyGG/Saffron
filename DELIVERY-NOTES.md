@@ -32,3 +32,10 @@ Compiled 2026-07-17 during the autonomous build. Each item is safe as shipped bu
 7. Reviews: quotes shown are real, new-era (2024 to 2026), attributed by first name, rating, and
    platform, from the listings for this address. Aggregate scores were NOT printed on the site
    because platform listings still mix the old market identity with the new kitchen.
+
+8. AI hero video: the build method calls for a Higgsfield cinemagraph hero clip. The connected
+   Higgsfield account holds 2 credits on the free plan and a clip runs about 6 credits, so no
+   generation was attempted and no credits were spent. The heroes use cinematic motion on real
+   stills instead (canvas saffron-thread drift, slow zooms). To add a video hero later: top up
+   Higgsfield credits (smallest pack is 500) and regenerate; the hero markup swaps a video in
+   behind the same arch mask in one block.

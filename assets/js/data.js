@@ -28,6 +28,7 @@ window.SITE = {
     plainName: "Saffron and Rice",
     tagline: "Persian, Middle Eastern Kitchen",
     scriptFa: "زعفران و برنج", /* zafaran o berenj, saffron and rice */
+    scriptFaTranslit: "Za'faran o berenj, saffron and rice",
     address: {
       street: "3801 Pacific Coast Hwy",
       city: "Torrance",
