@@ -1,0 +1,6 @@
+research/refs/*/screenshots/
+research/refs/*/page.html
+research/refs/*/styles.css
+review/capture/
+node_modules/
+__pycache__/
