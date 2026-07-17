@@ -62,6 +62,22 @@ Run started: 2026-07-17. Orchestrator: Claude Code (remote session), branch `cla
   cost rule: no generation attempted, no credits burned, cinematic-still fallback kept, shortfall
   and exact top-up documented in DELIVERY-NOTES.md item 8.
 - Resume (same run id, cached prefix): about/contact/404 + integration re-running on sonnet.
+- Phase 3 COMPLETE (wf_6ea7685f-f33, 7/7, 0 errors). Integration verified: nav and footer
+  byte-identical across pages, unified Restaurant JSON-LD with exact NAP, script order identical,
+  Osmo button-070 corner-bracket CTA applied site-wide (token-themed, reduced-motion gated), no
+  dead vendor files, font+hero preloads present, sitemap/robots/.nojekyll written, silent console
+  across all 6 pages at both widths, reduced-motion renders finished. Known artifact documented:
+  programmatic scrolling fights the Lenis RAF loop (real input does not reproduce).
+- Owner supplied official logo renders + wordmark SVG mid-run (commit c9d7423). Brand set rebuilt
+  from them (lockup, cleaned emblem, favicons, 624K total after quantization). Wordmark SVG wired
+  into the first-visit loader: DrawSVG stroke-draw then fill, text fallback kept, console clean.
+
+## Phase 4 - REVIEW: in progress
+
+- Round 1 workflow launched (wf_5f7fd380-b81): capture + reference composites, then six blind
+  lenses (Motion, Code/Perf, Brand, A11y, Visual, Benchmark) at high effort with sonnet fallback,
+  then chair verdict into REVIEW-LOG.md + FIXLIST. Gate: all lenses 9.5+, zero critical/major,
+  reviewer-verified fixes, minimum three rounds.
 ## Phase 3 - EXECUTION: not started
 ## Phase 4 - REVIEW: not started
 ## Phase 5 - DEPLOY AND VERIFY: not started
