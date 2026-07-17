@@ -131,6 +131,8 @@ window.SITE = {
           { id: "gheyme-bademjan", name: "Gheyme Bademjan", price: 18.99, veg: 16.99, desc: "" },
           { id: "bademjan", name: "Bademjan", price: 21.99, veg: 18.99, desc: "Beef, eggplant, tomato sauce, onions." },
           { id: "fasenjoon", name: "Fasenjoon", price: 18.99, veg: 16.99, desc: "Walnut, pomegranate molasses, chicken." },
+          /* desc below is verbatim from the printed menu (authoritative
+             transcription); it is a sourced claim, not marketing copy. */
           { id: "lamb-shank", name: "Lamb Shank with Baghali Polo", price: 25.99, desc: "New Zealand, grass-fed, halal." },
           { id: "dizzy", name: "Dizzy", price: 25.99, priceAssumed: true, desc: "Lamb shank, potato, beans." },
           { id: "tahchin", name: "Tahchin", price: 15.99, veg: 13.99, desc: "" }

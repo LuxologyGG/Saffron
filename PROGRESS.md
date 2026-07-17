@@ -78,6 +78,22 @@ Run started: 2026-07-17. Orchestrator: Claude Code (remote session), branch `cla
   lenses (Motion, Code/Perf, Brand, A11y, Visual, Benchmark) at high effort with sonnet fallback,
   then chair verdict into REVIEW-LOG.md + FIXLIST. Gate: all lenses 9.5+, zero critical/major,
   reviewer-verified fixes, minimum three rounds.
+- Round 1 run stalled once (runner died silently on the model-credit wall ~42 min in); resumed
+  with cached capture + codeperf, remaining lenses on sonnet. Watchdog self-check-ins armed.
+- ROUND 1 VERDICT: NEEDS-WORK, overall 6.87 (motion 7.3, brand 7.2, visual 7.2, a11y 6.8,
+  codeperf 6.5, benchmark 6.2). 0 critical, 15 major, 17 minor. Chair themes: on-teal contrast
+  scope, under-photographed long scroll (highest leverage), registered-but-unshipped pattern,
+  half-built menu transliteration. No lens flagged for rerun.
+- ORCHESTRATOR OVERRIDE, finding BR-2 (FIXLIST item 6) REJECTED: the lamb shank desc
+  "New Zealand, grass-fed, halal." is verbatim from the authoritative printed-menu transcription
+  in the build brief, so it is a sourced claim, not invented copy. data.js now carries a
+  provenance comment at the item. Verifier instructed to confirm the desc stayed intact.
+- Fix pass launched (wf_b9f008b7-a39): wave 1 code fixers (alpha: shell/tokens/root cleanup +
+  full on-teal audit; beta: menu translit, no-JS prerender, 404, image re-encodes), wave 2 design
+  fixers (index environmental hero + arch grid + pull-quote; catering/about/contact photography
+  and ornaments), wave 3 independent adversarial verifier who alone may write fixed (verified).
+  Sanctioned tradeoff recorded: 404.html switches to root-relative URLs (FIXLIST item 8) since a
+  nested-path 404 cannot resolve relative assets; the rest of the site stays path-relative.
 ## Phase 3 - EXECUTION: not started
 ## Phase 4 - REVIEW: not started
 ## Phase 5 - DEPLOY AND VERIFY: not started
