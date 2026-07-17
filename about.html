@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About, Saffron &amp; Rice Torrance</title>
+  <meta name="description" content="The story of Saffron &amp; Rice: a Persian market on Pacific Coast Highway in Torrance, now a deli and catering kitchen under new management. Halal beef and chicken.">
+
+  <link rel="canonical" href="https://saffron-and-rice.vercel.app/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://saffron-and-rice.vercel.app/about.html">
+  <meta property="og:title" content="About, Saffron &amp; Rice Torrance">
+  <meta property="og:description" content="Years as a Persian market, now a Persian and Middle Eastern deli and catering kitchen. Same address, new fire.">
+  <meta property="og:image" content="https://saffron-and-rice.vercel.app/assets/img/about-hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About, Saffron &amp; Rice Torrance">
+  <meta name="twitter:image" content="https://saffron-and-rice.vercel.app/assets/img/about-hero.jpg">
+  <meta name="theme-color" content="#0f0d0c">
+
+  <link rel="icon" href="assets/img/brand/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/img/brand/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/brand/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/img/brand/favicon-192.png">
+
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/cormorant-garamond-latin-500-normal.woff2" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="assets/css/page-about.css">
+
+  <script>
+    /* Boot shim: html.js gate, paint-blocking cover for the loader and
+       page arrivals, and a watchdog that clears everything if app.js
+       never boots. No facts, no content, shell state only. */
+    (function () {
+      var de = document.documentElement;
+      de.classList.add("js");
+      var red = false;
+      try { red = window.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch (e) {}
+      var seen = false, arrive = false;
+      try {
+        seen = sessionStorage.getItem("srSeen") === "1";
+        arrive = sessionStorage.getItem("srArrive") === "1";
+      } catch (e) {}
+      if (!red && (!seen || arrive)) de.classList.add("sr-cover");
+      setTimeout(function () {
+        if (!window.__SR_BOOTED) { de.classList.remove("sr-cover"); de.classList.add("sr-noboot"); }
+      }, 4000);
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Saffron & Rice",
+    "description": "Persian and Middle Eastern deli and catering kitchen in Torrance, California. Formerly a Persian market at the same address, now cooking kabab, stews, and saffron rice under new management.",
+    "url": "https://saffron-and-rice.vercel.app/about.html",
+    "image": "https://saffron-and-rice.vercel.app/assets/img/about-hero.jpg",
+    "telephone": "+13105040310",
+    "servesCuisine": ["Persian", "Middle Eastern"],
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3801 Pacific Coast Hwy",
+      "addressLocality": "Torrance",
+      "addressRegion": "CA",
+      "postalCode": "90505",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "11:00",
+      "closes": "20:00"
+    }]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" data-nav>
+    <a class="nav__brand" href="index.html" aria-label="Saffron and Rice, home">
+      <span class="nav__seal"><img src="assets/img/brand/emblem.png" alt="" width="34" height="23"></span>
+      <span class="nav__word">Saffron &amp; Rice</span>
+    </a>
+    <nav class="nav__right" aria-label="Primary">
+      <ul class="nav__links">
+        <li><a class="nav__link" href="menu.html">Menu</a></li>
+        <li><a class="nav__link" href="catering.html">Catering</a></li>
+        <li><a class="nav__link is-active" href="about.html" aria-current="page">About</a></li>
+        <li><a class="nav__link" href="contact.html">Contact</a></li>
+      </ul>
+      <a class="btn nav__call" data-bind-href="company.phoneHref">
+        <span class="btn__text" data-bind="company.phone">Call us</span></a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false"
+              aria-controls="site-menu" data-menu-toggle>
+        <span class="nav__toggle-bar"></span><span class="nav__toggle-bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- HERO: day to night. A tall sticky stage whose ground scrubs
+         from cream to ink while the story advances in three steps.
+         DEFAULT (no JS, reduced motion): the finished night state with
+         every step visible. page-about.js flips it to the animated day
+         form before first paint when motion is allowed. -->
+    <section class="ab-dusk" data-dusk>
+      <div class="ab-dusk__darkzone" data-nav-theme="dark" aria-hidden="true"></div>
+      <div class="ab-dusk__stage" data-dusk-stage>
+        <div class="wrap ab-dusk__inner">
+          <header class="ab-dusk__head">
+            <p class="eyebrow ab-dusk__kicker" data-scramble>Our story</p>
+            <h1 class="h2 ab-dusk__title" data-dusk-title>
+              <span class="ab-dusk__line">The market becomes</span>
+              <span class="ab-dusk__line">a <em>kitchen</em></span>
+            </h1>
+            <div class="script-line ab-dusk__script">
+              <span class="script-fa" lang="fa" dir="rtl" aria-hidden="true">از بازار تا آشپزخانه</span>
+              <span class="translit">Az bazar ta ashpazkhaneh, from market to kitchen</span>
+            </div>
+          </header>
+          <div class="ab-dusk__steps">
+            <div class="ab-dusk__progress" aria-hidden="true"><span data-dusk-bar></span></div>
+            <ol class="ab-dusk__list">
+              <li class="ab-step" data-dusk-step>
+                <p class="ab-step__kicker">01, The market years</p>
+                <p class="ab-step__text">For years, this address kept a Persian market.</p>
+              </li>
+              <li class="ab-step" data-dusk-step>
+                <p class="ab-step__kicker">02, The turn</p>
+                <p class="ab-step__text">Under new management, the market started to cook.</p>
+              </li>
+              <li class="ab-step" data-dusk-step>
+                <p class="ab-step__kicker">03, Now</p>
+                <p class="ab-step__text">Same address, new <em>fire</em>.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="ab-dusk__hud">
+          <span class="scrollcue">Scroll
+            <svg width="10" height="12" viewBox="0 0 10 12" fill="none" aria-hidden="true">
+              <path d="M5 1v9M1.5 7 5 10.5 8.5 7" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="ab-dusk__addr" data-bind="company.address.full"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 THE MARKET YEARS -->
+    <section class="section chapter" id="market">
+      <div class="wrap ab-grid">
+        <div class="ab-copy">
+          <div class="chapter__head">
+            <span class="chapter__num" aria-hidden="true">01</span>
+            <p class="eyebrow" data-scramble>The market years</p>
+            <h2 class="h2 chapter__title" data-reveal>Saffron on the <em>shelves</em></h2>
+          </div>
+          <p class="lead measure" data-reveal="fade">
+            Before this kitchen, the address belonged to a Persian market.
+            Neighbors came in off Pacific Coast Highway for basmati and
+            barberries, for saffron and bread, and for the halal deli
+            counter at the back.</p>
+          <p class="measure ab-body" data-reveal="fade">
+            The shelves fed South Bay kitchens for years. Ours was simply
+            the last one they fed.</p>
+          <hr class="chapter__rule">
+          <p class="chapter__foot">A family ran the market here from 2018.</p>
+        </div>
+        <figure class="ab-media" data-reveal="clip">
+          <div class="ph arch ab-media__ph">
+            <img src="assets/img/about-hero.jpg" width="2000" height="1333" loading="lazy"
+                 data-parallax="0.14"
+                 alt="Pyramids of spices, barberries, and dried goods on a bazaar spice stand">
+          </div>
+          <figcaption class="ab-media__cap">Bazaar staples</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 02 UNDER NEW MANAGEMENT -->
+    <section class="section chapter ab-turn" id="turn">
+      <div class="wrap ab-grid ab-grid--flip">
+        <div class="ab-copy">
+          <div class="chapter__head">
+            <span class="chapter__num" aria-hidden="true">02</span>
+            <p class="eyebrow" data-scramble>Under new management</p>
+            <h2 class="h2 chapter__title" data-reveal>The fire is <em>lit</em></h2>
+          </div>
+          <p class="lead measure" data-bind="company.story" data-reveal="fade"></p>
+          <p class="measure ab-body" data-reveal="fade">
+            In 2024, new management took over and turned the market into a
+            Persian and Middle Eastern deli and catering kitchen. The stew
+            pots go on in the morning, the skewers come off the flame all
+            day, and the catering trays leave packed for the whole table.</p>
+          <hr class="chapter__rule">
+          <p class="chapter__foot">The sign changed. The address did not.</p>
+        </div>
+        <figure class="ab-media" data-reveal="clip">
+          <div class="ph arch ab-media__ph">
+            <img src="assets/img/about-kitchen.jpg" width="2000" height="1433" loading="lazy"
+                 data-parallax="0.14" class="ab-media__img--kitchen"
+                 alt="A cook turning skewers of kabab over a long smoking charcoal grill">
+          </div>
+          <figcaption class="ab-media__cap">Off the flame</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 03 WHAT WE COOK NOW -->
+    <section class="section chapter" id="cooking">
+      <div class="wrap">
+        <div class="chapter__head">
+          <span class="chapter__num" aria-hidden="true">03</span>
+          <p class="eyebrow" data-scramble>From our kitchen</p>
+          <h2 class="h2 chapter__title" data-reveal>Kabab, stews, <em>rice</em></h2>
+        </div>
+        <p class="lead measure ab-body" data-bind="company.intro" data-reveal="fade"></p>
+        <div class="ab-cook" data-cook-cols data-reveal-group></div>
+        <hr class="chapter__rule">
+        <div class="ab-actions" data-reveal="fade">
+          <a class="btn btn--solid" href="menu.html"><span class="btn__text">See the full menu</span></a>
+        </div>
+        <p class="chapter__foot">Names first. Prices live on the menu page.</p>
+      </div>
+    </section>
+
+    <!-- 04 THE HALAL PLEDGE: gilded credential panel on ink -->
+    <section class="section chapter on-dark ab-halal" id="halal">
+      <div class="wrap">
+        <div class="chapter__head">
+          <span class="chapter__num" aria-hidden="true">04</span>
+          <p class="eyebrow" data-scramble>The halal pledge</p>
+          <h2 class="h2 chapter__title" data-reveal>Two lines, in <em>writing</em></h2>
+        </div>
+        <p class="lead measure ab-body" data-reveal="fade">
+          Two claims travel with every skewer that leaves this kitchen.
+          They are printed on our menu, and we repeat them here word for
+          word.</p>
+        <div class="ab-cred" data-reveal="fade">
+          <svg class="ab-cred__orn ornament" data-draw viewBox="0 0 420 40" fill="none"
+               stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+               stroke-linejoin="round" aria-hidden="true">
+            <path d="M10 16 V24" />
+            <path d="M10 20 H172" />
+            <path d="M172 20 C180 12 188 12 196 20" />
+            <path d="M210 6 L224 20 L210 34 L196 20 Z" />
+            <path d="M210 13 L217 20 L210 27 L203 20 Z" />
+            <path d="M224 20 C232 28 240 28 248 20" />
+            <path d="M248 20 H410" />
+            <path d="M410 16 V24" />
+          </svg>
+          <div class="ab-cred__claims">
+            <div class="ab-cred__claim">
+              <p class="ab-cred__tag">Beef</p>
+              <p class="ab-cred__text" data-bind="company.halal.beef"></p>
+            </div>
+            <hr class="ab-cred__div">
+            <div class="ab-cred__claim">
+              <p class="ab-cred__tag">Chicken</p>
+              <p class="ab-cred__text" data-bind="company.halal.chicken"></p>
+            </div>
+          </div>
+          <svg class="ab-cred__orn ab-cred__orn--flip ornament" data-draw viewBox="0 0 420 40" fill="none"
+               stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+               stroke-linejoin="round" aria-hidden="true">
+            <path d="M10 16 V24" />
+            <path d="M10 20 H172" />
+            <path d="M172 20 C180 12 188 12 196 20" />
+            <path d="M210 6 L224 20 L210 34 L196 20 Z" />
+            <path d="M210 13 L217 20 L210 27 L203 20 Z" />
+            <path d="M224 20 C232 28 240 28 248 20" />
+            <path d="M248 20 H410" />
+            <path d="M410 16 V24" />
+          </svg>
+        </div>
+        <p class="chapter__foot ab-halal__foot">Verbatim from our printed menu.</p>
+      </div>
+    </section>
+
+    <!-- 05 WHAT WE BELIEVE: saffron, fire, family -->
+    <section class="section chapter" id="beliefs">
+      <div class="wrap">
+        <div class="chapter__head">
+          <span class="chapter__num" aria-hidden="true">05</span>
+          <p class="eyebrow" data-scramble>What we believe</p>
+          <h2 class="h2 chapter__title" data-reveal>Saffron, fire, <em>family</em></h2>
+        </div>
+        <div class="ab-beliefs" data-reveal-group>
+          <article class="ab-belief" data-reveal-item>
+            <div class="ab-belief__icon" aria-hidden="true">
+              <svg data-draw viewBox="0 0 64 64" width="44" height="44" fill="none"
+                   stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                   stroke-linejoin="round">
+                <path d="M32 46 C24 40 20 28 25 14" />
+                <path d="M32 46 C40 40 44 28 39 14" />
+                <path d="M32 46 C32 34 32 24 32 12" />
+                <path d="M32 26 C28 21 26 18 24 14" />
+                <path d="M32 26 C36 21 38 18 40 14" />
+                <path d="M32 46 V56" />
+                <path d="M26 56 H38" />
+              </svg>
+            </div>
+            <div class="script-line ab-belief__script">
+              <span class="script-fa" lang="fa" dir="rtl" aria-hidden="true">زعفران</span>
+              <span class="translit">Za&rsquo;faran</span>
+            </div>
+            <h3 class="h4">Saffron</h3>
+            <p class="ab-belief__copy">
+              It is in our name and under the food. Saffron rice beneath
+              the kabab, shole zard when there is room left for dessert.</p>
+          </article>
+          <article class="ab-belief" data-reveal-item>
+            <div class="ab-belief__icon" aria-hidden="true">
+              <svg data-draw viewBox="0 0 64 64" width="44" height="44" fill="none"
+                   stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                   stroke-linejoin="round">
+                <path d="M32 8 C24 18 18 28 20 38 C22 48 28 52 32 52 C36 52 42 48 44 38 C46 28 40 18 32 8 Z" />
+                <path d="M32 30 C28 36 27 42 32 46 C37 42 36 36 32 30 Z" />
+              </svg>
+            </div>
+            <div class="script-line ab-belief__script">
+              <span class="script-fa" lang="fa" dir="rtl" aria-hidden="true">آتش</span>
+              <span class="translit">Atash</span>
+            </div>
+            <h3 class="h4">Fire</h3>
+            <p class="ab-belief__copy">
+              Our menu says it in four words: served off the flame.
+              Koobideh, barg, and soltani hold to that line every day.</p>
+          </article>
+          <article class="ab-belief" data-reveal-item>
+            <div class="ab-belief__icon" aria-hidden="true">
+              <svg data-draw viewBox="0 0 64 64" width="44" height="44" fill="none"
+                   stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                   stroke-linejoin="round">
+                <path d="M8 34 H56" />
+                <path d="M12 34 C18 46 46 46 52 34" />
+                <path d="M24 26 C24 22 27 22 27 18" />
+                <path d="M32 26 C32 22 35 22 35 18" />
+                <path d="M40 26 C40 22 43 22 43 18" />
+                <path d="M28 50 H36" />
+              </svg>
+            </div>
+            <div class="script-line ab-belief__script">
+              <span class="script-fa" lang="fa" dir="rtl" aria-hidden="true">خانواده</span>
+              <span class="translit">Khanevadeh</span>
+            </div>
+            <h3 class="h4">Family</h3>
+            <p class="ab-belief__copy">
+              We cook in family portions. Combos for the table, platters
+              counted for ten, twenty, or thirty guests.</p>
+          </article>
+        </div>
+        <hr class="chapter__rule">
+        <p class="chapter__foot">Three words, each one tied to something on the menu.</p>
+      </div>
+    </section>
+
+    <!-- 06 WORD OF MOUTH -->
+    <section class="section chapter" id="reviews">
+      <div class="wrap">
+        <div class="chapter__head">
+          <span class="chapter__num" aria-hidden="true">06</span>
+          <p class="eyebrow" data-scramble>Word of mouth</p>
+          <h2 class="h2 chapter__title" data-reveal>What the <em>neighbors</em> say</h2>
+        </div>
+        <div class="ab-reviews" data-about-reviews data-reveal-group></div>
+        <hr class="chapter__rule">
+        <p class="chapter__foot">Real reviews from public listings for this address.</p>
+      </div>
+    </section>
+
+    <!-- 07 VISIT -->
+    <section class="section chapter ab-visit" id="visit">
+      <div class="wrap">
+        <div class="chapter__head">
+          <span class="chapter__num" aria-hidden="true">07</span>
+          <p class="eyebrow" data-scramble>Visit</p>
+          <h2 class="h2 chapter__title" data-reveal>Come taste what <em>changed</em></h2>
+        </div>
+        <div class="ab-visit__body" data-reveal="fade">
+          <address class="ab-visit__addr" data-bind="company.address.full"></address>
+          <p class="ab-visit__hours" data-bind="company.hours.label"></p>
+          <p class="ab-visit__note" data-bind="company.hours.note"></p>
+          <div class="ab-visit__ctas">
+            <a class="btn btn--solid" data-bind-href="company.phoneHref">
+              <span class="btn__text" data-bind="company.phone">Call us</span></a>
+            <a class="btn" href="menu.html"><span class="btn__text">See the menu</span></a>
+            <a class="btn" data-bind-href="orderLinks.0.href" target="_blank" rel="noopener">
+              <span class="btn__text" data-bind="orderLinks.0.label">Order online</span></a>
+          </div>
+          <a class="tlink" data-bind-href="company.address.mapsUrl" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer on-dark" data-site-footer data-nav-theme="dark"></footer>
+
+  <script src="assets/js/vendor/gsap.min.js"></script>
+  <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/js/vendor/CustomEase.min.js"></script>
+  <script src="assets/js/vendor/SplitText.min.js"></script>
+  <script src="assets/js/vendor/ScrambleTextPlugin.min.js"></script>
+  <script src="assets/js/vendor/DrawSVGPlugin.min.js"></script>
+  <script src="assets/js/vendor/lenis.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/page-about.js"></script>
+</body>
+</html>

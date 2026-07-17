@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 40" width="220" height="40" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- Saffron thread flourish, line art. Inline + data-draw for the
+       draw-on effect; stroke inherits currentColor. -->
+  <path d="M4 30 C40 8 72 34 106 18 C140 4 180 32 216 12" />
+  <path d="M58 22 C62 16 68 14 74 15" />
+  <path d="M148 20 C152 26 158 28 164 27" />
+</svg>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Saffron &amp; Rice, Persian and Middle Eastern Kitchen in Torrance</title>
+  <meta name="description" content="A Persian and Middle Eastern deli and catering kitchen on Pacific Coast Highway in Torrance. Kabab off the flame, home style stews, saffron rice, and party platters.">
+
+  <link rel="canonical" href="https://saffron-and-rice.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://saffron-and-rice.vercel.app/">
+  <meta property="og:title" content="Saffron &amp; Rice, Persian and Middle Eastern Kitchen in Torrance">
+  <meta property="og:description" content="Kabab off the flame, home style stews, saffron rice, and party platters on Pacific Coast Highway in Torrance.">
+  <meta property="og:image" content="https://saffron-and-rice.vercel.app/assets/img/home-hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Saffron &amp; Rice, Persian and Middle Eastern Kitchen in Torrance">
+  <meta name="twitter:image" content="https://saffron-and-rice.vercel.app/assets/img/home-hero.jpg">
+  <meta name="theme-color" content="#0f0d0c">
+
+  <link rel="icon" href="assets/img/brand/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/img/brand/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/brand/favicon-192.png">
+  <link rel="apple-touch-icon" href="assets/img/brand/favicon-192.png">
+
+  <link rel="preload" as="image" href="assets/img/home-hero.jpg" fetchpriority="high">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/cormorant-garamond-latin-500-normal.woff2" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+
+  <script>
+    /* Boot shim: html.js gate, paint-blocking cover for the loader and
+       page arrivals, and a watchdog that clears everything if app.js
+       never boots. No facts, no content, shell state only. */
+    (function () {
+      var de = document.documentElement;
+      de.classList.add("js");
+      var red = false;
+      try { red = window.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch (e) {}
+      var seen = false, arrive = false;
+      try {
+        seen = sessionStorage.getItem("srSeen") === "1";
+        arrive = sessionStorage.getItem("srArrive") === "1";
+      } catch (e) {}
+      if (!red && (!seen || arrive)) de.classList.add("sr-cover");
+      setTimeout(function () {
+        if (!window.__SR_BOOTED) { de.classList.remove("sr-cover"); de.classList.add("sr-noboot"); }
+      }, 4000);
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Saffron & Rice",
+    "url": "https://saffron-and-rice.vercel.app/",
+    "image": "https://saffron-and-rice.vercel.app/assets/img/home-hero.jpg",
+    "telephone": "+13105040310",
+    "servesCuisine": ["Persian", "Middle Eastern"],
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3801 Pacific Coast Hwy",
+      "addressLocality": "Torrance",
+      "addressRegion": "CA",
+      "postalCode": "90505",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "11:00",
+      "closes": "20:00"
+    }]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" data-nav>
+    <a class="nav__brand" href="index.html" aria-label="Saffron and Rice, home">
+      <span class="nav__seal"><img src="assets/img/brand/emblem.png" alt="" width="34" height="23"></span>
+      <span class="nav__word">Saffron &amp; Rice</span>
+    </a>
+    <nav class="nav__right" aria-label="Primary">
+      <ul class="nav__links">
+        <li><a class="nav__link" href="menu.html">Menu</a></li>
+        <li><a class="nav__link" href="catering.html">Catering</a></li>
+        <li><a class="nav__link" href="about.html">About</a></li>
+        <li><a class="nav__link" href="contact.html">Contact</a></li>
+      </ul>
+      <a class="btn nav__call" data-bind-href="company.phoneHref">
+        <span class="btn__text" data-bind="company.phone">Call us</span></a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false"
+              aria-controls="site-menu" data-menu-toggle>
+        <span class="nav__toggle-bar"></span><span class="nav__toggle-bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- HERO: ink ground, drifting saffron threads, ogee arch reveal -->
+    <section class="hero on-dark" data-nav-theme="dark">
+      <canvas class="hero__canvas" data-hero-threads aria-hidden="true"></canvas>
+      <div class="hero__inner wrap">
+        <div class="hero__copy">
+          <p class="hero__kicker eyebrow">
+            <span data-bind="company.tagline"></span>
+          </p>
+          <h1 class="hero__title" data-hero-title>
+            <span class="hero__line">Off the flame,</span>
+            <span class="hero__line">under the <em>saffron</em></span>
+          </h1>
+          <div class="script-line hero__script">
+            <span class="script-fa" lang="fa" dir="rtl" aria-hidden="true" data-bind="company.scriptFa"></span>
+            <span class="translit">Za&rsquo;faran o berenj, saffron and rice</span>
+          </div>
+          <div class="hero__ctas">
+            <a class="btn btn--solid" href="menu.html"><span class="btn__text">See the menu</span></a>
+            <a class="btn" data-bind-href="company.phoneHref">
+              <span class="btn__text" data-bind="company.phone">Call us</span></a>
+          </div>
+        </div>
+        <figure class="hero__arch arch--ogee">
+          <div class="hero__arch-mask ph">
+            <img src="assets/img/home-hero.jpg" width="1200" height="1800" fetchpriority="high"
+                 alt="Skewers of koobideh and saffron chicken kabab on a platter beside saffron rice">
+          </div>
+        </figure>
+      </div>
+      <div class="hero__hud">
+        <span class="scrollcue">Scroll
+          <svg width="10" height="12" viewBox="0 0 10 12" fill="none" aria-hidden="true">
+            <path d="M5 1v9M1.5 7 5 10.5 8.5 7" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="hero__hours mono" data-bind="company.hours.short"></span>
+      </div>
+    </section>
+
+    <!-- 01 THE KITCHEN -->
+    <section class="section chapter" id="kitchen">
+      <div class="wrap ch-grid">
+        <div class="ch-copy">
+          <div class="chapter__head">
+            <span class="chapter__num" aria-hidden="true">01</span>
+            <p class="eyebrow" data-scramble>The kitchen</p>
+            <h2 class="h2 chapter__title" data-reveal>A market that learned to <em>cook</em></h2>
+          </div>
+          <p class="lead measure" data-bind="company.story" data-reveal="fade"></p>
+          <p class="measure ch-body" data-bind="company.intro" data-reveal="fade"></p>
+          <hr class="chapter__rule">
+          <div class="ch-actions" data-reveal="fade">
+            <a class="btn" href="about.html"><span class="btn__text">Our story</span></a>
+          </div>
+          <p class="chapter__foot">Dine in, pick up, delivery, or a catered sofreh.</p>
+        </div>
+        <figure class="ch-media arch" data-reveal="clip">
+          <div class="ph ch-media__ph">
+            <img src="assets/img/home-story.jpg" width="1800" height="1200" loading="lazy"
+                 alt="A wooden spoon holding deep red saffron threads">
+          </div>
+          <figcaption class="ch-media__cap mono">Saffron threads</figcaption>
+        </figure>
+      </div>
+      <div class="ch-ornament ornament" aria-hidden="true">
+        <svg viewBox="0 0 120 140" width="86" height="100" fill="none" stroke="currentColor"
+             stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" data-draw>
+          <path d="M60 138 C57 112 62 96 60 78" />
+          <path d="M60 122 C44 114 36 98 41 82" />
+          <path d="M60 122 C76 114 84 98 79 82" />
+          <path d="M60 78 C46 64 42 40 53 24" />
+          <path d="M60 78 C60 56 60 38 60 18" />
+          <path d="M60 78 C74 64 78 40 67 24" />
+          <path d="M60 76 C54 62 48 56 44 50" />
+          <path d="M60 76 C66 62 72 56 76 50" />
+          <path d="M44 50 L41 46" />
+          <path d="M76 50 L79 46" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- 02 FROM THE FIRE: dark band, proves nav theming -->
+    <section class="section chapter on-dark ch-fire" id="fire">
+      <p class="ch-fire__ghost script-fa" aria-hidden="true" data-fa-of="kababs"></p>
+      <div class="wrap">
+        <div class="chapter__head">
+          <span class="chapter__num" aria-hidden="true">02</span>
+          <p class="eyebrow" data-scramble>From the fire</p>
+          <h2 class="h2 chapter__title" data-reveal>Koobideh, barg, <em>soltani</em></h2>
+          <div class="script-line">
+            <span class="script-fa" lang="fa" dir="rtl" aria-hidden="true" data-fa-of="kababs"></span>
+            <span class="translit" data-kabab-note></span>
+          </div>
+        </div>
+        <div class="kcards" data-kabab-cards data-reveal-group></div>
+        <hr class="chapter__rule">
+        <div class="ch-actions">
+          <a class="btn" href="menu.html"><span class="btn__text">See the full menu</span></a>
+        </div>
+        <p class="chapter__foot" data-halal-beef></p>
+      </div>
+    </section>
+
+    <!-- 03 THE SOFREH: parallax band + dish-name marquee -->
+    <section class="section chapter ch-sofreh" id="sofreh">
+      <div class="wrap">
+        <div class="chapter__head">
+          <span class="chapter__num" aria-hidden="true">03</span>
+          <p class="eyebrow" data-scramble>The sofreh</p>
+          <h2 class="h2 chapter__title" data-reveal>One cloth, many <em>hands</em></h2>
+        </div>
+        <p class="lead measure ch-body" data-reveal="fade">
+          Appetizers to share, stews from the morning pots, rice under
+          everything. The sofreh fills fast.</p>
+      </div>
+      <div class="band ch-sofreh__band" data-reveal="clip">
+        <div class="band__media ph">
+          <img src="assets/img/home-menu-teaser.jpg" width="1350" height="1800" loading="lazy"
+               data-parallax="0.16"
+               alt="A spread of Persian dishes, rice, herbs, and flatbread laid out to share">
+        </div>
+        <p class="band__caption">From our kitchen</p>
+      </div>
+      <div class="marquee marquee--display" data-marquee data-marquee-speed="70">
+        <div class="marquee__track" data-dish-marquee></div>
+      </div>
+    </section>
+
+    <!-- 04 CATERING: teal stage, odometer counts -->
+    <section class="section chapter on-teal ch-cater" id="catering">
+      <div class="wrap">
+        <div class="chapter__head">
+          <span class="chapter__num" aria-hidden="true">04</span>
+          <p class="eyebrow" data-scramble>Catering</p>
+          <h2 class="h2 chapter__title" data-reveal>Counted out, skewer by <em>skewer</em></h2>
+        </div>
+        <p class="lead measure ch-body" data-reveal="fade">
+          Platters counted for the whole table, kabab and stews together.
+          Tell us the headcount and we build the tray.</p>
+        <div class="pstats" data-platter-stats data-reveal-group></div>
+        <hr class="chapter__rule">
+        <div class="ch-actions" data-reveal="fade">
+          <a class="btn btn--solid" href="catering.html"><span class="btn__text">Catering</span></a>
+          <a class="btn" data-bind-href="company.phoneHref">
+            <span class="btn__text" data-bind="company.phone">Call us</span></a>
+        </div>
+        <p class="chapter__foot">Call ahead and we will have it packed and ready.</p>
+      </div>
+    </section>
+
+    <!-- 05 WORD OF MOUTH -->
+    <section class="section chapter" id="reviews">
+      <div class="wrap">
+        <div class="chapter__head">
+          <span class="chapter__num" aria-hidden="true">05</span>
+          <p class="eyebrow" data-scramble>Word of mouth</p>
+          <h2 class="h2 chapter__title" data-reveal>Neighbors <em>talk</em></h2>
+        </div>
+        <div class="rgrid" data-review-cards data-reveal-group></div>
+        <hr class="chapter__rule">
+        <p class="chapter__foot">Real reviews from public listings for this address.</p>
+      </div>
+    </section>
+
+    <!-- 06 VISIT -->
+    <section class="section chapter ch-visit" id="visit">
+      <div class="wrap">
+        <div class="chapter__head">
+          <span class="chapter__num" aria-hidden="true">06</span>
+          <p class="eyebrow" data-scramble>Visit</p>
+          <h2 class="h2 chapter__title" data-reveal>Find us on <em>PCH</em></h2>
+        </div>
+        <div class="visit-grid">
+          <div class="visit-col" data-reveal="fade">
+            <p class="eyebrow eyebrow--plain visit-label">Address</p>
+            <address class="visit-address">
+              <span data-bind="company.address.street"></span><br>
+              <span data-bind="company.address.city"></span>,
+              <span data-bind="company.address.state"></span>
+              <span data-bind="company.address.zip"></span>
+            </address>
+            <a class="tlink" data-bind-href="company.address.mapsUrl" target="_blank" rel="noopener">Directions</a>
+          </div>
+          <div class="visit-col" data-reveal="fade">
+            <p class="eyebrow eyebrow--plain visit-label">Hours</p>
+            <p class="visit-hours" data-bind="company.hours.label"></p>
+            <p class="visit-note" data-bind="company.hours.note"></p>
+            <ul class="visit-services" data-services></ul>
+          </div>
+          <div class="visit-col" data-reveal="fade">
+            <p class="eyebrow eyebrow--plain visit-label">Order</p>
+            <a class="visit-phone" data-bind-href="company.phoneHref" data-bind="company.phone"></a>
+            <div class="ch-actions">
+              <a class="btn btn--solid" data-bind-href="orderLinks.0.href" target="_blank" rel="noopener">
+                <span class="btn__text" data-bind="orderLinks.0.label">Order online</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer on-dark" data-site-footer data-nav-theme="dark"></footer>
+
+  <script src="assets/js/vendor/gsap.min.js"></script>
+  <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/js/vendor/CustomEase.min.js"></script>
+  <script src="assets/js/vendor/SplitText.min.js"></script>
+  <script src="assets/js/vendor/ScrambleTextPlugin.min.js"></script>
+  <script src="assets/js/vendor/DrawSVGPlugin.min.js"></script>
+  <script src="assets/js/vendor/lenis.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>
