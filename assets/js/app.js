@@ -84,6 +84,7 @@
     ready: function (fn) { if (readyFired) fn(); else readyQueue.push(fn); },
     mountCanvas: mountCanvas,
     marquee: measureMarquee,
+    button070: button070,
     refresh: function () { if (hasGsap && window.ScrollTrigger) window.ScrollTrigger.refresh(); }
   };
 
@@ -127,6 +128,30 @@
     });
   }
 
+  /* The house primary CTA: Osmo button-070, corner brackets that
+     spread on hover, accent fill. opts: href OR hrefBind (data-bind-href),
+     label OR textBind (data-bind), blank (target=_blank + noopener). */
+  function button070(opts) {
+    opts = opts || {};
+    var hrefAttr = opts.hrefBind ? ' data-bind-href="' + esc(opts.hrefBind) + '"' :
+      ' href="' + esc(opts.href || "#") + '"';
+    var target = opts.blank ? ' target="_blank" rel="noopener"' : "";
+    var textBind = opts.textBind ? ' data-bind="' + esc(opts.textBind) + '"' : "";
+    var label = opts.label != null ? esc(opts.label) : "";
+    return '<a class="button-070 is-accent"' + hrefAttr + target + '>' +
+      '<span class="button-070__bg-wrap">' +
+        '<span class="button-070__corner-wrap">' +
+          '<span class="button-070__corner is--top-left"></span>' +
+          '<span class="button-070__corner is--top-right"></span>' +
+          '<span class="button-070__corner is--bottom-left"></span>' +
+          '<span class="button-070__corner is--bottom-right"></span>' +
+        "</span>" +
+        '<span class="button-070__bg"></span>' +
+      "</span>" +
+      '<span class="button-070__inner"><span class="button-070__text"' + textBind + '>' + label + "</span></span>" +
+    "</a>";
+  }
+
   function renderFooter() {
     var host = $("[data-site-footer]");
     var c = SITE.company;
@@ -148,8 +173,7 @@
             '<p class="script-fa footer__fa" lang="fa" dir="rtl" aria-hidden="true">' + esc(c.scriptFa) + "</p>" +
             '<p class="footer__tag">' + esc(c.tagline) + ", " + esc(a.city) + ", " + esc(a.state) + "</p>" +
             '<div class="menu__ctas">' +
-              (order ? '<a class="btn btn--solid" href="' + esc(order.href) + '" target="_blank" rel="noopener">' +
-                '<span class="btn__text">' + esc(order.label) + "</span></a>" : "") +
+              (order ? button070({ href: order.href, blank: true, label: order.label }) : "") +
               '<a class="btn" href="' + esc(c.phoneHref) + '"><span class="btn__text">' + esc(c.phone) + "</span></a>" +
             "</div>" +
           "</div>" +
@@ -228,8 +252,7 @@
         '<span class="menu__translit">Za’faran o berenj, ' + esc(c.tagline) + "</span>" +
       "</div>" +
       '<div class="menu__ctas">' +
-        (order ? '<a class="btn btn--solid" href="' + esc(order.href) + '" target="_blank" rel="noopener">' +
-          '<span class="btn__text">' + esc(order.label) + "</span></a>" : "") +
+        (order ? button070({ href: order.href, blank: true, label: order.label }) : "") +
         '<a class="btn btn--price" href="' + esc(c.phoneHref) + '"><span class="btn__text">' + esc(c.phone) + "</span></a>" +
       "</div>";
     d.body.appendChild(menuEl);
@@ -451,8 +474,12 @@
       nav.classList.toggle("is-scrolled", y > 24);
       var probe = nav.offsetHeight * .6;
       var dark = false;
+      var wideEnough = window.innerWidth * .7;
       for (var i = 0; i < darkSections.length; i++) {
         var r = darkSections[i].getBoundingClientRect();
+        /* Only full-bleed bands theme the fixed nav; a narrow dark
+           card nested in a column (e.g. a CTA panel) must not flip it. */
+        if (r.width < wideEnough) continue;
         if (r.top <= probe && r.bottom >= probe && r.height > 0) { dark = true; break; }
       }
       nav.classList.toggle("nav--over-dark", dark);
@@ -730,12 +757,25 @@
       initNavState();
       initSkip();
       initAnchors();
-      initReveals();
-      initScramble();
       initParallax();
-      initCounters();
-      initDraw();
       initMarquees();
+      /* Reveals, scramble, counters, and draw-ons arm ScrollTrigger
+         "once" triggers. If armed at raw boot time, any instance that
+         already sits within the first viewport (a hero eyebrow, an
+         above-the-fold HUD row, a hero odometer) fires immediately,
+         while still hidden behind the loader or arrival curtain, so
+         the effect is "spent" before the visitor ever sees it. Gate
+         the arming behind SR.ready so it always plays on reveal,
+         above the fold or not. Below-the-fold instances are unaffected:
+         they only fire once actually scrolled into view regardless of
+         when the trigger was created, and scrolling is locked while
+         the loader/curtain covers the page. */
+      SR.ready(function () {
+        initReveals();
+        initScramble();
+        initCounters();
+        initDraw();
+      });
 
       bootQueue.forEach(function (fn) { try { fn(); } catch (e) { console.error(e); } });
       bootQueue = [];

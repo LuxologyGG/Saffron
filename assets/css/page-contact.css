@@ -204,7 +204,7 @@
 }
 
 /* ----------------------------------------- 03 call or walk in */
-.ch-call { position: relative; }
+.ch-call { position: relative; background: var(--bg); color: var(--fg); }
 .call-panel {
   margin-top: clamp(28px, 3.4vw, 46px);
   display: flex; flex-direction: column; align-items: flex-start; gap: 10px;
