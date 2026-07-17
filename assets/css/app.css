@@ -608,6 +608,17 @@ body.menu-open .menu { display: flex; }
   font-family: var(--font-display); font-weight: 500;
   font-size: clamp(26px, 3vw, 40px); line-height: 1.1;
 }
+/* Inline wordmark SVG (fetched from assets/img/brand/logo-text.svg).
+   Paths are ink-filled in the file; currentColor re-inks them to paper
+   on the loader ground. The text word stays as the fallback and goes
+   visually hidden once the mark is in. */
+.loader__mark { width: clamp(230px, 36vw, 470px); color: var(--paper); }
+.loader__mark svg { width: 100%; height: auto; display: block; }
+.loader__mark path { fill: currentColor; }
+.loader--marked .loader__word {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip-path: inset(50%); white-space: nowrap;
+}
 .loader__fa { font-size: clamp(20px, 2vw, 28px); line-height: 1.8; color: var(--accent-lite); }
 .loader__kicker {
   font-family: var(--font-mono); font-size: var(--fs-eyebrow); font-weight: 500;

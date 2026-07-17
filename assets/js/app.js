@@ -422,14 +422,34 @@
       '<div class="loader__inner">' +
         '<div class="loader__row">' +
           '<span class="loader__line loader__line--l"></span>' +
-          '<span class="loader__seal"><img src="assets/img/brand/emblem.png" alt="" width="480" height="324"></span>' +
+          '<span class="loader__seal"><img src="assets/img/brand/emblem.png" alt="" width="480" height="332"></span>' +
           '<span class="loader__line loader__line--r"></span>' +
         "</div>" +
+        '<div class="loader__mark" aria-hidden="true"></div>' +
         '<p class="loader__word">' + esc(c.name || "Saffron & Rice") + "</p>" +
         '<p class="loader__fa script-fa" lang="fa" dir="rtl" aria-hidden="true">' + esc(c.scriptFa) + "</p>" +
         '<p class="loader__kicker">' + esc(a.city) + ", California</p>" +
       "</div>";
     d.body.appendChild(el);
+    /* Inline the vector wordmark so its letterforms can stroke-draw.
+       Local same-origin fetch; the text word stays as the fallback. */
+    if (window.fetch) {
+      el._markReady = fetch("assets/img/brand/logo-text.svg")
+        .then(function (r) { return r.ok ? r.text() : null; })
+        .then(function (txt) {
+          if (!txt) return false;
+          var slot = $(".loader__mark", el);
+          if (!slot || !el.isConnected) return false;
+          slot.innerHTML = txt;
+          var svg = slot.querySelector("svg");
+          if (!svg) return false;
+          svg.setAttribute("aria-hidden", "true");
+          svg.setAttribute("focusable", "false");
+          el.classList.add("loader--marked");
+          return true;
+        })
+        .catch(function () { return false; });
+    }
     return el;
   }
 
@@ -442,6 +462,22 @@
       return;
     }
     if (window.lenisRef) window.lenisRef.stop();
+    /* Give the wordmark fetch a beat to land; never hold boot longer. */
+    var started = false;
+    function go() {
+      if (started) return;
+      started = true;
+      runLoaderTimeline(loader);
+    }
+    if (loader._markReady) {
+      loader._markReady.then(go, go);
+      setTimeout(go, 180);
+    } else {
+      go();
+    }
+  }
+
+  function runLoaderTimeline(loader) {
     var tl = g.timeline({
       defaults: { ease: "sr" },
       onComplete: function () {
@@ -449,13 +485,26 @@
         if (window.lenisRef) window.lenisRef.start();
       }
     });
+    var marked = loader.classList.contains("loader--marked");
+    var markPaths = marked ? $$(".loader__mark path", loader) : [];
+    var wordTargets = [$(".loader__fa", loader), $(".loader__kicker", loader)];
+    if (!markPaths.length) wordTargets.unshift($(".loader__word", loader));
+
     tl.fromTo($$(".loader__line", loader), { scaleX: 0 }, { scaleX: 1, duration: .9, stagger: 0 })
       .fromTo($(".loader__seal", loader), { y: 26, opacity: 0, scale: .94 },
-        { y: 0, opacity: 1, scale: 1, duration: .85 }, .15)
-      .fromTo([$(".loader__word", loader), $(".loader__fa", loader), $(".loader__kicker", loader)],
-        { y: 22, opacity: 0 }, { y: 0, opacity: 1, duration: .7, stagger: .1 }, .45)
+        { y: 0, opacity: 1, scale: 1, duration: .85 }, .15);
+    if (markPaths.length) {
+      /* Letterforms draw their outlines, then ink themselves in. */
+      g.set(markPaths, { stroke: "currentColor", strokeWidth: 1, fillOpacity: 0, drawSVG: "0%" });
+      tl.to(markPaths, { drawSVG: "100%", duration: 1.0, stagger: .05, ease: "none" }, .4)
+        .to(markPaths, { fillOpacity: 1, duration: .5, ease: "sr" }, "-=.45")
+        .to(markPaths, { strokeOpacity: 0, duration: .35, ease: "sr" }, "<+.1");
+    }
+    tl.fromTo(wordTargets,
+        { y: 22, opacity: 0 }, { y: 0, opacity: 1, duration: .7, stagger: .1 },
+        markPaths.length ? "-=.55" : .45)
       .to(loader, {
-        yPercent: -112, duration: .95, ease: "srInOut", delay: .5,
+        yPercent: -112, duration: .95, ease: "srInOut", delay: markPaths.length ? .35 : .5,
         onStart: notifyReady
       });
   }
