@@ -740,7 +740,7 @@ body.menu-open .menu { display: flex; }
 .scrollcue svg { display: block; animation: k-chev 2.1s var(--e-inout) infinite; }
 
 /* ------------------------------------------------- ornaments */
-/* Inline line-art SVGs (see assets/img/ornament/) carry
+/* Inline line-art SVGs in the page markup carry class=ornament + data-draw carry
    class="ornament" + data-draw so their strokes draw on. */
 .ornament { color: var(--accent-text); }
 .ornament svg, svg.ornament { display: block; }
