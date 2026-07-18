@@ -17,12 +17,21 @@
 }
 .cat-hero__bg { position: absolute; inset: -8% 0; z-index: 0; }
 .cat-hero__bg img { width: 100%; height: 100%; object-fit: cover; }
+/* AX-R2-5: the middle stop was the weakest point of the scrim (84%),
+   and the triptych's serve-count numerals sit past it, in the lower
+   half where a pale plate in the source photo could still show
+   through. Deepened the whole ramp and added a stop around where the
+   triptych sits so the numerals' local ground stays dark enough for
+   the paper-colored digits to clear 3:1 against even the brightest
+   crop of the photo, without flattening the gradient into a solid
+   block. */
 .cat-hero__bg::after {
   content: ""; position: absolute; inset: 0;
   background: linear-gradient(180deg,
-    color-mix(in srgb, var(--ink) 92%, transparent) 0%,
-    color-mix(in srgb, var(--ink) 84%, transparent) 44%,
-    color-mix(in srgb, var(--ink) 90%, transparent) 100%);
+    color-mix(in srgb, var(--ink) 94%, transparent) 0%,
+    color-mix(in srgb, var(--ink) 90%, transparent) 40%,
+    color-mix(in srgb, var(--ink) 96%, transparent) 68%,
+    color-mix(in srgb, var(--ink) 96%, transparent) 100%);
 }
 .cat-hero__inner {
   position: relative; z-index: 1; width: 100%;

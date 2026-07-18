@@ -237,7 +237,12 @@
       });
       /* Beat 1: the row compresses into slivers, first dish dominant */
       tl.to(rest, { width: 72, duration: 2.4, ease: "power2.inOut", stagger: .55 }, .4)
-        .to(restCaps, { opacity: 0, duration: .9, ease: "none", stagger: .55 }, .3)
+        /* AX-R2-6: autoAlpha (not opacity) so visibility flips to hidden
+           at 0, and a short duration/stagger so the fade completes in a
+           thin sliver of the scrub instead of drifting semi-transparent
+           over a bright strip photo for a large chunk of the pin; no
+           parked scrub position should land mid-fade. */
+        .to(restCaps, { autoAlpha: 0, duration: .08, ease: "none", stagger: .12 }, .3)
         /* Beat 2: the carta panel wipes in from the right */
         .to(strip, { x: -40, duration: 3, ease: "power2.inOut" }, 4.4)
         .to(carta, { xPercent: 0, duration: 3, ease: "power3.out" }, 4.4)

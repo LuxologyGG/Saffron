@@ -341,6 +341,14 @@
     if (!skip) return;
     skip.addEventListener("click", function (e) {
       e.preventDefault();
+      /* AX-R2-3: the skip link sits before the header in the DOM, so it
+         stays reachable (not inert) even while the overlay menu is open,
+         both by Shift+Tab back out of the menu and by forward-Tab wrap.
+         #main is inert during that state though, so activating skip-link
+         used to be a dead no-op: focus() on an inert target silently
+         fails. Close the overlay first so the target is live again,
+         same as any other menu-closing action, then land on #main. */
+      if (menuIsOpen()) setMenu(false);
       var main = $("#main");
       if (!main) return;
       if (window.lenisRef) window.lenisRef.scrollTo(main, { immediate: true });

@@ -134,6 +134,68 @@
     }
     function css(c) { return "rgb(" + c[0] + "," + c[1] + "," + c[2] + ")"; }
 
+    /* AX-R2-2: a plain linear crossfade of fg from ink to paper (and
+       bg from paper to ink) on the SAME t necessarily meets itself
+       partway, since one rises while the other falls across the same
+       range: parked mid-scrub, text and ground converge toward the
+       same mid-tone and contrast collapses. Rather than trying to
+       out-ease that collision away (any smooth, monotonic crossfade
+       still has to cross zero contrast at one exact instant), every
+       foreground token below is picked, every frame, against the
+       ACTUAL live background: whichever of the ink-side or paper-side
+       anchor currently reads better wins, and if neither clears the
+       AA floor (only possible in the narrow band right around the
+       crossover) it is nudged toward true black or white, numerically,
+       just far enough to clear the floor. Outside that narrow band the
+       result is bit-identical to the plain ink/paper anchors, so nothing
+       changes at rest; only the sliver of scrub around the crossover is
+       touched. */
+    function relLum(c) {
+      function ch(v) { v = v / 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); }
+      return 0.2126 * ch(c[0]) + 0.7152 * ch(c[1]) + 0.0722 * ch(c[2]);
+    }
+    function contrastOf(c1, c2) {
+      var a = relLum(c1), b = relLum(c2);
+      var hi = Math.max(a, b), lo = Math.min(a, b);
+      return (hi + 0.05) / (lo + 0.05);
+    }
+    var BLACK = [0, 0, 0], WHITE = [255, 255, 255];
+    var AA_MIN = 4.75; /* comfortably above the 4.5 floor, buffering rounding/AA sampling noise */
+
+    /* Picks the higher-contrast of the two role anchors against bg;
+       if neither clears min (only inside the crossover sliver), bisects
+       that anchor toward black/white until it does. Guarantees
+       contrastOf(result, bg) >= min for any bg between paper and ink. */
+    function pickFg(darkC, lightC, bg, min) {
+      var cd = contrastOf(darkC, bg), cl = contrastOf(lightC, bg);
+      var useLight = cl > cd;
+      var base = useLight ? lightC : darkC;
+      var best = useLight ? cl : cd;
+      if (best >= min) return base;
+      var extreme = useLight ? WHITE : BLACK;
+      var lo = 0, hi = 1, mid, c;
+      for (var i = 0; i < 14; i++) {
+        mid = (lo + hi) / 2;
+        c = mix(base, extreme, mid);
+        if (contrastOf(c, bg) >= min) hi = mid; else lo = mid;
+      }
+      return mix(base, extreme, hi);
+    }
+
+    /* Same guarantee for opacity-faded text: bisects UP from the
+       intended resting opacity (never down, so the design's dim/bright
+       grammar for "not yet arrived" steps is preserved) until the
+       alpha-blended-over-bg color clears min. */
+    function safeOpacity(fg, bg, target, min) {
+      if (contrastOf(mix(bg, fg, target), bg) >= min) return target;
+      var lo = target, hi = 1, mid;
+      for (var i = 0; i < 12; i++) {
+        mid = (lo + hi) / 2;
+        if (contrastOf(mix(bg, fg, mid), bg) >= min) hi = mid; else lo = mid;
+      }
+      return hi;
+    }
+
     var ink = toRgb(hex("--ink", "#0f0d0c"));
     var paper = toRgb(hex("--paper", "#f7f1e6"));
     var accentDeep = toRgb(hex("--accent-deep", "#7d5610"));
@@ -149,21 +211,50 @@
     var faintDark = mix(ink, paper, .55);
 
     function render(t) {
-      stage.style.setProperty("--bg", css(mix(paper, ink, t)));
-      stage.style.setProperty("--fg", css(mix(ink, paper, t)));
-      stage.style.setProperty("--fg-soft", css(mix(softLight, softDark, t)));
-      stage.style.setProperty("--fg-faint", css(mix(faintLight, faintDark, t)));
-      stage.style.setProperty("--accent-text", css(mix(accentDeep, accentLite, t)));
+      var bg = mix(paper, ink, t);
+      var fg = pickFg(ink, paper, bg, AA_MIN);
+      var fgSoft = pickFg(softLight, softDark, bg, AA_MIN);
+      var fgFaint = pickFg(faintLight, faintDark, bg, AA_MIN);
+      stage.style.setProperty("--bg", css(bg));
+      stage.style.setProperty("--fg", css(fg));
+      stage.style.setProperty("--fg-soft", css(fgSoft));
+      stage.style.setProperty("--fg-faint", css(fgFaint));
+      stage.style.setProperty("--accent-text", css(pickFg(accentDeep, accentLite, bg, AA_MIN)));
       if (bar) bar.style.width = (t * 100).toFixed(1) + "%";
       /* BM03: the interior photo darkens/reveals in step with the
          ground, a low ambient wash by day, closer to its full CSS
          fallback opacity (.5) by night. */
       if (photo) photo.style.opacity = (.08 + t * .42).toFixed(2);
       steps.forEach(function (el, i) {
-        if (i === 0) { el.style.opacity = "1"; el.style.transform = "none"; return; }
+        if (i === 0) {
+          el.style.opacity = "1"; el.style.transform = "none";
+          var kEl0 = $(".ab-step__kicker", el), tEl0 = $(".ab-step__text", el);
+          if (kEl0) kEl0.style.opacity = "1";
+          if (tEl0) tEl0.style.opacity = "1";
+          return;
+        }
         var start = i === 1 ? .32 : .66;
         var local = Math.min(1, Math.max(0, (t - start) / .24));
-        el.style.opacity = (.26 + local * .74).toFixed(2);
+        /* AX-R2-2: floor raised from .26 to .6 so the resting dim state
+           of a not-yet-arrived step still clears AA on its own. Opacity
+           is computed and applied SEPARATELY for the kicker (fg-faint)
+           and the body line (fg) rather than once for the whole row:
+           fg-faint's own natural contrast against the paper extreme is
+           already thin (~5.24:1 at full opacity), so a shared floor
+           driven by its worst case would force the whole row close to
+           full opacity and erase the dim/arrived read entirely. Splitting
+           them lets the body line keep a real dim state (~.58+) while
+           the smaller kicker label, which has less room to give, holds
+           its own higher floor. Transform still moves the row as one. */
+        var target = .6 + local * .4;
+        var textOp = safeOpacity(fg, bg, target, AA_MIN);
+        var kickOp = safeOpacity(fgFaint, bg, target, AA_MIN);
+        var kEl = $(".ab-step__kicker", el), tEl = $(".ab-step__text", el);
+        /* Full float precision, not toFixed(2): rounding opacity to the
+           nearest hundredth can shave off just enough of the safeOpacity
+           bisection's margin to dip back under the AA target. */
+        if (kEl) kEl.style.opacity = String(kickOp);
+        if (tEl) tEl.style.opacity = String(textOp);
         el.style.transform = "translateY(" + ((1 - local) * 14).toFixed(1) + "px)";
       });
     }

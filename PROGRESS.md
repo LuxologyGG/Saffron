@@ -102,3 +102,10 @@ Run started: 2026-07-17. Orchestrator: Claude Code (remote session), branch `cla
 - ROUND 2 launched as six PARALLEL REMOTE lens agents (own cloud env each, own cores; repo cloned
   from the pushed branch), replacing the local 2-slot queue. Chair aggregates locally when all
   six return. Rounds may not PASS before round 3 per the gate.
+
+- Round-2 fix cycle COMPLETE: consolidated batch (11 items: 2s loader with mission line and skip
+  control, peopled sofreh photograph, hero scroll growth, scramble scoping, balance fixes) plus
+  the a11y pass (dusk scrub retimed with a per-frame contrast-anchored fg picker, worst parked
+  reading 4.705:1; skip-link functional inside the overlay; catering scrim deepened; menu caption
+  autoAlpha; all remaining no-JS binds prerendered). All verified with measurement sweeps and
+  silent consoles. Round 3 launching as six parallel remote lenses: first live gate attempt.
