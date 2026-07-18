@@ -41,7 +41,14 @@
 /* Pinned choreography geometry, applied by catering.js ONLY when the
    scrub actually runs. 220vh pin depth per the brief; the stage rides
    sticky through it. */
-.spread.is-pinned { height: 220vh; }
+/* Bumped from 220vh: at 220vh the pin released right as #platters'
+   stat numerals entered the viewport, so the outgoing tier numerals
+   (10/20/30) and the incoming .pstat__num (1/2/3) briefly occupied the
+   same row during the scrub's easing tail. Extra runway (plus the
+   #platters clearance padding below) guarantees the pinned stage is
+   fully unstuck and out of frame before the next numerals arrive. */
+.spread.is-pinned { height: 280vh; }
+#platters { padding-top: clamp(48px, 10vh, 120px); }
 .spread.is-pinned .spread__stage {
   position: sticky; top: 0;
   height: 100vh;

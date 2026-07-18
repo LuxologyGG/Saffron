@@ -228,8 +228,13 @@
       opacity: 1, y: 0, duration: 0.4, ease: EASE_REVEAL,
       stagger: Math.min(0.09, words.length ? 1.3 / words.length : 0.09)
     });
+    /* Do not move focus into the overlay: the loader is not a trapped
+       dialog (no inert/aria-modal on the rest of the document), so
+       stealing focus here would let a second Tab escape into the live,
+       visually-covered page underneath. Leaving focus alone keeps the
+       skip link the first real Tab stop, matching every other page. */
     var skip = $(".loader__skip", loader);
-    if (skip) { skip.focus(); skip.addEventListener("click", exit); }
+    if (skip) { skip.addEventListener("click", exit); }
     setTimeout(exit, 2200 - 450); /* hard cap incl. the 450ms exit */
   }
 
@@ -436,22 +441,27 @@
   }
 
   /* ---------------- Day-to-night lerp helper ----------------
-     [data-daynight] section: scrub-ties --dn-mix 0 -> 1 on THAT
+     [data-daynight] section: ties --dn-mix to scroll progress on THAT
      element only (perf contract: never body/html). The fg does not
-     lerp: .is-night flips in one step at 55% progress. Under reduce
-     this never runs and the section renders as authored (the page
-     ships it as two static stacked bands per the matrix). */
+     lerp: .is-night flips in one step at 55% progress, together with
+     the background. --dn-mix is intentionally STEPPED (two flat
+     values, not a continuous 0->1 lerp) so no scroll rest position
+     ever lands the background in the muddy mid-grey band where
+     neither ink nor paper text clears 4.5:1 (measured dead zone was
+     roughly progress 0.42-0.63 under the old continuous lerp). Under
+     reduce this never runs and the section renders as authored (the
+     page ships it as two static stacked bands per the matrix). */
   function initDayNight() {
     $$("[data-daynight]").forEach(function (sec) {
-      var state = { mix: 0 };
-      gsap.to(state, {
-        mix: 1, ease: "none",
-        scrollTrigger: {
-          trigger: sec, start: "top 60%", end: "bottom 90%", scrub: true,
-          onUpdate: function (self) {
-            sec.style.setProperty("--dn-mix", String(state.mix));
-            sec.classList.toggle("is-night", self.progress >= 0.55);
-          }
+      ScrollTrigger.create({
+        trigger: sec, start: "top 60%", end: "bottom 90%", scrub: true,
+        onUpdate: function (self) {
+          var night = self.progress >= 0.55;
+          /* 0.15 / 0.85 keep the background comfortably light or dark
+             on either side of the flip (>7:1 against the paired text
+             color), never resting at the ~0.5 grey midpoint. */
+          sec.style.setProperty("--dn-mix", night ? "0.85" : "0.15");
+          sec.classList.toggle("is-night", night);
         }
       });
     });

@@ -18,6 +18,9 @@
   position: fixed;
   top: 12px; left: 12px;
   z-index: calc(var(--z-loader) + 1);
+  min-height: var(--tap);
+  display: inline-flex;
+  align-items: center;
   padding: 10px 18px;
   background: var(--ink);
   color: var(--paper);
@@ -113,7 +116,7 @@
   box-shadow: 0 1px 0 color-mix(in srgb, var(--paper) 15%, transparent);
   color: var(--paper);
 }
-.nav__brand { display: inline-flex; align-items: center; gap: 12px; min-height: var(--tap); }
+.nav__brand { display: inline-flex; align-items: center; gap: 12px; min-height: var(--tap); min-width: var(--tap); }
 .nav__brand img { width: 46px; height: 46px; object-fit: contain; }
 .nav__wordmark {
   font-family: var(--font-display);
@@ -475,18 +478,26 @@ body.menu-open { overflow: hidden; }
   color: var(--accent-lite);
   margin-bottom: 6px;
 }
-.footer__col a { min-height: 32px; display: inline-flex; align-items: center; width: fit-content; }
+.footer__col a { min-height: var(--tap); display: inline-flex; align-items: center; width: fit-content; }
 .footer__col a:hover { color: var(--accent-lite); }
 .footer__col p { color: var(--fg-soft); }
 .footer__wordmark {
   display: block;
   width: 100%;
-  margin-bottom: -1px;
-  transform: translateY(18%);
+  max-height: clamp(80px, 16vw, 220px);
+  overflow: clip;
+  margin-top: clamp(16px, 3vh, 32px);
   color: color-mix(in srgb, var(--paper) 90%, var(--ink));
   pointer-events: none; user-select: none;
 }
-.footer__wordmark svg, .footer__wordmark img { width: 100%; height: auto; display: block; }
+.footer__wordmark svg, .footer__wordmark img {
+  width: 100%;
+  height: auto;
+  max-height: clamp(80px, 16vw, 220px);
+  object-fit: contain;
+  object-position: bottom;
+  display: block;
+}
 /* The wordmark SVG file ships fixed brand colors (near-ink script), so
    as an <img> it would vanish on the night ground. Flip lightness while
    keeping hue. Inline-SVG wordmarks (currentColor) are untouched. */

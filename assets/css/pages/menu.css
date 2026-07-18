@@ -179,7 +179,15 @@
   max-width: 1000px;
   margin-bottom: clamp(22px, 4vh, 52px);
 }
-.mcat__head .thread-divider { width: 100%; margin-inline: 0; }
+/* Capped rather than full-bleed: the shared 520x14 squiggle path uses
+   preserveAspectRatio="none", so stretching it across the full 1000px
+   header column (previously width:100%) distorted the curve's x-scale
+   far more than its narrower usages elsewhere, reading as a rougher
+   hand than the rest of the ornament set. Capping the width keeps the
+   stretch ratio close to the divider's native caliber; the stroke is
+   pinned to non-scaling so line weight stays consistent regardless. */
+.mcat__head .thread-divider { width: 100%; max-width: 460px; margin-inline: 0; }
+.mcat__head .thread-divider svg path { vector-effect: non-scaling-stroke; }
 /* Category note: owner-verbatim content ("Wrap or soft baguette"), so it
    keeps its authored case; never uppercased into decoration. */
 .mcat__note { text-transform: none; letter-spacing: .08em; }

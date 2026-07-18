@@ -167,10 +167,13 @@
 /* cutouts drift BEHIND the cards: ambient layer under the wrap */
 .home-trio .float-layer { z-index: var(--z-ambient); }
 .home-trio .float-cutout { color: var(--crocus); }
-.home-trio .fc-thread { top: 9%; right: 6%; width: 46px; }
-.home-trio .fc-petal-1 { top: 34%; left: 3.5%; width: 30px; }
-.home-trio .fc-petal-2 { bottom: 14%; right: 12%; width: 24px; }
-.home-trio .fc-grain { bottom: 26%; left: 9%; width: 15px; }
+/* Ornaments live in the section's outer margin strip (outside --gutter,
+   above the head or below the repnote) so they never sit over card copy,
+   at any breakpoint including stacked mobile cards. */
+.home-trio .fc-thread { top: 2%; right: 0.6%; width: 46px; }
+.home-trio .fc-petal-1 { top: 4.5%; left: 0.4%; width: 30px; }
+.home-trio .fc-petal-2 { bottom: 2%; right: 0.6%; width: 24px; }
+.home-trio .fc-grain { bottom: 2%; left: 0.6%; width: 15px; }
 .home-trio__head {
   display: grid;
   gap: 14px;
@@ -205,6 +208,13 @@
   align-items: center;
   min-height: 110vh;
   padding-block: var(--sect-sm);
+}
+/* Mobile: two 110vh bands stacked (the no-JS/reduced-motion truth) read
+   as a huge dead gap under the short copy + CTA block, since the band's
+   height is viewport-driven rather than content-driven at this width.
+   Tighten to the site's spacing-token rhythm instead of a raw vh figure. */
+@media (max-width: 700px) {
+  .dn-band { min-height: 0; padding-block: var(--sect); }
 }
 .dn-band--day { background: var(--paper); color: var(--ink); }
 .dn-band--night { background: var(--ink); color: var(--paper); }
