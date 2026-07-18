@@ -1,0 +1,58 @@
+name: Deploy Saffron and Rice to GitHub Pages
+
+# ONE-TIME OWNER STEP TO GO LIVE:
+#   Repo Settings -> Pages -> Build and deployment -> Source: "GitHub Actions".
+# That single toggle enables Pages for this repo. This workflow cannot enable
+# Pages itself: the default Actions token returns "Resource not accessible by
+# integration" for the create-pages-site API (the documented GitHub gotcha).
+# Once the source is set to GitHub Actions, every push to the branch below
+# publishes the site automatically. No other configuration is needed.
+#
+# The site is authored for a DOMAIN-ROOT deploy (e.g. Vercel). GitHub Pages
+# for a project repo serves under /Saffron/, so the build step below adapts
+# 404.html's root-relative asset paths to that subpath. Every other page uses
+# relative URLs and needs no adaptation.
+
+on:
+  push:
+    branches: [claude/saffron-rice-website-3ms1ya]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Stage the static site
+        run: |
+          mkdir -p _site
+          # ship only the site, never the research/review/tooling
+          rsync -a --exclude='.git' --exclude='research' --exclude='review' \
+                --exclude='tools' --exclude='.github' --exclude='*.md' \
+                --exclude='.gitignore' --exclude='.vercelignore' ./ _site/
+          # adapt the 404 page for the /Saffron/ project subpath
+          if [ -f _site/404.html ]; then
+            sed -i 's#\(href\|src\)="/assets/#\1="/Saffron/assets/#g; s#href="/\([a-z0-9-]*\.html\)"#href="/Saffron/\1"#g; s#data-root="/"#data-root="/Saffron/"#g' _site/404.html
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

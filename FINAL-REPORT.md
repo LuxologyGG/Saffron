@@ -6,19 +6,51 @@ final round-4 lens scores are filled in at the deploy step below.
 
 ## Live URL
 
-`{{LIVE_URL}}` (filled at deploy)
+The build is complete, council-approved, and verified deploy-ready, but the final publish step is
+gated on one owner action that this autonomous session cannot perform (see "Deploy status" below).
+Two one-step paths to a live URL, either works:
 
-## Final per-lens scores (round 4, the gate)
+- **Vercel (recommended, matches the build):** at vercel.com, Add New Project, import
+  `LuxologyGG/Saffron`, Framework Preset "Other", Build Command empty, Output Directory `.`, Deploy.
+  Serves at the domain root the build is authored for, matching its canonical URL
+  `https://saffron-and-rice.vercel.app/`.
+- **GitHub Pages (one toggle):** repo Settings, Pages, Build and deployment, Source: "GitHub
+  Actions". The committed workflow `.github/workflows/deploy-pages.yml` then publishes on the next
+  push automatically (it also adapts the 404 page for the `/Saffron/` project subpath).
+
+## Final per-lens scores (round 4, the gate: PASS)
 
 | Lens | R1 | R2 | R3 | R4 (gate) |
 |---|---|---|---|---|
-| Motion | 7.3 | 8.5 | 9.6 | {{MO4}} |
-| Code / Perf | 6.5 | 8.3 | 9.5 | {{CP4}} |
+| Motion | 7.3 | 8.5 | 9.6 | 9.6 |
+| Code / Perf | 6.5 | 8.3 | 9.5 | 9.6 |
 | Brand | 7.2 | 8.3 | 8.9 | 9.6 |
-| Accessibility | 6.8 | 7.5 | 7.7 | {{AX4}} |
-| Visual | 7.2 | 7.9 | 8.8 | {{VS4}} |
+| Accessibility | 6.8 | 7.5 | 7.7 | 9.5 |
+| Visual | 7.2 | 7.9 | 8.8 | 9.5 |
 | Benchmark | 6.2 | 7.6 | 8.8 | 9.6 |
-| **Overall** | **6.87** | **8.02** | **8.88** | **{{OVERALL4}}** |
+| **Overall** | **6.87** | **8.02** | **8.88** | **9.57 PASS** |
+
+## Deploy status (honest)
+
+Every automated deploy host is gated on a credential or a one-time setting this session cannot
+supply, so the publish step needs one owner action. What was tried:
+
+- **Vercel MCP (`deploy_to_vercel`):** authenticated and the correct target, but it takes the file
+  tree inline and the site is about 5 MB (mostly self-hosted fonts and photography). That payload
+  cannot be emitted in a single tool call. A Vercel project was confirmed creatable (team present,
+  no existing project); it just needs the files, which the owner's one-click Git import supplies.
+- **Vercel / Netlify / Surge / Cloudflare CLIs:** present or installable, but no deploy token is
+  available in this environment, and their auth is interactive.
+- **GitHub Pages:** the Actions token cannot enable Pages (`Create Pages site failed: Resource not
+  accessible by integration`), the REST API is blocked for this session, and a parallel session hit
+  the same wall twice. Enabling Pages is a single owner toggle in Settings, after which the
+  committed workflow deploys automatically.
+- **Google Cloud Storage:** gcloud is not installed and the injected Cloud token is a proxy
+  placeholder (rejected as invalid), so this path is unavailable.
+
+This is the one place in the whole run where a human is genuinely required: a credential or a
+Settings toggle only the repo owner can provide. Everything up to and including full deploy-grade
+verification was completed autonomously.
 
 Gate rule: PASS requires every lens at 9.5 or higher, zero CRITICAL and zero MAJOR open, every
 fix reviewer-verified by an agent other than the one that wrote it, and a minimum of three rounds.
@@ -39,7 +71,17 @@ fix reviewer-verified by an agent other than the one that wrote it, and a minimu
   independently located one defect from four angles: the about day-to-night hero clipped its story
   steps and double-printed the scroll cue at laptop viewport heights. Root cause: a head-column
   width cap wrapping the title tall enough to overflow the fixed-height stage.
-- **Round 4, the gate.** {{ROUND4_SUMMARY}}
+- **Round 4, the gate (9.57, PASS).** All six lenses cleared 9.5, zero critical and zero major
+  open. The one defect that four lenses had independently located in round 3 (the about day-to-night
+  hero clipping its story steps) was structurally recomposed and re-verified. Round-4 surfaced and
+  closed a handful of genuine finds: the flagship dusk title collapsing into a four-line tower at
+  wide desktops (the width cap resolved against the wrong font box), a dimmed accent word dropping
+  below AA at the day-to-night crossover, a factual HUD value that could scramble mid-reveal, the
+  overlay focus trap wrapping through the body, plus image-budget and orphan-file cleanup. Each fix
+  was measured locally, then independently re-verified by the owning lens against live behavior. Two
+  MINOR polish items were deferred with written reason (a non-interactive body focus stop at the Tab
+  wrap, and the crossover contrast floor sitting 0.008 above the AA line). Every lens ran as an
+  isolated remote agent, blind to the others.
 
 ## Decisions made under the autonomy contract
 
@@ -102,7 +144,14 @@ Every image is self-hosted and referenced by a stable slug in `assets/js/data.js
 
 ## Live verification
 
-{{VERIFICATION_SUMMARY}}
+The site was verified with the exact harness that would run against a live URL
+(`tools/verify_live.py`), served from a clean staging copy containing only the deployable files
+(the six pages, `assets/`, `sitemap.xml`, `robots.txt`, `.nojekyll`), exactly what a host serves.
+Result: **all six pages, at desktop 1440 and mobile 390, load with zero console errors, zero page
+errors, and zero external runtime requests.** Full-page screenshots of every page at both widths
+are in `verification/`. This is deploy-grade verification; the only step it does not exercise is the
+public URL itself, which is pending the one owner action above. On the live URL the same harness can
+be re-run with `python3 tools/verify_live.py <URL>`.
 
 ## What ships
 
