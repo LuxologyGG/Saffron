@@ -53,6 +53,11 @@ All six pages built, each self-verified (Playwright: zero console errors, zero e
 ### Phase 4 — Full-site council (round 1 in flight)
 - First attempt (Fable 5) hit session/model limits mid-run, no reviews written. Session switched to Opus 4.8; council relaunched on Sonnet (3 agents, 6 lenses, fresh screenshots + reference composites + live motion measurement). Writing to review/site-round1/.
 
+### Phase 5 — Deployment (in flight, 2026-07-18)
+- Higgsfield credits: 2 (free) < clip cost; no generation. Vercel MCP deploy needs full tree inline (~11MB images) = impractical. Separate GitHub repo BLOCKED (403, token scoped to LuxologyGG/Saffron only).
+- DECISION D4: deploy via GitHub Pages on LuxologyGG/Saffron using a self-enabling Actions workflow (.github/workflows/pages.yml) on my branch. URL: https://luxologygg.github.io/Saffron/. Distinct from the other agent (they are not using this workflow; I own pages-rebuild-b concurrency group). Origin token swapped to luxologygg.github.io/Saffron in all shipped files. Workflow stages site files only (excludes 733M research/review). Run 29639952540 in_progress.
+- Next: confirm run success, load live URL, verify all 6 pages + assets + animations + zero console errors.
+
 ## Council verdicts
 
 ### Full site — Round 1 (2026-07-18): FAIL
