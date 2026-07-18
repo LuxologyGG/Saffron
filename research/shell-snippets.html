@@ -1,0 +1,192 @@
+<!doctype html>
+<!-- =====================================================================
+  Saffron & Rice, CANONICAL SHELL SNIPPETS
+  =====================================================================
+  This file is a COPY SOURCE, not a served page. Per the skill's
+  architecture doc, every page is static HTML with the shared shell
+  markup copied verbatim; app.js only ENHANCES (hydrates [data-site]
+  strings from window.SITE, wires nav state, menu trap, motion hooks).
+
+  Page agents: copy the blocks below verbatim into every page, then:
+    1. Fill the per-page <title>, meta description, canonical/OG.
+    2. Add class="nav--dark" to <nav> ONLY on pages whose hero is a
+       night (.on-dark) ground: Menu, Contact, 404. Home's hero photo
+       also counts as dark: use nav--dark there too. About is the one
+       light hero: plain .nav.
+    3. The preloader block ships on index.html ONLY.
+    4. Keep the strict CSS and JS orders exactly as below.
+    5. Relative URLs only. No em dashes anywhere. No external requests.
+====================================================================== -->
+<html lang="en">
+<head>
+<!-- ============ HEAD BLOCK (copy, then fill the three TODOs) ============ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TODO Page Title, Saffron &amp; Rice · Torrance</title>
+<meta name="description" content="TODO unique per-page description under 160 chars.">
+<meta name="theme-color" content="#0e110f">
+<link rel="icon" href="assets/img/brand/saffronlogonobg.png">
+<link rel="apple-touch-icon" href="assets/img/brand/saffronlogonobg.png">
+<!-- CSS cascade order is STRICT: fonts -> vendor -> tokens -> app -> pages -> per-page -->
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/vendor/lenis.css">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/app.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<!-- optional per-page stylesheet LAST, linked only on its page -->
+<!-- NOTE: no noscript reveal shim is needed. The design brief's hidden-state
+     rule means no stylesheet ever authors opacity:0; app.js applies hidden
+     states only when motion actually runs. With JS off, pages are complete. -->
+</head>
+<body>
+
+<!-- ============ SKIP LINK (first element in body, every page) ============ -->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ PRELOADER (index.html ONLY, directly after skip link) ============
+     Inert until app.js activates it (Home, once per session, motion on,
+     no data-saver). Hard cap 2200ms. Skip pill is focused first. -->
+<div class="loader" role="dialog" aria-label="Introduction">
+  <button class="loader__skip tap-44" type="button">Skip</button>
+  <div class="loader__inner">
+    <p class="loader__line">Threads of <em>saffron</em>,</p>
+    <p class="loader__line">mountains of <em>rice</em>,</p>
+    <p class="loader__line">fire on the coals.</p>
+    <div class="loader__tick" aria-hidden="true"></div>
+  </div>
+</div>
+
+<!-- ============ NAV (every page; add nav--dark per the rule above) ============ -->
+<nav class="nav" aria-label="Main">
+  <a class="nav__brand" href="index.html" aria-label="Saffron and Rice, home">
+    <img src="assets/img/brand/saffronlogonobg.png" alt="" width="46" height="46">
+    <span class="nav__wordmark">Saffron &amp; Rice</span>
+  </a>
+  <div class="nav__links">
+    <a class="nav__link tap-44" href="index.html">Home</a>
+    <a class="nav__link tap-44" href="menu.html">Menu</a>
+    <a class="nav__link tap-44" href="catering.html">Catering</a>
+    <a class="nav__link tap-44" href="about.html">About</a>
+    <a class="nav__link tap-44" href="contact.html">Contact</a>
+    <a class="btn btn--gold nav__cta" href="tel:+13105040310" data-site-href="company.phoneHref" data-no-transition><span class="btn__tick" aria-hidden="true"></span><span data-site="company.phone">(310) 504-0310</span></a>
+  </div>
+  <button class="nav__toggle tap-44" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ============ MOBILE MENU OVERLAY (every page, right after nav) ============ -->
+<div class="menu" id="site-menu">
+  <nav class="menu__nav" aria-label="Mobile">
+    <a class="menu__link" href="index.html"><small>01</small>Home</a>
+    <a class="menu__link" href="menu.html"><small>02</small>Menu</a>
+    <a class="menu__link" href="catering.html"><small>03</small>Catering</a>
+    <a class="menu__link" href="about.html"><small>04</small>About</a>
+    <a class="menu__link" href="contact.html"><small>05</small>Contact</a>
+  </nav>
+  <div class="menu__foot">
+    <a href="tel:+13105040310" data-site-href="company.phoneHref" data-no-transition data-site="company.phone">(310) 504-0310</a>
+    <span data-site="company.addressShort">3801 Pacific Coast Hwy, Torrance</span>
+    <span>Open daily, call to confirm hours</span>
+  </div>
+</div>
+
+<main id="main" tabindex="-1">
+  <!-- PAGE CONTENT GOES HERE. Distinct hero per page (see the brief).
+       Shared motion hooks available from app.js:
+         data-reveal="lines"           masked line rise (add data-reveal-load
+                                       on the hero H1 to fire on load)
+         data-reveal                   y+fade scroll reveal
+         data-reveal-group / -item     staggered group
+         data-scramble                 chars resolve into text
+         data-parallax="-12"           scrub drift (default -12)
+         data-count="199"              odometer; PRINT the final value too
+         data-draw                     SVG stroke draw-on
+         data-daynight                 day-to-night ground lerp section
+         .float-cutout in .float-layer sine-float ladder
+         .marquee / .marquee__track / .marquee-static
+         .testimonials band (below)
+       Saffron-thread divider (the sitewide divider system; use INSTEAD of
+       any generic <hr> or hairline between sections):
+
+  <div class="thread-divider" aria-hidden="true">
+    <svg viewBox="0 0 520 14" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 8 C 60 2, 110 12, 168 7 S 300 3, 366 9 S 480 5, 518 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      <path d="M120 7 c 6 -4, 12 -5, 17 -3" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+      <path d="M368 9 c 5 3, 11 4, 16 2" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+       Testimonial band skeleton (quotes/attribution VERBATIM from
+       window.SITE.testimonials, era attribution mandatory):
+
+  <section class="section testimonials">
+    <div class="wrap">
+      <div class="tcard-stage">
+        <figure class="tcard">
+          <blockquote class="tcard__quote">QUOTE FROM data.js</blockquote>
+          <figcaption class="tcard__who">Yelp reviewer, on the kitchen in its Saffron Food Mart era</figcaption>
+        </figure>
+        <figure class="tcard" hidden>...</figure>
+        <figure class="tcard" hidden>...</figure>
+      </div>
+      <div class="tnav">
+        <button class="tnav__btn tap-44" type="button" data-tprev aria-label="Previous quote">&#8592;</button>
+        <span class="tnav__pill">1 / 3</span>
+        <button class="tnav__btn tap-44" type="button" data-tnext aria-label="Next quote">&#8594;</button>
+      </div>
+    </div>
+  </section>
+  -->
+</main>
+
+<!-- ============ STICKY MOBILE CALL BAR (Menu page adds class "is-on") ============ -->
+<div class="callbar">
+  <a class="btn btn--gold tap-44" href="tel:+13105040310" data-site-href="company.phoneHref" data-no-transition>Call <span data-site="company.phone">(310) 504-0310</span></a>
+</div>
+
+<!-- ============ FOOTER (every page) ============ -->
+<footer class="footer on-dark">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <img src="assets/img/brand/saffronlogonobg.png" alt="Saffron and Rice emblem" width="168" height="168">
+      <p data-site="company.intro">A Persian and Middle Eastern kitchen in Torrance serving charcoal-kissed kababs, fragrant rice, and slow-simmered stews. Dine in, pick up, get it delivered, or let us cater your next gathering.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Explore</h4>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="catering.html">Catering &amp; Platters</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer__col">
+      <h4>Visit</h4>
+      <a href="tel:+13105040310" data-site-href="company.phoneHref" data-no-transition data-site="company.phone">(310) 504-0310</a>
+      <p data-site="company.address">3801 Pacific Coast Hwy, Torrance, CA 90505</p>
+      <p>Open daily, call to confirm hours</p>
+      <p data-site="company.formerly">Formerly Saffron Food Market, now under new management</p>
+    </div>
+  </div>
+  <div class="footer__wordmark" aria-hidden="true">
+    <img src="assets/img/brand/saffron_rice_text_only_high_quality.svg" alt="" loading="lazy">
+  </div>
+  <div class="wrap footer__bar">
+    <span>&copy; <span data-year>2026</span> Saffron and Rice, LLC</span>
+    <span data-site="company.tagline">Persian &amp; Middle Eastern Kitchen</span>
+    <span data-site="company.addressShort">3801 Pacific Coast Hwy, Torrance</span>
+  </div>
+</footer>
+
+<!-- ============ SCRIPTS (end of body, STRICT order, every page) ============ -->
+<script src="assets/js/vendor/gsap.min.js"></script>
+<script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/js/vendor/SplitText.min.js"></script>
+<script src="assets/js/vendor/ScrambleTextPlugin.min.js"></script>
+<script src="assets/js/vendor/CustomEase.min.js"></script>
+<script src="assets/js/vendor/lenis.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<!-- optional per-page hero module LAST -->
+</body>
+</html>

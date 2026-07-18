@@ -1,0 +1,500 @@
+/* =============================================================
+   Saffron & Rice, Shared shell (app.css)
+   "Sofreh at Dusk". Loads AFTER tokens.css; consumes token names
+   only. Contains: skip link, preloader, page-transition curtain,
+   nav + mobile menu overlay, footer, section primitives (arch
+   panels, saffron-thread dividers, chapter kickers, ghost words),
+   buttons, marquee, testimonial band, grain overlay.
+
+   HIDDEN-STATE RULE (design brief section 4): this stylesheet
+   NEVER authors opacity: 0 or any hidden-until-reveal state.
+   All hidden initial states are applied by app.js only, so the
+   site is fully readable with JS disabled.
+   House rules: no em dashes; zero-build; self-hosted only.
+   ============================================================= */
+
+/* ============================ Skip link ============================ */
+.skip-link {
+  position: fixed;
+  top: 12px; left: 12px;
+  z-index: calc(var(--z-loader) + 1);
+  padding: 10px 18px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  transform: translateY(-300%);
+}
+.skip-link:focus-visible { transform: none; }
+
+/* ============================ Poetic preloader ============================ */
+/* Home only, once per session (sessionStorage snrIntroSeen). app.js adds
+   .is-active when it decides to run it; without JS or when skipped the
+   overlay stays display:none and costs nothing. Hard cap 2200ms in JS. */
+.loader {
+  display: none;
+  position: fixed; inset: 0;
+  z-index: var(--z-loader);
+  background: var(--ink);
+  color: var(--paper);
+  align-items: center; justify-content: center;
+  text-align: center;
+}
+.loader.is-active { display: flex; }
+.loader__inner { max-width: 34ch; padding-inline: var(--gutter); }
+.loader__line {
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  line-height: 1.4;
+  font-weight: 400;
+}
+.loader__line em { font-style: italic; color: var(--accent-lite); }
+.loader__tick {
+  width: 9px; height: 9px; margin: 22px auto 0;
+  background: var(--accent-lite);
+  transform: rotate(45deg);
+  animation: k-blink 1.2s ease-in-out infinite;
+}
+.loader__skip {
+  position: absolute;
+  top: 20px; right: 20px;
+  padding-inline: 20px;
+  border: 1px solid color-mix(in srgb, var(--paper) 35%, transparent);
+  border-radius: var(--radius-pill);
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+}
+
+/* ============================ Page-transition curtain ============================ */
+/* Built by app.js and appended to body; ink full-viewport panel that
+   slides per the brief (.6s --e-inout each way, 80ms entry delay).
+   Sits offscreen by default so a JS failure never covers the page. */
+.curtain {
+  position: fixed; inset: 0;
+  z-index: var(--z-transition);
+  background: var(--ink);
+  transform: translateY(101%);
+  pointer-events: none;
+}
+
+/* ============================ Navigation ============================ */
+/* Transparent over the hero; app.js adds .is-scrolled (solid ground +
+   hairline) past 24px. Theme-aware: nav over an .on-dark hero inherits
+   light fg via .nav--dark; over cream it reads ink. */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: var(--z-nav);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px;
+  padding: 14px var(--gutter);
+  color: var(--ink);
+  background: transparent;
+  transition: background-color var(--t-fast) var(--e-ui),
+              box-shadow var(--t-fast) var(--e-ui),
+              color var(--t-fast) var(--e-ui);
+}
+.nav--dark { color: var(--paper); }
+.nav.is-scrolled {
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  box-shadow: 0 1px 0 var(--line);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: var(--ink);
+}
+.nav--dark.is-scrolled {
+  background: color-mix(in srgb, var(--ink) 90%, transparent);
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--paper) 15%, transparent);
+  color: var(--paper);
+}
+.nav__brand { display: inline-flex; align-items: center; gap: 12px; min-height: var(--tap); }
+.nav__brand img { width: 46px; height: 46px; object-fit: contain; }
+.nav__wordmark {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+  white-space: nowrap;
+}
+.nav__links { display: flex; align-items: center; gap: clamp(4px, 1.4vw, 18px); }
+.nav__link {
+  position: relative;
+  padding-inline: 10px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+}
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 10px; right: 10px; bottom: 8px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--t-fast) var(--e-ui);
+}
+.nav__link:hover::after,
+.nav__link[aria-current="page"]::after { transform: scaleX(1); transform-origin: left; }
+.nav__link[aria-current="page"] { color: var(--accent-text); }
+.nav--dark .nav__link[aria-current="page"] { color: var(--accent-lite); }
+.nav__cta { margin-left: 6px; }
+
+/* Hamburger (mobile only) */
+.nav__toggle { display: none; position: relative; z-index: calc(var(--z-overlay) + 1); }
+.nav__toggle span {
+  display: block;
+  width: 22px; height: 2px;
+  background: currentColor;
+  margin-block: 2.5px;
+  transition: transform var(--t-fast) var(--e-ui), opacity var(--t-fast) var(--e-ui);
+}
+body.menu-open .nav__toggle span:nth-child(1) { transform: translateY(4.5px) rotate(45deg); }
+body.menu-open .nav__toggle span:nth-child(2) { opacity: 0; }
+body.menu-open .nav__toggle span:nth-child(3) { transform: translateY(-4.5px) rotate(-45deg); }
+body.menu-open .nav__toggle { color: var(--paper); }
+
+/* Mobile menu overlay: night ground, big display links */
+.menu {
+  position: fixed; inset: 0;
+  z-index: var(--z-overlay);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--gutter);
+  background: var(--ink);
+  color: var(--paper);
+}
+body.menu-open .menu { display: flex; }
+body.menu-open { overflow: hidden; }
+.menu__nav { display: flex; flex-direction: column; gap: 4px; }
+.menu__link {
+  display: inline-flex; align-items: baseline; gap: 16px;
+  min-height: var(--tap);
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: 600;
+  line-height: 1.15;
+}
+.menu__link small {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: var(--tracking-mono);
+  color: var(--accent-lite);
+}
+.menu__link[aria-current="page"] { color: var(--accent-lite); }
+.menu__foot {
+  margin-top: 40px;
+  display: flex; flex-direction: column; gap: 8px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--paper) 70%, var(--ink));
+}
+.menu__foot a { min-height: var(--tap); display: inline-flex; align-items: center; color: var(--paper); }
+
+@media (max-width: 900px) {
+  .nav__links { display: none; }
+  .nav__toggle { display: inline-flex; }
+  .nav__wordmark { font-size: .95rem; }
+}
+
+/* ============================ Section primitives ============================ */
+
+/* Chapter kicker: "01 / The Kitchen". Numeral in gold mono, label after. */
+.kicker {
+  display: inline-flex; align-items: baseline; gap: .8em;
+  font-family: var(--font-mono);
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--fg-soft);
+}
+.kicker__num { color: var(--accent-text); font-weight: 500; }
+
+/* Chapter numeral, oversized ghost variant for section corners */
+.chapter-num {
+  font-family: var(--font-display);
+  font-size: var(--fs-h2);
+  font-weight: 600;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px color-mix(in srgb, var(--fg) 22%, transparent);
+  user-select: none; pointer-events: none;
+}
+
+/* Saffron-thread divider: the sitewide divider system. An inline SVG
+   strand (see shell-snippets.html) stretched across the measure. The
+   wrapper centers it and keeps it decorative. */
+.thread-divider {
+  display: block;
+  width: min(100%, 520px);
+  margin-inline: auto;
+  color: var(--red);
+  pointer-events: none;
+}
+.on-dark .thread-divider { color: var(--red-lite); }
+.thread-divider svg { width: 100%; height: 14px; display: block; }
+.thread-divider--full { width: 100%; }
+.thread-divider--gold { color: var(--accent-base); }
+.on-dark .thread-divider--gold { color: var(--accent-lite); }
+
+/* Rule header: saffron-thread strand under a heading (About stations grid) */
+.rule-head { display: grid; gap: 12px; }
+.rule-head .thread-divider { margin-inline: 0; width: 100%; }
+
+/* Shamse watermark: faint static rosette behind section heads. The SVG
+   itself lives in markup (shell-snippets.html), aria-hidden. Spin is 404
+   hero only via .shamse--spin, applied there by that page's markup. */
+.shamse-watermark {
+  position: absolute;
+  z-index: var(--z-ambient);
+  width: clamp(200px, 30vw, 460px);
+  opacity: .07;
+  color: var(--ornament);
+  pointer-events: none;
+}
+.shamse--spin { animation: k-spin 120s linear infinite; }
+.shamse--spin svg { display: block; }
+
+/* Sine-float cutout layer (thread strands, crocus petals, rice grains).
+   JS assigns the desynced durations from the ladder (6s / 7.3s / 8.1s).
+   Without JS the cutouts simply sit still, which is fine. */
+.float-layer { position: absolute; inset: 0; z-index: var(--z-float); pointer-events: none; }
+.float-cutout { position: absolute; color: var(--crocus-lite); }
+.float-cutout--thread { color: var(--red); }
+.on-dark .float-cutout--thread { color: var(--red-lite); }
+.float-cutout--gold { color: var(--accent-base); }
+.is-floating { animation: k-float var(--float-dur, 7s) ease-in-out infinite alternate; }
+
+/* Grain overlay: archival grade on photos/panels. Own pseudo-element,
+   tokens tile at --grain-opacity (perf contract section 5). */
+.grained { position: relative; }
+.grained::after {
+  content: "";
+  position: absolute; inset: 0;
+  background-image: var(--grain-url);
+  background-repeat: repeat;
+  opacity: var(--grain-opacity);
+  pointer-events: none;
+}
+
+/* Day-to-night lerp band: JS animates --dn-mix 0 -> 1 on THIS element
+   only (perf contract: one section-level element, never body/html).
+   Text does not lerp; JS flips .is-night at 55% which swaps fg tokens. */
+.daynight {
+  background-color: color-mix(in srgb, var(--ink) calc(var(--dn-mix, 0) * 100%), var(--paper));
+  color: var(--ink);
+}
+.daynight.is-night { color: var(--paper); }
+
+/* ============================ Buttons ============================ */
+/* House CTA: heritage pill. Primary = gold fill with ink text; ghost =
+   hairline pill; text link with underline-retract hover. */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: .7em;
+  min-height: var(--tap);
+  padding: 10px 28px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  font-weight: 500;
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  transition: background-color var(--t-fast) var(--e-ui),
+              color var(--t-fast) var(--e-ui),
+              border-color var(--t-fast) var(--e-ui),
+              transform var(--t-fast) var(--e-ui);
+}
+.btn:hover { transform: translateY(-2px); }
+.btn--gold { background: var(--accent-base); color: var(--accent-ink); }
+.btn--gold:hover { background: var(--accent-lite); }
+.btn--ink { background: var(--ink); color: var(--paper); }
+.btn--ink:hover { background: var(--ink-2); }
+.on-dark .btn--ink,
+.nav--dark .btn--ink { background: var(--paper); color: var(--ink); }
+.btn--ghost { border-color: color-mix(in srgb, currentColor 45%, transparent); }
+.btn--ghost:hover { border-color: currentColor; background: color-mix(in srgb, currentColor 8%, transparent); }
+.btn .btn__tick {
+  width: 7px; height: 7px; flex: none;
+  background: currentColor;
+  transform: rotate(45deg);
+}
+
+/* Underline-retract text link (Khufu hover), used for service pills too */
+.tlink {
+  position: relative;
+  display: inline-flex; align-items: center;
+  min-height: var(--tap);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--fg);
+}
+.tlink::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: 10px;
+  height: 1px; background: currentColor;
+  transform-origin: right;
+  transition: transform var(--t-ui) var(--e-ui);
+}
+.tlink:hover::after { transform: scaleX(0); }
+
+/* ============================ Marquee ============================ */
+/* Duplicated animated track + single-line static fallback. The
+   reduced-motion guard in tokens.css kills [class*="marquee"] motion;
+   here we also swap tracks so the frozen duplicate never shows. */
+.marquee { overflow: clip; }
+.marquee__track {
+  display: inline-flex;
+  white-space: nowrap;
+  gap: 1.2em;
+  animation: k-marquee var(--marquee-dur, 80s) linear infinite;
+  will-change: auto;
+}
+.marquee__item {
+  font-family: var(--font-display);
+  font-size: var(--fs-display);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  white-space: nowrap;
+}
+.marquee__item .dot { color: var(--accent-text); }
+.marquee-static { display: none; }
+.marquee-static .marquee__item { white-space: normal; }
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track { display: none; }
+  .marquee-static { display: block; }
+}
+
+/* ============================ Testimonial band ============================ */
+/* Fanned polaroid cards (Khufu re-skin). Card stock is white with a
+   grain-free photo window; index pills numbered; arrows .tap-44. */
+.testimonials { position: relative; }
+.tcard-stage { position: relative; max-width: 640px; margin-inline: auto; }
+.tcard {
+  background: var(--white);
+  color: var(--ink);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-2);
+  padding: clamp(24px, 4vw, 44px);
+  transition: transform .35s var(--e-ui), opacity .35s var(--e-ui);
+}
+.tcard[hidden] { display: none; }
+.tcard__quote {
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  line-height: 1.4;
+  font-weight: 400;
+}
+.tcard__quote::before { content: "\201C"; color: var(--accent-text); }
+.tcard__quote::after { content: "\201D"; color: var(--accent-text); }
+.tcard__who {
+  margin-top: 18px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+.tcard--fan-l { transform: rotate(-2.2deg); }
+.tcard--fan-r { transform: rotate(1.6deg); }
+.tnav { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 28px; }
+.tnav__btn {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  transition: border-color var(--t-fast) var(--e-ui), background-color var(--t-fast) var(--e-ui);
+}
+.tnav__btn:hover { border-color: var(--accent-text); background: var(--accent-wash); }
+.tnav__pill {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: var(--tracking-mono);
+  color: var(--fg-faint);
+}
+
+/* ============================ Footer ============================ */
+/* Night ground; full-emblem moment; cropped giant wordmark sliced by the
+   viewport bottom (Berenjak). app.js hydrates links/contact from SITE. */
+.footer {
+  position: relative;
+  overflow: clip;
+  padding-top: var(--sect);
+}
+.footer__grid {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.4fr) 1fr 1fr;
+  gap: clamp(28px, 4vw, 64px);
+  padding-bottom: var(--sect-sm);
+}
+.footer__brand { display: grid; gap: 18px; align-content: start; }
+.footer__brand img { width: clamp(110px, 12vw, 168px); height: auto; }
+.footer__brand p { color: var(--fg-soft); max-width: 34ch; }
+.footer__col { display: grid; gap: 10px; align-content: start; }
+.footer__col h4 {
+  font-family: var(--font-mono);
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--accent-lite);
+  margin-bottom: 6px;
+}
+.footer__col a { min-height: 32px; display: inline-flex; align-items: center; width: fit-content; }
+.footer__col a:hover { color: var(--accent-lite); }
+.footer__col p { color: var(--fg-soft); }
+.footer__wordmark {
+  display: block;
+  width: 100%;
+  margin-bottom: -1px;
+  transform: translateY(18%);
+  color: color-mix(in srgb, var(--paper) 90%, var(--ink));
+  pointer-events: none; user-select: none;
+}
+.footer__wordmark svg, .footer__wordmark img { width: 100%; height: auto; display: block; }
+.footer__bar {
+  display: flex; flex-wrap: wrap; gap: 10px 28px;
+  justify-content: space-between;
+  padding-block: 18px;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: .08em;
+  color: var(--fg-faint);
+}
+@media (max-width: 900px) {
+  .footer__grid { grid-template-columns: 1fr; }
+}
+
+/* ============================ Sticky mobile call bar ============================ */
+.callbar {
+  display: none;
+  position: fixed;
+  left: 12px; right: 12px; bottom: 12px;
+  z-index: var(--z-nav);
+}
+.callbar .btn { width: 100%; box-shadow: var(--shadow-2); }
+@media (max-width: 700px) {
+  .callbar.is-on { display: block; }
+}
+
+/* ============================ Small screens (390px floor) ============================ */
+@media (max-width: 420px) {
+  .nav { padding-inline: 16px; }
+  .nav__brand img { width: 40px; height: 40px; }
+  .nav__wordmark { display: none; }
+  .menu__link { font-size: var(--fs-h3); }
+  .loader__skip { top: 14px; right: 14px; }
+}
