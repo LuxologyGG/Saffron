@@ -79,8 +79,11 @@
 .ab-dusk__head {
   display: flex; flex-direction: column;
   gap: clamp(10px, 1.6vh, 18px);
-  /* Wide enough that the title breaks to two or three lines, never
-     four; the stage's vertical budget is the constraint (BM-R3-1). */
+  /* The stacked short-line title (three lines at laptop widths, four
+     at wide desktops) is the intended grammar, mirroring the index
+     hero; the binding constraint is the stage's vertical budget, which
+     every supported viewport height clears with 69px+ of hud margin
+     (BM-R3-1, BR-R4-1). */
   max-width: 30ch;
 }
 /* The stage must hold head + steps + hud inside one viewport at every
