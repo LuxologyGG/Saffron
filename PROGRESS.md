@@ -117,22 +117,21 @@ major. Four rounds (6.87 -> 8.02 -> 8.88 -> 9.57). Every fix reviewer-verified b
 rounds 3 and 4 ran the six lenses as isolated remote cloud agents in parallel. Two MINOR polish
 items deferred with written reason (REVIEW-LOG round-4 verdict).
 
-## Phase 5 - DEPLOY AND VERIFY: build verified, publish gated on one owner action
+## Phase 5 - DEPLOY AND VERIFY: DONE, SITE IS LIVE
 
-- LOCAL DEPLOY-GRADE VERIFICATION DONE: tools/verify_live.py against a clean staging copy (only the
-  deployable files) shows all six pages at desktop 1440 and mobile 390 with zero console errors,
-  zero page errors, zero external runtime requests. Screenshots in verification/ (committed).
-- DEPLOY BLOCKED autonomously, every path credential/setting gated:
-  Vercel MCP deploy_to_vercel takes files inline and the site is ~5MB, too large to emit in one
-  tool call (a Vercel team exists, no project); no Vercel/Netlify/Surge/Cloudflare CLI tokens;
-  GitHub Pages enablement returns "Resource not accessible by integration" for the Actions token and
-  the REST API is blocked for this session (a parallel session hit the same wall twice); the
-  injected Google Cloud token is a proxy placeholder (invalid) and gcloud is not installed.
-- READY TO GO LIVE IN ONE OWNER STEP: (a) import LuxologyGG/Saffron to Vercel (Other / no build /
-  output "."), matching the build's canonical saffron-and-rice.vercel.app; or (b) repo Settings ->
-  Pages -> Source: GitHub Actions, after which the committed .github/workflows/deploy-pages.yml
-  publishes automatically (it adapts 404.html for the /Saffron/ project subpath).
+- LIVE URL: https://luxologygg.github.io/Saffron/ (capital S; returns HTTP 200 with the correct
+  document title). The owner enabled GitHub Pages (Settings -> Pages -> Source: "GitHub Actions");
+  the committed .github/workflows/deploy-pages.yml ran to success and published the site.
+- LIVE VERIFICATION DONE: tools/verify_live_routed.py (proxy-routed Playwright, since Chromium's
+  native TLS is reset by the egress proxy on external hosts) against the live URL shows all six pages
+  at desktop 1440 and mobile 390 with zero console errors, zero page errors, zero external runtime
+  requests. Full-page screenshots captured from the LIVE host are in verification/ (committed).
+- 404 confirmed rendering correctly at the /Saffron/ subpath (workflow path adaptation verified).
+  Live index visually confirmed (environmental hero, chapters, pull-quote, footer).
+- Deploy paths evaluated before Pages went live: Vercel MCP deploy_to_vercel takes files inline and
+  the site is ~5MB (too large for one tool call); no Vercel/Netlify/Surge/Cloudflare CLI tokens; the
+  Actions token cannot self-enable Pages ("Resource not accessible by integration"); the injected
+  Google Cloud token is a proxy placeholder. The single owner toggle (enable Pages) was the one
+  genuinely human-gated step; every push now publishes automatically.
 - PR: not applicable. This branch (claude/saffron-rice-website-3ms1ya) is the repo default/HEAD
   branch, so there is no separate base to open a pull request against; the work is already on trunk.
-- A self-check is scheduled to detect the site going live (either URL), run live verification, record
-  the real URL in FINAL-REPORT.md, and report it.

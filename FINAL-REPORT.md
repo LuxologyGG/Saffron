@@ -6,17 +6,17 @@ final round-4 lens scores are filled in at the deploy step below.
 
 ## Live URL
 
-The build is complete, council-approved, and verified deploy-ready, but the final publish step is
-gated on one owner action that this autonomous session cannot perform (see "Deploy status" below).
-Two one-step paths to a live URL, either works:
+**https://luxologygg.github.io/Saffron/** (note the capital S)
 
-- **Vercel (recommended, matches the build):** at vercel.com, Add New Project, import
-  `LuxologyGG/Saffron`, Framework Preset "Other", Build Command empty, Output Directory `.`, Deploy.
-  Serves at the domain root the build is authored for, matching its canonical URL
-  `https://saffron-and-rice.vercel.app/`.
-- **GitHub Pages (one toggle):** repo Settings, Pages, Build and deployment, Source: "GitHub
-  Actions". The committed workflow `.github/workflows/deploy-pages.yml` then publishes on the next
-  push automatically (it also adapts the 404 page for the `/Saffron/` project subpath).
+The site is LIVE and publicly serving. The owner enabled GitHub Pages (Settings, Pages, Source:
+"GitHub Actions"), the committed workflow `.github/workflows/deploy-pages.yml` ran to `success`, and
+the published URL returns HTTP 200 with the correct document title. Live verification (below)
+confirms all six pages render clean at desktop and mobile with zero console errors.
+
+The build is authored for a domain-root deploy, so the workflow adapts the 404 page for the
+`/Saffron/` project subpath; every other page uses relative URLs and resolves unchanged. A future
+domain-root host (e.g. a Vercel Git import of `LuxologyGG/Saffron`, Framework Preset "Other", empty
+build command, output `.`) would serve the identical build with no adaptation needed.
 
 ## Final per-lens scores (round 4, the gate: PASS)
 
@@ -32,25 +32,24 @@ Two one-step paths to a live URL, either works:
 
 ## Deploy status (honest)
 
-Every automated deploy host is gated on a credential or a one-time setting this session cannot
-supply, so the publish step needs one owner action. What was tried:
+**LIVE via GitHub Pages.** The site publishes automatically from `.github/workflows/deploy-pages.yml`
+on every push to the branch. The one step this autonomous session could not perform was the initial
+Pages enablement toggle (the Actions token returns `Create Pages site failed: Resource not accessible
+by integration`, the documented GitHub gotcha); the owner flipped Settings, Pages, Source: "GitHub
+Actions", after which the workflow ran to `success` and the URL went live. Everything else in the
+publish path is automated: no further owner action is needed for future pushes.
 
-- **Vercel MCP (`deploy_to_vercel`):** authenticated and the correct target, but it takes the file
-  tree inline and the site is about 5 MB (mostly self-hosted fonts and photography). That payload
-  cannot be emitted in a single tool call. A Vercel project was confirmed creatable (team present,
-  no existing project); it just needs the files, which the owner's one-click Git import supplies.
+Deploy paths that were evaluated before Pages went live:
+
+- **Vercel MCP (`deploy_to_vercel`):** authenticated and a correct target, but it takes the file tree
+  inline and the site is about 5 MB (mostly self-hosted fonts and photography); that payload cannot be
+  emitted in a single tool call. Still available as a domain-root alternative via one-click Git import.
 - **Vercel / Netlify / Surge / Cloudflare CLIs:** present or installable, but no deploy token is
-  available in this environment, and their auth is interactive.
-- **GitHub Pages:** the Actions token cannot enable Pages (`Create Pages site failed: Resource not
-  accessible by integration`), the REST API is blocked for this session, and a parallel session hit
-  the same wall twice. Enabling Pages is a single owner toggle in Settings, after which the
-  committed workflow deploys automatically.
+  available in this environment and their auth is interactive.
 - **Google Cloud Storage:** gcloud is not installed and the injected Cloud token is a proxy
-  placeholder (rejected as invalid), so this path is unavailable.
+  placeholder (rejected as invalid), so this path was unavailable.
 
-This is the one place in the whole run where a human is genuinely required: a credential or a
-Settings toggle only the repo owner can provide. Everything up to and including full deploy-grade
-verification was completed autonomously.
+GitHub Pages became the live host once the owner supplied the one-time Settings toggle.
 
 Gate rule: PASS requires every lens at 9.5 or higher, zero CRITICAL and zero MAJOR open, every
 fix reviewer-verified by an agent other than the one that wrote it, and a minimum of three rounds.
@@ -144,14 +143,15 @@ Every image is self-hosted and referenced by a stable slug in `assets/js/data.js
 
 ## Live verification
 
-The site was verified with the exact harness that would run against a live URL
-(`tools/verify_live.py`), served from a clean staging copy containing only the deployable files
-(the six pages, `assets/`, `sitemap.xml`, `robots.txt`, `.nojekyll`), exactly what a host serves.
-Result: **all six pages, at desktop 1440 and mobile 390, load with zero console errors, zero page
-errors, and zero external runtime requests.** Full-page screenshots of every page at both widths
-are in `verification/`. This is deploy-grade verification; the only step it does not exercise is the
-public URL itself, which is pending the one owner action above. On the live URL the same harness can
-be re-run with `python3 tools/verify_live.py <URL>`.
+The **live public URL** `https://luxologygg.github.io/Saffron/` was verified with a proxy-routed
+Playwright harness (`tools/verify_live_routed.py`, which routes browser requests through the egress
+proxy the same way `tools/capture.py` does, since Chromium's native TLS is reset by the proxy).
+Result: **all six pages, at desktop 1440 and mobile 390, load from the live host with zero console
+errors, zero page errors, and zero external runtime requests.** Full-page screenshots captured from
+the live URL at both widths are in `verification/`. The 404 page was confirmed to render correctly at
+the `/Saffron/` subpath, proving the workflow's path adaptation. The live index was visually confirmed
+(environmental hero, chapter scroll, pull-quote, footer). Re-run any time with
+`python3 tools/verify_live_routed.py https://luxologygg.github.io/Saffron`.
 
 ## What ships
 
