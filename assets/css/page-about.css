@@ -79,19 +79,17 @@
 .ab-dusk__head {
   display: flex; flex-direction: column;
   gap: clamp(10px, 1.6vh, 18px);
-  /* The stacked short-line title (three lines at laptop widths, four
-     at wide desktops) is the intended grammar, mirroring the index
-     hero; the binding constraint is the stage's vertical budget, which
-     every supported viewport height clears with 69px+ of hud margin
-     (BM-R3-1, BR-R4-1). */
-  max-width: 30ch;
+  /* No width cap here: 30ch resolved against the head's 15px body
+     font (270px) and starved the title into a four-line tower. The
+     title budgets its own width in its own font box (VS-R4-1). */
+  max-width: none;
 }
 /* The stage must hold head + steps + hud inside one viewport at every
    common height; the title and script are sized for that budget, not
    for the generic h2 scale (BM-R3-1). */
-.ab-dusk__title { max-width: 18ch; font-size: clamp(40px, 4.8vw, 72px); }
+.ab-dusk__title { max-width: none; font-size: clamp(40px, 4.8vw, 72px); }
 .ab-dusk__script .script-fa { font-size: clamp(22px, 2.4vw, 38px); line-height: 1.9; }
-.ab-dusk__line { display: block; }
+.ab-dusk__line { display: block; white-space: nowrap; }
 .ab-dusk__script { margin-top: 2px; }
 
 .ab-dusk__steps { display: flex; flex-direction: column; gap: clamp(18px, 2.6vh, 28px); max-width: 50ch; }
@@ -135,6 +133,7 @@
      over the animating ground, and in the no-JS night fallback. */
   color: color-mix(in srgb, var(--paper) 90%, var(--ink));
   background: color-mix(in srgb, var(--ink) 84%, transparent);
+  margin-left: auto; /* VS-R4-2: right-anchored whether or not the cue shows */
   -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
   padding: 8px 12px;
 }
