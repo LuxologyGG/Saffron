@@ -260,9 +260,35 @@
           .fromTo(".hero__arch-mask",
             { clipPath: "inset(100% 0 0 0)" },
             { clipPath: "inset(0% 0 0 0)", duration: 1.5, ease: "srInOut" }, .15)
-          .from(".hero__arch-mask img", { scale: 1.18, duration: 1.9 }, .15);
+          .from(".hero__arch-mask img", { scale: 1.18, duration: 1.9 }, .15)
+          /* BM-R2-4: the scroll-scrub growth below shares this same
+             element's scale, so it is wired on only once the intro's
+             own settle finishes; that keeps the two from ever fighting
+             over the same transform and guarantees no jump between
+             them (the intro ends at scale 1, exactly where the scrub
+             below starts). */
+          .call(armArchScrollGrowth);
       };
       if (d.fonts && d.fonts.ready) d.fonts.ready.then(run); else run();
     });
   });
+
+  /* ------------------------ hero arch: scroll growth (BM-R2-4) */
+  /* A slow scale over the first viewport of scroll, the same scrub
+     grammar as the sofreh parallax elsewhere on the page. Wired
+     through gsap.matchMedia so a visitor who prefers reduced motion
+     never gets the ScrollTrigger at all, not even a static end frame. */
+  function armArchScrollGrowth() {
+    if (!window.ScrollTrigger || !window.gsap.matchMedia) return;
+    var hero = $(".hero");
+    var img = $(".hero__arch-mask img");
+    if (!hero || !img) return;
+    var mm = window.gsap.matchMedia();
+    mm.add("(prefers-reduced-motion: no-preference)", function () {
+      window.gsap.fromTo(img, { scale: 1 }, {
+        scale: 1.06, ease: "none",
+        scrollTrigger: { trigger: hero, start: "top top", end: "bottom top", scrub: true }
+      });
+    });
+  }
 })();

@@ -136,7 +136,10 @@
 .ab-media { position: relative; }
 .ab-media__ph { aspect-ratio: 4 / 4.7; }
 .ab-media__ph img { object-position: 50% 38%; }
-.ab-media__img--kitchen { object-position: 50% 44%; }
+/* BM-R2-2: section 02 moved off about-kitchen.jpg (the dusk hero's
+   own image) onto the grill close-up; tuned so the visible crop lands
+   on the skewers rather than the smoke above or the coals below. */
+.ab-media__img--kabab { object-position: 50% 46%; }
 .ab-media__cap {
   margin-top: 12px;
   display: inline-flex; align-items: center; gap: .8em;

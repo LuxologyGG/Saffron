@@ -131,11 +131,14 @@
           <dl class="hud-grid" data-hud-rows data-reveal-group>
             <div class="hud-row" data-reveal-item>
               <dt class="hud-row__k">Coordinates</dt>
-              <dd class="hud-row__v" data-scramble>33.8107° N, 118.3494° W</dd>
+              <!-- BM-R2-5: coordinates, address, and phone are facts a
+                   visitor might actually copy down, so they get the
+                   plain fade instead of a mid-scramble garble. -->
+              <dd class="hud-row__v" data-reveal="fade">33.8107° N, 118.3494° W</dd>
             </div>
             <div class="hud-row" data-reveal-item>
               <dt class="hud-row__k">Address</dt>
-              <dd class="hud-row__v" data-scramble>3801 Pacific Coast Hwy, Torrance, CA 90505</dd>
+              <dd class="hud-row__v" data-reveal="fade">3801 Pacific Coast Hwy, Torrance, CA 90505</dd>
             </div>
             <div class="hud-row" data-reveal-item>
               <dt class="hud-row__k">Hours</dt>
@@ -143,7 +146,7 @@
             </div>
             <div class="hud-row" data-reveal-item>
               <dt class="hud-row__k">Phone</dt>
-              <dd class="hud-row__v" data-scramble>(310) 504-0310</dd>
+              <dd class="hud-row__v" data-reveal="fade">(310) 504-0310</dd>
             </div>
             <div class="hud-row" data-reveal-item>
               <dt class="hud-row__k">Services</dt>
@@ -282,37 +285,61 @@
 
     <!-- 03 CALL OR WALK IN: no contact form, no email on file -->
     <section class="section section--sm chapter on-teal ch-call" id="visit-us">
-      <div class="wrap">
-        <div class="chapter__head">
-          <span class="chapter__num" aria-hidden="true">03</span>
-          <p class="eyebrow" data-scramble>Call or walk in</p>
-          <h2 class="h2 chapter__title" data-reveal>No forms, just <em>fire</em></h2>
-        </div>
-        <p class="lead measure" data-reveal="fade">We do not run a contact form. Pick up the
-          phone or walk in the door on Pacific Coast Highway and we will take it from there.</p>
-        <div class="call-panel" data-reveal="fade">
-          <p class="eyebrow call-panel__kick">Ring the kitchen</p>
-          <a class="call-panel__phone" href="tel:+13105040310" data-bind-href="company.phoneHref" data-bind="company.phone">(310) 504-0310</a>
-          <p class="call-panel__hours" data-bind="company.hours.label">Open daily, 11:00 AM to 8:00 PM</p>
-          <p class="call-panel__note" data-bind="company.hours.note">Call to confirm holiday hours.</p>
-          <div class="call-panel__ctas">
-            <a class="button-070 is-accent" href="https://www.grubhub.com/restaurant/south-bay-food-hall-3801-pacific-coast-hwy-torrance/7933240" data-bind-href="orderLinks.0.href" target="_blank" rel="noopener">
-              <span class="button-070__bg-wrap">
-                <span class="button-070__corner-wrap">
-                  <span class="button-070__corner is--top-left"></span>
-                  <span class="button-070__corner is--top-right"></span>
-                  <span class="button-070__corner is--bottom-left"></span>
-                  <span class="button-070__corner is--bottom-right"></span>
-                </span>
-                <span class="button-070__bg"></span>
-              </span>
-              <span class="button-070__inner"><span class="button-070__text" data-bind="orderLinks.0.label">Order on Grubhub</span></span>
-            </a>
-            <a class="btn" href="menu.html"><span class="btn__text">See the menu</span></a>
+      <div class="wrap ch-call__grid">
+        <div class="ch-call__col">
+          <div class="chapter__head">
+            <span class="chapter__num" aria-hidden="true">03</span>
+            <p class="eyebrow" data-scramble>Call or walk in</p>
+            <h2 class="h2 chapter__title" data-reveal>No forms, just <em>fire</em></h2>
           </div>
+          <p class="lead measure" data-reveal="fade">We do not run a contact form. Pick up the
+            phone or walk in the door on Pacific Coast Highway and we will take it from there.</p>
+          <div class="call-panel" data-reveal="fade">
+            <p class="eyebrow call-panel__kick">Ring the kitchen</p>
+            <a class="call-panel__phone" href="tel:+13105040310" data-bind-href="company.phoneHref" data-bind="company.phone">(310) 504-0310</a>
+            <p class="call-panel__hours" data-bind="company.hours.label">Open daily, 11:00 AM to 8:00 PM</p>
+            <p class="call-panel__note" data-bind="company.hours.note">Call to confirm holiday hours.</p>
+            <div class="call-panel__ctas">
+              <a class="button-070 is-accent" href="https://www.grubhub.com/restaurant/south-bay-food-hall-3801-pacific-coast-hwy-torrance/7933240" data-bind-href="orderLinks.0.href" target="_blank" rel="noopener">
+                <span class="button-070__bg-wrap">
+                  <span class="button-070__corner-wrap">
+                    <span class="button-070__corner is--top-left"></span>
+                    <span class="button-070__corner is--top-right"></span>
+                    <span class="button-070__corner is--bottom-left"></span>
+                    <span class="button-070__corner is--bottom-right"></span>
+                  </span>
+                  <span class="button-070__bg"></span>
+                </span>
+                <span class="button-070__inner"><span class="button-070__text" data-bind="orderLinks.0.label">Order on Grubhub</span></span>
+              </a>
+              <a class="btn" href="menu.html"><span class="btn__text">See the menu</span></a>
+            </div>
+          </div>
+          <hr class="chapter__rule">
+          <p class="chapter__foot">Address, hours, and every fact on this page come straight from our printed menu and live ordering profiles.</p>
         </div>
-        <hr class="chapter__rule">
-        <p class="chapter__foot">Address, hours, and every fact on this page come straight from our printed menu and live ordering profiles.</p>
+        <!-- VS-R2-7a: the teal band's right half sat empty beside the
+             call panel. A mono readout, the same hud-row vocabulary as
+             the hero HUD, counterweights it with the same facts the
+             page already states, bound from data.js rather than
+             retyped. -->
+        <aside class="ch-call__readout" data-reveal="fade" aria-label="Hours at a glance">
+          <p class="eyebrow eyebrow--plain ch-call__readout-kick">On the highway</p>
+          <dl class="hud-grid ch-call__hud">
+            <div class="hud-row">
+              <dt class="hud-row__k">Hours</dt>
+              <dd class="hud-row__v" data-bind="company.hours.short">Daily 11 AM to 8 PM</dd>
+            </div>
+            <div class="hud-row">
+              <dt class="hud-row__k">Today</dt>
+              <dd class="hud-row__v" data-bind="company.hours.days.0.t">11:00 AM to 8:00 PM</dd>
+            </div>
+            <div class="hud-row">
+              <dt class="hud-row__k">Located</dt>
+              <dd class="hud-row__v" data-bind="company.address.street">3801 Pacific Coast Hwy</dd>
+            </div>
+          </dl>
+        </aside>
       </div>
     </section>
   </main>

@@ -22,6 +22,7 @@ verified as a real JPEG, and visually inspected. Direct CDN pattern used:
 | catering-hero | catering-hero.jpg | 2000x2667 | https://www.pexels.com/photo/top-view-of-people-enjoy-meal-14399248/ | Ayse | Pexels license | Overhead marble table with many hands reaching into shared plates of hummus, falafel, wraps and salads — communal party-table energy. |
 | catering-platters | catering-platters.jpg | 2000x2384 | https://www.pexels.com/photo/middle-eastern-feast-with-halal-cuisine-in-vancouver-30119029/ | Saba Foods | Pexels license | Feast-for-a-crowd platter: braised lamb shank over saffron-yellow rice ringed by shakshuka, grilled meats, dips and flatbreads. |
 | about-hero | about-hero.jpg | 2000x1333 | https://www.pexels.com/photo/spice-stand-at-the-marketplace-19227962/ | AXP Photography | Pexels license | Bazaar spice stand with vivid pyramids of sumac, turmeric, barberries, rock sugar and chickpeas under a patterned canopy. |
+| kitchen-people | kitchen-people.jpg | 1067x1600 | https://www.pexels.com/photo/20488508/ | Gül Işık | Pexels license | Overhead shot of several hands reaching across a shared table of dates, walnuts, olives, and dips, mid motion, no faces, no branding. Saved at 1600px max side, quality ~74, warm grade applied (brightness 0.94, +saturation, warmer channel balance) to match the set's amber mood. |
 | about-kitchen | about-kitchen.jpg | 2000x1433 | https://www.pexels.com/photo/chef-grilling-kebabs-in-gaziantep-restaurant-37028501/ | Hasan Huseyin Turan | Pexels license | Chef in apron working skewers with tongs over a long smoking charcoal kabab grill in a restaurant kitchen. |
 | contact-hero | contact-hero.jpg | 2000x1333 | https://www.pexels.com/photo/interior-of-restaurant-14590691/ | Jonathan Borba | Pexels license | Warm amber-lit restaurant interior with wood ceilings, round tables and cozy evening glow — generic but inviting. |
 | texture-1 | texture-1.jpg | 2000x3000 | https://www.pexels.com/photo/black-cloth-in-close-up-photography-7641148/ | Eva Bronzini | Pexels license | Near-black woven fabric close-up with soft folds and subtle green-tinged sheen — dark moody background texture. |
@@ -29,9 +30,17 @@ verified as a real JPEG, and visually inspected. Direct CDN pattern used:
 
 ## Flags / caveats
 
-- **All 15 slots sourced from Pexels** (Pexels license: free commercial use, no attribution
-  required). No Unsplash images were used — Pexels search yielded stronger authentic Persian
-  subjects and its CDN was directly reachable from this environment.
+- **BM-R2-6 (round 2 fix pass)**: added a 16th slot, kitchen-people.jpg, sourced fresh from
+  Pexels (candidates screened against "restaurant counter service", "kebab shop staff", "middle
+  eastern restaurant people", and "chef serving customers" searches; most hits were either
+  posed/looking-at-camera stock shots, a food-truck shot with a legible sticker logo, or too
+  dark/nightlife-toned for the set). Photo 20488508 (Gül Işık) cleared every bar: candid hands
+  mid motion, no faces, no branding, and warm enough after grading to sit with the rest of the
+  set. It replaces home-menu-teaser.jpg as the ground for index.html's #sofreh pull-quote band
+  ONLY; home-menu-teaser.jpg is untouched and still used wherever else it was already placed.
+- **All 15 (now 16) slots sourced from Pexels** (Pexels license: free commercial use, no
+  attribution required). No Unsplash images were used — Pexels search yielded stronger authentic
+  Persian subjects and its CDN was directly reachable from this environment.
 - **menu-rice**: first candidate (Pexels 37991957, zereshk polo) was rejected during visual QA
   because a Red Bull can was visible in the background; replaced with the tahchin shot above.
   The chosen shot has a blurred stemmed glass of a red drink (reads as pomegranate/sour-cherry

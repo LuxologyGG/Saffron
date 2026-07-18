@@ -205,6 +205,22 @@
 
 /* ----------------------------------------- 03 call or walk in */
 .ch-call { position: relative; background: var(--bg); color: var(--fg); }
+/* VS-R2-7a: the panel column only fills the left 44% of the band, so
+   a right-aligned mono readout (same hud-row vocabulary as the hero)
+   counterweights the empty half at wide widths. Collapses to a single
+   column, readout above the panel, once there is no room to spare. */
+.ch-call__grid {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(200px, 300px);
+  gap: clamp(28px, 5vw, 80px); align-items: start;
+}
+.ch-call__readout {
+  justify-self: end; width: 100%; max-width: 280px;
+  padding-top: clamp(4px, 1vh, 14px);
+  text-align: right;
+}
+.ch-call__readout-kick { justify-content: flex-end; }
+.ch-call__hud { margin-top: clamp(16px, 2.2vw, 26px); }
+.ch-call__hud .hud-row { justify-content: flex-end; gap: clamp(14px, 2vw, 22px); }
 .call-panel {
   margin-top: clamp(28px, 3.4vw, 46px);
   display: flex; flex-direction: column; align-items: flex-start; gap: 10px;
@@ -253,6 +269,14 @@
   .mappanel__frame { max-width: 440px; }
 
   .call-panel__phone { font-size: clamp(32px, 9vw, 52px); }
+
+  .ch-call__grid { grid-template-columns: 1fr; gap: clamp(26px, 6vh, 40px); }
+  .ch-call__readout {
+    justify-self: start; max-width: 340px; text-align: left;
+    padding-top: 0;
+  }
+  .ch-call__readout-kick { justify-content: flex-start; }
+  .ch-call__hud .hud-row { justify-content: space-between; }
 }
 @media (max-width: 560px) {
   .hud-row { flex-direction: column; align-items: flex-start; gap: 4px; }

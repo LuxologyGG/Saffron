@@ -104,9 +104,19 @@
 .ch-gap {
   display: flex; align-items: center; justify-content: center;
   max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter);
-  padding-block: clamp(18px, 2.6vw, 34px);
+  padding-block: clamp(14px, 1.8vw, 22px);
 }
 .ch-gap__thread { width: min(220px, 42vw); height: auto; color: var(--crocus-lite); opacity: .7; }
+/* VS-R2-3: re-measured with chapter--close/--tight already applied to
+   this join, the footnote-to-numeral gap still ran ~310px at 1440,
+   over the ~260px ceiling. #platters and #combos are the only chapters
+   sharing this specific join, so the halved --sect-sm padding gets a
+   further, join-scoped trim here rather than touching the shared
+   .chapter--close/--tight tokens other joins on this page still rely
+   on at their own rhythm. Both sides use the same clamp, so the
+   ornament above stays centered in whatever gap remains. */
+#platters.chapter--close { padding-block-end: clamp(50px, 5.4vw, 74px); }
+#combos.chapter--tight { padding-block-start: clamp(50px, 5.4vw, 74px); }
 
 /* BM04: a single supporting photo per photo-less chapter (02/03/05),
    reusing the catering shoot, arch-masked to match the site's image
@@ -286,7 +296,12 @@
   gap: clamp(24px, 3.4vw, 60px); align-items: stretch;
   margin-top: clamp(30px, 3.6vw, 54px);
 }
-.close-review .review { height: 100%; }
+/* VS-R2-7b: the review card used to be forced to the dome panel's full
+   height, which pushed .review__who's margin-top: auto down and left
+   a bare ~160px gap between the quote and the byline. Let the quote
+   card keep its natural height and center it against its taller
+   neighbor instead. */
+.close-review { align-self: center; }
 
 /* Ink dome panel. Tokens are re-pointed by hand instead of using
    .on-dark so the fixed-nav theme probe does not key on this card. */

@@ -193,10 +193,22 @@
 
 /* ----------------------------------------------- 04 catering */
 .ch-cater { background: var(--bg); color: var(--fg); }
+/* BM-R2-3: the odometer trio stays the headline; the platter chip is
+   a small, quiet companion so the band is not just a spec sheet. */
+.pstats-band {
+  display: flex; align-items: flex-end;
+  gap: clamp(24px, 4vw, 56px);
+  margin-block: clamp(30px, 3.6vw, 54px) clamp(24px, 3vw, 40px);
+}
 .pstats {
   display: grid; grid-template-columns: repeat(3, 1fr);
   gap: clamp(22px, 3.4vw, 52px);
-  margin-block: clamp(30px, 3.6vw, 54px) clamp(24px, 3vw, 40px);
+  flex: 1;
+}
+.pstats-chip {
+  flex: none; align-self: stretch;
+  width: clamp(84px, 8vw, 128px); aspect-ratio: 4 / 4.7;
+  opacity: .92;
 }
 
 /* ------------------------------------------------ 05 reviews */
@@ -269,7 +281,18 @@
   .kcards { grid-template-columns: 1fr; }
   .kcard { min-height: 0; }
   .pstats, .rgrid, .visit-grid { grid-template-columns: 1fr; }
+  .pstats-chip { display: none; }
   .ch-fire__ghost { font-size: clamp(140px, 46vw, 240px); top: 1%; }
   .ch-sofreh__quote { right: var(--gutter); }
   .ch-sofreh__quote p { max-width: 100%; font-size: clamp(20px, 5.6vw, 26px); }
+  /* VS-R2-5: a bright crop under the quote needs a taller, stronger
+     scrim at this width than the desktop 66%/84% falloff gives it. */
+  .ch-sofreh__band::after {
+    height: 92%;
+    background: linear-gradient(to top,
+      color-mix(in srgb, var(--ink) 92%, transparent) 0%,
+      color-mix(in srgb, var(--ink) 78%, transparent) 46%,
+      color-mix(in srgb, var(--ink) 30%, transparent) 78%,
+      transparent 100%);
+  }
 }
