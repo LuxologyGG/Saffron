@@ -72,6 +72,9 @@ Scores: Visual 7.6, Brand 8.4, Motion 8.7, Code/Perf 7.6, Accessibility 8.1, Dev
 - Track B (page visuals) DONE: crocus petal off "Hand-pressed" copy, catering pin depth 220->280vh (no 10/20/30 vs 1/2/3 collision), menu underline smoothed, mobile home gap closed. Fixlog B.
 - A late a11y/devil report (score 7.8/8.4) surfaced extras -> Round-1b in flight: nav-toggle z-index (--z-nav 90), name standardized to "Saffron Food Market" everywhere (authoritative: former domain saffronfoodmarket.com), footer h4->h3 heading order, price display padded to 2 decimals (data.js values kept authoritative), 3 aria fixes.
 
+### Full site — Round 2 (2026-07-18)
+Scores: Visual 9.6 PASS, Brand 9.5 PASS, Motion 9.6 PASS, Code/Perf 9.6 PASS, Accessibility 9.7 PASS, Devil's Advocate 8.9 FAIL. Reviews: review/site-round2/*.md. All round-1 fixes verified live (footer overlap, petal, catering pin, logo weight -774KB/page, stepped day-night 11-12:1, aria clean, tap targets, name/price). Only failing lens = Devil's Advocate, on ONE finding: round-1b name reversal was wrong. DECISION D3: former name is "Saffron Food Mart" (primary sources: storefront sign photo + Yelp/Grubhub/Zabihah/DoorDash/Restaurantji listings + Eat the World LA blog all say Mart; old saffronfoodmarket.com domain disclaimed as not-a-source per facts.md). Reverted all shipped files to "Mart" with honest provenance. Re-verifying devil's-advocate lens (round 2b).
+
 ### Design spec — Round 2 (2026-07-18): PASS ✅
 Scores: Visual 9.6, Brand 9.7, Motion 9.6, Code/Perf 9.6, Accessibility 9.7, Devil's Advocate 9.6 (all ≥ 9.5). Reviews: review/design-spec/round2-*.md. All round-1 findings verified fixed in-file; contrast ratios independently recomputed. Non-blocking nits logged (comment accuracy, map-tile licensing note, Farsi SVG QA).
 
