@@ -55,6 +55,18 @@ All six pages built, each self-verified (Playwright: zero console errors, zero e
 
 ## Council verdicts
 
+### Full site — Round 1 (2026-07-18): FAIL
+Scores: Visual 7.6, Brand 8.4, Motion 8.7, Code/Perf 7.6, Accessibility 8.1, Devil's Advocate 8.4 (bar 9.5). Reviews: review/site-round1/*.md; composites review/composites/. Honesty audit CLEAN (no fake certs/ratings/hours/lineage). Fix list:
+- CRITICAL footer wordmark box overlaps footer bar (name/address unreadable) — app.css .footer__wordmark reserve size, kill 18% translateY.
+- CRITICAL purple crocus petal over "Hand-pressed" copy — home.css .home-trio .fc-petal-1 reposition off text.
+- CRITICAL homepage preloader skip.focus() creates untrapped dialog Tab-escape — app.js runLoader: inert/aria-modal or don't focus-hijack.
+- CRITICAL nav logo 789KB@1254px shown at 46px — downscale saffronlogonobg to ~96px+192px, rewire all refs; big page-weight win.
+- MAJOR catering pin-out collision ~2700px (tier 10/20/30 over card 1/2/3) — catering.css pin depth.
+- MAJOR footer__col a min-height 32px<44px; skip-link/nav__brand under 44px — use var(--tap).
+- MAJOR day-night lerp dead zone t=0.42-0.63 contrast <4.5:1 — stepped flip / darken.
+- MAJOR about.html callbar missing is-on class (no mobile phone) — add is-on.
+- MINOR font preloads on 5 pages, srcset on content imgs, menu hand-underline roughness, mobile home gap, PLACEHOLDER_ORIGIN (deploy step).
+
 ### Design spec — Round 2 (2026-07-18): PASS ✅
 Scores: Visual 9.6, Brand 9.7, Motion 9.6, Code/Perf 9.6, Accessibility 9.7, Devil's Advocate 9.6 (all ≥ 9.5). Reviews: review/design-spec/round2-*.md. All round-1 findings verified fixed in-file; contrast ratios independently recomputed. Non-blocking nits logged (comment accuracy, map-tile licensing note, Farsi SVG QA).
 
