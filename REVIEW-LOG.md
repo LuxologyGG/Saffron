@@ -266,7 +266,7 @@ laptop viewport heights.
 | AX-R3-4 | Loader focuses Skip on mount; focus hands to #main on completion | Probed: loader__skip during, main after |
 | CP-R3-1 | Four orphan assets deleted | git rm, zero references confirmed first |
 | CP-R3-2 | lenis sourcemap pointer stripped | file check |
-| CP-R3-3 | Five heroes recompressed to 172-228KB | on-disk sizes |
+| CP-R3-3 | Five heroes recompressed to 176-234KB (BM-R4-1 corrected range) | on-disk sizes |
 | MO-R3-1 | Dusk photo decode warm-up before scrub arms | code path applied |
 | VS-R3-2 | Mobile mission line distinct from all chapter copy | grep + render |
 | VS-R3-3 | Contact readout vertically centered (285/285 gaps) | measured |
