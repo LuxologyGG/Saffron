@@ -37,6 +37,16 @@ Orchestrated autonomous rebuild. Branch: `claude/saffron-rice-rebuild-du9vf1` (s
 - Higgsfield decision: 2 free credits < ~6/clip cost → skip generation, cinematic motion on real stills (skill cost rule). No credits burned.
 - Page builds fanned out in parallel: Home, Menu (Counter), Catering, About, Contact (+sitemap/robots), 404. Each self-verifies (Playwright, zero console errors, 1440+390, both motion modes) and screenshots to review/pages/<page>/.
 
+### Phase 3 — Page builds COMPLETE (2026-07-18)
+All six pages built, each self-verified (Playwright: zero console errors, zero external requests, 1440+390, normal+reduced motion; no-JS passes where specified):
+- Home: arch dolly-zoom hero (1.05->1.32/160vh), day-to-night band, favicons generated. 22 screenshots.
+- Menu "The Counter": 70vh dotted-leader hero, EXACT 16/16 item fidelity vs data.js (healer never fired), no-JS shows all rows. 14 screenshots.
+- Catering: picture-frame + spread-builder (220vh), exact platter data, JSON-LD offers 6/6. 14 screenshots.
+- About: 300vh era scrubber (2 verified milestones only), full tablist keyboard model, new farsi-noosh.svg ornament. 18 screenshots.
+- Contact: split arch-window hero, original SVG locator map (zero tile requests), honest phone-first form (no public inbox verified), sitemap.xml + robots.txt. 24 screenshots.
+- 404 "Spilled Bowl": spinning shamse w/ cut 404, deep-path base handling. 5 screenshots.
+- Integration pass in flight: centralize shell fixes (.on-dark paint, nav toggle, footer wordmark invert, SplitText descenders), PLACEHOLDER_ORIGIN unification, cross-page nav click-through, full-site re-verify.
+
 ## Council verdicts
 
 ### Design spec — Round 2 (2026-07-18): PASS ✅
