@@ -1,10 +1,11 @@
 name: Deploy Saffron & Rice to GitHub Pages
 
 on:
-  # Enablement of the Pages site requires a permission the current GitHub App
-  # installation does not grant, so push-triggered auto-deploy fails at
-  # actions/configure-pages. Kept as manual dispatch: once Pages is enabled for
-  # the repo (Settings > Pages > Source: GitHub Actions), dispatch this workflow.
+  # Pages is enabled for the repo (Settings > Pages > Source: GitHub Actions),
+  # so this deploys on every push to the branch. No self-enablement needed.
+  push:
+    branches:
+      - claude/saffron-rice-rebuild-du9vf1
   workflow_dispatch:
 
 permissions:
@@ -42,8 +43,6 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
