@@ -55,8 +55,13 @@
         '<p class="kcard__price">' + esc(money(it.price)) + "</p>" +
       "</article>";
     }).join("");
+    /* The translit slot carries the honest Latinization of the Persian
+       word beside it, glossed with the serving note (BR-R2-1); the raw
+       note alone mislabeled the script pair. */
     var note = $("[data-kabab-note]");
-    if (note && sec.note) note.textContent = sec.note;
+    if (note && sec.translit) {
+      note.textContent = sec.translit + (sec.note ? ", " + sec.note.replace(/\.$/, "").toLowerCase() + "." : "");
+    }
     $$("[data-fa-of]").forEach(function (el) {
       var s = section(el.getAttribute("data-fa-of"));
       if (s && s.fa) el.textContent = s.fa;
@@ -106,7 +111,8 @@
   }
   function fillReviews() {
     var mount = $("[data-review-cards]");
-    var reviews = (SITE.reviews || []).slice(0, 4);
+    /* Two cards here; about.html carries the full 2x2 (VS-R2-4). */
+    var reviews = (SITE.reviews || []).slice(0, 2);
     if (!mount || !reviews.length) return;
     mount.innerHTML = reviews.map(function (r) {
       var stars = "";

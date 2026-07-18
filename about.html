@@ -111,7 +111,7 @@
          form before first paint when motion is allowed. -->
     <section class="ab-dusk" data-dusk>
       <div class="ab-dusk__darkzone" data-nav-theme="dark" aria-hidden="true"></div>
-      <div class="ab-dusk__stage on-dark" data-dusk-stage>
+      <div class="ab-dusk__stage on-dark" data-dusk-stage data-nav-ignore>
         <div class="ab-dusk__photo" aria-hidden="true">
           <img src="assets/img/about-kitchen.jpg" width="1800" height="1233" loading="eager"
                alt="">
@@ -158,7 +158,7 @@
     </section>
 
     <!-- 01 THE MARKET YEARS -->
-    <section class="section chapter" id="market">
+    <section class="section chapter chapter--close" id="market">
       <div class="wrap ab-grid">
         <div class="ab-copy">
           <div class="chapter__head">
@@ -188,7 +188,7 @@
     </section>
 
     <!-- 02 UNDER NEW MANAGEMENT -->
-    <section class="section chapter ab-turn chapter--tight" id="turn">
+    <section class="section chapter ab-turn chapter--tight chapter--close" id="turn">
       <div class="wrap ab-grid ab-grid--flip">
         <div class="ab-copy">
           <div class="chapter__head">
@@ -305,7 +305,7 @@
     </section>
 
     <!-- 05 WHAT WE BELIEVE: saffron, fire, family -->
-    <section class="section chapter chapter--tight" id="beliefs">
+    <section class="section chapter chapter--tight chapter--close" id="beliefs">
       <div class="wrap">
         <div class="chapter__head">
           <span class="chapter__num" aria-hidden="true">05</span>
@@ -383,7 +383,7 @@
     </section>
 
     <!-- 06 WORD OF MOUTH -->
-    <section class="section chapter chapter--tight" id="reviews">
+    <section class="section chapter chapter--tight chapter--close" id="reviews">
       <div class="wrap">
         <div class="chapter__head">
           <span class="chapter__num" aria-hidden="true">06</span>
@@ -409,7 +409,7 @@
           <p class="ab-visit__hours" data-bind="company.hours.label"></p>
           <p class="ab-visit__note" data-bind="company.hours.note"></p>
           <div class="ab-visit__ctas">
-            <a class="button-070 is-accent" data-bind-href="company.phoneHref">
+            <a class="button-070 is-accent" href="tel:+13105040310" data-bind-href="company.phoneHref">
               <span class="button-070__bg-wrap">
                 <span class="button-070__corner-wrap">
                   <span class="button-070__corner is--top-left"></span>
@@ -422,10 +422,10 @@
               <span class="button-070__inner"><span class="button-070__text" data-bind="company.phone">Call us</span></span>
             </a>
             <a class="btn" href="menu.html"><span class="btn__text">See the menu</span></a>
-            <a class="btn" data-bind-href="orderLinks.0.href" target="_blank" rel="noopener">
+            <a class="btn" href="https://www.grubhub.com/restaurant/south-bay-food-hall-3801-pacific-coast-hwy-torrance/7933240" data-bind-href="orderLinks.0.href" target="_blank" rel="noopener">
               <span class="btn__text" data-bind="orderLinks.0.label">Order online</span></a>
           </div>
-          <a class="tlink" data-bind-href="company.address.mapsUrl" target="_blank" rel="noopener">Directions</a>
+          <a class="tlink" href="https://www.google.com/maps/search/?api=1&amp;query=Saffron%20and%20Rice%203801%20Pacific%20Coast%20Hwy%20Torrance%20CA%2090505" data-bind-href="company.address.mapsUrl" target="_blank" rel="noopener">Directions</a>
         </div>
       </div>
     </section>

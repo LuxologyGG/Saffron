@@ -1,0 +1,34 @@
+{
+  "round": 2,
+  "received": {
+    "motion": 8.5,
+    "codeperf": 8.3,
+    "brand": 8.3,
+    "visual": 7.9,
+    "benchmark": 7.6,
+    "a11y": null
+  },
+  "round1": { "motion": 7.3, "codeperf": 6.5, "brand": 7.2, "visual": 7.2, "benchmark": 6.2, "a11y": 6.8 },
+  "majors_round2": [
+    { "id": "BR-R2-1", "lens": "brand", "note": "home kabab chapter translit slot misuse", "status": "fixed by orchestrator, pending round-3 verification" },
+    { "id": "CP-R2-1", "lens": "codeperf", "note": "404 nested-path brand image URLs ignore ROOT", "status": "fixed by orchestrator, pending round-3 verification" },
+    { "id": "VS-R2-1", "lens": "visual", "note": "about nav cream-on-cream at load + eyebrow/header collision", "status": "fixed by orchestrator (data-nav-ignore + safe center), pending round-3 verification" },
+    { "id": "VS-R2-2", "lens": "visual", "note": "8 of 11 same-bg joins still bare", "status": "fixed by orchestrator (chapter--close at 8 joins), pending round-3 verification" },
+    { "id": "BM-R2-1", "lens": "benchmark", "note": "4s content-free loader", "status": "delegated to consolidated fix agent (target 2.0-2.2s + mission line + skip)" }
+  ],
+  "minors_round2_delegated": [
+    "MO-R2-1 index scroll jank", "MO-R2-2 loader race guard refinement",
+    "VS-R2-3 catering thread centering", "VS-R2-4 review dedup (done by orchestrator)",
+    "VS-R2-5 sofreh mobile scrim", "VS-R2-6 mission echo (done by orchestrator)",
+    "VS-R2-7 contact call band + catering review card balance",
+    "BM-R2-2 about photo reuse", "BM-R2-3 index teal chapter imagery",
+    "BM-R2-4 hero arch scroll growth", "BM-R2-5 contact scramble scoping",
+    "BM-R2-6 peopled photography", "BM-R2-7 contact join ornaments (chapter--close applied)",
+    "BR-R2-2 apostrophe glyph (done by orchestrator)",
+    "CP-R2-2 dead no-JS CTAs catering/about (done by orchestrator)",
+    "CP-R2-3 image weights (done by orchestrator, catering-platters rests at 329KB floor)",
+    "CP-R2-4 brand PNG sizes (done by orchestrator: lockup 52KB, emblem 40KB)",
+    "CP-R2-5 dead .band__caption ruleset (done by orchestrator)"
+  ],
+  "notes": "Full lens JSON returns including checksRun live in the orchestrator conversation record; per-lens files below hold findings and summaries. All six lenses ran as isolated remote agents, blind to each other."
+}

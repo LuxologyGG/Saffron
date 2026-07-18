@@ -202,7 +202,7 @@
     var reviews = SITE.reviews || [];
     if (!mount || !reviews.length) return;
     /* Pick the big pickup order quote; it is the catering story. */
-    var r = reviews[1] || reviews[0];
+    var r = reviews[3] || reviews[0]; /* Walter, not shown on index (VS-R2-4) */
     var stars = "";
     for (var i = 0; i < r.stars; i++) stars += starSvg();
     mount.innerHTML = '<article class="review">' +

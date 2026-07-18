@@ -171,7 +171,7 @@
       '<div class="wrap">' +
         '<div class="footer__top">' +
           '<div class="footer__seal">' +
-            '<img src="assets/img/brand/logo-lockup.png" ' +
+            '<img src="' + ROOT + 'assets/img/brand/logo-lockup.png" ' +
                  'alt="' + esc(c.name) + ", " + esc(c.tagline) + '" loading="lazy" width="800" height="910">' +
           "</div>" +
           '<div class="footer__lede">' +
@@ -435,7 +435,7 @@
       '<div class="loader__inner">' +
         '<div class="loader__row">' +
           '<span class="loader__line loader__line--l"></span>' +
-          '<span class="loader__seal"><img src="assets/img/brand/emblem.png" alt="" width="480" height="332"></span>' +
+          '<span class="loader__seal"><img src="' + ROOT + 'assets/img/brand/emblem.png" alt="" width="480" height="332"></span>' +
           '<span class="loader__line loader__line--r"></span>' +
         "</div>" +
         '<div class="loader__mark" aria-hidden="true"></div>' +
@@ -452,7 +452,7 @@
        entirely rather than pop a fully-inked, never-drawn SVG in
        mid-animation. */
     if (window.fetch) {
-      el._markReady = fetch("assets/img/brand/logo-text.svg")
+      el._markReady = fetch(ROOT + "assets/img/brand/logo-text.svg")
         .then(function (r) { return r.ok ? r.text() : null; })
         .then(function (txt) {
           if (!txt || el._started) return false;
@@ -533,7 +533,10 @@
     var nav = $("[data-nav]");
     if (!nav) return;
     var darkSections = $$('[data-nav-theme="dark"], .on-dark, .on-teal').filter(function (el) {
-      return !el.closest(".menu");
+      /* data-nav-ignore: element uses a dark token scope for styling
+         only (e.g. the about dusk stage, whose ground starts cream);
+         a separate marker element drives the nav flip instead. */
+      return !el.closest(".menu") && !el.hasAttribute("data-nav-ignore");
     });
     var ticking = false;
     function update() {

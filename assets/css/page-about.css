@@ -37,7 +37,11 @@
   position: relative;
   min-height: 100svh; width: 100%;
   overflow: hidden;
-  display: flex; flex-direction: column; justify-content: center;
+  display: flex; flex-direction: column;
+  /* safe center: falls back to start when the copy column overflows a
+     short viewport, so the eyebrow never rides up under the fixed nav
+     (VS-R2-1). */
+  justify-content: safe center;
   background: var(--bg); color: var(--fg);
 }
 .ab-dusk__stage.is-pinned {

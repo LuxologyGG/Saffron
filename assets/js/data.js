@@ -28,7 +28,7 @@ window.SITE = {
     plainName: "Saffron and Rice",
     tagline: "Persian, Middle Eastern Kitchen",
     scriptFa: "زعفران و برنج", /* zafaran o berenj, saffron and rice */
-    scriptFaTranslit: "Za'faran o berenj, saffron and rice",
+    scriptFaTranslit: "Za’faran o berenj, saffron and rice",
     address: {
       street: "3801 Pacific Coast Hwy",
       city: "Torrance",
@@ -55,7 +55,8 @@ window.SITE = {
       chicken: "100% all natural, no added hormone, halal chicken."
     },
     intro: "A Persian and Middle Eastern deli and catering kitchen on Pacific Coast Highway in Torrance. Kabab off the flame, stews that simmer all morning, saffron rice under everything.",
-    story: "Under new management. The market that stood here for years now cooks. Same address, new fire."
+    story: "Under new management. The market that stood here for years now cooks. Same address, new fire.",
+    mission: "Kabab off the flame, stews that simmer all morning, saffron rice under everything."
   },
 
   orderLinks: [
