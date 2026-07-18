@@ -56,7 +56,10 @@ All six pages built, each self-verified (Playwright: zero console errors, zero e
 ### Phase 5 — Deployment (in flight, 2026-07-18)
 - Higgsfield credits: 2 (free) < clip cost; no generation. Vercel MCP deploy needs full tree inline (~11MB images) = impractical. Separate GitHub repo BLOCKED (403, token scoped to LuxologyGG/Saffron only).
 - DECISION D4: deploy via GitHub Pages on LuxologyGG/Saffron using a self-enabling Actions workflow (.github/workflows/pages.yml) on my branch. URL: https://luxologygg.github.io/Saffron/. Distinct from the other agent (they are not using this workflow; I own pages-rebuild-b concurrency group). Origin token swapped to luxologygg.github.io/Saffron in all shipped files. Workflow stages site files only (excludes 733M research/review). Run 29639952540 in_progress.
-- Next: confirm run success, load live URL, verify all 6 pages + assets + animations + zero console errors.
+- BLOCKED on GitHub Pages: the CCR GitHub App installation lacks Pages permission, so actions/configure-pages enablement:true returns "Resource not accessible by integration" (same ceiling that 403'd new-repo creation). Workflow (.github/workflows/pages.yml) staged the site correctly but cannot self-enable Pages. Switched workflow to manual-dispatch-only to stop failing-run spam. If a human enables Settings > Pages > Source: GitHub Actions, dispatching the workflow ships to https://luxologygg.github.io/Saffron/.
+- Route-around IN FLIGHT: deploying to Higgsfield website hosting (Cloudflare Workers under the hood, distinct URL, no generation credits). Subagent creating site + integrating the static bundle + verifying live.
+- DECISION D5: no draft PR opened. Repo has no main branch; the only other branch is the other agent's, and independence rules forbid targeting it as a PR base. No independent base exists, so a PR would either fail or entangle the two agents. Deliverable is the pushed branch + live deploy, not a PR.
+- Next: confirm Higgsfield live URL loads all 6 pages + assets + animations, zero console errors; if Higgsfield infeasible, escalate the one-click Pages enable.
 
 ## Council verdicts
 
