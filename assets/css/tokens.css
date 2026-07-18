@@ -138,7 +138,8 @@
   --z-ambient: 0;          /* ornament/linework layer          */
   --z-base:    1;
   --z-float:   5;          /* sine-float cutouts               */
-  --z-nav:     60;
+  --z-nav:     90;         /* must exceed --z-overlay so .nav__toggle's
+                               z-index is actually compared against .menu */
   --z-overlay: 80;         /* counter menu overlay             */
   --z-transition: 95;      /* page transition wipe             */
   --z-loader:  100;        /* poetic preloader                 */

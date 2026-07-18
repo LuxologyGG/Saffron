@@ -324,8 +324,8 @@
 }
 .form__submit { justify-self: start; }
 .form__hint { color: var(--fg-soft); font-size: var(--fs-body); }
-.form__hint a { color: var(--accent-text); }
-.form__hint a:hover { text-decoration: underline; }
+.form__hint a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 2px; }
+.form__hint a:hover { text-decoration-thickness: 2px; }
 .form__ok {
   border: 1px solid color-mix(in srgb, var(--accent-lite) 55%, transparent);
   background: color-mix(in srgb, var(--accent-lite) 10%, transparent);

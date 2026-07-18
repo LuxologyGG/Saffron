@@ -97,10 +97,23 @@
   function get(path) {
     return path.split(".").reduce(function (o, k) { return o == null ? o : o[k]; }, SITE);
   }
+  /* Prices in data.js are authoritative as owner-provided strings
+     ("199", "69.99"); display always pads to 2 decimals so every
+     price on the site reads consistently (e.g. "199.00"). */
+  function formatPrice(v) {
+    var n = parseFloat(v);
+    return isNaN(n) ? v : n.toFixed(2);
+  }
+  /* Shared with page modules (menu.js, catering.js) that render
+     item.price directly, so every display path pads consistently. */
+  window.formatPrice = formatPrice;
   function hydrate() {
     $$("[data-site]").forEach(function (el) {
-      var v = get(el.getAttribute("data-site"));
-      if (typeof v === "string" && v) el.textContent = v;
+      var path = el.getAttribute("data-site");
+      var v = get(path);
+      if (typeof v === "string" && v) {
+        el.textContent = /\.price$/.test(path) ? formatPrice(v) : v;
+      }
     });
     $$("[data-site-href]").forEach(function (el) {
       var v = get(el.getAttribute("data-site-href"));

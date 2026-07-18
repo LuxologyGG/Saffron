@@ -68,10 +68,11 @@
         var row = rows[i];
         if (!row) { report.missing.push(cat.slug + "[" + i + "]"); return; }
         report.checked++;
+        var fmtPrice = window.formatPrice ? window.formatPrice(item.price) : item.price;
         var pairs = [
           ["[data-item-name]", item.name, "name"],
           ["[data-item-desc]", item.desc, "desc"],
-          ["[data-item-price]", item.price, "price"]
+          ["[data-item-price]", fmtPrice, "price"]
         ];
         pairs.forEach(function (p) {
           var el = $(p[0], row);

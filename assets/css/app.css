@@ -469,7 +469,8 @@ body.menu-open { overflow: hidden; }
 .footer__brand img { width: clamp(110px, 12vw, 168px); height: auto; }
 .footer__brand p { color: var(--fg-soft); max-width: 34ch; }
 .footer__col { display: grid; gap: 10px; align-content: start; }
-.footer__col h4 {
+.footer__col h2,
+.footer__col h3 {
   font-family: var(--font-mono);
   font-size: var(--fs-eyebrow);
   letter-spacing: var(--tracking-mono);

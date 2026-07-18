@@ -107,6 +107,7 @@
   color: var(--fg-soft);
 }
 .tier__num {
+  display: block;
   font-size: clamp(3rem, 6.4vw, 6rem);
   font-weight: 600;
   line-height: 1;

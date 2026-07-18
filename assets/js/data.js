@@ -15,6 +15,10 @@
    - History: formerly Saffron Food Market (supermarket) under prior
      ownership; now a Persian & Middle Eastern deli and catering
      kitchen under new management. Old site is gist-only, not a source.
+   - Naming: the business's own former domain (saffronfoodmarket.com)
+     and the owner brief both use "Market." The Yelp listing used
+     "Mart," but we standardize all display copy to the authoritative
+     "Saffron Food Market" spelling site-wide.
 
    ---- HOUSE RULES ----
    1. NO em dashes anywhere. Hyphens for ranges only.
@@ -52,6 +56,10 @@ window.SITE = {
       slug: "party-platters",
       title: "Party Platters",
       note: null,
+      /* Prices below (owner-authoritative) are stored as plain strings,
+         including the platter tiers' round-dollar "199"/"319"/"449".
+         Do not reformat these values here; display always pads to two
+         decimals at render time (see formatPrice() in app.js). */
       items: [
         { name: "Family Combo", desc: "6 koobideh, 1 boneless (serves 3-4)", price: "69.99" },
         { name: "Deluxe Family Combo", desc: "4 koobideh, 1 boneless, 1 beef barg, 1 beef shish kabab (serves 5-6)", price: "98.99" },
@@ -90,7 +98,7 @@ window.SITE = {
   /* Story timeline: VERIFIED facts only (see research/business/facts.md).
      Unverified lineage years are omitted, never approximated. */
   story: [
-    { year: "2020-2021", label: "The kitchen earns local blog love as Saffron Food Mart", provenance: "Discovering LA (2020) and Eat the World LA (2021) coverage of this location" },
+    { year: "2020-2021", label: "The kitchen earns local blog love as Saffron Food Market", provenance: "Discovering LA (2020) and Eat the World LA (2021) coverage of this location" },
     { year: "2026", label: "Saffron & Rice opens under new management", provenance: "Saffron & Rice LLC filed 2026-03-16 (public filing)" },
   ],
 
@@ -99,9 +107,9 @@ window.SITE = {
      ownership transition; the era attribution below must render with the
      quote and old-era praise is never attributed to "Saffron & Rice". */
   testimonials: [
-    { quote: "We had a fantastic lunch here with delicious authentic tasting Persian food and excellent service!", who: "Yelp reviewer, on the kitchen in its Saffron Food Mart era", src: "Yelp" },
-    { quote: "Incredibly kind and quick service and consistently the most flavorful dishes I've had in the South Bay. The menu is limited, but what's offered is exceptional!", who: "Yelp reviewer, on the kitchen in its Saffron Food Mart era", src: "Yelp" },
-    { quote: "Super quaint and has the best, most saffron-y, and rich rice ever. The meat was juicy and flavorful in the beef koobideh.", who: "Yelp reviewer, on the kitchen in its Saffron Food Mart era", src: "Yelp" },
+    { quote: "We had a fantastic lunch here with delicious authentic tasting Persian food and excellent service!", who: "Yelp reviewer, on the kitchen in its Saffron Food Market era", src: "Yelp" },
+    { quote: "Incredibly kind and quick service and consistently the most flavorful dishes I've had in the South Bay. The menu is limited, but what's offered is exceptional!", who: "Yelp reviewer, on the kitchen in its Saffron Food Market era", src: "Yelp" },
+    { quote: "Super quaint and has the best, most saffron-y, and rich rice ever. The meat was juicy and flavorful in the beef koobideh.", who: "Yelp reviewer, on the kitchen in its Saffron Food Market era", src: "Yelp" },
   ],
 
   /* Photography: production images must be owner-supplied or licensed
