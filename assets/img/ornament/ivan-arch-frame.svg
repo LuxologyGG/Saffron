@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" role="img">
+<!-- Original ivan arch frame: hairline rect + inset Persianate pointed arch. Decorative: aria-hidden="true". -->
+<g fill="none" stroke="currentColor" stroke-width="1.5">
+<rect x="4" y="4" width="292" height="392"/>
+<path d="M40 396V150c0-42 18-78 47-99 17-13 30-19 63-19s46 6 63 19c29 21 47 57 47 99v246"/>
+<path d="M52 396V152c0-38 16-70 42-89 16-12 28-17 56-17s40 5 56 17c26 19 42 51 42 89v244" stroke-width="1" opacity=".6"/>
+<path d="M150 27v-8M138 22h24" stroke-width="1"/>
+</g>
+</svg>
