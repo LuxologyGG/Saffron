@@ -1,0 +1,61 @@
+name: Deploy Saffron & Rice to GitHub Pages
+
+on:
+  push:
+    branches:
+      - claude/saffron-rice-rebuild-du9vf1
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-rebuild-b
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Stage site files (exclude research and review corpora)
+        run: |
+          mkdir -p _site
+          rsync -a \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude 'research' \
+            --exclude 'review' \
+            --exclude 'deploy' \
+            --exclude 'PROGRESS.md' \
+            --exclude '_site' \
+            ./ _site/
+          # Drop the heavy unreferenced source emblem; keep favicons and sized emblems.
+          rm -f _site/assets/img/brand/saffronlogonobg.png
+          touch _site/.nojekyll
+          ls -la _site
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

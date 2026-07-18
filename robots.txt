@@ -1,7 +1,7 @@
-# Saffron & Rice. PLACEHOLDER_ORIGIN is replaced at deploy with the
+# Saffron & Rice. luxologygg.github.io/Saffron is replaced at deploy with the
 # site host plus any base path (one sed pass, see deploy/ORIGIN-SWAP.md;
 # same token as sitemap.xml and every page head).
 User-agent: *
 Allow: /
 
-Sitemap: https://PLACEHOLDER_ORIGIN/sitemap.xml
+Sitemap: https://luxologygg.github.io/Saffron/sitemap.xml
