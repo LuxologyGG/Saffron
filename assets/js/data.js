@@ -86,5 +86,15 @@ window.SITE = {
     },
   ],
 
-  testimonials: [], // filled only with verbatim verified review quotes post-discovery
+  /* Verbatim Yelp quotes from the location's listing (old name, same kitchen
+     location; source: research/business/reviews.md). Attributed honestly. */
+  testimonials: [
+    { quote: "We had a fantastic lunch here with delicious authentic tasting Persian food and excellent service!", who: "Yelp reviewer", src: "Yelp" },
+    { quote: "Incredibly kind and quick service and consistently the most flavorful dishes I've had in the South Bay. The menu is limited, but what's offered is exceptional!", who: "Yelp reviewer", src: "Yelp" },
+    { quote: "Super quaint and has the best, most saffron-y, and rich rice ever. The meat was juicy and flavorful in the beef koobideh.", who: "Yelp reviewer", src: "Yelp" },
+  ],
+
+  /* Photography: blog-sourced representative imagery of this location
+     (pre-transition era). Disclosure required wherever rendered. */
+  imagesDisclosure: "Photography is representative of the kitchen and its dishes.",
 };
