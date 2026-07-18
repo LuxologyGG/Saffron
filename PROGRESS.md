@@ -22,6 +22,14 @@ Orchestrated autonomous rebuild. Branch: `claude/saffron-rice-rebuild-du9vf1` (s
 - data.js committed with exact owner menu (authoritative), disclaimers, service modes, halal claims.
 - Council tooling: claude-council cloned; 0/7 providers available (no keys/CLIs) → using its LOCAL COUNCIL mode: Claude subagent roles for the 6 lenses, images attached, 9.5 bar.
 
+### Phase 1 — Research COMPLETE (2026-07-18)
+- Business facts: research/business/facts.md + reviews.md + 10 photos. Key: LLC "Saffron and Rice, LLC" filed 3/16/2026 at the address; hours UNVERIFIED (say "Open daily, call to confirm"); Yelp 4.1/~173 under old name; 3 usable verbatim quotes merged into data.js.
+- Reference recons committed: khufus (8 pages, 179 shots), laguna (64 shots + measured parallax spec), tastavents (28 shots), berenjak+lobat+dokmeh (129 shots). Each has design-system.md + notes.md. These are the council comparison baselines.
+- Vendored: GSAP 3.13 (core/ScrollTrigger/SplitText/ScrambleText/CustomEase) + Lenis 1.3.11 + ClashDisplay/GeneralSans/ChivoMono woff2, verified zero-error load.
+
+### Phase 2 — Design synthesis (in flight)
+- Synthesis agent producing tokens.css + research/design-brief.md from all four design systems + logo-sampled palette.
+
 ## Council verdicts
 (none yet — pass bar 9.5 on every lens: visual fidelity, motion, code/perf, brand, accessibility, devil's advocate)
 
