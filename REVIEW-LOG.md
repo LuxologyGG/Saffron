@@ -240,3 +240,38 @@ a11y fix agent takes them with AX-R2-2. |
 Anti-inflation check: score spread 7.5-8.5 with per-lens measured evidence proportional to score;
 no lens flagged for rerun. Round-3 gate attempt requires: all pending-verify fixes independently
 re-confirmed, AX-R2-2 and the loader closed, zero critical/major open, and every lens at 9.5+.
+
+## Verdict, round 3
+
+Overall: 8.88   Verdict: NEEDS-WORK
+Lenses:  Motion 9.6 GATE | Code 9.5 GATE | Brand 8.9 | Visual 8.8 | Benchmark 8.8 | A11y 7.7
+Movement from round 2: +1.1 / +1.2 / +0.6 / +0.9 / +1.2 / +0.2. Two lenses cleared the 9.5 bar
+with zero criticals or majors. Benchmark: 11 holds + 1 exceeds of 12 composites, zero falls-short,
+"with the fixes closed I would genuinely submit this expecting an Honorable Mention."
+
+Convergence: Brand (BR-R3-1), Visual (VS-R3-1), Benchmark (BM-R3-1), and A11y (AX-R3-1, filed
+CRITICAL with the clipping evidence) independently located the same dusk-hero defect from four
+angles: the head column, capped at 15ch, wrapped the title tall enough to overflow the
+overflow-hidden stage, clipping steps 2-3 and double-printing the scroll cue over step 1 at
+laptop viewport heights.
+
+### Fixes applied during the round (orchestrator, all pending round-4 reviewer verification)
+
+| Finding | Fix | Local verification |
+|---|---|---|
+| BR/VS/BM-R3-1 + AX-R3-1 | Dusk recomposition: head widened to 30ch (title now 2-3 lines), base title/script capped, two height-tier compaction queries, scroll cue yields under 960px heights | Full column fits above the hud at 1440x900, 1280x800, 1366x768, 1280x720, 1440x1080, 1920x1080, 390x844; zero cue overlap anywhere |
+| BM-R3-2 | fillHud emits data-reveal=fade on Coordinates/Address/Phone rows (scramble kept on Hours/Services only) | 25-frame early sampling: zero garbled factual values |
+| AX-R3-2 | Dusk hud address on a constant ink chip (skip-link chip language), scrub-independent | Visual + construction: fixed paper-on-ink pair, blur plate over photo |
+| AX-R3-3 | Dimmed step em inherits row ink until active | Code path applied in render() |
+| AX-R3-4 | Loader focuses Skip on mount; focus hands to #main on completion | Probed: loader__skip during, main after |
+| CP-R3-1 | Four orphan assets deleted | git rm, zero references confirmed first |
+| CP-R3-2 | lenis sourcemap pointer stripped | file check |
+| CP-R3-3 | Five heroes recompressed to 172-228KB | on-disk sizes |
+| MO-R3-1 | Dusk photo decode warm-up before scrub arms | code path applied |
+| VS-R3-2 | Mobile mission line distinct from all chapter copy | grep + render |
+| VS-R3-3 | Contact readout vertically centered (285/285 gaps) | measured |
+| BR-R3-2 | kitchen-people added to SITE.images map | grep |
+
+Round 4 is a full six-lens gate attempt on the fixed build: every lens re-verifies this fix table
+independently, sweeps for regressions, and scores fresh. PASS requires all six at 9.5+ with zero
+critical/major open and reviewer-verified fixes.

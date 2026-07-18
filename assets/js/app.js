@@ -524,7 +524,13 @@
       if (loader._tl) loader._tl.progress(1);
     }
     var skipBtn = $(".loader__skip", loader);
-    if (skipBtn) skipBtn.addEventListener("click", skip);
+    if (skipBtn) {
+      skipBtn.addEventListener("click", skip);
+      /* AX-R3-4: while the page is covered, Skip is the only operable
+         control; give it focus so a keyboard user is not tabbing
+         through hidden content behind the overlay. */
+      try { skipBtn.focus({ preventScroll: true }); } catch (e) {}
+    }
     function onSkipKey(e) {
       if (e.key === "Escape") { e.preventDefault(); skip(); }
     }
@@ -542,9 +548,16 @@
     var tl = g.timeline({
       defaults: { ease: "sr" },
       onComplete: function () {
+        /* AX-R3-4: focus must not fall to body when the loader (and the
+           focused Skip control) leaves the DOM; hand it to main. */
+        var hadFocus = loader.contains(d.activeElement);
         loader.remove();
         if (loader._cleanupSkip) loader._cleanupSkip();
         if (window.lenisRef) window.lenisRef.start();
+        if (hadFocus) {
+          var main = $("#main");
+          if (main) { try { main.focus({ preventScroll: true }); } catch (e) {} }
+        }
       }
     });
     /* Exposed (MO-R2-2) so a late wordmark swap can check how far the
