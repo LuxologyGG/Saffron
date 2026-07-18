@@ -94,10 +94,6 @@ Run started: 2026-07-17. Orchestrator: Claude Code (remote session), branch `cla
   and ornaments), wave 3 independent adversarial verifier who alone may write fixed (verified).
   Sanctioned tradeoff recorded: 404.html switches to root-relative URLs (FIXLIST item 8) since a
   nested-path 404 cannot resolve relative assets; the rest of the site stays path-relative.
-## Phase 3 - EXECUTION: not started
-## Phase 4 - REVIEW: not started
-## Phase 5 - DEPLOY AND VERIFY: not started
-
 - Fix pass COMPLETE (wf_b9f008b7-a39, 5/5 agents): 30/32 verified fixed, BR-2 rejected-intact per
   override, CP-1 completed by orchestrator after verification (static footer prerender all six
   pages), VER-2 nav regression fixed (unified nav__call + html[data-root] runtime support for
