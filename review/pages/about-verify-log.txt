@@ -1,0 +1,13 @@
+PASS desktop boot: is-scrub + tablist wired, tab0 selected
+PASS scrub end state: tab1 selected, panel2 opacity 1, marker matrix(1, 0, 0, 1, 1296, 0)
+PASS section scroll states captured
+PASS testimonial next -> 2 / 3
+PASS keyboard: ArrowRight -> era 2 (y=1800), Home -> era 1 (y=0)
+PASS desktop 1440 normal: ZERO console errors
+PASS reduced motion: static stacked rows, no pin, no Lenis, no tab roles, both panels visible
+PASS reduced motion: era stop jumps to row (y=970, focus=era-panel-1)
+PASS desktop 1440 reduced: ZERO console errors
+PASS mobile scrub end: tab1 selected
+PASS mobile 390 normal: ZERO console errors
+PASS mobile 390 reduced: ZERO console errors, static rows
+ALL CHECKS PASSED

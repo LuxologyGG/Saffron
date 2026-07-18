@@ -148,7 +148,9 @@
 .nav__cta { margin-left: 6px; }
 
 /* Hamburger (mobile only) */
-.nav__toggle { display: none; position: relative; z-index: calc(var(--z-overlay) + 1); }
+.nav__toggle { display: none; position: relative; z-index: calc(var(--z-overlay) + 1);
+  /* .tap-44 makes this inline-flex; stack the three bars vertically */
+  flex-direction: column; }
 .nav__toggle span {
   display: block;
   width: 22px; height: 2px;
@@ -432,6 +434,13 @@ body.menu-open { overflow: hidden; }
   position: relative;
   overflow: clip;
   padding-top: var(--sect);
+  /* .on-dark only re-points tokens; each night surface paints its own
+     ground. The footer ships with class="on-dark" in the shell markup,
+     so these resolve to the ink ground and paper fg. (Fix found during
+     the Contact build: without this the footer rendered cream with
+     inherited ink text.) */
+  background: var(--bg);
+  color: var(--fg);
 }
 .footer__grid {
   display: grid;
