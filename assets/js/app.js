@@ -59,6 +59,11 @@
     return null;
   }
 
+  /* 404.html deploys with root-relative links (it can be served at any
+     nested miss path); it sets data-root="/" on <html> so runtime-built
+     links match its static ones. Every other page leaves this empty. */
+  var ROOT = root.getAttribute("data-root") || "";
+
   var NAV_LINKS = [
     { label: "Menu", href: "menu.html" },
     { label: "Catering", href: "catering.html" },
@@ -160,7 +165,7 @@
     var insta = (SITE.social && SITE.social[0]) || null;
     var a = c.address || {};
     var pageLinks = NAV_LINKS.map(function (l) {
-      return '<li><a class="footer__navlink" href="' + l.href + '">' + esc(l.label) + "</a></li>";
+      return '<li><a class="footer__navlink" href="' + ROOT + l.href + '">' + esc(l.label) + "</a></li>";
     }).join("");
     host.innerHTML =
       '<div class="wrap">' +
@@ -243,7 +248,7 @@
     menuEl.innerHTML =
       '<nav aria-label="Site menu"><ul class="menu__list">' +
         NAV_LINKS.map(function (l, i) {
-          return '<li class="menu__item"><a class="menu__link" href="' + l.href + '">' +
+          return '<li class="menu__item"><a class="menu__link" href="' + ROOT + l.href + '">' +
             '<span class="menu__index">0' + (i + 1) + "</span><span>" + esc(l.label) + "</span></a></li>";
         }).join("") +
       "</ul></nav>" +

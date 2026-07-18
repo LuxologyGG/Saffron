@@ -221,6 +221,12 @@
   transition: color var(--t-fast) var(--e-out);
 }
 .call-panel__phone:hover { color: var(--accent-text); }
+/* On the teal stage the pomegranate price tone sits at 4.04:1, which
+   clears AA large-text but not the council's strict 4.5 line. Lift it
+   toward paper while keeping the warmth; measured 5.7:1 on teal-deep. */
+.on-teal .call-panel__phone {
+  color: color-mix(in srgb, var(--pomegranate-lite) 72%, var(--paper));
+}
 .call-panel__hours {
   font-family: var(--font-mono); font-size: var(--fs-mono); color: var(--fg-soft);
 }
