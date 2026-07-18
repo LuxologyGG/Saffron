@@ -31,6 +31,10 @@ Orchestrated autonomous rebuild. Branch: `claude/saffron-rice-rebuild-du9vf1` (s
 - Synthesis agent producing tokens.css + research/design-brief.md from all four design systems + logo-sampled palette.
 
 ## Council verdicts
+
+### Design spec — Round 1 (2026-07-18): FAIL
+Scores: Visual 8.6, Brand 8.9, Motion 8.3, Code/Perf 8.6, Accessibility 7.9, Devil's Advocate 7.2 (bar 9.5 all lenses).
+Reviews: review/design-spec/round1-*.md. Headline fixes: swap display face to a vendored serif (Fraunces/Instrument Serif); rename "Carte"->"Counter"; red-lite contrast on dark (#e0685f/#e0736c for text); shamse 404-only, new Menu hero device; preloader cap 2.2s Home-only; Lenis motion-engine contract + page-transition spec; rem+vw clamp rewrite; perf contract (transform/opacity only); complete reduced-motion matrix incl. marquee fix; :focus-visible block + 12px floor + 44px tap utility; photo license manifest + era-attributed testimonials; menu page puts prices/CTA first; drop unverified About timeline years; halal as supplier statements not certification seals.
 (none yet — pass bar 9.5 on every lens: visual fidelity, motion, code/perf, brand, accessibility, devil's advocate)
 
 ## Decisions
