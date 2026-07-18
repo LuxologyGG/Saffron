@@ -1,0 +1,339 @@
+/* =============================================================
+   Saffron & Rice, Menu page ("The Counter")
+   assets/css/pages/menu.css, linked LAST on menu.html only.
+   Night-hero page (nav--dark). Consumes token NAMES only.
+
+   HIDDEN-STATE RULE (design brief section 4): this stylesheet
+   never authors opacity: 0 or any hidden-until-reveal state.
+   Menu item rows render immediately, always; app.js/menu.js
+   apply hidden states only when motion actually runs.
+   House rules: no em dashes; zero-build; self-hosted only.
+   ============================================================= */
+
+/* Night-scope text repair: tokens.css .on-dark re-points --fg but never
+   re-applies color, so unstyled text inside a night band inherits body
+   ink and vanishes. Zero-specificity so every explicit component color
+   still wins. (Latent shell issue; scoped fix here, flagged upstream.) */
+:where(.on-dark) { color: var(--fg); }
+
+/* ============================ Hero: set the table ============================ */
+/* 70vh maximum per the brief. Desktop fills the cap; small screens size
+   to content under the cap so the category index and first prices land
+   inside the first viewport. */
+.mhero {
+  position: relative;
+  display: flex;
+  height: 70vh;
+  max-height: 70vh;
+  overflow: clip;
+  padding: clamp(70px, 9vh, 104px) 0 clamp(14px, 2.6vh, 30px);
+  background:
+    radial-gradient(58% 46% at 50% 26%, rgba(212, 169, 93, .09), transparent 72%),
+    var(--bg);
+}
+.mhero__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: clamp(8px, 1.5vh, 16px);
+  margin-block: auto;
+}
+.mhero__kicker { color: var(--fg-soft); }
+
+.mhero__panel { margin: 0; display: grid; gap: 10px; justify-items: center; }
+.mhero__frame {
+  padding: clamp(7px, 1vh, 10px);
+  border: 1px solid color-mix(in srgb, var(--accent-lite) 32%, transparent);
+  border-radius: 50% 50% 0 0;
+}
+.mhero__arch {
+  width: clamp(170px, 22vh + 40px, 320px);
+  aspect-ratio: 10 / 11;
+}
+.mhero__arch img { width: 100%; height: 100%; object-fit: cover; }
+.mhero__caption {
+  font-size: var(--fs-body);
+  color: var(--fg-faint);
+  max-width: 52ch;
+}
+
+.mhero__dish {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.1rem, 0.9rem + 4.6vw, 4.9rem);
+  line-height: var(--lh-tight);
+  letter-spacing: -.02em;
+}
+.mhero__dish em { font-style: italic; color: var(--accent-lite); }
+
+/* The distinct device: a scroll-scrubbed dotted leader "sets the table"
+   across the counter, ending in red khatam ticks at each category chip.
+   No-JS / reduced-motion truth: the dots and ticks ship fully visible;
+   the cover panel is authored RETRACTED (scaleX 0) and only menu.js
+   extends it before scrubbing it away. */
+.mhero__table {
+  width: min(100%, 860px);
+  display: grid;
+  gap: clamp(10px, 1.8vh, 16px);
+  margin-top: clamp(2px, 1vh, 10px);
+}
+.setline { position: relative; height: 12px; }
+.setline__dots {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle at 5px 6px,
+    color-mix(in srgb, var(--accent-lite) 78%, transparent) 1.6px, transparent 1.9px);
+  background-size: 13px 12px;
+  background-repeat: repeat-x;
+}
+.setline__cover {
+  position: absolute; inset: -1px;
+  background: var(--bg);
+  transform: scaleX(0);
+  transform-origin: right center;
+}
+.setline__ticks { position: absolute; inset: 0; }
+.setline__tick {
+  position: absolute;
+  top: 50%; left: var(--x, 50%);
+  width: 9px; height: 9px;
+  background: var(--accent-2);
+  translate: -50% -50%;
+  rotate: 45deg;
+}
+
+.mhero__chips {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.chip {
+  gap: 10px;
+  padding: 0 18px;
+  border: 1px solid color-mix(in srgb, var(--paper) 24%, transparent);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: border-color var(--t-fast) var(--e-ui),
+              background-color var(--t-fast) var(--e-ui);
+}
+.chip small { font-size: inherit; color: var(--accent-lite); }
+.chip:hover { border-color: var(--accent-lite); background: var(--accent-wash); }
+
+/* ============================ Category index ============================ */
+/* Numbered hairline table, 20 percent alpha gold hairlines (decorative). */
+.mindex { background: var(--bg); padding: clamp(14px, 2.6vh, 40px) 0 clamp(22px, 4vh, 56px); }
+.mindex__row {
+  display: grid;
+  grid-template-columns: 3.2ch 1fr auto;
+  align-items: center;
+  gap: clamp(12px, 2.5vw, 28px);
+  width: 100%;
+  min-height: var(--tap);
+  padding: clamp(8px, 1.4vh, 16px) 4px;
+  border-top: 1px solid color-mix(in srgb, var(--accent-lite) 20%, transparent);
+  justify-content: start;
+  text-align: left;
+}
+.mindex__list > li:last-child .mindex__row {
+  border-bottom: 1px solid color-mix(in srgb, var(--accent-lite) 20%, transparent);
+}
+.mindex__num {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  color: var(--accent-lite);
+}
+.mindex__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3s);
+  font-weight: 500;
+  letter-spacing: -.01em;
+  transition: transform var(--t-fast) var(--e-ui), color var(--t-fast) var(--e-ui);
+}
+.mindex__row:hover .mindex__name { transform: translateX(8px); color: var(--accent-lite); }
+.mindex__count {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+
+/* ============================ Category chapters ============================ */
+.mcat {
+  position: relative;
+  background: var(--bg);
+  padding: clamp(40px, 7vh, 104px) 0 clamp(56px, 9vh, 128px);
+  overflow: clip;
+  scroll-margin-top: 84px;
+}
+.mcat__wrap { position: relative; z-index: var(--z-base); }
+.mcat .shamse-watermark { top: clamp(16px, 4vw, 56px); right: calc(-1 * clamp(50px, 7vw, 140px)); }
+.mcat--alt .shamse-watermark { right: auto; left: calc(-1 * clamp(50px, 7vw, 140px)); }
+
+.mcat__head {
+  display: grid;
+  gap: clamp(10px, 1.6vh, 18px);
+  max-width: 1000px;
+  margin-bottom: clamp(22px, 4vh, 52px);
+}
+.mcat__head .thread-divider { width: 100%; margin-inline: 0; }
+/* Category note: owner-verbatim content ("Wrap or soft baguette"), so it
+   keeps its authored case; never uppercased into decoration. */
+.mcat__note { text-transform: none; letter-spacing: .08em; }
+
+/* Item rows: display name, dotted leader, mono price with red khatam tick.
+   Rows are static HTML, verbatim from data.js, never generated. */
+.mrows { display: grid; gap: clamp(18px, 3vh, 32px); max-width: 1000px; }
+.mrow__line { display: flex; align-items: baseline; gap: clamp(10px, 1.6vw, 18px); }
+.mrow__name { font-weight: 500; }
+.mrow__leader {
+  flex: 1 1 24px;
+  min-width: 24px;
+  height: 5px;
+  align-self: flex-end;
+  margin-bottom: .44em;
+  background-image: radial-gradient(circle at 2.5px 2.5px,
+    color-mix(in srgb, var(--fg) 36%, transparent) 1.4px, transparent 1.7px);
+  background-size: 9px 5px;
+  background-repeat: repeat-x;
+}
+.mrow__price { display: inline-flex; align-items: center; gap: 9px; color: var(--accent-2-text); }
+.mrow__tick { width: 10px; height: 10px; color: var(--accent-2); flex: none; }
+.mrow__amount { font-family: var(--font-mono); font-weight: 500; font-size: var(--fs-body); }
+.mrow__desc { margin-top: 6px; color: var(--fg-soft); max-width: 58ch; }
+
+/* ============================ Sticky category rail (desktop) ============================ */
+/* Ships [hidden] in markup; menu.js reveals it over the chapters only.
+   Roll-up hover labels: two-layer swap, .35s --e-ui (Dokmeh re-skin). */
+.mrail {
+  position: fixed;
+  left: clamp(10px, 1.2vw, 24px);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: calc(var(--z-nav) - 10);
+  display: none;
+  gap: 2px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid color-mix(in srgb, var(--paper) 14%, transparent);
+  background: color-mix(in srgb, var(--ink) 85%, transparent);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: var(--paper);
+}
+.mrail__item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 11px;
+  padding-inline: 6px;
+}
+.mrail__item::before {
+  content: "";
+  width: 6px; height: 6px; flex: none;
+  rotate: 45deg;
+  background: color-mix(in srgb, var(--paper) 22%, transparent);
+  transition: background-color var(--t-fast) var(--e-ui);
+}
+.mrail__item.is-active::before { background: var(--accent-lite); }
+.mrail__item.is-active { color: var(--accent-lite); }
+.mrail__num { font-family: var(--font-mono); font-size: var(--fs-mono); color: var(--accent-lite); }
+.mrail__label {
+  display: block;
+  overflow: hidden;
+  height: 1.4em;
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.mrail__stack { display: grid; transition: transform .35s var(--e-ui); }
+.mrail__stack span { display: block; height: 1.4em; line-height: 1.4; white-space: nowrap; }
+.mrail__item:hover .mrail__stack,
+.mrail__item:focus-visible .mrail__stack { transform: translateY(-1.4em); }
+@media (min-width: 1160px) {
+  .mrail:not([hidden]) { display: grid; }
+  /* Reserve the left gutter for the rail so it never overlaps rows */
+  .mcat .wrap { padding-left: calc(var(--gutter) + 170px); }
+}
+
+/* ============================ Disclosure band ============================ */
+.mdisclose { background: var(--bg); padding-block: clamp(56px, 9vh, 130px); }
+.mdisclose__grid {
+  display: grid;
+  grid-template-columns: minmax(240px, .9fr) 2fr;
+  gap: clamp(24px, 4vw, 64px);
+  align-items: start;
+}
+.mdisclose__lede { display: grid; gap: 14px; }
+.mdisclose__quotes { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 3vw, 44px); }
+.hquote { display: grid; gap: 12px; margin: 0; align-content: start; }
+.hquote blockquote {
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  line-height: 1.4;
+  font-weight: 400;
+  margin: 0;
+}
+.hquote blockquote::before { content: "\201C"; color: var(--accent-lite); }
+.hquote blockquote::after { content: "\201D"; color: var(--accent-lite); }
+.hquote figcaption {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+.mdisclose .thread-divider { margin-block: clamp(28px, 5vh, 56px); }
+.mdisclose__fine {
+  display: grid;
+  gap: 10px;
+  max-width: 72ch;
+  font-size: var(--fs-body);
+  color: var(--fg-soft);
+}
+.mdisclose__fine a { color: var(--fg); text-decoration: underline; text-underline-offset: 3px; }
+.mdisclose__fine a:hover { color: var(--accent-lite); }
+.mdisclose__cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  margin-top: clamp(20px, 3.4vh, 34px);
+}
+.mdisclose__addr {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+
+/* ============================ Responsive ============================ */
+@media (max-width: 900px) {
+  .mdisclose__grid { grid-template-columns: 1fr; }
+  .mdisclose__quotes { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  /* Content-sized hero, still capped at 70vh, so the index AND the first
+     prices land inside the first viewport, clear of the call bar
+     (brief guarantee). */
+  .mhero { height: auto; max-height: 70vh; padding-top: 68px; padding-bottom: 10px; }
+  .mhero__wrap { gap: 8px; }
+  .mhero__caption { display: none; }   /* the disclosure band instance always renders */
+  .mhero__arch { width: clamp(124px, 33vw, 160px); }
+  .mhero__chips { gap: 8px; }
+  .chip { padding: 0 14px; }
+  .mindex { padding: 6px 0 10px; }
+  .mindex__row { padding-block: 6px; }
+  .mcat { scroll-margin-top: 70px; padding-top: 18px; }
+  .mcat__head { margin-bottom: 10px; gap: 8px; }
+  .mcat__title { font-size: var(--fs-h3); }
+  .mrow__desc { margin-top: 4px; }
+}
