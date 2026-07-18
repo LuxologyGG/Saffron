@@ -249,6 +249,7 @@
         tl.from(".hero__kicker", { y: 18, opacity: 0, duration: .7 }, .3)
           .from(".hero__script", { y: 16, opacity: 0, duration: .7 }, .55)
           .from(".hero__ctas", { y: 16, opacity: 0, duration: .7 }, .7)
+          .from(".hero__mission", { y: 16, opacity: 0, duration: .7 }, .8)
           .from(".hero__hud", { opacity: 0, duration: .8 }, .9)
           .fromTo(".hero__arch-mask",
             { clipPath: "inset(100% 0 0 0)" },
