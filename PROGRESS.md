@@ -16,6 +16,12 @@ Orchestrated autonomous rebuild. Branch: `claude/saffron-rice-rebuild-du9vf1` (s
 - Fresh clone at scratchpad/saffron-b, orphan branch created, brand assets extracted, loop scheduled.
 - Next: load camron-website-create pipeline, clone claude-council, fan out research subagents (business facts, awwwards rediscovery, per-reference full-site recon with clone-skill capture).
 
+### Phase 1 — Research (in flight)
+- Awwwards rediscovery COMPLETE: all prior findings confirmed as of 2026-07. KHUFU'S HM (May 2026, now #1 MENA 50 Best) = primary baseline; Laguna Al-Sha'ab HM (Oct 2025, concept piece); Tastavents HM (Oct 2024); Berenjak best real Persian site (no award, bot-protected); zero Persian restaurants on awwwards (Iran page checked). Artifact: research/awwwards-rediscovery.md.
+- In flight: business facts agent, 4 reference recon agents (khufus, laguna, tastavents, berenjak+lobat+dokmeh), vendor/scaffold agent (GSAP+Lenis+fonts).
+- data.js committed with exact owner menu (authoritative), disclaimers, service modes, halal claims.
+- Council tooling: claude-council cloned; 0/7 providers available (no keys/CLIs) → using its LOCAL COUNCIL mode: Claude subagent roles for the 6 lenses, images attached, 9.5 bar.
+
 ## Council verdicts
 (none yet — pass bar 9.5 on every lens: visual fidelity, motion, code/perf, brand, accessibility, devil's advocate)
 
