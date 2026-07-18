@@ -1,0 +1,456 @@
+/* =============================================================
+   Saffron & Rice, Home ("The Sofreh") page styles
+   Loads LAST in the cascade (fonts -> vendor -> tokens -> app ->
+   pages -> this). Consumes token names only.
+
+   HIDDEN-STATE RULE (design brief section 4): this stylesheet
+   never authors opacity: 0 or any hidden-until-reveal state.
+   assets/js/pages/home.js applies hero/daynight motion states
+   only when motion actually runs.
+   House rules: no em dashes; zero-build; self-hosted only.
+   ============================================================= */
+
+/* ============================ Night-scope ground + ink ============================ */
+/* tokens.css .on-dark re-points the semantic variables but declares no
+   background/color of its own, so descendants would inherit body ink.
+   Declare both here at scope level (page-scoped safety net; individual
+   sections later in this file still override their ground). */
+.on-dark {
+  background-color: var(--bg);
+  color: var(--fg);
+}
+/* The footer wordmark SVG ships fixed brand colors (near-ink script);
+   flip lightness while keeping hue so it reads on the night ground. */
+.footer__wordmark img {
+  filter: invert(1) hue-rotate(180deg);
+  opacity: .9;
+}
+/* Hamburger bars must stack: .tap-44 sets row flex on the toggle, which
+   would lay the three spans side by side (page-scoped shell safety net). */
+.nav__toggle { flex-direction: column; }
+
+/* ============================ Hero: arch-framed dolly zoom ============================ */
+/* 160vh scroll runway; the viewport-height stage is CSS-sticky and the
+   photo scale 1.05 -> 1.32 is scrub-tied in home.js. Without JS or under
+   reduced motion the stage simply scrolls as a static arch image. */
+.home-hero {
+  position: relative;
+  height: 160vh;
+  background: var(--ink);
+}
+.home-hero__view {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: clip;
+}
+.home-hero__arch {
+  position: absolute;
+  top: clamp(66px, 9vh, 92px);
+  left: clamp(10px, 2.6vw, 38px);
+  right: clamp(10px, 2.6vw, 38px);
+  bottom: 0;
+  border-radius: var(--arch-radius);
+  overflow: clip;
+  background: var(--ink-1);
+}
+.home-hero__arch picture,
+.home-hero__arch img {
+  width: 100%;
+  height: 100%;
+}
+.home-hero__arch img { object-fit: cover; }
+/* legibility scrim: quiet at the dome, ink toward the caption ledge */
+.home-hero__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(14,17,15,.46) 0%,
+    rgba(14,17,15,.10) 38%,
+    rgba(14,17,15,.34) 66%,
+    rgba(14,17,15,.86) 100%);
+  pointer-events: none;
+}
+.home-hero__content {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-base);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 calc(var(--gutter) + clamp(0px, 1vw, 18px)) clamp(18px, 3.6vh, 40px);
+}
+/* Ghost outline word (Laguna text-stroke curve). Decorative; home.js
+   scrubs opacity 0 -> .44 -> 0 across the pin. Static fallback keeps it
+   a faint 18 percent stroke, never hidden. */
+.home-hero__ghost {
+  position: absolute;
+  left: 50%;
+  top: 24%;
+  transform: translateX(-50%);
+  -webkit-text-stroke: 1px color-mix(in srgb, var(--paper) 62%, transparent);
+  white-space: nowrap;
+}
+.home-hero__eyebrow { margin-bottom: 14px; }
+.home-hero h1 {
+  max-width: 14ch;
+  text-wrap: balance;
+}
+.home-hero h1 .hline { display: block; }
+.home-hero h1 em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--accent-lite);
+}
+/* Facts ledge: address, phone, service modes, hours. MUST sit inside the
+   first viewport (task + brief hard requirement). */
+.home-hero__facts {
+  margin-top: clamp(16px, 2.6vh, 28px);
+  padding-top: clamp(12px, 2vh, 18px);
+  border-top: 1px solid color-mix(in srgb, var(--paper) 26%, transparent);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 30px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--paper);
+}
+.home-hero__facts a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  color: var(--accent-lite);
+}
+.home-hero__fact {
+  display: inline-flex;
+  align-items: center;
+  gap: .65em;
+}
+.home-hero__fact .khatam { width: 9px; height: 9px; flex: none; color: var(--accent-lite); }
+.home-hero__fact .farsi { height: 17px; width: auto; flex: none; color: var(--accent-lite); }
+.home-hero__modes { display: inline-flex; align-items: center; gap: .65em; flex-wrap: wrap; }
+.home-hero__modes .sep {
+  width: 4px; height: 4px; flex: none;
+  background: color-mix(in srgb, var(--paper) 55%, transparent);
+  transform: rotate(45deg);
+}
+.home-hero__disclosure {
+  margin-top: 10px;
+  font-size: var(--fs-body);
+  color: color-mix(in srgb, var(--paper) 78%, var(--ink));
+}
+@media (max-width: 700px) {
+  .home-hero__facts { gap: 4px 18px; }
+  .home-hero__ghost { top: 18%; }
+}
+
+/* ============================ Welcome statement (01 / The Kitchen) ============================ */
+.home-welcome { background: var(--bg); overflow: clip; }
+.home-welcome .wrap { position: relative; }
+.home-welcome .shamse-watermark {
+  top: -40px;
+  right: -60px;
+}
+.home-welcome__body {
+  position: relative;
+  z-index: var(--z-base);
+  display: grid;
+  gap: clamp(18px, 2.6vw, 30px);
+}
+.home-welcome__statement {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  line-height: 1.22;
+  font-weight: 500;
+  letter-spacing: -.01em;
+  max-width: 26ch;
+}
+.home-welcome__statement em {
+  font-style: italic;
+  color: var(--accent-text);
+}
+
+/* ============================ Signature trio (02 / Signatures) ============================ */
+.home-trio {
+  background: var(--bg-2);
+  overflow: clip;
+}
+.home-trio .wrap { position: relative; z-index: var(--z-base); }
+/* cutouts drift BEHIND the cards: ambient layer under the wrap */
+.home-trio .float-layer { z-index: var(--z-ambient); }
+.home-trio .float-cutout { color: var(--crocus); }
+.home-trio .fc-thread { top: 9%; right: 6%; width: 46px; }
+.home-trio .fc-petal-1 { top: 34%; left: 3.5%; width: 30px; }
+.home-trio .fc-petal-2 { bottom: 14%; right: 12%; width: 24px; }
+.home-trio .fc-grain { bottom: 26%; left: 9%; width: 15px; }
+.home-trio__head {
+  display: grid;
+  gap: 14px;
+  margin-bottom: clamp(30px, 4.5vw, 56px);
+}
+.home-trio__grid { align-items: start; }
+.dish-card { display: grid; gap: 14px; }
+.dish-card__media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  background: var(--paper-3);
+}
+.dish-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.dish-card h3 { margin-top: 6px; }
+.dish-card p { color: var(--fg-soft); max-width: 34ch; }
+.dish-card .tlink { color: var(--accent-text); }
+.home-trio .repnote { margin-top: clamp(26px, 3.6vw, 44px); }
+
+/* ============================ Day-to-night band ============================ */
+/* Authored as two static stacked bands (the no-JS and reduced-motion
+   truth per the brief matrix). When motion runs, home.js adds
+   .is-lerping: the bands go transparent and app.js scrubs --dn-mix on
+   the section, flipping .is-night at 55 percent. All copy inside is
+   --fs-h3 or larger; CTA text sits on solid pill fills, never on the
+   lerping ground. */
+.dn-band {
+  display: flex;
+  align-items: center;
+  min-height: 110vh;
+  padding-block: var(--sect-sm);
+}
+.dn-band--day { background: var(--paper); color: var(--ink); }
+.dn-band--night { background: var(--ink); color: var(--paper); }
+.daynight.is-lerping .dn-band { background: transparent; color: inherit; }
+.dn-copy {
+  font-family: var(--font-display);
+  font-size: var(--fs-h3);
+  line-height: 1.24;
+  font-weight: 500;
+  letter-spacing: -.01em;
+  max-width: 24ch;
+}
+.dn-copy em { font-style: italic; }
+.dn-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: clamp(24px, 3.6vw, 40px);
+}
+/* paper pill: solid fill readable at every point of the lerp */
+.btn--paper { background: var(--paper); color: var(--ink); }
+.btn--paper:hover { background: var(--paper-1); }
+
+/* ============================ Menu teaser (03 / The Counter) ============================ */
+.home-counter { background: var(--bg); }
+.home-counter__head {
+  display: grid;
+  gap: 14px;
+  margin-bottom: clamp(30px, 4.5vw, 56px);
+}
+.home-counter__cat { display: grid; gap: 4px; align-content: start; }
+.home-counter__cat h3 {
+  display: flex;
+  align-items: baseline;
+  gap: .7em;
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent-lite) 20%, transparent);
+}
+.home-counter__cat h3 .num {
+  font-family: var(--font-mono);
+  font-size: var(--fs-eyebrow);
+  letter-spacing: var(--tracking-mono);
+  color: var(--accent-text);
+}
+.mrow {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  min-height: 44px;
+}
+.mrow__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  font-weight: 500;
+  letter-spacing: -.01em;
+}
+.mrow__dots {
+  flex: 1;
+  min-width: 24px;
+  border-bottom: 1px dotted color-mix(in srgb, var(--fg) 38%, transparent);
+  transform: translateY(-4px);
+}
+.mrow__price {
+  display: inline-flex;
+  align-items: center;
+  gap: .55em;
+  font-family: var(--font-mono);
+  font-size: var(--fs-body);
+  font-weight: 500;
+  color: var(--accent-2-text);
+  white-space: nowrap;
+}
+.mrow__price::before {
+  content: "";
+  width: 6px; height: 6px; flex: none;
+  background: var(--accent-2);
+  transform: rotate(45deg);
+}
+.home-counter__cta {
+  margin-top: clamp(30px, 4.5vw, 52px);
+  display: flex;
+  justify-content: center;
+}
+
+/* ============================ Catering teaser (04 / The Spread) ============================ */
+.home-spread { background: var(--bg-2); }
+.home-spread__grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: clamp(28px, 4.5vw, 72px);
+}
+.home-spread__media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+}
+.home-spread__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home-spread__body { display: grid; gap: clamp(14px, 2vw, 22px); }
+.home-spread__body h2 em {
+  font-style: italic;
+  color: var(--accent-2-text);
+}
+.home-spread__tiers { display: grid; gap: 6px; }
+.home-spread__tier {
+  display: flex;
+  align-items: center;
+  gap: .7em;
+  min-height: 32px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-body);
+  letter-spacing: .06em;
+  color: var(--fg-soft);
+}
+.home-spread__tier::before {
+  content: "";
+  width: 6px; height: 6px; flex: none;
+  background: var(--accent-2);
+  transform: rotate(45deg);
+}
+.home-spread__tier b { font-weight: 500; color: var(--fg); }
+.home-spread__tier span { color: var(--accent-2-text); font-weight: 500; }
+.home-spread__tier span::before { content: "\00B7\00A0"; color: var(--fg-faint); }
+.home-spread__cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 8px; }
+@media (max-width: 900px) {
+  .home-spread__grid { grid-template-columns: 1fr; }
+  .home-spread__media { max-width: 480px; }
+}
+
+/* ============================ Testimonials (05 / Word of Mouth) ============================ */
+.home-testimonials { background: var(--bg); }
+.home-testimonials__head {
+  display: grid;
+  gap: 14px;
+  justify-items: center;
+  text-align: center;
+  margin-bottom: clamp(30px, 4.5vw, 52px);
+}
+/* no-JS truth: all three cards are authored visible and simply stack;
+   app.js applies [hidden] to cards 2-3 when it takes over the band. */
+.home-testimonials .tcard + .tcard { margin-top: 18px; }
+/* The white card is a light island inside the .on-dark scope, so the
+   scope's faint/accent variables would go too light on it. Re-anchor
+   the attribution (meaningful text, AA on white) and the quote marks. */
+.home-testimonials .tcard__who { color: color-mix(in srgb, var(--ink) 68%, var(--white)); }
+.home-testimonials .tcard__quote::before,
+.home-testimonials .tcard__quote::after { color: var(--accent-deep); }
+
+/* ============================ Halal sourcing band (06 / Sourcing) ============================ */
+.home-halal { background: var(--ink-1); }
+.home-halal__grid {
+  display: grid;
+  grid-template-columns: minmax(240px, .9fr) 1.4fr;
+  gap: clamp(28px, 4.5vw, 72px);
+  align-items: start;
+}
+.home-halal__head { display: grid; gap: 14px; }
+.home-halal__head .khatam-seal {
+  width: 44px;
+  height: 44px;
+  color: var(--accent-lite);
+}
+.home-halal__quotes { display: grid; gap: clamp(20px, 3vw, 30px); }
+.halal-quote {
+  border-left: 2px solid color-mix(in srgb, var(--accent-lite) 45%, transparent);
+  padding-left: clamp(16px, 2vw, 26px);
+  display: grid;
+  gap: 8px;
+}
+.halal-quote blockquote {
+  font-family: var(--font-display);
+  font-size: var(--fs-h4);
+  line-height: 1.35;
+  font-weight: 400;
+}
+.halal-quote blockquote::before { content: "\201C"; color: var(--accent-lite); }
+.halal-quote blockquote::after { content: "\201D"; color: var(--accent-lite); }
+.halal-quote figcaption {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--fg-faint);
+}
+.home-halal__note { color: var(--fg-soft); }
+.home-halal__modes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-top: 6px;
+}
+.mode-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .6em;
+  min-height: var(--tap);
+  padding-inline: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+  color: var(--fg);
+}
+.mode-chip::before {
+  content: "";
+  width: 6px; height: 6px; flex: none;
+  background: var(--accent-lite);
+  transform: rotate(45deg);
+}
+@media (max-width: 900px) {
+  .home-halal__grid { grid-template-columns: 1fr; }
+}
+
+/* ============================ Disclosure band (before footer) ============================ */
+.home-disclosures { background: var(--bg); }
+.home-disclosures .wrap {
+  display: grid;
+  gap: 10px;
+  padding-block: var(--sect-sm);
+}
+.home-disclosures p {
+  font-size: var(--fs-body);
+  color: var(--fg-soft);
+  max-width: 74ch;
+}
+.home-disclosures .thread-divider { margin-bottom: 14px; }
+
+/* ============================ Section divider spacing ============================ */
+.home-divider { padding-block: clamp(8px, 1.6vw, 20px); }

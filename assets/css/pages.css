@@ -1,0 +1,19 @@
+/* =============================================================
+   Saffron & Rice, Shared page styles (pages.css)
+   Loads AFTER app.css and BEFORE the per-page stylesheet (strict
+   cascade: fonts -> vendor -> tokens -> app -> pages -> per-page).
+   Cross-page section patterns that more than one page consumes
+   land here; hero/section styles unique to one page live in
+   assets/css/pages/<page>.css. Currently the per-page files carry
+   everything; this file exists so the canonical head block always
+   resolves. House rules: no em dashes; no hidden-state authoring.
+   ============================================================= */
+
+/* Representative-imagery disclosure note (design brief section 1:
+   renders wherever representative photography appears; type floor
+   --fs-body, never mono size). Used by multiple pages. */
+.repnote {
+  font-size: var(--fs-body);
+  color: var(--fg-soft);
+  max-width: var(--measure);
+}
