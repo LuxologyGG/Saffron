@@ -275,7 +275,11 @@
        link and nav (the toggle itself stays reachable, it is the
        close control). .nav__links/.nav__call are already display:none
        at the width the overlay opens, so inert on them is defensive. */
-    [$("#main"), $("[data-site-footer]"), $(".nav__brand"), $(".nav__links"), $(".nav__call")].forEach(function (el) {
+    /* AX-R4-2: the skip link is included so the overlay Tab cycle is a
+       textbook contained trap (menu items, CTAs, toggle) with no wrap out
+       through the body to the skip link. It returns to reachable and
+       functional the moment the menu closes. */
+    [$("#main"), $("[data-site-footer]"), $(".nav__brand"), $(".nav__links"), $(".nav__call"), $(".skip-link")].forEach(function (el) {
       if (el) { if (open) el.setAttribute("inert", ""); else el.removeAttribute("inert"); }
     });
     if (window.lenisRef) { if (open) window.lenisRef.stop(); else window.lenisRef.start(); }

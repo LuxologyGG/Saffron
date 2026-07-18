@@ -231,6 +231,9 @@
           var kEl0 = $(".ab-step__kicker", el), tEl0 = $(".ab-step__text", el);
           if (kEl0) kEl0.style.opacity = "1";
           if (tEl0) tEl0.style.opacity = "1";
+          /* Arrived step: release the em to its accent color (AX-R4-1). */
+          var em0 = $("em", el);
+          if (em0) em0.style.color = "";
           return;
         }
         var start = i === 1 ? .32 : .66;
@@ -255,6 +258,12 @@
            bisection's margin to dip back under the AA target. */
         if (kEl) kEl.style.opacity = String(kickOp);
         if (tEl) tEl.style.opacity = String(textOp);
+        /* AX-R4-1: an accent em (e.g. "fire") cannot clear AA at the row's
+           dim opacity, which safeOpacity floors for the ink body color only.
+           While the step is dimmed the em borrows the row ink; once it
+           arrives it releases back to its CSS accent color. */
+        var em = $("em", el);
+        if (em) em.style.color = local < 1 ? "var(--fg)" : "";
         el.style.transform = "translateY(" + ((1 - local) * 14).toFixed(1) + "px)";
       });
     }
