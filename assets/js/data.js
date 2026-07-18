@@ -56,7 +56,7 @@ window.SITE = {
     },
     intro: "A Persian and Middle Eastern deli and catering kitchen on Pacific Coast Highway in Torrance. Kabab off the flame, stews that simmer all morning, saffron rice under everything.",
     story: "Under new management. The market that stood here for years now cooks. Same address, new fire.",
-    mission: "Kabab off the flame, stews that simmer all morning, saffron rice under everything."
+    mission: "Kabab, stews, and saffron rice, daily 11 to 8 on Pacific Coast Highway."
   },
 
   orderLinks: [
@@ -214,6 +214,7 @@ window.SITE = {
     "about-kitchen": "assets/img/about-kitchen.jpg",
     "contact-hero": "assets/img/contact-hero.jpg",
     "texture-1": "assets/img/texture-1.jpg",
+    "kitchen-people": "assets/img/kitchen-people.jpg",
     "texture-2": "assets/img/texture-2.jpg"
   }
 };

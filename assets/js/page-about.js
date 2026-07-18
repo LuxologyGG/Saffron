@@ -270,6 +270,14 @@
       window.dispatchEvent(new Event("resize"));
     }
 
+    /* MO-R3-1: warm the stage photo's decode before the scrub arms so a
+       cold first pass through the runway never pays paint cost mid-frame. */
+    if (photo) {
+      var pimg = photo.querySelector ? photo.querySelector("img") : null;
+      if (!pimg && photo.tagName === "IMG") pimg = photo;
+      if (pimg && pimg.decode) pimg.decode().catch(function () {});
+    }
+
     var proxy = { t: 0 };
     g.to(proxy, {
       t: 1, ease: "none",

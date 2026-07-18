@@ -72,14 +72,22 @@
   position: relative; z-index: 1;
   display: flex; flex-direction: column;
   gap: clamp(34px, 5.4vh, 64px);
-  padding-block: clamp(96px, 15vh, 170px) clamp(70px, 11vh, 120px);
+  /* Bottom padding clears the absolute hud band; on short viewports the
+     scroll cue also yields (BR-R3-1). */
+  padding-block: clamp(96px, 15vh, 170px) clamp(96px, 13vh, 140px);
 }
 .ab-dusk__head {
   display: flex; flex-direction: column;
   gap: clamp(10px, 1.6vh, 18px);
-  max-width: 15ch;
+  /* Wide enough that the title breaks to two or three lines, never
+     four; the stage's vertical budget is the constraint (BM-R3-1). */
+  max-width: 30ch;
 }
-.ab-dusk__title { max-width: 14ch; }
+/* The stage must hold head + steps + hud inside one viewport at every
+   common height; the title and script are sized for that budget, not
+   for the generic h2 scale (BM-R3-1). */
+.ab-dusk__title { max-width: 18ch; font-size: clamp(40px, 4.8vw, 72px); }
+.ab-dusk__script .script-fa { font-size: clamp(22px, 2.4vw, 38px); line-height: 1.9; }
 .ab-dusk__line { display: block; }
 .ab-dusk__script { margin-top: 2px; }
 
@@ -272,4 +280,31 @@
   .ab-dusk__photo::after {
     background: color-mix(in srgb, var(--bg) 72%, transparent);
   }
+}
+
+/* BR-R3-1: at short viewport heights the in-flow steps rail reaches the
+   bottom hud band; the scroll cue yields rather than printing over the
+   step kicker. The address readout sits right of the 50ch rail and stays. */
+@media (max-height: 960px) {
+  .ab-dusk__hud .scrollcue { display: none; }
+}
+
+/* BM-R3-1 short-viewport compaction: at laptop heights the dusk copy
+   column must fit above the hud band so the narrative steps stay in
+   view for the whole pinned runway. */
+@media (max-height: 1020px) {
+  .ab-dusk__inner {
+    gap: clamp(18px, 3vh, 34px);
+    padding-block: clamp(76px, 10vh, 100px) clamp(84px, 11vh, 108px);
+  }
+  .ab-dusk__title { font-size: clamp(34px, 4.6vw, 64px); }
+  .ab-dusk__script .script-fa { font-size: clamp(22px, 2.2vw, 34px); }
+  .ab-dusk__steps { gap: 14px; }
+  .ab-dusk__list { gap: 12px; }
+  .ab-step__text { font-size: clamp(17px, 1.5vw, 21px); }
+}
+@media (max-height: 840px) {
+  .ab-dusk__inner { gap: 16px; padding-block: 72px 88px; }
+  .ab-dusk__title { font-size: clamp(30px, 4vw, 52px); }
+  .ab-dusk__head { gap: 8px; }
 }

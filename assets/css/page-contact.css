@@ -214,6 +214,7 @@
   gap: clamp(28px, 5vw, 80px); align-items: start;
 }
 .ch-call__readout {
+  align-self: center; /* VS-R3-3: balance the tall left column */
   justify-self: end; width: 100%; max-width: 280px;
   padding-top: clamp(4px, 1vh, 14px);
   text-align: right;
@@ -272,6 +273,7 @@
 
   .ch-call__grid { grid-template-columns: 1fr; gap: clamp(26px, 6vh, 40px); }
   .ch-call__readout {
+  align-self: center; /* VS-R3-3: balance the tall left column */
     justify-self: start; max-width: 340px; text-align: left;
     padding-top: 0;
   }

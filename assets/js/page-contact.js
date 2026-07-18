@@ -53,19 +53,23 @@
     var mount = $("[data-hud-rows]");
     if (!mount) return;
     var rows = [];
+    /* BM-R3-2: factual values (coordinates, address, phone) must never
+       render garbled, so they fade; only labels-adjacent Hours and
+       Services keep the scramble treatment. */
     if (typeof addr.lat === "number" && typeof addr.lng === "number") {
-      rows.push({ k: "Coordinates", v: fmtCoords(addr.lat, addr.lng) });
+      rows.push({ k: "Coordinates", v: fmtCoords(addr.lat, addr.lng), fade: true });
     }
-    if (addr.full) rows.push({ k: "Address", v: addr.full });
+    if (addr.full) rows.push({ k: "Address", v: addr.full, fade: true });
     if (company.hours && company.hours.short) rows.push({ k: "Hours", v: company.hours.short });
-    if (company.phone) rows.push({ k: "Phone", v: company.phone });
+    if (company.phone) rows.push({ k: "Phone", v: company.phone, fade: true });
     if (company.services && company.services.length) {
       rows.push({ k: "Services", v: joinList(company.services) });
     }
     mount.innerHTML = rows.map(function (r) {
+      var attr = r.fade ? 'data-reveal="fade"' : "data-scramble";
       return '<div class="hud-row" data-reveal-item>' +
         '<dt class="hud-row__k">' + esc(r.k) + "</dt>" +
-        '<dd class="hud-row__v" data-scramble>' + esc(r.v) + "</dd>" +
+        '<dd class="hud-row__v" ' + attr + '>' + esc(r.v) + "</dd>" +
       "</div>";
     }).join("");
   }
