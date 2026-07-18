@@ -432,6 +432,8 @@
     el.setAttribute("role", "status");
     el.setAttribute("aria-label", "Loading");
     el.innerHTML =
+      '<button type="button" class="loader__skip btn"><span class="btn__text">' +
+        '<span class="swap" data-text="Skip">Skip</span></span></button>' +
       '<div class="loader__inner">' +
         '<div class="loader__row">' +
           '<span class="loader__line loader__line--l"></span>' +
@@ -442,20 +444,27 @@
         '<p class="loader__word">' + esc(c.name || "Saffron & Rice") + "</p>" +
         '<p class="loader__fa script-fa" lang="fa" dir="rtl" aria-hidden="true">' + esc(c.scriptFa) + "</p>" +
         '<p class="loader__kicker">' + esc(a.city) + ", California</p>" +
+        '<p class="loader__mission" data-bind="company.mission">' + esc(c.mission || "") + "</p>" +
       "</div>";
     d.body.appendChild(el);
     /* Inline the vector wordmark so its letterforms can stroke-draw.
        Local same-origin fetch; the text word stays as the fallback.
-       el._started (set by runLoader's go(), CP-6) flags that the
-       180ms fallback already kicked the timeline off with the plain
-       text word; if the fetch lands after that we skip the swap
-       entirely rather than pop a fully-inked, never-drawn SVG in
-       mid-animation. */
+       el._started (set by runLoader's go()) flags the timeline is
+       already running. A late fetch can still swap the mark in and
+       have it draw, as long as we catch it early: el._tl (exposed by
+       runLoaderTimeline) reports tl.time(), and while that is <= .35s
+       the wordmark tween has not meaningfully progressed yet, so we
+       inject a standalone draw-in tween for the freshly swapped paths.
+       Past that window we keep the text fallback rather than pop a
+       fully-inked, never-drawn SVG in mid-animation. */
     if (window.fetch) {
       el._markReady = fetch(ROOT + "assets/img/brand/logo-text.svg")
         .then(function (r) { return r.ok ? r.text() : null; })
         .then(function (txt) {
-          if (!txt || el._started) return false;
+          if (!txt) return false;
+          var tl = el._tl;
+          var lateOk = el._started && tl && tl.time() <= 0.35;
+          if (el._started && !lateOk) return false;
           var slot = $(".loader__mark", el);
           if (!slot || !el.isConnected) return false;
           slot.innerHTML = txt;
@@ -464,6 +473,16 @@
           svg.setAttribute("aria-hidden", "true");
           svg.setAttribute("focusable", "false");
           el.classList.add("loader--marked");
+          if (lateOk && hasGsap) {
+            var paths = $$("path", slot);
+            if (paths.length) {
+              g.set(paths, { stroke: "currentColor", strokeWidth: 1, fillOpacity: 0, drawSVG: "0%" });
+              g.timeline()
+                .to(paths, { drawSVG: "100%", duration: .65, ease: "none" })
+                .to(paths, { fillOpacity: 1, duration: .4, ease: "sr" }, "-=.3")
+                .to(paths, { strokeOpacity: 0, duration: .3, ease: "sr" }, "<+.05");
+            }
+          }
           return true;
         })
         .catch(function () { return false; });
@@ -488,6 +507,21 @@
       loader._started = true;
       runLoaderTimeline(loader);
     }
+    /* Skip control: a mono "Skip" button (top-right, paper text on the
+       ink ground) and Escape both jump straight to the timeline's end.
+       If the timeline has not been built yet (a click lands inside the
+       180ms wordmark grace window) go() first so there is a tl to jump. */
+    function skip() {
+      go();
+      if (loader._tl) loader._tl.progress(1);
+    }
+    var skipBtn = $(".loader__skip", loader);
+    if (skipBtn) skipBtn.addEventListener("click", skip);
+    function onSkipKey(e) {
+      if (e.key === "Escape") { e.preventDefault(); skip(); }
+    }
+    d.addEventListener("keydown", onSkipKey);
+    loader._cleanupSkip = function () { d.removeEventListener("keydown", onSkipKey); };
     if (loader._markReady) {
       loader._markReady.then(go, go);
       setTimeout(go, 180);
@@ -501,31 +535,42 @@
       defaults: { ease: "sr" },
       onComplete: function () {
         loader.remove();
+        if (loader._cleanupSkip) loader._cleanupSkip();
         if (window.lenisRef) window.lenisRef.start();
       }
     });
+    /* Exposed (MO-R2-2) so a late wordmark swap can check how far the
+       timeline has run, and so the skip control can jump to the end. */
+    loader._tl = tl;
     var marked = loader.classList.contains("loader--marked");
     var markPaths = marked ? $$(".loader__mark path", loader) : [];
-    var wordTargets = [$(".loader__fa", loader), $(".loader__kicker", loader)];
+    var wordTargets = [$(".loader__fa", loader), $(".loader__kicker", loader), $(".loader__mission", loader)];
     if (!markPaths.length) wordTargets.unshift($(".loader__word", loader));
 
-    tl.fromTo($$(".loader__line", loader), { scaleX: 0 }, { scaleX: 1, duration: .9, stagger: 0 })
+    /* Overlapping choreography tuned to clear in about 2s total:
+       hairlines (0 to .5s) and the seal settle (.1 to .6s) run
+       together; the wordmark strokes draw in from .3s with the fill
+       overlapping its own tail, the kicker and mission line fade in
+       alongside, and the exit lift starts the instant that settles,
+       with only a minimal breathing gap. */
+    tl.fromTo($$(".loader__line", loader), { scaleX: 0 }, { scaleX: 1, duration: .5 }, 0)
       .fromTo($(".loader__seal", loader), { y: 26, opacity: 0, scale: .94 },
-        { y: 0, opacity: 1, scale: 1, duration: .85 }, .15);
+        { y: 0, opacity: 1, scale: 1, duration: .5 }, .1);
     if (markPaths.length) {
       /* Letterforms draw their outlines, then ink themselves in. */
       g.set(markPaths, { stroke: "currentColor", strokeWidth: 1, fillOpacity: 0, drawSVG: "0%" });
-      tl.to(markPaths, { drawSVG: "100%", duration: 1.0, stagger: .05, ease: "none" }, .4)
-        .to(markPaths, { fillOpacity: 1, duration: .5, ease: "sr" }, "-=.45")
-        .to(markPaths, { strokeOpacity: 0, duration: .35, ease: "sr" }, "<+.1");
+      tl.to(markPaths, { drawSVG: "100%", duration: .65, ease: "none" }, .3)
+        .to(markPaths, { fillOpacity: 1, duration: .4, ease: "sr" }, .65)
+        .to(markPaths, { strokeOpacity: 0, duration: .3, ease: "sr" }, .7);
     }
     tl.fromTo(wordTargets,
-        { y: 22, opacity: 0 }, { y: 0, opacity: 1, duration: .7, stagger: .1 },
-        markPaths.length ? "-=.55" : .45)
+        { y: 22, opacity: 0 }, { y: 0, opacity: 1, duration: .65, stagger: .08 },
+        .35)
       .to(loader, {
-        yPercent: -112, duration: .95, ease: "srInOut", delay: markPaths.length ? .35 : .5,
+        yPercent: -112, duration: .72, ease: "srInOut",
         onStart: notifyReady
-      });
+      }, "+=.12");
+    return tl;
   }
 
   /* -------------------------------------------------- nav state */
@@ -574,7 +619,21 @@
      so a JS stall, reduced motion, or a full-page snapshot never
      shows a half-revealed page. */
   function onceEnter(el, start, run) {
-    window.ScrollTrigger.create({ trigger: el, start: start, once: true, onEnter: run });
+    window.ScrollTrigger.create({
+      trigger: el, start: start, once: true,
+      onEnter: function () {
+        /* MO-R2-1: a reveal that clips or slides in over an unfinished
+           image (the arch figures especially) forces a decode on the
+           same frame as the tween's first paint, dropping frames mid
+           scroll. Decoding first (a no-op once the image is already
+           decoded) keeps that cost off the animation's critical path. */
+        var imgs = $$("img", el);
+        if (!imgs.length) { run(); return; }
+        Promise.all(imgs.map(function (img) {
+          return img.decode ? img.decode().catch(function () {}) : Promise.resolve();
+        })).then(run);
+      }
+    });
   }
 
   function initReveals() {

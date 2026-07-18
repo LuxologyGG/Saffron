@@ -649,6 +649,11 @@ body.menu-open .menu { display: flex; }
   position: fixed; inset: 0; z-index: var(--z-loader);
   background: var(--ink); color: var(--paper);
   display: grid; place-items: center; text-align: center;
+  --focus: var(--accent-lite); /* the ink ground needs the dark-scope focus color */
+}
+.loader__skip {
+  position: absolute; top: clamp(14px, 2.2vw, 24px); right: clamp(14px, 2.2vw, 24px);
+  z-index: 1;
 }
 .loader::after {
   content: ""; position: absolute; top: 100%; left: -10%;
@@ -690,6 +695,12 @@ body.menu-open .menu { display: flex; }
   font-family: var(--font-mono); font-size: var(--fs-eyebrow); font-weight: 500;
   letter-spacing: var(--tracking-mono); text-transform: uppercase;
   color: color-mix(in srgb, var(--paper) 55%, var(--ink));
+}
+/* The mission line gives the overlap seconds something to say. */
+.loader__mission {
+  max-width: 32ch;
+  font-size: var(--fs-body); line-height: 1.55;
+  color: color-mix(in srgb, var(--paper) 80%, transparent);
 }
 
 /* ------------------------------------- arch transition curtain */
