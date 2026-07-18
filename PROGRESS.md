@@ -67,6 +67,11 @@ Scores: Visual 7.6, Brand 8.4, Motion 8.7, Code/Perf 7.6, Accessibility 8.1, Dev
 - MAJOR about.html callbar missing is-on class (no mobile phone) — add is-on.
 - MINOR font preloads on 5 pages, srcset on content imgs, menu hand-underline roughness, mobile home gap, PLACEHOLDER_ORIGIN (deploy step).
 
+### Full site — Round 1 fix passes (2026-07-18)
+- Track A (shell/perf) DONE: footer wordmark overlap fixed, preloader focus-hijack removed, nav logo downscaled to emblem-96/192.png (page weight -35-45%), tap targets ≥44px, day-night stepped flip (contrast 11-12:1, no dead zone), about callbar is-on, font preloads. Fixlog A.
+- Track B (page visuals) DONE: crocus petal off "Hand-pressed" copy, catering pin depth 220->280vh (no 10/20/30 vs 1/2/3 collision), menu underline smoothed, mobile home gap closed. Fixlog B.
+- A late a11y/devil report (score 7.8/8.4) surfaced extras -> Round-1b in flight: nav-toggle z-index (--z-nav 90), name standardized to "Saffron Food Market" everywhere (authoritative: former domain saffronfoodmarket.com), footer h4->h3 heading order, price display padded to 2 decimals (data.js values kept authoritative), 3 aria fixes.
+
 ### Design spec — Round 2 (2026-07-18): PASS ✅
 Scores: Visual 9.6, Brand 9.7, Motion 9.6, Code/Perf 9.6, Accessibility 9.7, Devil's Advocate 9.6 (all ≥ 9.5). Reviews: review/design-spec/round2-*.md. All round-1 findings verified fixed in-file; contrast ratios independently recomputed. Non-blocking nits logged (comment accuracy, map-tile licensing note, Farsi SVG QA).
 
