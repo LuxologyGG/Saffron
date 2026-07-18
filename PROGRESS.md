@@ -47,6 +47,12 @@ All six pages built, each self-verified (Playwright: zero console errors, zero e
 - 404 "Spilled Bowl": spinning shamse w/ cut 404, deep-path base handling. 5 screenshots.
 - Integration pass in flight: centralize shell fixes (.on-dark paint, nav toggle, footer wordmark invert, SplitText descenders), PLACEHOLDER_ORIGIN unification, cross-page nav click-through, full-site re-verify.
 
+### Phase 3 — Integration COMPLETE
+- All shell fixes centralized in app.css/tokens.css; curtain page-transition blackout bug found & fixed (GSAP yPercent matrix). Canonical origin unified behind `https://PLACEHOLDER_ORIGIN` token + deploy/ORIGIN-SWAP.md. Full-site re-verify 24/24 PASS (6 pages x 2 breakpoints x 2 motion modes), nav click-through clean, zero em dashes shipped. Artifact: review/integration-report.md.
+
+### Phase 4 — Full-site council (round 1 in flight)
+- First attempt (Fable 5) hit session/model limits mid-run, no reviews written. Session switched to Opus 4.8; council relaunched on Sonnet (3 agents, 6 lenses, fresh screenshots + reference composites + live motion measurement). Writing to review/site-round1/.
+
 ## Council verdicts
 
 ### Design spec — Round 2 (2026-07-18): PASS ✅
