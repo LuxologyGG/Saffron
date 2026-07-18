@@ -1,0 +1,41 @@
+{
+  "index_1440_errors": [],
+  "index_1440_footer_rect": {
+    "wordmark": [
+      621.859375,
+      841.859375
+    ],
+    "bar": [
+      841.859375,
+      899.90625
+    ],
+    "overlap": false
+  },
+  "index_1440_petal_overlap": [],
+  "menu_1440_errors": [],
+  "catering_1440_errors": [],
+  "about_1440_errors": [],
+  "contact_1440_errors": [],
+  "404_1440_errors": [],
+  "index_390_errors": [],
+  "index_390_footer_rect": {
+    "wordmark": [
+      647.578125,
+      727.578125
+    ],
+    "bar": [
+      727.578125,
+      843.5
+    ],
+    "overlap": false
+  },
+  "index_390_petal_overlap": [],
+  "index_390_dnband": {
+    "height": 280.9375
+  },
+  "menu_390_errors": [],
+  "catering_390_errors": [],
+  "about_390_errors": [],
+  "contact_390_errors": [],
+  "404_390_errors": []
+}

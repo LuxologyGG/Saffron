@@ -12,13 +12,16 @@
      during discovery (see research/business/facts.md).
    - Hours, ratings, review quotes: filled only from verified public
      listings; anything unverifiable is softened or omitted.
-   - History: formerly Saffron Food Market (supermarket) under prior
+   - History: formerly Saffron Food Mart (supermarket) under prior
      ownership; now a Persian & Middle Eastern deli and catering
      kitchen under new management. Old site is gist-only, not a source.
-   - Naming: the business's own former domain (saffronfoodmarket.com)
-     and the owner brief both use "Market." The Yelp listing used
-     "Mart," but we standardize all display copy to the authoritative
-     "Saffron Food Market" spelling site-wide.
+   - Naming: the former business is "Saffron Food Mart" site-wide. This
+     is the primary-source-verified spelling: the storefront sign photo
+     plus every consumer listing (Yelp, Grubhub, Zabihah, DoorDash,
+     Restaurantji) and the Eat the World LA blog all read "Mart" (see
+     research/business/facts.md). The old saffronfoodmarket.com domain
+     is disclaimed as not a source for current facts, so it does not
+     override the signage and listings.
 
    ---- HOUSE RULES ----
    1. NO em dashes anywhere. Hyphens for ranges only.
@@ -30,7 +33,7 @@ window.SITE = {
   company: {
     name: "Saffron & Rice",
     tagline: "Persian & Middle Eastern Kitchen",
-    formerly: "Formerly Saffron Food Market, now under new management",
+    formerly: "Formerly Saffron Food Mart, now under new management",
     address: "3801 Pacific Coast Hwy, Torrance, CA 90505",
     addressShort: "3801 Pacific Coast Hwy, Torrance",
     phone: "(310) 504-0310",
@@ -98,7 +101,7 @@ window.SITE = {
   /* Story timeline: VERIFIED facts only (see research/business/facts.md).
      Unverified lineage years are omitted, never approximated. */
   story: [
-    { year: "2020-2021", label: "The kitchen earns local blog love as Saffron Food Market", provenance: "Discovering LA (2020) and Eat the World LA (2021) coverage of this location" },
+    { year: "2020-2021", label: "The kitchen earns local blog love as Saffron Food Mart", provenance: "Discovering LA (2020) and Eat the World LA (2021) coverage of this location" },
     { year: "2026", label: "Saffron & Rice opens under new management", provenance: "Saffron & Rice LLC filed 2026-03-16 (public filing)" },
   ],
 
@@ -107,9 +110,9 @@ window.SITE = {
      ownership transition; the era attribution below must render with the
      quote and old-era praise is never attributed to "Saffron & Rice". */
   testimonials: [
-    { quote: "We had a fantastic lunch here with delicious authentic tasting Persian food and excellent service!", who: "Yelp reviewer, on the kitchen in its Saffron Food Market era", src: "Yelp" },
-    { quote: "Incredibly kind and quick service and consistently the most flavorful dishes I've had in the South Bay. The menu is limited, but what's offered is exceptional!", who: "Yelp reviewer, on the kitchen in its Saffron Food Market era", src: "Yelp" },
-    { quote: "Super quaint and has the best, most saffron-y, and rich rice ever. The meat was juicy and flavorful in the beef koobideh.", who: "Yelp reviewer, on the kitchen in its Saffron Food Market era", src: "Yelp" },
+    { quote: "We had a fantastic lunch here with delicious authentic tasting Persian food and excellent service!", who: "Yelp reviewer, on the kitchen in its Saffron Food Mart era", src: "Yelp" },
+    { quote: "Incredibly kind and quick service and consistently the most flavorful dishes I've had in the South Bay. The menu is limited, but what's offered is exceptional!", who: "Yelp reviewer, on the kitchen in its Saffron Food Mart era", src: "Yelp" },
+    { quote: "Super quaint and has the best, most saffron-y, and rich rice ever. The meat was juicy and flavorful in the beef koobideh.", who: "Yelp reviewer, on the kitchen in its Saffron Food Mart era", src: "Yelp" },
   ],
 
   /* Photography: production images must be owner-supplied or licensed
