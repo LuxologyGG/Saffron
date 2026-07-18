@@ -205,3 +205,38 @@ Full per-item exact-change instructions and verifier steps: `review/round-1/FIXL
   measured 5.7:1 on teal-deep (was 4.04:1, which passed AA large-text but not the strict line).
 - Verified locally: zero console errors/warnings on all six pages, JS-off footers populated,
   nav identity restored. Round-2 lenses must independently re-verify these three.
+
+## Verdict, round 2
+
+Overall: 8.02   Verdict: NEEDS-WORK (rounds one and two never PASS)
+Lenses:  Motion 8.5 | Code 8.3 | Brand 8.3 | Visual 7.9 | Benchmark 7.6 | A11y 7.5
+Movement from round 1: +1.2 / +1.8 / +1.1 / +0.7 / +1.4 / +0.7. Every lens ran as an isolated
+remote agent, blind to the others, each with measured-evidence checksRun.
+
+Reverification: every round-1 finding re-checked by its owning lens came back genuinely fixed
+(motion 3/3, brand 5/5, codeperf 7/9 with CP-2 regressed and CP-3 partial, a11y 5/5 plus the
+three verification-addendum items, visual 3/4 with VS1 partial, benchmark 9/9). Composites:
+10 of 12 topics now hold their own vs the references, up from 6.
+
+Open after round 2 (chair-consolidated):
+| ID | Sev | State |
+|----|-----|-------|
+| AX-R2-1 | CRITICAL | nav paper-on-paper at about load. Fixed by orchestrator during the round
+(data-nav-ignore on the dusk stage + safe-center clearance; the a11y lens reviewed the pre-fix
+commit; visual flagged the same defect as VS-R2-1). Round-3 a11y MUST re-measure at load. |
+| AX-R2-2 | MAJOR | dusk scrub parked-position contrast holes (text tracks lag the ground,
+1.1-3.4:1 at parked scroll). OPEN, assigned to the dusk-retiming fix agent. |
+| BR-R2-1 | MAJOR | home kabab translit slot. Fixed by orchestrator, pending round-3 verify. |
+| CP-R2-1 | MAJOR | 404 nested-path brand images. Fixed by orchestrator, pending round-3 verify. |
+| VS-R2-1 | MAJOR | same defect as AX-R2-1, see above. |
+| VS-R2-2 | MAJOR | 8 bare same-bg joins. Fixed by orchestrator (chapter--close), pending verify. |
+| BM-R2-1 | MAJOR | 4s content-free loader. Assigned to consolidated fix agent (2.0-2.2s +
+mission line + skip control + smarter SVG race guard). |
+| Minors | 17 | Consolidated fix agent owns the design/motion set (MO-R2-1/2, VS-R2-3/5/7,
+BM-R2-2/3/4/5/6/7); orchestrator closed BR-R2-2, CP-R2-2/3/4/5, VS-R2-4/6 during the round;
+a11y minors AX-R2-3/5/6/7 queue behind the consolidated agent (file overlap), then a focused
+a11y fix agent takes them with AX-R2-2. |
+
+Anti-inflation check: score spread 7.5-8.5 with per-lens measured evidence proportional to score;
+no lens flagged for rerun. Round-3 gate attempt requires: all pending-verify fixes independently
+re-confirmed, AX-R2-2 and the loader closed, zero critical/major open, and every lens at 9.5+.
