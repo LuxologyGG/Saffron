@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+/* GitHub Pages serves 404.html from the site root for ANY missing URL,
+   so this page's relative asset URLs would resolve against the missing
+   path. When the document is served from a nested path, re-anchor URLs
+   at the site root via <base>: on *.github.io project pages the root is
+   the first path segment (/<repo>/), everywhere else it is /. The base
+   is injected ONLY when needed, and fragment-only hrefs are re-pointed
+   after parse so the base cannot hijack in-page anchors. */
+(function () {
+  var dir = location.pathname.replace(/[^/]*$/, "");
+  var root = "/";
+  if (/\.github\.io$/i.test(location.hostname)) {
+    var seg = location.pathname.split("/")[1];
+    if (seg && seg.indexOf(".") === -1) root = "/" + seg + "/";
+  }
+  if (dir === root) return;
+  var b = document.createElement("base");
+  b.href = root;
+  document.head.appendChild(b);
+  document.addEventListener("DOMContentLoaded", function () {
+    var here = location.pathname + location.search;
+    Array.prototype.forEach.call(document.querySelectorAll('a[href^="#"]'), function (a) {
+      a.setAttribute("href", here + a.getAttribute("href"));
+    });
+  });
+})();
+</script>
+<title>Page Not Found, Saffron &amp; Rice · Torrance</title>
+<meta name="description" content="That page is not on our sofreh. Head back to the menu, the party platters, or call Saffron and Rice in Torrance at (310) 504-0310.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0e110f">
+<link rel="icon" href="assets/img/brand/saffronlogonobg.png">
+<link rel="apple-touch-icon" href="assets/img/brand/saffronlogonobg.png">
+<link rel="preload" href="assets/fonts/Fraunces-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<!-- CSS cascade order is STRICT: fonts -> vendor -> tokens -> app -> per-page -->
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/vendor/lenis.css">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/app.css">
+<link rel="stylesheet" href="assets/css/pages/404.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="nav nav--dark" aria-label="Main">
+  <a class="nav__brand" href="index.html" aria-label="Saffron and Rice, home">
+    <img src="assets/img/brand/saffronlogonobg.png" alt="" width="46" height="46">
+    <span class="nav__wordmark">Saffron &amp; Rice</span>
+  </a>
+  <div class="nav__links">
+    <a class="nav__link tap-44" href="index.html">Home</a>
+    <a class="nav__link tap-44" href="menu.html">Menu</a>
+    <a class="nav__link tap-44" href="catering.html">Catering</a>
+    <a class="nav__link tap-44" href="about.html">About</a>
+    <a class="nav__link tap-44" href="contact.html">Contact</a>
+    <a class="btn btn--gold nav__cta" href="tel:+13105040310" data-site-href="company.phoneHref" data-no-transition><span class="btn__tick" aria-hidden="true"></span><span data-site="company.phone">(310) 504-0310</span></a>
+  </div>
+  <button class="nav__toggle tap-44" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="menu" id="site-menu">
+  <nav class="menu__nav" aria-label="Mobile">
+    <a class="menu__link" href="index.html"><small>01</small>Home</a>
+    <a class="menu__link" href="menu.html"><small>02</small>Menu</a>
+    <a class="menu__link" href="catering.html"><small>03</small>Catering</a>
+    <a class="menu__link" href="about.html"><small>04</small>About</a>
+    <a class="menu__link" href="contact.html"><small>05</small>Contact</a>
+  </nav>
+  <div class="menu__foot">
+    <a href="tel:+13105040310" data-site-href="company.phoneHref" data-no-transition data-site="company.phone">(310) 504-0310</a>
+    <span data-site="company.addressShort">3801 Pacific Coast Hwy, Torrance</span>
+    <span>Open daily, call to confirm hours</span>
+  </div>
+</div>
+
+<main id="main" tabindex="-1">
+
+  <!-- ============ 404 hero: "The Spilled Bowl" ============
+       The one place the shamse spins (brief section 2, 404). Giant
+       gold rosette, 120s linear, with the 404 numeral cut from its
+       heart; rice grains and saffron threads sine-float around it.
+       Line work is an inline copy of assets/img/ornament/shamse.svg
+       with the filled core removed so the heart disc can carry the
+       numeral. Reduced motion: static rosette, floats off (tokens.css
+       guard + app.js branches); nothing here is hidden by CSS. -->
+  <section class="nf on-dark grained" aria-labelledby="nf-title">
+
+    <div class="float-layer" aria-hidden="true">
+      <span class="float-cutout nf__float--rice nf__f1"><svg viewBox="0 0 10 26" focusable="false"><path fill="currentColor" d="M5 .8c2.6 3.4 4 8 4 12.2s-1.4 8.8-4 12.2c-2.6-3.4-4-8-4-12.2S2.4 4.2 5 .8Z"/></svg></span>
+      <span class="float-cutout nf__float--rice nf__f2"><svg viewBox="0 0 14 24" focusable="false"><path fill="currentColor" d="M11.8 1.2c1.9 4.2 1.6 9-.9 13.6-2.2 4-5.6 7.1-9.7 8-1.4-4.4-.6-9.3 2.1-13.6C5.7 5.3 8.7 2.4 11.8 1.2Z"/></svg></span>
+      <span class="float-cutout float-cutout--thread nf__f3"><svg viewBox="0 0 36 30" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 27C9 20 10.8 13.6 9.6 4.6"/><path d="M8 27.6C15 22 19.2 15 20.4 3"/><path d="M14 28c8.4-3.6 14.6-10.4 18.6-20.6"/></g><g fill="currentColor"><circle cx="9.6" cy="3.8" r="1.9"/><circle cx="20.6" cy="2.4" r="1.9"/><circle cx="33" cy="6.6" r="1.9"/></g></svg></span>
+      <span class="float-cutout nf__float--rice nf__f4"><svg viewBox="0 0 14 24" focusable="false"><path fill="currentColor" d="M11.8 1.2c1.9 4.2 1.6 9-.9 13.6-2.2 4-5.6 7.1-9.7 8-1.4-4.4-.6-9.3 2.1-13.6C5.7 5.3 8.7 2.4 11.8 1.2Z"/></svg></span>
+      <span class="float-cutout float-cutout--thread nf__f5"><svg viewBox="0 0 36 30" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 27C9 20 10.8 13.6 9.6 4.6"/><path d="M8 27.6C15 22 19.2 15 20.4 3"/><path d="M14 28c8.4-3.6 14.6-10.4 18.6-20.6"/></g><g fill="currentColor"><circle cx="9.6" cy="3.8" r="1.9"/><circle cx="20.6" cy="2.4" r="1.9"/><circle cx="33" cy="6.6" r="1.9"/></g></svg></span>
+      <span class="float-cutout nf__float--rice nf__f6"><svg viewBox="0 0 10 26" focusable="false"><path fill="currentColor" d="M5 .8c2.6 3.4 4 8 4 12.2s-1.4 8.8-4 12.2c-2.6-3.4-4-8-4-12.2S2.4 4.2 5 .8Z"/></svg></span>
+      <span class="float-cutout float-cutout--thread nf__f7"><svg viewBox="0 0 36 30" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 27C9 20 10.8 13.6 9.6 4.6"/><path d="M8 27.6C15 22 19.2 15 20.4 3"/><path d="M14 28c8.4-3.6 14.6-10.4 18.6-20.6"/></g><g fill="currentColor"><circle cx="9.6" cy="3.8" r="1.9"/><circle cx="20.6" cy="2.4" r="1.9"/><circle cx="33" cy="6.6" r="1.9"/></g></svg></span>
+      <span class="float-cutout nf__float--rice nf__f8"><svg viewBox="0 0 10 26" focusable="false"><path fill="currentColor" d="M5 .8c2.6 3.4 4 8 4 12.2s-1.4 8.8-4 12.2c-2.6-3.4-4-8-4-12.2S2.4 4.2 5 .8Z"/></svg></span>
+    </div>
+
+    <div class="wrap nf__wrap">
+
+      <div class="nf__stage" aria-hidden="true">
+        <div class="nf__spin shamse--spin">
+          <svg viewBox="0 0 200 200" focusable="false">
+            <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+              <path d="M100 4A96 96 0 1 1 99.99 4Z"/>
+              <path d="M100 30Q109.15 8.34 124.33 9.2Q137.91 16.04 135 39.38M135 39.38Q153.76 25.19 166.47 33.53Q174.81 46.24 160.62 65M160.62 65Q183.96 62.09 190.8 75.67Q191.66 90.85 170 100M170 100Q191.66 109.15 190.8 124.33Q183.96 137.91 160.62 135M160.62 135Q174.81 153.76 166.47 166.47Q153.76 174.81 135 160.62M135 160.62Q137.91 183.96 124.33 190.8Q109.15 191.66 100 170M100 170Q90.85 191.66 75.67 190.8Q62.09 183.96 65 160.62M65 160.62Q46.24 174.81 33.53 166.47Q25.19 153.76 39.38 135M39.38 135Q16.04 137.91 9.2 124.33Q8.34 109.15 30 100M30 100Q8.34 90.85 9.2 75.67Q16.04 62.09 39.38 65M39.38 65Q25.19 46.24 33.53 33.53Q46.24 25.19 65 39.38M65 39.38Q62.09 16.04 75.67 9.2Q90.85 8.34 100 30"/>
+              <path d="M100 28L111.91 55.57L136 37.65L132.53 67.47L162.35 64L144.43 88.09L172 100L144.43 111.91L162.35 136L132.53 132.53L136 162.35L111.91 144.43L100 172L88.09 144.43L64 162.35L67.47 132.53L37.65 136L55.57 111.91L28 100L55.57 88.09L37.65 64L67.47 67.47L64 37.65L88.09 55.57Z"/>
+              <path d="M118.63 30.45L123 60.16L150.91 49.09L139.84 77L169.55 81.37L146 100L169.55 118.63L139.84 123L150.91 150.91L123 139.84L118.63 169.55L100 146L81.37 169.55L77 139.84L49.09 150.91L60.16 123L30.45 118.63L54 100L30.45 81.37L60.16 77L49.09 49.09L77 60.16L81.37 30.45L100 54Z" stroke-width="1"/>
+              <path d="M100 54A46 46 0 1 1 99.99 54Z" stroke-width="1"/>
+            </g>
+          </svg>
+        </div>
+        <div class="nf__heart">
+          <svg viewBox="0 0 200 200" focusable="false">
+            <circle cx="100" cy="100" r="47" fill="currentColor"/>
+            <text class="nf__num" x="100" y="100" text-anchor="middle" dominant-baseline="central">404</text>
+          </svg>
+        </div>
+      </div>
+
+      <p class="eyebrow nf__eyebrow">Error 404 / Not on the menu</p>
+      <h1 class="h2 nf__title" id="nf-title" data-reveal="lines" data-reveal-load>This plate is <em>empty</em>.</h1>
+      <p class="nf__line">The page you were craving is not on our sofreh. The coals are still glowing and the rice is still steaming, so follow the saffron back to the table.</p>
+
+      <div class="nf__actions">
+        <a class="btn btn--gold tap-44" href="index.html"><span class="btn__tick" aria-hidden="true"></span>Back to the sofreh</a>
+        <a class="btn btn--ghost tap-44" href="menu.html">See the menu</a>
+        <a class="btn btn--ghost tap-44" href="tel:+13105040310" data-site-href="company.phoneHref" data-no-transition>Call <span data-site="company.phone">(310) 504-0310</span></a>
+      </div>
+
+      <p class="nf__trail">
+        <a class="tlink" href="catering.html">Catering</a>
+        <span class="nf__dot" aria-hidden="true"></span>
+        <a class="tlink" href="contact.html">Contact</a>
+      </p>
+
+    </div>
+  </section>
+
+</main>
+
+<div class="callbar">
+  <a class="btn btn--gold tap-44" href="tel:+13105040310" data-site-href="company.phoneHref" data-no-transition>Call <span data-site="company.phone">(310) 504-0310</span></a>
+</div>
+
+<footer class="footer on-dark">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <img src="assets/img/brand/saffronlogonobg.png" alt="Saffron and Rice emblem" width="168" height="168">
+      <p data-site="company.intro">A Persian and Middle Eastern kitchen in Torrance serving charcoal-kissed kababs, fragrant rice, and slow-simmered stews. Dine in, pick up, get it delivered, or let us cater your next gathering.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Explore</h4>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="catering.html">Catering &amp; Platters</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer__col">
+      <h4>Visit</h4>
+      <a href="tel:+13105040310" data-site-href="company.phoneHref" data-no-transition data-site="company.phone">(310) 504-0310</a>
+      <p data-site="company.address">3801 Pacific Coast Hwy, Torrance, CA 90505</p>
+      <p>Open daily, call to confirm hours</p>
+      <p data-site="company.formerly">Formerly Saffron Food Market, now under new management</p>
+    </div>
+  </div>
+  <div class="footer__wordmark" aria-hidden="true">
+    <img src="assets/img/brand/saffron_rice_text_only_high_quality.svg" alt="" loading="lazy">
+  </div>
+  <div class="wrap footer__bar">
+    <span>&copy; <span data-year>2026</span> Saffron and Rice, LLC</span>
+    <span data-site="company.tagline">Persian &amp; Middle Eastern Kitchen</span>
+    <span data-site="company.addressShort">3801 Pacific Coast Hwy, Torrance</span>
+  </div>
+</footer>
+
+<script src="assets/js/vendor/gsap.min.js"></script>
+<script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/js/vendor/SplitText.min.js"></script>
+<script src="assets/js/vendor/ScrambleTextPlugin.min.js"></script>
+<script src="assets/js/vendor/CustomEase.min.js"></script>
+<script src="assets/js/vendor/lenis.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/pages/404.js"></script>
+</body>
+</html>

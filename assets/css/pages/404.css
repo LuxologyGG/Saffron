@@ -1,0 +1,155 @@
+/* =============================================================
+   Saffron & Rice, 404 page ("The Spilled Bowl")
+   assets/css/pages/404.css, linked LAST on 404.html only.
+
+   Night-ground, single-viewport hero. This is the ONLY page where
+   the shamse rosette spins: .shamse--spin (app.css) runs k-spin
+   (tokens.css) at 120s linear. The 404 numeral sits in a saffron
+   gold heart disc, set in Fraunces and filled with the night ink,
+   so it reads as cut straight through the medallion's heart.
+   Rice-grain and saffron-thread cutouts sine-float via app.js
+   initFloats(); with JS off, or under prefers-reduced-motion,
+   everything simply sits still (tokens.css guard + JS branches).
+
+   HIDDEN-STATE RULE: this stylesheet authors NO opacity: 0 or any
+   hidden-until-reveal state. House rules: no em dashes anywhere;
+   relative URLs only; consumes token NAMES from tokens.css.
+   ============================================================= */
+
+/* The whole page is night; overscroll and the footer seam stay ink. */
+body { background: var(--ink); }
+
+/* Shared-shell fix, scoped here until app.css picks it up: .tap-44
+   makes .nav__toggle a ROW flexbox, so its three burger bars sit side
+   by side as one long line. Stack them. */
+.nav__toggle { flex-direction: column; }
+
+/* ---------------- Hero shell ---------------- */
+.nf {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  align-items: center;
+  background: var(--bg);
+  color: var(--fg);
+  overflow: clip;
+  padding-top: clamp(76px, 9vh, 100px);    /* fixed nav clearance */
+  padding-bottom: clamp(24px, 4vh, 44px);
+}
+.nf__wrap {
+  position: relative;
+  z-index: 6;                 /* copy above the float layer */
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: clamp(10px, 1.6vh, 18px);
+}
+
+/* ---------------- Shamse medallion stage ---------------- */
+.nf__stage {
+  position: relative;
+  width: clamp(230px, 36vmin, 400px);
+  aspect-ratio: 1;
+  margin-bottom: clamp(4px, 1.4vh, 16px);
+}
+/* Candle-warm glow behind the medallion (static, paint-cheap). */
+.nf__stage::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(closest-side,
+    rgba(212, 169, 93, .16),
+    rgba(212, 169, 93, .05) 55%,
+    transparent 74%);
+  pointer-events: none;
+}
+.nf__spin,
+.nf__heart {
+  position: absolute;
+  inset: 0;
+}
+.nf__spin svg,
+.nf__heart svg { width: 100%; height: 100%; display: block; }
+/* Two-tone gold: bright line work spinning around a deeper heart. */
+.nf__spin  { color: var(--accent-lite); }
+.nf__heart { color: var(--accent-base); }
+/* The numeral: Fraunces, filled with the page's own night ink so it
+   reads as a cutout. SVG user units (200-unit viewBox), so the type
+   scales with the medallion. Decorative; real text sits in the copy. */
+.nf__num {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 42px;
+  letter-spacing: .015em;
+  fill: var(--ink);
+}
+
+/* ---------------- Copy ---------------- */
+.nf__title { max-width: 14ch; }
+.nf__title em { font-style: italic; color: var(--accent-lite); }
+.nf__line {
+  color: var(--fg-soft);
+  max-width: 56ch;
+}
+.nf__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 14px;
+  margin-top: clamp(4px, 1vh, 10px);
+}
+/* Quiet second trail: the rest of the table, khatam diamond between. */
+.nf__trail {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--fg-faint);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: var(--tracking-mono);
+  text-transform: uppercase;
+}
+.nf__trail .tlink { color: var(--fg-soft); }
+.nf__trail .tlink:hover { color: var(--fg); }
+.nf__dot {
+  width: 5px; height: 5px; flex: none;
+  background: var(--accent-lite);
+  transform: rotate(45deg);
+}
+
+/* ---------------- Sine-float scatter ---------------- */
+/* Rice grains and saffron threads only (brief, 404 section). The
+   OUTER .float-cutout carries position + the k-float translate; the
+   INNER svg carries the static rotation so the float animation never
+   overwrites it. Thread color comes from app.css
+   (.on-dark .float-cutout--thread -> --red-lite, fills-only on dark). */
+.nf .float-cutout { opacity: .92; }
+.nf__float--rice { color: var(--paper-1); }
+.nf__f1 { left: 12%;  top: 24%;    width: 17px; }
+.nf__f1 svg { transform: rotate(-24deg); }
+.nf__f2 { right: 15%; top: 19%;    width: 22px; }
+.nf__f2 svg { transform: rotate(18deg); }
+.nf__f3 { left: 19%;  bottom: 27%; width: 36px; }
+.nf__f3 svg { transform: rotate(-12deg); }
+.nf__f4 { left: 7%;   top: 55%;    width: 20px; }
+.nf__f4 svg { transform: rotate(38deg) scaleX(-1); }
+.nf__f5 { right: 9%;  top: 47%;    width: 32px; }
+.nf__f5 svg { transform: rotate(24deg); }
+.nf__f6 { right: 21%; bottom: 22%; width: 15px; }
+.nf__f6 svg { transform: rotate(62deg); }
+.nf__f7 { left: 36%;  top: 12%;    width: 24px; }
+.nf__f7 svg { transform: rotate(8deg) scaleX(-1); }
+.nf__f8 { right: 34%; bottom: 12%; width: 14px; }
+.nf__f8 svg { transform: rotate(-48deg); }
+
+/* ---------------- Small screens ---------------- */
+@media (max-width: 700px) {
+  .nf__stage { width: clamp(200px, 58vw, 260px); }
+  /* thin the scatter so the 390px hero stays calm */
+  .nf__f4, .nf__f6, .nf__f7 { display: none; }
+  .nf__f3 { left: 8%; bottom: 20%; width: 30px; }
+  .nf__f5 { right: 6%; top: 42%; width: 26px; }
+  .nf__actions { flex-direction: column; width: 100%; }
+  .nf__actions .btn { width: min(100%, 320px); }
+}
