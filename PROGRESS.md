@@ -97,3 +97,12 @@ Run started: 2026-07-17. Orchestrator: Claude Code (remote session), branch `cla
 ## Phase 3 - EXECUTION: not started
 ## Phase 4 - REVIEW: not started
 ## Phase 5 - DEPLOY AND VERIFY: not started
+
+- Fix pass COMPLETE (wf_b9f008b7-a39, 5/5 agents): 30/32 verified fixed, BR-2 rejected-intact per
+  override, CP-1 completed by orchestrator after verification (static footer prerender all six
+  pages), VER-2 nav regression fixed (unified nav__call + html[data-root] runtime support for
+  404's sanctioned root-relative scheme), contact phone lifted to 5.7:1. All re-verified locally:
+  silent console, JS-off complete, nav identity restored.
+- ROUND 2 launched as six PARALLEL REMOTE lens agents (own cloud env each, own cores; repo cloned
+  from the pushed branch), replacing the local 2-slot queue. Chair aggregates locally when all
+  six return. Rounds may not PASS before round 3 per the gate.
