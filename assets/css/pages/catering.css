@@ -10,9 +10,7 @@
    House rules: no em dashes; zero-build; self-hosted only.
    ============================================================= */
 
-/* Shell nit, page-scoped: the hamburger spans must stack (app.css leaves
-   the .tap-44 inline-flex row direction). Candidate for app.css proper. */
-.page-catering .nav__toggle { flex-direction: column; }
+/* Hamburger stacking lives in the shared shell (app.css .nav__toggle). */
 
 /* Screen-reader-only utility (occasions marquee true-text line) */
 .sr-only {
@@ -266,12 +264,8 @@ main > .thread-divider { margin-block: clamp(10px, 2vw, 28px); }
 }
 
 /* ============================ 04 / The Stews (on-dark) ============================ */
-/* .on-dark only re-points tokens; night sections paint their own ground
-   and set their own fg (color does not re-point itself) */
-.stews, .book, .page-catering .footer {
-  background: var(--bg);
-  color: var(--fg);
-}
+/* Night ground + ink paint centrally now (tokens.css :where(.on-dark));
+   .stews, .book, and the footer only add their own extras here. */
 .stews { overflow: clip; }
 .stews__head { display: grid; gap: 14px; margin-bottom: clamp(30px, 4vw, 60px); position: relative; z-index: var(--z-base); }
 .stews__grid {

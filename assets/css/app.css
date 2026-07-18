@@ -209,6 +209,19 @@ body.menu-open { overflow: hidden; }
   .nav__wordmark { font-size: .95rem; }
 }
 
+/* ============================ SplitText mask room ============================ */
+/* Masked line reveals ([data-reveal="lines"], app.js): SplitText wraps
+   each line in a mask element (overflow: clip) that hugs the line box,
+   and at tight display leading Fraunces descenders (y, g, j) get
+   clipped. Give every mask descender room below the baseline and cancel
+   the layout growth so line spacing is unchanged. The class comes from
+   app.js linesClass "snr-line"; SplitText suffixes every word in the
+   class with -mask, hence .snr-mask-line-mask. */
+[data-reveal="lines"] .snr-mask-line-mask {
+  padding-bottom: .16em;
+  margin-bottom: -.16em;
+}
+
 /* ============================ Section primitives ============================ */
 
 /* Chapter kicker: "01 / The Kitchen". Numeral in gold mono, label after. */
@@ -434,10 +447,11 @@ body.menu-open { overflow: hidden; }
   position: relative;
   overflow: clip;
   padding-top: var(--sect);
-  /* .on-dark only re-points tokens; each night surface paints its own
-     ground. The footer ships with class="on-dark" in the shell markup,
-     so these resolve to the ink ground and paper fg. (Fix found during
-     the Contact build: without this the footer rendered cream with
+  /* The footer ships with class="on-dark" in the shell markup, so these
+     resolve to the ink ground and paper fg. tokens.css :where(.on-dark)
+     now paints every night scope; this explicit copy stays as the
+     shell's own guarantee for its one always-dark surface. (Originally
+     a Contact-build fix: without it the footer rendered cream with
      inherited ink text.) */
   background: var(--bg);
   color: var(--fg);
@@ -473,6 +487,13 @@ body.menu-open { overflow: hidden; }
   pointer-events: none; user-select: none;
 }
 .footer__wordmark svg, .footer__wordmark img { width: 100%; height: auto; display: block; }
+/* The wordmark SVG file ships fixed brand colors (near-ink script), so
+   as an <img> it would vanish on the night ground. Flip lightness while
+   keeping hue. Inline-SVG wordmarks (currentColor) are untouched. */
+.footer__wordmark img {
+  filter: invert(1) hue-rotate(180deg);
+  opacity: .9;
+}
 .footer__bar {
   display: flex; flex-wrap: wrap; gap: 10px 28px;
   justify-content: space-between;

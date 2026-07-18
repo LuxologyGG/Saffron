@@ -8,20 +8,13 @@
    House rules: no em dashes; zero-build; self-hosted only.
    ============================================================= */
 
-/* SplitText masked line reveals: the mask wrapper (overflow: clip) hugs
-   the line box, and at tight display leading Fraunces descenders (y, g)
-   get clipped. Give every mask descender room below the baseline and
-   cancel the layout growth, so line spacing is unchanged. */
-[data-reveal="lines"] .snr-mask-line-mask {
-  padding-bottom: .16em;
-  margin-bottom: -.16em;
-}
+/* SplitText descender room now ships site-wide in app.css
+   ([data-reveal="lines"] .snr-mask-line-mask). */
 
 /* ============================ Hero ============================ */
+/* Night ground + ink paint centrally (tokens.css :where(.on-dark)) */
 .contact-hero {
   position: relative;
-  background: var(--bg);
-  color: var(--fg);
   padding-top: clamp(120px, 16vh, 176px);
   padding-bottom: var(--sect-sm);
   overflow: clip;
@@ -241,8 +234,8 @@
 .service-row:hover .service-row__cta::after { transform: scaleX(0); }
 
 /* ============================ Say hello (form band) ============================ */
-/* .on-dark re-points tokens only; the section paints its own ground */
-.say-hello { background: var(--bg); color: var(--fg); overflow: clip; }
+/* Night ground + ink paint centrally (tokens.css :where(.on-dark)) */
+.say-hello { overflow: clip; }
 .say-hello .shamse-watermark {
   top: clamp(30px, 6vw, 80px);
   right: calc(-1 * clamp(60px, 8vw, 140px));

@@ -19,19 +19,15 @@
 /* The whole page is night; overscroll and the footer seam stay ink. */
 body { background: var(--ink); }
 
-/* Shared-shell fix, scoped here until app.css picks it up: .tap-44
-   makes .nav__toggle a ROW flexbox, so its three burger bars sit side
-   by side as one long line. Stack them. */
-.nav__toggle { flex-direction: column; }
+/* Hamburger stacking lives in the shared shell (app.css .nav__toggle). */
 
 /* ---------------- Hero shell ---------------- */
+/* Night ground + ink paint centrally (tokens.css :where(.on-dark)) */
 .nf {
   position: relative;
   min-height: 100svh;
   display: grid;
   align-items: center;
-  background: var(--bg);
-  color: var(--fg);
   overflow: clip;
   padding-top: clamp(76px, 9vh, 100px);    /* fixed nav clearance */
   padding-bottom: clamp(24px, 4vh, 44px);

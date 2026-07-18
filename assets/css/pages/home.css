@@ -10,24 +10,9 @@
    House rules: no em dashes; zero-build; self-hosted only.
    ============================================================= */
 
-/* ============================ Night-scope ground + ink ============================ */
-/* tokens.css .on-dark re-points the semantic variables but declares no
-   background/color of its own, so descendants would inherit body ink.
-   Declare both here at scope level (page-scoped safety net; individual
-   sections later in this file still override their ground). */
-.on-dark {
-  background-color: var(--bg);
-  color: var(--fg);
-}
-/* The footer wordmark SVG ships fixed brand colors (near-ink script);
-   flip lightness while keeping hue so it reads on the night ground. */
-.footer__wordmark img {
-  filter: invert(1) hue-rotate(180deg);
-  opacity: .9;
-}
-/* Hamburger bars must stack: .tap-44 sets row flex on the toggle, which
-   would lay the three spans side by side (page-scoped shell safety net). */
-.nav__toggle { flex-direction: column; }
+/* Night-scope ground paint, footer wordmark invert, and hamburger
+   stacking all live in the shared shell now (tokens.css :where(.on-dark),
+   app.css .footer__wordmark img, app.css .nav__toggle). */
 
 /* ============================ Hero: arch-framed dolly zoom ============================ */
 /* 160vh scroll runway; the viewport-height stage is CSS-sticky and the
@@ -244,7 +229,7 @@
 .btn--paper:hover { background: var(--paper-1); }
 
 /* ============================ Menu teaser (03 / The Counter) ============================ */
-.home-counter { background: var(--bg); }
+/* .home-counter ground: tokens.css :where(.on-dark) */
 .home-counter__head {
   display: grid;
   gap: 14px;
@@ -353,7 +338,7 @@
 }
 
 /* ============================ Testimonials (05 / Word of Mouth) ============================ */
-.home-testimonials { background: var(--bg); }
+/* .home-testimonials ground: tokens.css :where(.on-dark) */
 .home-testimonials__head {
   display: grid;
   gap: 14px;
@@ -439,7 +424,7 @@
 }
 
 /* ============================ Disclosure band (before footer) ============================ */
-.home-disclosures { background: var(--bg); }
+/* .home-disclosures ground: tokens.css :where(.on-dark) */
 .home-disclosures .wrap {
   display: grid;
   gap: 10px;

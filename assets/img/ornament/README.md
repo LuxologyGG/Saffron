@@ -1,4 +1,4 @@
-# Ornament assets — Saffron & Rice
+# Ornament assets, Saffron & Rice
 
 All vector artwork in this directory is **original, hand-authored SVG** drawn
 in-repo for this project (see `research/design-brief.md` section 3, "Ornament

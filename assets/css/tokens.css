@@ -166,6 +166,17 @@
   color-scheme: dark;
 }
 
+/* Ground paint for every night scope: the re-pointed tokens above only
+   change what --bg/--fg RESOLVE to; without this the element itself
+   would still show the body's cream ground and inherit body ink.
+   :where() keeps specificity at zero so any page-level ground (heroes
+   with gradients, the day-to-night band) still wins with a bare class
+   selector. */
+:where(.on-dark) {
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
 /* ============================ Reset ============================ */
 *,*::before,*::after { box-sizing: border-box; }
 * { margin: 0; }

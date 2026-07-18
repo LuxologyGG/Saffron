@@ -205,8 +205,8 @@
 .station p { color: var(--fg-soft); max-width: 30ch; }
 
 /* ============================ 03 / Sourcing (on-dark) ============================ */
-/* .on-dark re-points tokens only; the section paints its own night ground */
-.halal { overflow: clip; background: var(--bg); color: var(--fg); }
+/* Night ground + ink paint centrally (tokens.css :where(.on-dark)) */
+.halal { overflow: clip; }
 .halal__wrap {
   position: relative;
   z-index: var(--z-base);

@@ -246,6 +246,11 @@
     curtain.className = "curtain";
     curtain.setAttribute("aria-hidden", "true");
     document.body.appendChild(curtain);
+    /* The CSS resting state translateY(101%) computes to a PIXEL matrix,
+       which GSAP would keep as a permanent y offset under every yPercent
+       tween (the entry reveal would end covering the page). Take over in
+       percentage space: zero the pixel part, park at 101% offscreen. */
+    gsap.set(curtain, { y: 0, yPercent: 101 });
 
     var covered = false;
     try { covered = sessionStorage.getItem("snrCurtain") === "1"; } catch (e) {}

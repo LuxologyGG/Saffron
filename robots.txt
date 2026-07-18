@@ -1,6 +1,7 @@
-# Saffron & Rice. PLACEHOLDER_ORIGIN is replaced with the deployed
-# site origin by the deploy step (same token as sitemap.xml).
+# Saffron & Rice. PLACEHOLDER_ORIGIN is replaced at deploy with the
+# site host plus any base path (one sed pass, see deploy/ORIGIN-SWAP.md;
+# same token as sitemap.xml and every page head).
 User-agent: *
 Allow: /
 
-Sitemap: PLACEHOLDER_ORIGIN/sitemap.xml
+Sitemap: https://PLACEHOLDER_ORIGIN/sitemap.xml

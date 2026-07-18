@@ -10,11 +10,8 @@
    House rules: no em dashes; zero-build; self-hosted only.
    ============================================================= */
 
-/* Night-scope text repair: tokens.css .on-dark re-points --fg but never
-   re-applies color, so unstyled text inside a night band inherits body
-   ink and vanishes. Zero-specificity so every explicit component color
-   still wins. (Latent shell issue; scoped fix here, flagged upstream.) */
-:where(.on-dark) { color: var(--fg); }
+/* Night-scope ground + ink now paint centrally: tokens.css
+   :where(.on-dark). The scoped repair that lived here is retired. */
 
 /* ============================ Hero: set the table ============================ */
 /* 70vh maximum per the brief. Desktop fills the cap; small screens size
@@ -127,7 +124,7 @@
 
 /* ============================ Category index ============================ */
 /* Numbered hairline table, 20 percent alpha gold hairlines (decorative). */
-.mindex { background: var(--bg); padding: clamp(14px, 2.6vh, 40px) 0 clamp(22px, 4vh, 56px); }
+.mindex { /* ground: tokens.css :where(.on-dark) */ padding: clamp(14px, 2.6vh, 40px) 0 clamp(22px, 4vh, 56px); }
 .mindex__row {
   display: grid;
   grid-template-columns: 3.2ch 1fr auto;
@@ -264,7 +261,7 @@
 }
 
 /* ============================ Disclosure band ============================ */
-.mdisclose { background: var(--bg); padding-block: clamp(56px, 9vh, 130px); }
+.mdisclose { /* ground: tokens.css :where(.on-dark) */ padding-block: clamp(56px, 9vh, 130px); }
 .mdisclose__grid {
   display: grid;
   grid-template-columns: minmax(240px, .9fr) 2fr;
@@ -336,4 +333,10 @@
   .mcat__head { margin-bottom: 10px; gap: 8px; }
   .mcat__title { font-size: var(--fs-h3); }
   .mrow__desc { margin-top: 4px; }
+}
+
+/* This page opts the sticky call bar on (callbar is-on in markup); keep
+   the footer bar clear of it on small screens (same fix as catering). */
+@media (max-width: 700px) {
+  .footer__bar { padding-bottom: 84px; }
 }
