@@ -30,6 +30,13 @@ Orchestrated autonomous rebuild. Branch: `claude/saffron-rice-rebuild-du9vf1` (s
 ### Phase 2 — Design synthesis (in flight)
 - Synthesis agent producing tokens.css + research/design-brief.md from all four design systems + logo-sampled palette.
 
+### Phase 3 — Build (in flight, 2026-07-18)
+- Shell + motion engine COMPLETE and verified (zero console errors, both motion modes). Files: assets/css/app.css, assets/js/app.js, research/shell-snippets.html.
+- Original ornament set COMPLETE (11 assets, incl. HarfBuzz-shaped Farsi hours label from Vazirmatn OFL, grain tile). All original vector work.
+- Photography COMPLETE: 17 Unsplash-license-verified images (jpg+webp, 4.6MB/3.2MB) + license manifest. Unlicensed blog photos remain research-only, never ship.
+- Higgsfield decision: 2 free credits < ~6/clip cost → skip generation, cinematic motion on real stills (skill cost rule). No credits burned.
+- Page builds fanned out in parallel: Home, Menu (Counter), Catering, About, Contact (+sitemap/robots), 404. Each self-verifies (Playwright, zero console errors, 1440+390, both motion modes) and screenshots to review/pages/<page>/.
+
 ## Council verdicts
 
 ### Design spec — Round 2 (2026-07-18): PASS ✅
