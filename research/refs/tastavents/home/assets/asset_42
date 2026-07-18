@@ -1,0 +1,2256 @@
+<!doctype html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="shortcut icon" href="https://tastavents.com/assets/themes/tastavents.com/img/preferences/favicon.png" type="image/png"/>
+
+    <title>Restaurante Tastavents | Página web oficial</title>
+
+    <meta name="author" content="Emexs Marketing SL" />
+    <meta name="copyright" content="Tastavents Restaurante">
+    <meta name="robots" content="index, follow">
+        <meta name="description" content="Disfruta de una experiencia culinaria única con vistas al mar. Nuestra carta presenta una selección de platos que capturan la esencia del Mediterráneo.">
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website" />
+        <meta property="og:title" content="Restaurante Tastavents | Página web oficial"/>
+            <meta property="og:url" content="https://tastavents.com/"/>
+    
+            <meta property="og:image" content="https://tastavents.com/" />
+        <meta property="og:description" content="Disfruta de una experiencia culinaria única con vistas al mar. Nuestra carta presenta una selección de platos que capturan la esencia del Mediterráneo.">
+
+    <!-- TwitterCard -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://tastavents.com/">    <meta name="twitter:title" content="Restaurante Tastavents | Página web oficial">
+    <meta name="twitter:text:description" content="Disfruta de una experiencia culinaria única con vistas al mar. Nuestra carta presenta una selección de platos que capturan la esencia del Mediterráneo." />
+            <meta name="twitter:image:src" content="https://tastavents.com/" />
+    
+    <!-- Alternates y Hreflang -->
+            <link href="https://tastavents.com/" rel="canonical" />
+
+                    <link href="https://tastavents.com/ca" hreflang="ca" rel="alternate" />
+                    <link href="https://tastavents.com/en" hreflang="en" rel="alternate" />
+                    <link href="https://tastavents.com/fr" hreflang="fr" rel="alternate" />
+        
+        <link href="https://tastavents.com/" hreflang="es" rel="alternate" />
+    
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="65a68cb8-c6ea-48bc-8a4e-3a612ae18edc" data-blockingmode="auto" type="text/javascript"></script>
+
+            <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-TS4V3XP5');
+        </script>
+        <!-- END Google Tag Manager -->
+    
+    <link rel="preload" as="style" href="https://tastavents.com/assets/themes/tastavents.com/utils-58ef1ed0.css" />
+    <link rel="preload" as="style" href="https://tastavents.com/assets/themes/tastavents.com/app-ee664d1b.css" />
+    <link rel="modulepreload" href="https://tastavents.com/assets/themes/tastavents.com/loader-6d8e9784.js?v2" />
+    <link rel="modulepreload" href="https://tastavents.com/assets/themes/tastavents.com/app-33d544c6.js" />
+    <link rel="modulepreload" href="https://tastavents.com/assets/themes/tastavents.com/modal-733ae86b.js" />
+    <link rel="stylesheet" href="https://tastavents.com/assets/themes/tastavents.com/utils-58ef1ed0.css" />
+    <link rel="stylesheet" href="https://tastavents.com/assets/themes/tastavents.com/app-ee664d1b.css" />
+    <link rel="stylesheet" href="https://tastavents.com/assets/themes/tastavents.com/custom.css?0018072026" />
+    <script type="module" src="https://tastavents.com/assets/themes/tastavents.com/loader-6d8e9784.js"></script>
+    <script type="module" src="https://tastavents.com/assets/themes/tastavents.com/app-33d544c6.js"></script>
+</head>
+<body data-scroll-direction="initial" data-load="first-loading" class="overflow-hidden">
+
+            <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TS4V3XP5"
+                            height="0" width="0" style="display:none; visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+    <div id="loader">
+
+        <div class="inner-container">
+            <div class="container-img loader-logo no-desktop">
+                <img src="https://tastavents.com/assets/themes/tastavents.com/img/logo.svg" data-preload class=" media">
+
+            </div>
+
+            <section class="loading-progressbar"></section>
+        </div>
+
+
+    </div>
+    <div class="cursor-wrapper" id="wrapper-cursor">
+        <div></div>
+    </div>
+
+    
+<header id="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 column-links d-mobile-none">
+                <div class="links-wrapper">
+                    <div class="lang dropdown nav-item d-none d-lg-block">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">es</a>
+                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item" data-pjax-state href="https://tastavents.com/ca/change-language">CA</a>
+                                                            <a class="dropdown-item" data-pjax-state href="https://tastavents.com/en/change-language">EN</a>
+                                                            <a class="dropdown-item" data-pjax-state href="https://tastavents.com/fr/change-language">FR</a>
+                                                    </div>
+                    </div>
+                                            <a href="https://www.google.com/search?sca_esv=8add4daed646876f&sca_upv=1&tbm=lcl&q=Restaurant+Tastavents+Rese%C3%B1as&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2MjEwNzc1MzM1MjA3MDMxNjex3MDI-IpRLii1uCSxtCgxr0QhJBHILEvNKylWAIqmHt6YWLyIlYACAPsAwMlcAAAA&rldimm=2407756652070643749&hl=es-ES&sa=X&ved=2ahUKEwjWtaahx6OGAxWDU6QEHeNKDYMQ9fQKegQIQxAF&biw=1920&bih=1039&dpr=1#lkt=LocalPoiReviews"
+                           target="_blank" rel="noopener noreferrer" class="link-resenas color-active-dark btn-hover"
+                           data-letter="Reseñas">
+                            <span>Reseñas</span>
+                        </a>
+                                                                <a href="https://www.instagram.com/tastavents/" target="_blank" rel="noopener noreferrer"
+                           class="color-active-dark btn-hover" data-letter="Instagram">
+                            <span>Instagram</span>
+                        </a>
+                                    </div>
+            </div>
+
+            <div class="col-lg-2 offset-lg-2 column-logo d-flex-center d-mobile-none">
+                <a href="javascript:void(0)" data-scrollto="0" class="logo" data-pjax
+                   aria-label="Tastavents Restaurante">
+                    <span class="hide">Tastavents Restaurante</span>
+                    <svg width="404" height="47" viewBox="0 0 404 47" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_30_1387)">
+                            <path
+                                d="M14.2892 3.67529H9.1163V45.454H5.54756V3.67529H0.328125V1.08301H14.2892V3.67529Z"
+                                fill="#FCE9B9" />
+                            <path
+                                d="M58.2062 45.454H54.6375L53.3704 36.8867H46.9304L45.7214 45.454H42.6758L49.5227 1.08301H51.3593L58.1946 45.454H58.2062ZM53.0333 34.306L50.162 14.1374L47.3489 34.306H53.0333Z"
+                                fill="#FCE9B9" />
+                            <path
+                                d="M98.7197 2.05975C95.4416 5.33788 93.3724 9.12749 93.3724 12.859C93.3724 16.1371 94.0001 18.4388 95.4416 21.31C96.883 24.2394 98.1966 27.8082 98.1966 30.5632C98.1966 37.7472 94.4651 42.862 90.6639 46.5935L88.7109 44.5824C91.8728 41.4787 94.4535 36.887 94.4535 32.1093C94.4535 29.4705 93.3026 26.3667 91.6985 23.0305C90.1989 19.9267 89.5712 17.6251 89.5712 13.9517C89.5712 8.0929 93.5933 3.3152 96.697 0.15332L98.7081 2.04813L98.7197 2.05975Z"
+                                fill="#FCE9B9" />
+                            <path
+                                d="M143.555 3.67529H138.382V45.454H134.813V3.67529H129.582V1.08301H143.543V3.67529H143.555Z"
+                                fill="#FCE9B9" />
+                            <path
+                                d="M187.46 45.454H183.891L182.624 36.8867H176.184L174.975 45.454H171.93L178.777 1.08301H180.613L187.449 45.454H187.46ZM182.287 34.306L179.416 14.1374L176.603 34.306H182.287Z"
+                                fill="#FCE9B9" />
+                            <path
+                                d="M229.995 1.08301L223.16 45.454H221.323L214.477 1.08301H217.929L222.474 31.3185L226.961 1.08301H230.007H229.995Z"
+                                fill="#FCE9B9" />
+                            <path
+                                d="M272.519 45.454H261.313V29.9352H259.871V27.3429H261.313V1.08301H272.519V3.67529H264.87V27.3429H270.728V29.9352H264.87V42.8617H272.519V45.4424V45.454Z"
+                                fill="#FCE9B9" />
+                            <path
+                                d="M318.214 45.454H316.377L307.694 16.4274V45.454H304.125V1.08301H305.962L314.645 30.4467V1.08301H318.214V45.454Z"
+                                fill="#FCE9B9" />
+                            <path
+                                d="M363.664 3.67529H358.491V45.454H354.922V3.67529H349.691V1.08301H363.652V3.67529H363.664Z"
+                                fill="#FCE9B9" />
+                            <path
+                                d="M403.895 2.05975C400.617 5.33788 398.548 9.12749 398.548 12.859C398.548 16.1371 399.176 18.4388 400.617 21.31C402.059 24.2394 403.372 27.8082 403.372 30.5632C403.372 37.7472 399.641 42.862 395.84 46.5935L393.887 44.5824C397.049 41.4787 399.629 36.887 399.629 32.1093C399.629 29.4705 398.478 26.3667 396.874 23.0305C395.375 19.9267 394.747 17.6251 394.747 13.9517C394.747 8.0929 398.769 3.3152 401.873 0.15332L403.884 2.04813L403.895 2.05975Z"
+                                fill="#FCE9B9" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_30_1387">
+                                <rect width="403.57" height="46.4402" fill="white"
+                                      transform="translate(0.328125 0.164062)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </a>
+            </div>
+
+
+            <div class="col-lg-4 offset-lg-1 col-12 column-buttons">
+                                    <a href="javascript:void(0)" data-scrollto="contacto-y-reservas" data-menu-close
+                       class="btn-reservas">
+                        <div class="inner-btn" data-letter="Reservas">
+                            <span>Reservas</span>
+                        </div>
+                    </a>
+                                                    <a target="_blank" href="https://shopcollection.salleshotels.com/es/70-marina-badalona"
+                       class="btn-regala btn-reservas">
+                        <div class="inner-btn" data-letter="Regala">
+                            <span>Regala</span>
+                        </div>
+                    </a>
+                                <button data-href="javascript:void(0)" id="bt-menu" aria-label="Menu">
+                    <!--?xml version="1.0" encoding="utf-8"?>-->
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 33 25.6"
+                         xml:space="preserve">
+                            <style type="text/css">
+                                .bar {
+                                    fill: #E52421;
+                                }
+                            </style>
+                        <g id="bt-menu-bars">
+                            <rect id="bottombar" y="95%" class="bar" width="100%" height="1" />
+                            <rect id="middlebar" y="50%" class="bar" width="100%" height="1" />
+                            <rect id="topbar" class="bar" width="100%" height="1" />
+                        </g>
+                        </svg>
+
+                </button>
+
+                <div class="links-wrapper d-lg-none">
+                <div class="lang dropdown nav-item">
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">es</a>
+                    <div class="dropdown-menu">
+                                                    <a class="dropdown-item" data-pjax-state href="https://tastavents.com/ca/change-language">CA</a>
+                                                    <a class="dropdown-item" data-pjax-state href="https://tastavents.com/en/change-language">EN</a>
+                                                    <a class="dropdown-item" data-pjax-state href="https://tastavents.com/fr/change-language">FR</a>
+                                            </div>
+                </div>
+                </div>
+
+                <nav class="menu">
+                    <div class="menu--wrapper">
+                        <div class="img-left-container d-mobile-none">
+                            <a href="javascript:void(0)" data-scrollto="0" class="container-img" data-menu-close>
+                                <div class="imgs  media">
+
+                                                                            <img class="original" data-src="https://tastavents.com/assets/themes/tastavents.com/uploads/img/tastaventsheader/img51.jpg" src="" data-lazy>
+
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/uploads/img/tastaventsheader/img51.jpg" data-preload class="thumb pointer-events-none">
+                                    
+                                </div>
+
+
+                            </a>
+                        </div>
+
+                        <ul class="menu--list fs--header">
+                                                            <li>
+                                    <button data-scrollto="presentacion" data-menu-close
+                                            data-pg-active="section-presentacion">
+                                        <div class="container-number" data-letter="I">
+                                            <span class="item-number">I</span>
+                                        </div>
+
+                                        <div class="container-span" data-letter="Presentación">
+                                            <span class="item-title">Presentación</span>
+                                        </div>
+                                    </button>
+                                </li>
+                                                                                    <li>
+                                <button data-scrollto="nuestra-cocina" data-menu-close
+                                        data-pg-active="section-nuestra-cocina">
+                                    <div class="container-number" data-letter="II">
+                                        <span class="item-number">II</span>
+                                    </div>
+
+                                    <div class="container-span" data-letter="Nuestra Cocina">
+                                        <span class="item-title">Nuestra Cocina</span>
+                                    </div>
+                                </button>
+                            </li>
+                                                                                    <li>
+                                <button data-scrollto="espacio-singular" data-menu-close
+                                        data-pg-active="section-espacio-singular">
+
+                                    <div class="container-number" data-letter="III">
+                                        <span class="item-number">III</span>
+                                    </div>
+
+                                    <div class="container-span" data-letter="Espacio Singular">
+                                        <span class="item-title">Espacio Singular</span>
+                                    </div>
+                                </button>
+                            </li>
+                                                                                    <li>
+                                <button data-scrollto="chef-destacado" data-menu-close
+                                        data-pg-active="section-chef-destacado">
+
+                                    <div class="container-number" data-letter="IV">
+                                        <span class="item-number">IV</span>
+                                    </div>
+
+                                    <div class="container-span" data-letter="Chef Destacado">
+                                        <span class="item-title">Chef Destacado</span>
+                                    </div>
+                                </button>
+                            </li>
+                                                                                    <li>
+                                <button data-scrollto="menu-excepcional" data-menu-close
+                                        data-pg-active="section-menu-excepcional">
+
+                                    <div class="container-number" data-letter="V">
+                                        <span class="item-number">V</span>
+                                    </div>
+
+                                    <div class="container-span" data-letter="Menú Excepcionall">
+                                        <span class="item-title">Menú Excepcional</span>
+                                    </div>
+                                </button>
+                            </li>
+                                                                                    <li>
+                                <button data-scrollto="contacto-y-reservas" data-menu-close
+                                        data-pg-active="section-contacto-y-reservas">
+
+                                    <div class="container-number" data-letter="VI">
+                                        <span class="item-number">VI</span>
+                                    </div>
+
+                                    <div class="container-span" data-letter="Contacto Y Reservas">
+                                        <span class="item-title">Contacto Y Reservas</span>
+                                    </div>
+                                </button>
+                            </li>
+                                                    </ul>
+
+                        <div class="img-right-container">
+                                <span
+                                    class="d-block font-1 fs--12 lh-120 brown-1 text-uppercase text-center pb-lg-30 pb-mobile-15 pt-mobile-40 split-words">
+                                    <span class="no-mobile">
+                                        llámanos para<br>hacer tu reserva                                    </span>
+
+                                    <span class="no-desktop">
+                                                                            </span>
+                                </span>
+
+                            <div class="container-img">
+                                <div class="imgs  media">
+                                                                        <img class="original" data-src="https://tastavents.com/assets/themes/tastavents.com/uploads/img/tastaventsheader/img52.jpg" src="" data-lazy>
+
+                                    <img src="https://tastavents.com/assets/themes/tastavents.com/uploads/img/tastaventsheader/img52.jpg" data-preload class="thumb pointer-events-none">
+                                    
+                                </div>
+
+
+                            </div>
+
+                                                            <a href="tel:+34 830 83 10 83" target="_blank" class="link-phone no-mobile">
+                                    <div class="container-icon">
+                                        <i class="icon-phone"></i>
+                                    </div>
+
+                                    <div class="container-span" data-letter="+34 830 83 10 83">
+                                        <span>+34 830 83 10 83</span>
+                                    </div>
+                                </a>
+                                                                                        <a href="https://maps.app.goo.gl/LAT7py6WZBiUQkWBA" target="_blank"
+                                   class="link-phone no-desktop">
+                                        <span>
+                                            Hotel Marina Badalona<br>
+                                            Av. d'Eduard Maristany, 227,<br>08912 Badalona, Barcelona                                        </span>
+
+                                    <div class="container-icon">
+                                        <i class="icon-arrow-right"></i>
+                                    </div>
+                                </a>
+                                                    </div>
+                    </div>
+
+                </nav>
+            </div>
+
+        </div>
+    </div>
+</header>
+<!-- /header -->
+<div id="main-transition">
+    <div class="wrapper" id="pg-home" data-scroll-container>
+        <main>
+            <div class="fixed-bar"></div>
+
+<section class="section-banner pos-relative">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div id="intro-slider" data-aos>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                                                            <div class="swiper-slide">
+                                    <div class="container-img bg-slider" data-parallax-top
+                                         data-translate-y="20rem" data-scale="1.1">
+                                        <div class="imgs  media">
+                                            <img class="original" data-src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_grande/es/img01.jpg" src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_grande/es/img01.jpg"
+                                                 data-lazy>
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_grande/es/img01.jpg" data-preload
+                                                 class="thumb pointer-events-none">
+                                        </div>
+                                    </div>
+                                    <div class="container-img small-img">
+                                        <div class="imgs  media">
+                                            <img class="original" data-src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_pequena/es/img03.jpg" src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_pequena/es/img03.jpg"
+                                                 data-lazy>
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_pequena/es/img03.jpg" data-preload
+                                                 class="thumb pointer-events-none">
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="swiper-slide">
+                                    <div class="container-img bg-slider" data-parallax-top
+                                         data-translate-y="20rem" data-scale="1.1">
+                                        <div class="imgs  media">
+                                            <img class="original" data-src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_grande/es/img39.jpg" src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_grande/es/img39.jpg"
+                                                 data-lazy>
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_grande/es/img39.jpg" data-preload
+                                                 class="thumb pointer-events-none">
+                                        </div>
+                                    </div>
+                                    <div class="container-img small-img">
+                                        <div class="imgs  media">
+                                            <img class="original" data-src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_pequena/es/img32.jpg" src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_pequena/es/img32.jpg"
+                                                 data-lazy>
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_pequena/es/img32.jpg" data-preload
+                                                 class="thumb pointer-events-none">
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="swiper-slide">
+                                    <div class="container-img bg-slider" data-parallax-top
+                                         data-translate-y="20rem" data-scale="1.1">
+                                        <div class="imgs  media">
+                                            <img class="original" data-src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_grande/es/img40.jpg" src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_grande/es/img40.jpg"
+                                                 data-lazy>
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_grande/es/img40.jpg" data-preload
+                                                 class="thumb pointer-events-none">
+                                        </div>
+                                    </div>
+                                    <div class="container-img small-img">
+                                        <div class="imgs  media">
+                                            <img class="original" data-src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_pequena/es/img41.jpg" src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_pequena/es/img41.jpg"
+                                                 data-lazy>
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_pequena/es/img41.jpg" data-preload
+                                                 class="thumb pointer-events-none">
+                                        </div>
+                                    </div>
+                                </div>
+                                                    </div>
+                    </div>
+                    <div class="swiper-pagination start"
+                         data-aos="fadeIn .8s ease-in-out-cubic 0s, d:loop"></div>
+                </div>
+
+                                    <div class="container-title">
+                        <h1 class="intro-title font-2 fs--188 fw-100 yellow-1 text-uppercase text-center d-inline-block"
+                            data-parallax data-translate-y="-30rem">
+                                            <span class="split-words" data-aos="d:loop">
+                                                Un Viaje Gastronómico Único                                            </span>
+                        </h1>
+                    </div>
+                
+                <div class="container-img container-logo no-desktop"
+                     data-aos="fadeIn .8s ease-in-out-cubic 0s, d:loop">
+                    <img src="https://tastavents.com/assets/themes/tastavents.com/img/logo.svg" data-preload class=" media">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section-presentacion section" id="presentacion">
+    <div class="container-fluid">
+        <div class="row pt-lg-165 pb-lg-195 pt-mobile-65 pb-mobile-100">
+
+            <div class="col-lg-2 offset-lg-1 pb-mobile-55">
+                                    <h3 class="section-title-wrapper brown-1 px-mobile-5" data-aos="d:loop">
+                        <span class="section-number">I</span>
+                        <span class="section-title">Presentación</span>
+                    </h3>
+                            </div>
+
+            <div class="col-lg-5 offset-lg-2">
+                <p class="paragraph-24 brown-1 px-mobile-5" data-aos="fadeIn .6s ease-in-out 0s, d:loop">Bienvenidos a Tastavents, un destino culinario que deleitar&aacute; sus sentidos. Somos un enclave gastron&oacute;mico excepcional en la pintoresca costa del litoral barcelon&eacute;s, donde la comida se convierte en una experiencia que va m&aacute;s all&aacute; del paladar. Cada aspecto, desde la est&eacute;tica hasta la textura y el aroma, ha sido meticulosamente atendido para sumergirlo en la esencia m&aacute;s pura de la gastronom&iacute;a mediterr&aacute;nea.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="horizontal-scroll">
+    <div class="container-wrap">
+        <div class="placeholder">
+            <div class="container-scroll">
+                <div class="bg-wrapper-container pt-lg-95 pt-mobile-50 pb-tablet-150 pb-phone-25">
+                    <div class="col-12">
+                                                    <h3 class="font-2 fs--72 fw-100 yellow-1 text-uppercase text-center pos-relative z-2 split-words"
+                                data-aos="d:loop">
+                                                                    <span class="d-block">Veladas</span>
+                                                                    <span class="d-block">Mediterráneas</span>
+                                                            </h3>
+                                            </div>
+                </div>
+
+
+                <div class="scroll-content">
+                    <ul class="card-list">
+                        <li data-parallax data-translate-y="-20rem">
+                            <div class="card-item">
+                                <div class="container-header">
+                                                                                                    <span class="fs-lg-18 fs-mobile-14 brown-1 text-uppercase d-block">
+                                                        Espacio singular                                                    </span>
+                                                
+                                    <div class="container-icon">
+                                        <i class="icon-espacio"></i>
+                                    </div>
+
+                                    <p class="fs--16 lh-120 py-lg-25 py-5 pr-30">Una experiencia culinaria con cocina abierta y vistas impresionantes que se funden con el mar.</p>
+                                </div>
+
+                                <div class="container-img">
+                                    
+<picture>
+		<img data-src="https://tastavents.com/assets/themes/tastavents.com/img/tastaventshorizontal/img04.thigh.jpg"
+		 class="media" data-preload 		 loading="lazy"
+		 src="https://tastavents.com/assets/themes/tastavents.com/img/tastaventshorizontal/img04.thigh.jpg"
+		 alt=""
+		 title="">
+</picture>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="mt-lg-190" data-parallax data-translate-y="-40rem">
+                            <div class="card-item">
+                                <div class="container-header">
+                                                                                                    <span class="fs-lg-18 fs-mobile-14 brown-1 text-uppercase d-block">
+                                                        Propuesta de autor                                                    </span>
+                                                
+                                    <div class="container-icon">
+                                        <i class="icon-propuesta"></i>
+                                    </div>
+
+                                    <p class="fs--16 lh-120 py-lg-25 py-5 pr-30">D&iacute;dac Alcoriza te lleva en un viaje culinario de sabores tradicionales y contrastes exquisitos.</p>
+                                </div>
+
+                                <div class="container-img">
+                                    
+<picture>
+		<img data-src="https://tastavents.com/assets/themes/tastavents.com/img/tastaventshorizontal/img44.thigh.jpg"
+		 class="media" data-preload 		 loading="lazy"
+		 src="https://tastavents.com/assets/themes/tastavents.com/img/tastaventshorizontal/img44.thigh.jpg"
+		 alt=""
+		 title="">
+</picture>
+
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="mt-lg-380" data-parallax data-translate-y="-60rem">
+                            <div class="card-item">
+                                <div class="container-header">
+                                                                                                    <span class="fs-lg-18 fs-mobile-14 brown-1 text-uppercase d-block">
+                                                        Oasis íntimo                                                    </span>
+                                                
+                                    <div class="container-icon">
+                                        <i class="icon-oasis"></i>
+                                    </div>
+
+                                    <p class="fs--16 lh-120 py-lg-25 py-5 pr-30">Ideal para eventos especiales, donde la buena cocina se mezcla con la belleza &uacute;nica del entorno.</p>
+                                </div>
+
+                                <div class="container-img">
+                                    
+<picture>
+		<img data-src="https://tastavents.com/assets/themes/tastavents.com/img/tastaventshorizontal/img31.thigh.jpg"
+		 class="media" data-preload 		 loading="lazy"
+		 src="https://tastavents.com/assets/themes/tastavents.com/img/tastaventshorizontal/img31.thigh.jpg"
+		 alt=""
+		 title="">
+</picture>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                                    <div class="marquee-wrapper">
+                        <div class="marquee-trigger">
+                            <div class="marquee" data-marquee-speed="1">
+                                                <span
+                                                    class="marquee-item font-2 fs--866 yellow-1 text-uppercase d-block pr-100">Mediterráneo</span>
+                            </div>
+                        </div>
+
+                        <div class="marquee-trigger marquee-mobile">
+                            <div class="marquee" data-marquee-speed="1" data-reverse="true">
+                                                <span
+                                                    class="marquee-item font-2 fs--866 yellow-1 text-uppercase d-block pr-100">Mediterráneo</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                <div class="bg-img">
+                    <div class="container-img" data-parallax data-translate-y="60rem">
+
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/tastaventshorizontal/img02.jpg" data-preload class=" media">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section-nuestra-cocina section" id="nuestra-cocina">
+    <div class="no-mobile">
+        <div class="marquee-vertical marquee-left">
+            <p-marquee class="marquee-ul" speed="60" direction="y">
+                                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-1.jpg" data-preload class=" media">
+
+                    </div>
+
+                    <div class="container-text">
+                        <span>Rossinyols</span>
+                    </div>
+                                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-2.png" data-preload class=" media">
+
+                    </div>
+
+                    <div class="container-text">
+                        <span>Albahaca</span>
+                    </div>
+                                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-3.jpg" data-preload class=" media">
+
+                    </div>
+
+                    <div class="container-text">
+                        <span>Suprema <br>atun rojo</span>
+                    </div>
+                                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-4.jpg" data-preload class=" media">
+
+                    </div>
+
+                    <div class="container-text">
+                        <span>Calabazas</span>
+                    </div>
+                                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-5.jpg" data-preload class=" media">
+
+                    </div>
+
+                    <div class="container-text">
+                        <span>Azafran</span>
+                    </div>
+                                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-6.jpg" data-preload class=" media">
+
+                    </div>
+
+                    <div class="container-text">
+                        <span>aceite DE OLIVA<br>Extra virgen</span>
+                    </div>
+                                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-7.jpg" data-preload class=" media">
+
+                    </div>
+
+                    <div class="container-text">
+                        <span>Aguacate</span>
+                    </div>
+                                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-8.jpg" data-preload class=" media">
+
+                    </div>
+
+                    <div class="container-text">
+                        <span>alcachofas<br>del prat</span>
+                    </div>
+                            </p-marquee>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row pt-lg-95 pb-lg-150">
+
+            <div class="col-12 pb-lg-60 pt-mobile-50 pb-mobile-50">
+                                    <h3 class="section-title-wrapper white-1 text-lg-center" data-aos="d:loop">
+                        <span class="section-number">II</span>
+                        <span class="section-title">Nuestra Cocina</span>
+                    </h3>
+                            </div>
+
+            <div class="no-desktop pb-mobile-40 col-12">
+                <div class="marquee-vertical marquee-left">
+                    <p-marquee class="marquee-ul" speed="60" direction="x">
+                                                    <div class="container-img">
+                                <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-1.jpg" data-preload class=" media">
+
+                            </div>
+
+                            <div class="container-text">
+                                <span>Rossinyols</span>
+                            </div>
+                                                    <div class="container-img">
+                                <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-2.png" data-preload class=" media">
+
+                            </div>
+
+                            <div class="container-text">
+                                <span>Albahaca</span>
+                            </div>
+                                                    <div class="container-img">
+                                <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-3.jpg" data-preload class=" media">
+
+                            </div>
+
+                            <div class="container-text">
+                                <span>Suprema <br>atun rojo</span>
+                            </div>
+                                                    <div class="container-img">
+                                <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-4.jpg" data-preload class=" media">
+
+                            </div>
+
+                            <div class="container-text">
+                                <span>Calabazas</span>
+                            </div>
+                                                    <div class="container-img">
+                                <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-5.jpg" data-preload class=" media">
+
+                            </div>
+
+                            <div class="container-text">
+                                <span>Azafran</span>
+                            </div>
+                                                    <div class="container-img">
+                                <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-6.jpg" data-preload class=" media">
+
+                            </div>
+
+                            <div class="container-text">
+                                <span>aceite DE OLIVA<br>Extra virgen</span>
+                            </div>
+                                                    <div class="container-img">
+                                <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-7.jpg" data-preload class=" media">
+
+                            </div>
+
+                            <div class="container-text">
+                                <span>Aguacate</span>
+                            </div>
+                                                    <div class="container-img">
+                                <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-8.jpg" data-preload class=" media">
+
+                            </div>
+
+                            <div class="container-text">
+                                <span>alcachofas<br>del prat</span>
+                            </div>
+                                            </p-marquee>
+                </div>
+            </div>
+
+            <div class="col-lg-8 offset-lg-2">
+                                    <h2 class="font-2 fs--116 lh-100 fw-100 text-uppercase yellow-2 d-inline-block pos-relative z-5 section-subtitle text-lg-center split-words"
+                        data-aos="d:loop">
+                        Ingredientes Exquisitos, Platos memorables.                    </h2>
+                
+                <div class="container-img horizontal-banner z-0">
+                    
+<picture>
+		<img data-src="https://tastavents.com/assets/themes/tastavents.com/img/tastaventskitchen/img03.thigh.jpg"
+		 class="media" data-preload data-parallax data-translate-y="-15rem" 		 loading="lazy"
+		 src="https://tastavents.com/assets/themes/tastavents.com/img/tastaventskitchen/img03.thigh.jpg"
+		 alt=""
+		 title="">
+</picture>
+
+                </div>
+            </div>
+
+            <div
+                class="col-lg-4 offset-lg-4 col-tablet-10 offset-tablet-1 pt-lg-80 pt-mobile-35 pb-mobile-40">
+                <p class="fs--18 fw-400 lh-140 yellow-1 d-block px-lg-35 cocina-paragraph" data-aos="fadeIn .6s ease-in-out 0s, d:loop">Exquisitos manjares imbuidos de una herencia &uacute;nica. Nuestra cocina fusiona los dones ef&iacute;meros de nuestra finca en Cabrera de Mar, donde florecen ingredientes de estaci&oacute;n con la riqueza que otorga el Mar Mediterr&aacute;neo, junto a la excelencia de granjas locales. Cada creaci&oacute;n se erige en una sinfon&iacute;a que venera, magnifica y ennoblece los matices de los sabores m&aacute;s aut&eacute;nticos de la naturaleza.</p>
+
+                <div class="container-buttons">
+                    
+
+<a  href="https://web.winerim.com/tastavents120522" rel="noopener" class=""><button aria-label="Carta de vinos">
+                                                                    <div class="container-span" data-letter="Carta de vinos">
+                                                                        <span>Carta de vinos</span>
+                                                                    </div>
+                                                                    <i class="icon-arrow-right"></i>
+                                                                </button></a>
+
+                    
+
+<a  href="https://tastavents.com/assets/themes/tastavents.com/docs/tastaventskitchen/Carta_03-2026_ESP.pdf" rel="noopener" class=""><button aria-label="Menú degustación" class="mt-mobile-15">
+                                                                    <div class="container-span" data-letter="Menú degustación">
+                                                                        <span>Menú degustación</span>
+                                                                    </div>
+                                                                    <i class="icon-arrow-right"></i>
+                                                                </button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="no-mobile">
+        <div class="marquee-vertical marquee-right">
+            <p-marquee class="marquee-ul" speed="60" direction="y" reverse="true">
+                                    <div class="container-text">
+                        <span>Zanahorias</span>
+                    </div>
+
+                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-8.jpg" data-preload class=" media">
+
+                    </div>
+                                    <div class="container-text">
+                        <span>Gambas</span>
+                    </div>
+
+                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-11.jpg" data-preload class=" media">
+
+                    </div>
+                                    <div class="container-text">
+                        <span>Pulpo</span>
+                    </div>
+
+                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-21.jpg" data-preload class=" media">
+
+                    </div>
+                                    <div class="container-text">
+                        <span>Salmón</span>
+                    </div>
+
+                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-31.jpg" data-preload class=" media">
+
+                    </div>
+                                    <div class="container-text">
+                        <span>Tomate cherri <br>verde huerto</span>
+                    </div>
+
+                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-41.jpg" data-preload class=" media">
+
+                    </div>
+                                    <div class="container-text">
+                        <span>Uramaki<br>de atun</span>
+                    </div>
+
+                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-5.jpg" data-preload class=" media">
+
+                    </div>
+                                    <div class="container-text">
+                        <span>Boquerones</span>
+                    </div>
+
+                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-6.jpg" data-preload class=" media">
+
+                    </div>
+                                    <div class="container-text">
+                        <span>Masa pasta<br>quebrada</span>
+                    </div>
+
+                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-7.jpg" data-preload class=" media">
+
+                    </div>
+                            </p-marquee>
+        </div>
+    </div>
+
+    <div class="no-desktop">
+        <div class="marquee-vertical marquee-right">
+            <p-marquee class="marquee-ul" speed="60" direction="x" reverse="true">
+                                    <div class="container-text">
+                        <span>Zanahorias</span>
+                    </div>
+
+                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-8.jpg" data-preload class=" media">
+
+                    </div>
+                                    <div class="container-text">
+                        <span>Gambas</span>
+                    </div>
+
+                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-11.jpg" data-preload class=" media">
+
+                    </div>
+                                    <div class="container-text">
+                        <span>Pulpo</span>
+                    </div>
+
+                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-21.jpg" data-preload class=" media">
+
+                    </div>
+                                    <div class="container-text">
+                        <span>Salmón</span>
+                    </div>
+
+                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-31.jpg" data-preload class=" media">
+
+                    </div>
+                                    <div class="container-text">
+                        <span>Tomate cherri <br>verde huerto</span>
+                    </div>
+
+                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-41.jpg" data-preload class=" media">
+
+                    </div>
+                                    <div class="container-text">
+                        <span>Uramaki<br>de atun</span>
+                    </div>
+
+                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-5.jpg" data-preload class=" media">
+
+                    </div>
+                                    <div class="container-text">
+                        <span>Boquerones</span>
+                    </div>
+
+                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-6.jpg" data-preload class=" media">
+
+                    </div>
+                                    <div class="container-text">
+                        <span>Masa pasta<br>quebrada</span>
+                    </div>
+
+                    <div class="container-img">
+                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-7.jpg" data-preload class=" media">
+
+                    </div>
+                            </p-marquee>
+        </div>
+    </div>
+</section>
+<section class="section-espacio-singular section" id="espacio-singular">
+    <div class="container-fluid">
+        <div class="row pt-lg-95">
+            <div
+                class="col-lg-11 offset-lg-1 pb-lg-100 pt-mobile-65 pb-mobile-50 pl-mobile-15 order-mobile-0">
+                                    <h3 class="section-title-wrapper brown-1" data-aos="d:loop">
+                        <span class="section-number">III</span>
+                        <span class="section-title">Espacio Singular</span>
+                    </h3>
+                            </div>
+
+            <div class="col-lg-2 offset-lg-1 order-mobile-3">
+                <div class="container-img smaller-img pos-relative z-2 mt-lg-50" data-parallax
+                     data-translate-y="-10rem">
+                    
+<picture>
+		<img data-src="https://tastavents.com/assets/themes/tastavents.com/img/tastaventsspace/img13.thigh.jpg"
+		 class="media" data-preload 		 loading="lazy"
+		 src="https://tastavents.com/assets/themes/tastavents.com/img/tastaventsspace/img13.thigh.jpg"
+		 alt=""
+		 title="">
+</picture>
+                </div>
+            </div>
+
+            <div class="col-lg-7 order-mobile-1">
+                                    <h2 class="font-2 fs--74 fw-100 text-uppercase brown-1 d-inline-block pr-lg-150 pr-mobile-50 pb-mobile-20 split-words"
+                        data-aos="d:loop">
+                        Panorámicas que extasían y deleitan los sentidos.                    </h2>
+                            </div>
+
+            <div class="col-12 order-mobile-2">
+                <div class="container-img panoramicas-img">
+                    
+<picture>
+		<img data-src="https://tastavents.com/assets/themes/tastavents.com/img/tastaventsspace/img14.thigh.jpg"
+		 class="media" data-preload data-parallax data-translate-y="-15rem" 		 loading="lazy"
+		 src="https://tastavents.com/assets/themes/tastavents.com/img/tastaventsspace/img14.thigh.jpg"
+		 alt=""
+		 title="">
+</picture>
+                </div>
+            </div>
+
+        	
+			
+			
+			<div class="row pt-lg-165 pb-lg-195 pt-mobile-65 pb-mobile-100">
+
+				<div class="col-lg-4 pb-mobile-55 block-button">
+				
+				 
+
+<a data-aos="fadeIn .6s ease-in-out 0s, d:loop" href="https://tastavents.com/assets/themes/tastavents.com/docs/tastaventsspace/Carta_03-2026_ESP.pdf" rel="noopener" class=""><button aria-label="Menú degustación">
+                                                                    <div class="container-span" data-letter="Menú degustación">
+                                                                        <span>Menú degustación</span>
+                                                                    </div>
+                                                                    <i class="icon-arrow-right"></i>
+                                                                </button></a>
+					
+								
+				</div>
+
+				<div class="col-lg-5 offset-lg-2">
+					<p class="paragraph-24 brown-1 px-mobile-15" data-aos="fadeIn .6s ease-in-out 0s, d:loop">Tastavents va m&aacute;s all&aacute; de la simple gastronom&iacute;a, convirti&eacute;ndose en una aut&eacute;ntica odisea sensorial. Desde la transparencia de nuestras cocinas hasta la amplitud de las vistas mar&iacute;timas que se despliegan ante los comensales, cada visita se transforma en un exquisito fest&iacute;n est&eacute;tico. En momentos de singular relevancia, nuestro espacio se viste con un encantador rinc&oacute;n al aire libre que se fusiona con la poes&iacute;a del Mediterr&aacute;neo.</p>
+				</div>
+				
+			</div>
+			
+			
+			
+        </div>
+    </div>
+</section>
+<section class="section-chef-destacado section" id="chef-destacado">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 column-img order-mobile-1">
+                <div class="container-img chefs-img">
+                    
+<picture>
+		<img data-src="https://tastavents.com/assets/themes/tastavents.com/img/tastaventsfeatured/chef-img.thigh.jpg"
+		 class="media" data-preload data-parallax data-translate-y="15rem" 		 loading="lazy"
+		 src="https://tastavents.com/assets/themes/tastavents.com/img/tastaventsfeatured/chef-img.thigh.jpg"
+		 alt=""
+		 title="">
+</picture>
+
+                </div>
+
+                
+
+<a target="_blank" href="https://www.elmueble.com/estilo-de-vida/tastavents-restaurante-gastronomico-pleno-mediterraneo_52618" rel="noopener" class="btn-legado no-mobile"><div class="container-icon"><i class="icon-oasis"></i></div><div class="container-text" data-letter="Descubrir legado"><span>Descubrir legado</span></div></a>
+            </div>
+
+            <div class="col-lg-6 column-text order-mobile-0">
+                <div class="container-content">
+                                            <h3 class="section-title-wrapper white-1 mx-auto pb-lg-50 pb-mobile-40"
+                            data-aos="d:loop">
+                            <span class="section-number">IV</span>
+                            <span class="section-title">Chef Destacado</span>
+                        </h3>
+                                        <span
+                        class="font-2 fs--140 fw-100 lh-100 yellow-1 text-uppercase text-center d-block split-words chef-name"
+                        data-aos="d:loop">
+                                        Dídac Alcoriza                                    </span>
+
+                    <div class="card-didac" data-parallax data-translate-y="-15rem">
+                        <span class="circle"></span>
+
+                        <p class="fs--14 fw-400 lh-120 brown-1 text-uppercase py-20 pr-lg-10">
+                            <span class="no-mobile">
+                                Nuestra cocina de excelencia es el resultado de la dedicaci&oacute;n del chef ejecutivo&nbsp;D&iacute;dac Alcoriza y el sub chef ejecutivo Jose Mansilla. Fusionando la rica tradici&oacute;n culinaria con innovaciones contempor&aacute;neas, elevando as&iacute; la calidad de nuestro restaurante.
+                            </span>
+                            <span class="no-desktop">
+                                Nuestra cocina de excelencia es el resultado de la dedicaci&oacute;n del chef ejecutivo&nbsp;D&iacute;dac Alcoriza y el sub chef ejecutivo Jose Mansilla. Fusionando la rica tradici&oacute;n culinaria con innovaciones contempor&aacute;neas, elevando as&iacute; la calidad de nuestro restaurante.
+                            </span>
+                        </p>
+
+                        <div class="container-img">
+                            
+<picture>
+		<img data-src="https://tastavents.com/assets/themes/tastavents.com/img/tastaventsfeatured/didac-jose.thigh.jpg"
+		 class="media" data-preload 		 loading="lazy"
+		 src="https://tastavents.com/assets/themes/tastavents.com/img/tastaventsfeatured/didac-jose.thigh.jpg"
+		 alt=""
+		 title="">
+</picture>
+
+                        </div>
+                    </div>
+
+                    <span
+                        class="font-2 fs--140 fw-100 lh-100 yellow-1 text-uppercase text-center d-block split-words chef-name"
+                        data-aos="d:loop, trigger:.card-didac">
+                                        Jose<br>Mansilla                                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section-menu-excepcional section" id="menu-excepcional">
+    <div class="container-fluid">
+        <div class="row row-1">
+            <div class="col-12 d-flex pt-lg-90 pt-mobile-65 pb-lg-80 pb-mobile-45">
+                                    <h3 class="section-title-wrapper mx-auto brown-1" data-aos="d:loop">
+                        <span class="section-number">V</span>
+                        <span class="section-title">Menú Excepcional</span>
+                    </h3>
+                            </div>
+
+            <div class="col-lg-10 offset-lg-1 pb-lg-80 pb-mobile-40">
+                                    <h2 class="font-2 fs--116 fw-100 lh-110 brown-1 text-center text-uppercase px-mobile-50 split-words"
+                        data-aos="d:loop">
+                        Homenaje al Producto, Gustos Genuinos                    </h2>
+                            </div>
+        </div>
+
+        <div class="container-parent">
+            <div class="container-sticky col-12" data-sticky data-trigger="parent">
+                <div class="inner-column">
+                    <div class="gallery-wrapper" data-aos="p:loop">
+                                                <div class="gallery-item gallery-01 z-5">
+                            <div class="container-img">
+                                <div class="imgs  media">
+
+                                    <img class="original" data-src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/carta/es/img43.jpg" src="" data-lazy>
+
+                                    <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/carta/es/img43.jpg" data-preload
+                                         class="thumb pointer-events-none">
+
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="gallery-item gallery-02 z-4">
+                            <div class="container-img">
+                                <div class="imgs  media">
+
+                                    <img class="original" data-src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/carta/es/img18.jpg" src="" data-lazy>
+
+                                    <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/carta/es/img18.jpg" data-preload
+                                         class="thumb pointer-events-none">
+
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="gallery-item gallery-03 z-3">
+                            <div class="container-img">
+                                <div class="imgs  media">
+
+                                    <img class="original" data-src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/carta/es/img19.jpg" src="" data-lazy>
+
+                                    <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/carta/es/img19.jpg" data-preload
+                                         class="thumb pointer-events-none">
+
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="gallery-item gallery-04 z-2">
+                            <div class="container-img">
+                                <div class="imgs  media">
+
+                                    <img class="original" data-src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/carta/es/img17.jpg" src="" data-lazy>
+
+                                    <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/carta/es/img17.jpg" data-preload
+                                         class="thumb pointer-events-none">
+
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="gallery-item gallery-05 z-1">
+                            <div class="container-img">
+                                <div class="imgs  media">
+
+                                    <img class="original" data-src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/carta/es/img21.jpg" src="" data-lazy>
+
+                                    <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/carta/es/img21.jpg" data-preload
+                                         class="thumb pointer-events-none">
+
+                                </div>
+                            </div>
+                        </div>
+                                            </div>
+                </div>
+
+                <div class="inner-column carta-trigger">
+                    <div class="container-carta" data-aos="trigger:.carta-trigger">
+                        <div class="inner-content">
+                            <div class="container-icon">
+                                <svg width="84" height="109" viewBox="0 0 84 109" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <g id="CARTA ICON">
+                                        <g id="icons">
+                                            <path id="Vector" d="M14.2749 65.834H69.726"
+                                                  stroke="#E6D49B" stroke-width="1.02866"
+                                                  stroke-linecap="round" stroke-linejoin="round" />
+                                            <path id="Vector_2" d="M62.259 93.1543H21.7158"
+                                                  stroke="#E6D49B" stroke-width="1.02866"
+                                                  stroke-linecap="round" stroke-linejoin="round" />
+                                            <path id="Vector_3" d="M57.0793 81.6914H26.9216"
+                                                  stroke="#E6D49B" stroke-width="1.02866"
+                                                  stroke-linecap="round" stroke-linejoin="round" />
+                                            <g id="Vector_4">
+                                                <path
+                                                    d="M18.2454 65.8628C18.2454 52.6376 28.9728 41.9365 42.1716 41.9365C55.3705 41.9365 66.0979 52.6639 66.0979 65.8628"
+                                                    fill="#E6D49B" />
+                                                <path
+                                                    d="M18.2454 65.8628C18.2454 52.6376 28.9728 41.9365 42.1716 41.9365C55.3705 41.9365 66.0979 52.6639 66.0979 65.8628"
+                                                    stroke="#E6D49B" stroke-width="1.02866"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </g>
+                                            <path id="Vector_5" d="M66.0979 65.8271H18.2454"
+                                                  stroke="#E6D49B" stroke-width="1.02866"
+                                                  stroke-linecap="round" stroke-linejoin="round" />
+                                            <path id="Vector_6"
+                                                  d="M2.96899 20.2719V98.8079C2.96899 102.752 6.17669 105.96 10.1206 105.96H71.8557C76.9301 105.96 81.0318 101.858 81.0318 96.7834V34.9694C81.0318 29.895 76.9301 25.7933 71.8557 25.7933H10.1206H10.515C6.36074 25.7933 2.96899 23.3218 2.96899 20.2719ZM2.96899 20.2719C2.96899 17.8004 5.17757 15.7232 8.22752 15.0133L61.2334 2.97133C67.8329 1.26231 72.6444 6.23161 72.6444 10.1492V25.7933"
+                                                  stroke="#E6D49B" stroke-width="1.02866"
+                                                  stroke-linecap="round" stroke-linejoin="round" />
+                                            <path id="Vector_7" d="M42.1714 41.9358V38.2285"
+                                                  stroke="#E6D49B" stroke-width="1.02866"
+                                                  stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                    </g>
+                                </svg>
+
+                            </div>
+
+                            <p class="fs--24 fw-400 lh-110 yellow-2 py-lg-50 pt-mobile-40 pb-mobile-50 text-center">En Tastavents, el ingrediente es el rey. Nuestra carta presenta una selecci&oacute;n de platos que capturan la esencia del Mediterr&aacute;neo, con sabores aut&eacute;nticos y frescos.</p>
+
+                            <div class="container-buttons">
+                                
+                                
+
+<a  href="https://web.winerim.com/tastavents120522" rel="noopener" class=""><button aria-label="Carta de vinos" class="mt-mobile-15">
+                                                            <div class="container-span" data-letter="Carta de vinos">
+                                                                <span>Carta de vinos</span>
+                                                            </div>
+                                                            <i class="icon-arrow-right"></i>
+                                                        </button></a>
+
+                                
+
+<a  href="https://tastavents.com/assets/themes/tastavents.com/docs/tastaventsmenus/Carta_03-2026_ESP.pdf" rel="noopener" class=""><button aria-label="Menú degustación" class="btn-large">
+                                                            <div class="container-span" data-letter="Menú degustación">
+                                                                <span>Menú degustación</span>
+                                                            </div>
+                                                            <i class="icon-arrow-right"></i>
+                                                        </button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section-contacto-y-reservas section pb-lg-165" id="contacto-y-reservas">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 d-flex pt-lg-115 pt-mobile-85 pb-lg-45 pb-mobile-50">
+                                    <h3 class="section-title-wrapper mx-auto brown-1" data-aos="d:loop">
+                        <span class="section-number">VI</span>
+                        <span class="section-title">Contacto y reservas</span>
+                    </h3>
+                            </div>
+
+            <div class="col-lg-6 offset-lg-3 pb-lg-70 pb-mobile-50">
+                                    <h2 class="font-2 fs--116 fw-100 lh-100 brown-1 text-center text-uppercase split-words px-mobile-15"
+                        data-aos="d:loop">
+                        Reserva Tu Mesa en Tastavents                    </h2>
+                            </div>
+        </div>
+
+        <div class="row row-2" data-aos="d:loop">
+            <div class="col-lg-6 column-form">
+                <div class="form-wrapper">
+                    <!--<script type="text/javascript" src="https://www.covermanager.com/js/iframeResizer.min.js"></script>
+<iframe id="restaurante-tastavents" title="Reservas" 
+		src="https://www.covermanager.com/reservation/module_restaurant/restaurante-tastavents/spanish" 
+		frameborder="0" height="550" width="100%" onload="iFrameResize();"></iframe>-->
+<iframe src="https://widget.thefork.com/1a36c3b9-37c6-40f1-855c-e6a07da086a6" allow="payment *" style="width: 100%; min-height:800px; border:none; overflow:scroll;" ></iframe>
+                                    <!--<span
+                                        class="d-block fs-lg-20 fs-mobile-14 fw-400 lh-110 brown-1 text-uppercase w-100 pt-12 pb-lg-85 pb-mobile-30"
+                                        data-aos="fadeIn .6s ease-in-out .2s, d:loop">
+                                        <span class="no-mobile">
+                                            Haz tu reserva
+                                        </span>
+
+                                        <span class="no-desktop">
+                                            SOLICITUD DE RESERVA
+                                        </span>
+                                    </span>
+
+                    <div class="container-contato" data-aos="d:loop">
+                        <form class="form-contato form-01">
+                            <input type="hidden" name="assunto" value="[Contato]">
+
+                            <div class="container-select col-lg-4 col-6 container-reveal">
+                                <label for="reserva-personas">Personas</label>
+                                <select id="reserva-personas" name="personas" required>
+                                    <option value="" selected disabled>Seleccione</option>
+                                    <option value="1 persona">1 Persona</option>
+                                    <option value="2 persona">2 Personas</option>
+                                    <option value="3 persona">3 Personas</option>
+                                    <option value="4 persona">4 Personas</option>
+                                    <option value="+4 persona">+4 Personas</option>
+                                </select>
+                            </div>
+
+                            <div class="container-input col-lg-4 col-6 container-reveal">
+                                <label for="reserva-fecha">Fecha</label>
+                                <input id="reserva-fecha" name="fecha" type="date" required>
+                            </div>
+
+                            <div class="container-select col-lg-4 col-12 container-reveal">
+                                <label for="reserva-hora">Hora</label>
+                                <input id="reserva-hora" name="hora" type="time" required>
+                            </div>
+
+                            <div class="container-select col-12 pt-lg-25 container-reveal">
+                                <label for="reserva-zona">Zona</label>
+                                <select id="reserva-zona" name="zona" required>
+                                    <option value="" selected disabled>Seleccione la zona</option>
+                                    <option value="Zona I">Zona I</option>
+                                    <option value="Zona II">Zona II</option>
+                                </select>
+                            </div>
+
+                            <div class="container-submit col-12 pt-lg-60 pt-mobile-20 container-reveal">
+                                <button type="submit" class="bt-submit" aria-label="Reservar">
+                                    <div class="container-span" data-letter="Reservar">
+                                        <span class="submit-text">Reservar</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </form>
+                        <h3 class="feedback-contato d-none" data-aos="fadeInUp"></h3>
+
+                    </div>
+
+                    <div class="lista-wrapper pt-lg-70 mt-auto w-100 pt-mobile-30"
+                         data-aos="fadeIn .4s ease-in-out .2s, d:loop">
+                                        <span
+                                            class="fs-lg-18 fs-mobile-14 lh-110 fw-400 brown-1 d-block text-center pb-15 px-mobile-55">
+                                            Si no encuentra disponibilidad, apúntese en la lista de espera.
+                                        </span>
+
+                        <a href="" target="_blank" rel="noopener noreferrer" class="espera-link">
+                            <div class="container-span" data-letter="Lista de espera">
+                                <span>Lista de espera</span>
+                            </div>
+                        </a>
+                    </div>-->
+                </div>
+            </div>
+
+            <div class="col-lg-6 column-info pt-mobile-20 pb-mobile-65">
+                <div class="container-img" data-aos="fadeIn .6s ease-in-out .4s, d:loop">
+                    
+<picture>
+		<img data-src="https://tastavents.com/assets/themes/tastavents.com/img/tastaventsreservation/img48.thigh.jpg"
+		 class="media" data-preload data-parallax data-translate-y="8rem" 		 loading="lazy"
+		 src="https://tastavents.com/assets/themes/tastavents.com/img/tastaventsreservation/img48.thigh.jpg"
+		 alt=""
+		 title="">
+</picture>
+
+                </div>
+
+                <div class="info-wrapper">
+                                        <p
+                        class="brown-1 text-center fw-400 d-block py-mobile-40 container-paragraph my-lg-auto">
+                                        <span class="font-2 fs--24 lh-110 text-uppercase no-mobile split-words"
+                                              data-aos="d:loop">
+                                             Tu visita será un viaje <br>culinario memorable                                        </span>
+
+                        <span class="font-1 fs--18 lh-110 no-desktop split-words" data-aos="d:loop">
+                                            ¡Estamos emocionados por la posibilidad de sorprenderte con sabores únicos! Para hacer una reserva, comunícate con nosotros a través de los siguientes datos:                                        </span>
+                    </p>
+                    
+                    <div class="container-info">
+                                                    <div class="link-container" data-aos="d:loop">
+                                                <span class="fs--12 fw-400 lh-110 brown-1 text-uppercase d-inline-block">
+                                                    Teléfono                                                </span>
+                                <a href="tel:+34 830 83 10 83" target="_blank" rel="noopener noreferrer"
+                                   class="d-inline-block fs--16 fw-400 lh-110 brown-1"
+                                   data-letter="+34 830 83 10 83">
+                                                    <span>
+                                                        +34 830 83 10 83                                                    </span>
+                                </a>
+                            </div>
+                                                                            <div class="link-container" data-aos="d:loop">
+                                                <span class="fs--12 fw-400 lh-110 brown-1 text-uppercase d-inline-block">
+                                                    Email
+                                                </span>
+                                <a href="mailto:tastavents@salleshotels.com" target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="d-inline-block fs--16 fw-400 lh-110 brown-1"
+                                   data-letter="tastavents@salleshotels.com">
+                                                    <span>
+                                                        tastavents@salleshotels.com                                                    </span>
+                                </a>
+                            </div>
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section-galeria section" id="galeria">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+
+                <div id="slider-galeria" data-aos="d:loop" data-delay-desktop="10">
+                    <div class="swiper-container">
+
+                        <div class="swiper-wrapper">
+
+                                                            <div class="swiper-slide slide-1">
+                                                    <span class="slide-title split-words">
+                                                        Experiencias Tastavents                                                    </span>
+
+                                    <div class="slide-text split-words">
+                                        Sum&eacute;rgete en la esencia culinaria de Tastavents mientras el chef y su equipo crean obras maestras, todo mientras disfrutas en la misma cocina
+                                    </div>
+
+                                    <div class="container-img left-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery_text/img49.jpg" data-preload class=" media">
+
+                                    </div>
+
+                                    <div class="container-img right-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery_text/img50.jpg" data-preload class=" media">
+
+                                    </div>
+
+                                    <div class="container-icon-center">
+                                        <i class="icon-experiencia"></i>                                                                                                                                                            </div>
+
+                                    <btn-modal-open group="modal--galeria" item="galeria-1"
+                                                    class="thumb-container">
+                                        <ul class="thumb-list">
+                                                                                            <li class="thumb-item">
+                                                    <div class="container-img">
+                                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/experiencias_tastavents/es/img69.jpg" data-preload
+                                                             class=" media">
+
+                                                    </div>
+                                                </li>
+                                                                                            <li class="thumb-item">
+                                                    <div class="container-img">
+                                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/experiencias_tastavents/es/img26.jpg" data-preload
+                                                             class=" media">
+
+                                                    </div>
+                                                </li>
+                                                                                            <li class="thumb-item">
+                                                    <div class="container-img">
+                                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/experiencias_tastavents/es/img28.jpg" data-preload
+                                                             class=" media">
+
+                                                    </div>
+                                                </li>
+                                                                                            <li class="thumb-item">
+                                                    <div class="container-img">
+                                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/experiencias_tastavents/es/img65.jpg" data-preload
+                                                             class=" media">
+
+                                                    </div>
+                                                </li>
+                                                                                    </ul>
+
+                                        <div class="btn-galeria">
+                                            <div class="container-span" data-letter="Ver galería">
+                                                <span>Ver galería</span>
+                                            </div>
+
+                                            <div class="container-icon">
+                                                <i class="icon-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                    </btn-modal-open>
+                                </div>
+                                                            <div class="swiper-slide slide-2">
+                                                    <span class="slide-title split-words">
+                                                        Espacio singular                                                    </span>
+
+                                    <div class="slide-text split-words">
+                                        Una experiencia culinaria que empieza por los ojos: de la cocina abierta a las impresionantes vistas que se fusionan con el mar.
+                                    </div>
+
+                                    <div class="container-img left-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/sliders/img32.jpg" data-preload class=" media">
+
+                                    </div>
+
+                                    <div class="container-img right-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/sliders/img70.jpg" data-preload class=" media">
+
+                                    </div>
+
+                                    <div class="container-icon-center">
+                                                                                <i class="icon-espacio"></i>                                                                                                                    </div>
+
+                                    <btn-modal-open group="modal--galeria" item="galeria-2"
+                                                    class="thumb-container">
+                                        <ul class="thumb-list">
+                                                                                            <li class="thumb-item">
+                                                    <div class="container-img">
+                                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/espacio_singular/es/img04.jpg" data-preload
+                                                             class=" media">
+
+                                                    </div>
+                                                </li>
+                                                                                            <li class="thumb-item">
+                                                    <div class="container-img">
+                                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/espacio_singular/es/img33.jpg" data-preload
+                                                             class=" media">
+
+                                                    </div>
+                                                </li>
+                                                                                            <li class="thumb-item">
+                                                    <div class="container-img">
+                                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/espacio_singular/es/img21.jpg" data-preload
+                                                             class=" media">
+
+                                                    </div>
+                                                </li>
+                                                                                            <li class="thumb-item">
+                                                    <div class="container-img">
+                                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/espacio_singular/es/img34.jpg" data-preload
+                                                             class=" media">
+
+                                                    </div>
+                                                </li>
+                                                                                    </ul>
+
+                                        <div class="btn-galeria">
+                                            <div class="container-span" data-letter="Ver galería">
+                                                <span>Ver galería</span>
+                                            </div>
+
+                                            <div class="container-icon">
+                                                <i class="icon-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                    </btn-modal-open>
+                                </div>
+                                                            <div class="swiper-slide slide-3">
+                                                    <span class="slide-title split-words">
+                                                        Propuesta de autor                                                    </span>
+
+                                    <div class="slide-text split-words">
+                                        D&iacute;dac Alcoriza, JOSE MANSILLA Y SU EQUIPO ofrecen un recorrido gastron&oacute;mico entre sabores de anta&ntilde;o, exquisitos contrastes e ingredientes con arraigo local.
+                                    </div>
+
+                                    <div class="container-img left-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/sliders/img63-thumb.jpg" data-preload class=" media">
+
+                                    </div>
+
+                                    <div class="container-img right-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/sliders/img64-thumb.jpg" data-preload class=" media">
+
+                                    </div>
+
+                                    <div class="container-icon-center">
+                                                                                                                        <i class="icon-oasis"></i>                                                                            </div>
+
+                                    <btn-modal-open group="modal--galeria" item="galeria-3"
+                                                    class="thumb-container">
+                                        <ul class="thumb-list">
+                                                                                            <li class="thumb-item">
+                                                    <div class="container-img">
+                                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img65-thumb.jpg" data-preload
+                                                             class=" media">
+
+                                                    </div>
+                                                </li>
+                                                                                            <li class="thumb-item">
+                                                    <div class="container-img">
+                                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img64-thumb.jpg" data-preload
+                                                             class=" media">
+
+                                                    </div>
+                                                </li>
+                                                                                            <li class="thumb-item">
+                                                    <div class="container-img">
+                                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img67-thumb.jpg" data-preload
+                                                             class=" media">
+
+                                                    </div>
+                                                </li>
+                                                                                            <li class="thumb-item">
+                                                    <div class="container-img">
+                                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img66-thumb.jpg" data-preload
+                                                             class=" media">
+
+                                                    </div>
+                                                </li>
+                                                                                            <li class="thumb-item">
+                                                    <div class="container-img">
+                                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img68-thumb.jpg" data-preload
+                                                             class=" media">
+
+                                                    </div>
+                                                </li>
+                                                                                    </ul>
+
+                                        <div class="btn-galeria">
+                                            <div class="container-span" data-letter="Ver galería">
+                                                <span>Ver galería</span>
+                                            </div>
+
+                                            <div class="container-icon">
+                                                <i class="icon-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                    </btn-modal-open>
+                                </div>
+                                                            <div class="swiper-slide slide-4">
+                                                    <span class="slide-title split-words">
+                                                        OASIS ÍNTIMO                                                    </span>
+
+                                    <div class="slide-text split-words">
+                                        La exquisitez y el encanto mediterr&aacute;neo en el lugar ideal para eventos especiales, donde la buena cocina se mezcla con la belleza &uacute;nica del entorno.
+                                    </div>
+
+                                    <div class="container-img left-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/sliders/img35-thumb.jpg" data-preload class=" media">
+
+                                    </div>
+
+                                    <div class="container-img right-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/sliders/img36-thumb.jpg" data-preload class=" media">
+
+                                    </div>
+
+                                    <div class="container-icon-center">
+                                                                                                                                                                <i class="icon-propuesta"></i>                                    </div>
+
+                                    <btn-modal-open group="modal--galeria" item="galeria-4"
+                                                    class="thumb-container">
+                                        <ul class="thumb-list">
+                                                                                            <li class="thumb-item">
+                                                    <div class="container-img">
+                                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/oasis/es/img35-thumb.jpg" data-preload
+                                                             class=" media">
+
+                                                    </div>
+                                                </li>
+                                                                                            <li class="thumb-item">
+                                                    <div class="container-img">
+                                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/oasis/es/img36-thumb.jpg" data-preload
+                                                             class=" media">
+
+                                                    </div>
+                                                </li>
+                                                                                            <li class="thumb-item">
+                                                    <div class="container-img">
+                                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/oasis/es/img37-thumb.jpg" data-preload
+                                                             class=" media">
+
+                                                    </div>
+                                                </li>
+                                                                                            <li class="thumb-item">
+                                                    <div class="container-img">
+                                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/oasis/es/img38-thumb.jpg" data-preload
+                                                             class=" media">
+
+                                                    </div>
+                                                </li>
+                                                                                    </ul>
+
+                                        <div class="btn-galeria">
+                                            <div class="container-span" data-letter="Ver galería">
+                                                <span>Ver galería</span>
+                                            </div>
+
+                                            <div class="container-icon">
+                                                <i class="icon-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                    </btn-modal-open>
+                                </div>
+                                                    </div>
+                    </div>
+
+                    <div class="navigation-wrapper">
+                        <div class="swiper-button-prev"><i class="icon-arrow-left-2"></i></div>
+                        <div class="swiper-button-next"><i class="icon-arrow-right-2"></i></div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+<footer id="footer">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="container-left">
+                    <div class="horario-div pb-mobile-65"
+                         data-aos="fadeInUp .6s ease-out-cubic .2s, d:loop, trigger:.container-left">
+                                                    <span class="d-block">Te esperamos</span>
+                                                                            <span class="no-mobile">MARTES, MIERCOLES Y JUEVES, de 12:30 a 15:30 VIERNES Y sábado, de 19:30 a 22:30     Es necesario reservar mesa con antelación (Adults Only) </span>
+                                                                            <span class="no-desktop">MARTES, MIERCOLES Y JUEVES, de 12:30 a 15:30 VIERNES Y sábado, de 19:30 a 22:30      Es necesario reservar mesa con antelación (Adults Only)</span>
+                                            </div>
+                    
+                                            <div class="icons-div pb-mobile-65"
+                            data-aos="fadeInUp .6s ease-out-cubic .3s, d:loop, trigger:.container-left">
+                            <a style="text-decoration: none;" href="https://guide.michelin.com/es/es/catalunya/badalona/restaurante/tastavents" target="_blank" rel="noopener" class="partner">
+                                <img src="https://tastavents.com/assets/themes/tastavents.com/uploads/img/tastaventsfooter/Restaurante_seleccionado_MICHELIN_2026_Redondo_Rojo.png" alt="" title="" height="100" width="100">
+                            </a>
+                        </div>
+                    
+                    <div class="address-div pb-mobile-30"
+                         data-aos="fadeInUp .6s ease-out-cubic .4s, d:loop, trigger:.container-left">
+                                                    <address>
+                                <span class="no-mobile-no">Hotel Marina Badalona<br></span>
+                                Av. d'Eduard Maristany, 227,<br>08912 Badalona, Barcelona                            </address>
+                                                                            <a href="https://maps.app.goo.gl/LAT7py6WZBiUQkWBA" target="_blank"
+                               class="container-icon-address">
+                                <span class="hide">Dirección</span>
+                                <i class="icon-arrow-right"></i>
+                            </a>
+                                            </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="container-img footer-img">
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/uploads/img/tastaventsfooter/footer-img.jpg" data-preload class=" media">
+                                    </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="container-right">
+                    <div class="phrase-top pt-mobile-30 pb-mobile-75 px-mobile-15"
+                         data-aos="fadeInUp .6s ease-out-cubic .4s, d:loop, trigger:.container-right">
+                                                        <span class="no-mobile">sumérgete en una experiencia mediterránea verdaderamente singular </span>
+                                                                            <span class="no-desktop">sumérgete en una experiencia mediterránea verdaderamente singular <!--<a href="https://www.instagram.com/tastavents/" class="btn-underline yellow-1"><span>redes sociales</span></a>--></span>
+                                            </div>
+
+                    <div class="link-icon-wrapper no-mobile-no"
+                         data-aos="fadeInUp .6s ease-out-cubic .5s, d:loop, trigger:.container-right">
+                                                    <a href="tel:+34 830 83 10 83" target="_blank" rel="noopener noreferrer">
+                                <span class="hide">Teléfono</span>
+                                <i class="icon-phone"></i>
+                            </a>
+                                                                            <a href="https://maps.app.goo.gl/LAT7py6WZBiUQkWBA" target="_blank"
+                               rel="noopener noreferrer">
+                                <span class="hide">Dirección</span>
+                                <i class="icon-local"></i>
+                            </a>
+                                            </div>
+
+                    <div class="phrase-bottom pb-mobile-60"
+                         data-aos="fadeInUp .6s ease-out-cubic .6s, d:loop, trigger:.container-right">
+                                                    <span class="no-mobile">Te esperamos pronto en Tastavents para vivir una experiencia memorable</span>
+                                                                            <span class="no-desktop">Te esperamos pronto en Tastavents para vivir una experiencia memorable</span>
+                                            </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="container-img logo-footer">
+                    <img src="https://tastavents.com/assets/themes/tastavents.com/img/logo.svg" data-preload class=" media"
+                         data-aos="scaleIn .8s ease-out-cubic .4s, d:loop">
+
+                </div>
+            </div>
+
+            <div class="col-12 column-rights">
+                <div class="rights">
+                                            <a href="https://hotelmarinabadalona.com/aviso-legal" target="_blank"
+                           rel="noopener noreferrer" class="btn-aviso btn-hover" data-letter="Aviso Legal">
+                            <span>Aviso Legal</span>
+                        </a>
+                    
+                    <span>
+                                    © 2026 Tastavents
+                                </span>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="column-sign">
+                    <div class="sign-block">
+                                    <span>
+                                        Design:
+                                    </span>
+
+                        <a href="https://paisana.studio/" target="_blank" rel="noopener noreferrer"
+                           class="btn-aviso btn-hover" data-letter="paisana.studio">
+                            <span>paisana.studio</span>
+                        </a>
+                    </div>
+
+                    <div class="sign-block">
+                                    <span>
+                                        Dev.:
+                                    </span>
+
+                        <a href="https://programatorio.com/" target="_blank" rel="noopener noreferrer"
+                           class="btn-aviso btn-hover" data-letter="Programatório">
+                            <span>Programatório</span>
+                        </a>
+                    </div>
+
+                    <div class="sign-block">
+                                    <span>
+                                        CMS:
+                                    </span>
+
+                        <a href="https://emexs.es/" target="_blank" rel="noopener noreferrer"
+                           class="btn-aviso btn-hover" data-letter="EMEXS">
+                            <span>EMEXS</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+
+</div>
+
+<!--<div class="container-cookies d-none" data-aos="fadeIn - 1s" data-cursor-style="default">
+
+
+    <p class="font-1 fs--13 white-2 text-cookies">
+        Este sitio web utiliza cookies para proporcionar la funcionalidad necesaria del sitio web, mejorar su
+        experiencia y analizar nuestro tráfico. Al utilizar nuestro sitio web, acepta nuestra
+        <a href="https://hotelmarinabadalona.com/aviso-legal" target="_blank" class="btn-underline white-2">
+            <span> Política de privacidad</span>
+        </a> y el uso de cookies.
+    </p>
+
+    <div class="container-btn">
+        <button class="btn-cookies font-2 fs--12 white-2 accept btn-hover" data-close-cookies data-letter="Aceptar">
+            <span>Aceptar</span>
+        </button>
+    </div>
+
+</div>-->
+<modal-group name="modal--galeria" id="modal--galeria">
+    <modal-container>
+        <btn-modal-close>
+            <span class="hide">Fechar</span>
+            <div class="div-close"></div>
+        </btn-modal-close>
+
+
+                    <modal-item name="galeria-1">
+                <div class="slider-title fs--12 fw-400 text-uppercase yellow-1 text-center">
+                    Experiencias Tastavents                </div>
+
+                <div class="slider-galeria-modal">
+                    <div class="swiper-container">
+
+                        <div class="swiper-wrapper">
+
+                            <!-- --------------------- required at least 6 slides for loop ---------------------- -->
+                                                            <div class="swiper-slide">
+                                    <div class="container-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/experiencias_tastavents/es/img69.jpg" data-preload class=" media">
+                                    </div>
+
+                                    <div class="container-text-navigation">
+                                        <span class="prev">Anterior</span>
+                                        <span class="next">Siguiente</span>
+                                    </div>
+                                </div>
+                                                            <div class="swiper-slide">
+                                    <div class="container-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/experiencias_tastavents/es/img26.jpg" data-preload class=" media">
+                                    </div>
+
+                                    <div class="container-text-navigation">
+                                        <span class="prev">Anterior</span>
+                                        <span class="next">Siguiente</span>
+                                    </div>
+                                </div>
+                                                            <div class="swiper-slide">
+                                    <div class="container-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/experiencias_tastavents/es/img28.jpg" data-preload class=" media">
+                                    </div>
+
+                                    <div class="container-text-navigation">
+                                        <span class="prev">Anterior</span>
+                                        <span class="next">Siguiente</span>
+                                    </div>
+                                </div>
+                                                            <div class="swiper-slide">
+                                    <div class="container-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/experiencias_tastavents/es/img65.jpg" data-preload class=" media">
+                                    </div>
+
+                                    <div class="container-text-navigation">
+                                        <span class="prev">Anterior</span>
+                                        <span class="next">Siguiente</span>
+                                    </div>
+                                </div>
+                                                                                                                            <div class="swiper-slide">
+                                        <div class="container-img">
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/experiencias_tastavents/es/img69.jpg" data-preload class=" media">
+                                        </div>
+
+                                        <div class="container-text-navigation">
+                                            <span class="prev">Anterior</span>
+                                            <span class="next">Siguiente</span>
+                                        </div>
+                                    </div>
+                                                                    <div class="swiper-slide">
+                                        <div class="container-img">
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/experiencias_tastavents/es/img26.jpg" data-preload class=" media">
+                                        </div>
+
+                                        <div class="container-text-navigation">
+                                            <span class="prev">Anterior</span>
+                                            <span class="next">Siguiente</span>
+                                        </div>
+                                    </div>
+                                                                    <div class="swiper-slide">
+                                        <div class="container-img">
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/experiencias_tastavents/es/img28.jpg" data-preload class=" media">
+                                        </div>
+
+                                        <div class="container-text-navigation">
+                                            <span class="prev">Anterior</span>
+                                            <span class="next">Siguiente</span>
+                                        </div>
+                                    </div>
+                                                                    <div class="swiper-slide">
+                                        <div class="container-img">
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/experiencias_tastavents/es/img65.jpg" data-preload class=" media">
+                                        </div>
+
+                                        <div class="container-text-navigation">
+                                            <span class="prev">Anterior</span>
+                                            <span class="next">Siguiente</span>
+                                        </div>
+                                    </div>
+                                                            
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </modal-item>
+                    <modal-item name="galeria-2">
+                <div class="slider-title fs--12 fw-400 text-uppercase yellow-1 text-center">
+                    Espacio singular                </div>
+
+                <div class="slider-galeria-modal">
+                    <div class="swiper-container">
+
+                        <div class="swiper-wrapper">
+
+                            <!-- --------------------- required at least 6 slides for loop ---------------------- -->
+                                                            <div class="swiper-slide">
+                                    <div class="container-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/espacio_singular/es/img04.jpg" data-preload class=" media">
+                                    </div>
+
+                                    <div class="container-text-navigation">
+                                        <span class="prev">Anterior</span>
+                                        <span class="next">Siguiente</span>
+                                    </div>
+                                </div>
+                                                            <div class="swiper-slide">
+                                    <div class="container-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/espacio_singular/es/img33.jpg" data-preload class=" media">
+                                    </div>
+
+                                    <div class="container-text-navigation">
+                                        <span class="prev">Anterior</span>
+                                        <span class="next">Siguiente</span>
+                                    </div>
+                                </div>
+                                                            <div class="swiper-slide">
+                                    <div class="container-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/espacio_singular/es/img21.jpg" data-preload class=" media">
+                                    </div>
+
+                                    <div class="container-text-navigation">
+                                        <span class="prev">Anterior</span>
+                                        <span class="next">Siguiente</span>
+                                    </div>
+                                </div>
+                                                            <div class="swiper-slide">
+                                    <div class="container-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/espacio_singular/es/img34.jpg" data-preload class=" media">
+                                    </div>
+
+                                    <div class="container-text-navigation">
+                                        <span class="prev">Anterior</span>
+                                        <span class="next">Siguiente</span>
+                                    </div>
+                                </div>
+                                                                                                                            <div class="swiper-slide">
+                                        <div class="container-img">
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/espacio_singular/es/img04.jpg" data-preload class=" media">
+                                        </div>
+
+                                        <div class="container-text-navigation">
+                                            <span class="prev">Anterior</span>
+                                            <span class="next">Siguiente</span>
+                                        </div>
+                                    </div>
+                                                                    <div class="swiper-slide">
+                                        <div class="container-img">
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/espacio_singular/es/img33.jpg" data-preload class=" media">
+                                        </div>
+
+                                        <div class="container-text-navigation">
+                                            <span class="prev">Anterior</span>
+                                            <span class="next">Siguiente</span>
+                                        </div>
+                                    </div>
+                                                                    <div class="swiper-slide">
+                                        <div class="container-img">
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/espacio_singular/es/img21.jpg" data-preload class=" media">
+                                        </div>
+
+                                        <div class="container-text-navigation">
+                                            <span class="prev">Anterior</span>
+                                            <span class="next">Siguiente</span>
+                                        </div>
+                                    </div>
+                                                                    <div class="swiper-slide">
+                                        <div class="container-img">
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/espacio_singular/es/img34.jpg" data-preload class=" media">
+                                        </div>
+
+                                        <div class="container-text-navigation">
+                                            <span class="prev">Anterior</span>
+                                            <span class="next">Siguiente</span>
+                                        </div>
+                                    </div>
+                                                            
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </modal-item>
+                    <modal-item name="galeria-3">
+                <div class="slider-title fs--12 fw-400 text-uppercase yellow-1 text-center">
+                    Propuesta de autor                </div>
+
+                <div class="slider-galeria-modal">
+                    <div class="swiper-container">
+
+                        <div class="swiper-wrapper">
+
+                            <!-- --------------------- required at least 6 slides for loop ---------------------- -->
+                                                            <div class="swiper-slide">
+                                    <div class="container-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img65-thumb.jpg" data-preload class=" media">
+                                    </div>
+
+                                    <div class="container-text-navigation">
+                                        <span class="prev">Anterior</span>
+                                        <span class="next">Siguiente</span>
+                                    </div>
+                                </div>
+                                                            <div class="swiper-slide">
+                                    <div class="container-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img64-thumb.jpg" data-preload class=" media">
+                                    </div>
+
+                                    <div class="container-text-navigation">
+                                        <span class="prev">Anterior</span>
+                                        <span class="next">Siguiente</span>
+                                    </div>
+                                </div>
+                                                            <div class="swiper-slide">
+                                    <div class="container-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img67-thumb.jpg" data-preload class=" media">
+                                    </div>
+
+                                    <div class="container-text-navigation">
+                                        <span class="prev">Anterior</span>
+                                        <span class="next">Siguiente</span>
+                                    </div>
+                                </div>
+                                                            <div class="swiper-slide">
+                                    <div class="container-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img66-thumb.jpg" data-preload class=" media">
+                                    </div>
+
+                                    <div class="container-text-navigation">
+                                        <span class="prev">Anterior</span>
+                                        <span class="next">Siguiente</span>
+                                    </div>
+                                </div>
+                                                            <div class="swiper-slide">
+                                    <div class="container-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img68-thumb.jpg" data-preload class=" media">
+                                    </div>
+
+                                    <div class="container-text-navigation">
+                                        <span class="prev">Anterior</span>
+                                        <span class="next">Siguiente</span>
+                                    </div>
+                                </div>
+                                                                                                                            <div class="swiper-slide">
+                                        <div class="container-img">
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img65-thumb.jpg" data-preload class=" media">
+                                        </div>
+
+                                        <div class="container-text-navigation">
+                                            <span class="prev">Anterior</span>
+                                            <span class="next">Siguiente</span>
+                                        </div>
+                                    </div>
+                                                                    <div class="swiper-slide">
+                                        <div class="container-img">
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img64-thumb.jpg" data-preload class=" media">
+                                        </div>
+
+                                        <div class="container-text-navigation">
+                                            <span class="prev">Anterior</span>
+                                            <span class="next">Siguiente</span>
+                                        </div>
+                                    </div>
+                                                                    <div class="swiper-slide">
+                                        <div class="container-img">
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img67-thumb.jpg" data-preload class=" media">
+                                        </div>
+
+                                        <div class="container-text-navigation">
+                                            <span class="prev">Anterior</span>
+                                            <span class="next">Siguiente</span>
+                                        </div>
+                                    </div>
+                                                                    <div class="swiper-slide">
+                                        <div class="container-img">
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img66-thumb.jpg" data-preload class=" media">
+                                        </div>
+
+                                        <div class="container-text-navigation">
+                                            <span class="prev">Anterior</span>
+                                            <span class="next">Siguiente</span>
+                                        </div>
+                                    </div>
+                                                                    <div class="swiper-slide">
+                                        <div class="container-img">
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img68-thumb.jpg" data-preload class=" media">
+                                        </div>
+
+                                        <div class="container-text-navigation">
+                                            <span class="prev">Anterior</span>
+                                            <span class="next">Siguiente</span>
+                                        </div>
+                                    </div>
+                                                            
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </modal-item>
+                    <modal-item name="galeria-4">
+                <div class="slider-title fs--12 fw-400 text-uppercase yellow-1 text-center">
+                    OASIS ÍNTIMO                </div>
+
+                <div class="slider-galeria-modal">
+                    <div class="swiper-container">
+
+                        <div class="swiper-wrapper">
+
+                            <!-- --------------------- required at least 6 slides for loop ---------------------- -->
+                                                            <div class="swiper-slide">
+                                    <div class="container-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/oasis/es/img35-thumb.jpg" data-preload class=" media">
+                                    </div>
+
+                                    <div class="container-text-navigation">
+                                        <span class="prev">Anterior</span>
+                                        <span class="next">Siguiente</span>
+                                    </div>
+                                </div>
+                                                            <div class="swiper-slide">
+                                    <div class="container-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/oasis/es/img36-thumb.jpg" data-preload class=" media">
+                                    </div>
+
+                                    <div class="container-text-navigation">
+                                        <span class="prev">Anterior</span>
+                                        <span class="next">Siguiente</span>
+                                    </div>
+                                </div>
+                                                            <div class="swiper-slide">
+                                    <div class="container-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/oasis/es/img37-thumb.jpg" data-preload class=" media">
+                                    </div>
+
+                                    <div class="container-text-navigation">
+                                        <span class="prev">Anterior</span>
+                                        <span class="next">Siguiente</span>
+                                    </div>
+                                </div>
+                                                            <div class="swiper-slide">
+                                    <div class="container-img">
+                                        <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/oasis/es/img38-thumb.jpg" data-preload class=" media">
+                                    </div>
+
+                                    <div class="container-text-navigation">
+                                        <span class="prev">Anterior</span>
+                                        <span class="next">Siguiente</span>
+                                    </div>
+                                </div>
+                                                                                                                            <div class="swiper-slide">
+                                        <div class="container-img">
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/oasis/es/img35-thumb.jpg" data-preload class=" media">
+                                        </div>
+
+                                        <div class="container-text-navigation">
+                                            <span class="prev">Anterior</span>
+                                            <span class="next">Siguiente</span>
+                                        </div>
+                                    </div>
+                                                                    <div class="swiper-slide">
+                                        <div class="container-img">
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/oasis/es/img36-thumb.jpg" data-preload class=" media">
+                                        </div>
+
+                                        <div class="container-text-navigation">
+                                            <span class="prev">Anterior</span>
+                                            <span class="next">Siguiente</span>
+                                        </div>
+                                    </div>
+                                                                    <div class="swiper-slide">
+                                        <div class="container-img">
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/oasis/es/img37-thumb.jpg" data-preload class=" media">
+                                        </div>
+
+                                        <div class="container-text-navigation">
+                                            <span class="prev">Anterior</span>
+                                            <span class="next">Siguiente</span>
+                                        </div>
+                                    </div>
+                                                                    <div class="swiper-slide">
+                                        <div class="container-img">
+                                            <img src="https://tastavents.com/assets/themes/tastavents.com/img/gallery/oasis/es/img38-thumb.jpg" data-preload class=" media">
+                                        </div>
+
+                                        <div class="container-text-navigation">
+                                            <span class="prev">Anterior</span>
+                                            <span class="next">Siguiente</span>
+                                        </div>
+                                    </div>
+                                                            
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </modal-item>
+            </modal-container>
+</modal-group>
+
+<style>
+    @media (max-width: 768px){
+        #footer .container-right .link-icon-wrapper {
+            padding-bottom: 4rem;
+        }
+    }
+</style>
+    
+    
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="es-ES">
+
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- COOKIEBOT -->
+	<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="65a68cb8-c6ea-48bc-8a4e-3a612ae18edc" data-blockingmode="auto" type="text/javascript"></script>
+
+	<!-- MIRAI -->
+	<link rel="stylesheet" type="text/css" href="https://tastavents.com/assets/themes/tastavents.com/css/core-variables.css?0000" />
+    <link
+      rel="preload"
+      as="style"
+      href="https://static.mirai.com/core/index.css"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    
+	<!-- CSS -->
+	<link href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+	<link href="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.gallery.min.css" type="text/css" rel="stylesheet" />
+	<link rel="stylesheet preload" type="text/css" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style">
+	<link rel="stylesheet preload" type="text/css" href="https://tastavents.com/assets/themes/tastavents.com/css/flatpickr.min.css" as="style">
+	<link rel="stylesheet preload" type="text/css" href="https://tastavents.com/assets/themes/tastavents.com/css/swiper-bundle.min.css" as="style">
+	<link rel="stylesheet preload" type="text/css" href="https://tastavents.com/assets/themes/tastavents.com/css/photoswipe.css" as="style">
+	<link rel="stylesheet preload" type="text/css" href="https://tastavents.com/assets/themes/tastavents.com/css/bootstrap.min.css" as="style">
+	<link rel="stylesheet preload" type="text/css" href="https://tastavents.com/assets/themes/tastavents.com/css/custom.css?220124-00" as="style">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="https://tastavents.com/assets/themes/tastavents.com/img/preferences/favicon.png" type="image/png"/>
+
+    <title>Page not found</title>
+
+    <meta name="robots" content="noindex nofollow">
+        <meta name="description" content="">
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="website" />
+        <meta property="og:title" content="Page not found"/>
+    
+            <meta property="og:image" content="" />
+        <meta property="og:description" content="">
+
+    <!-- TwitterCard -->
+    <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Page not found">
+    <meta name="twitter:description" content="" />
+            <meta name="twitter:image" content="" />
+    
+    <!-- Alternates y Hreflang -->
+    
+            <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-TS4V3XP5');
+        </script>
+        <!-- END Google Tag Manager -->
+    
+<!--    <script type="text/javascript">
+        var BASE_URL = "https://tastavents.com/";
+        var THEME_PATH = "assets/themes/tastavents.com/";
+        var HOTEL_LAT = "";
+        var HOTEL_LON = "";
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var lazyloadMapElems = document.querySelectorAll(".map-lazy");
+            var lazyloadThrottleTimeout;
+
+            function lazyloadMap () {
+                if(lazyloadThrottleTimeout) {
+                    clearTimeout(lazyloadThrottleTimeout);
+                }
+
+                lazyloadThrottleTimeout = setTimeout(function() {
+                    var scrollTop = window.pageYOffset;
+                    lazyloadMapElems.forEach(function(map) {
+                        if(map.offsetTop < (window.innerHeight + scrollTop)) {
+                            initMap();
+                            map.classList.remove('map-lazy');
+                        }
+                    });
+
+                    if(document.querySelectorAll(".map-lazy").length == 0) {
+                        document.removeEventListener("scroll", lazyloadMap);
+                        window.removeEventListener("resize", lazyloadMap);
+                        window.removeEventListener("orientationChange", lazyloadMap);
+                    }
+                }, 100);
+            }
+
+            document.addEventListener("scroll", lazyloadMap);
+            window.addEventListener("resize", lazyloadMap);
+            window.addEventListener("orientationChange", lazyloadMap);
+        });
+    </script> -->
+
+    
+</head>
+
+<style>
+	#preloader{position:fixed;left:0;top:0;z-index:1031;width:100%;height:100%;overflow:hidden;background-color: var(--color-blue);
+		/*background-image: url('img/logos/logo-wittmore-preloader.svg');*/background-repeat: no-repeat;background-position: center;}
+	/*@media screen and (max-width: 600px){#preloader{background-size: 75%;}}*/
+	.peloader-circle {position: absolute;transform: translate(-50%,-50%);left: 50%;top: 50%;}
+</style>
+<div id="preloader" style="overflow: hidden;width: 100%;">
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+	<lottie-player src="https://assets10.lottiefiles.com/packages/lf20_9oookkwa/loading.json"  background="#0057b7"  speed="1" class="peloader-circle" style="width: 50px; height: 50px;"  loop  autoplay></lottie-player>
+</div>
+
+    <body id="id-1">
+	<div data-mirai-id=""></div>
+
+	<div id="top"></div>
+
+                    <!-- Google Tag Manager (noscript) -->
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TS4V3XP5"
+                              height="0" width="0" style="display:none; visibility:hidden"></iframe></noscript>
+            <!-- End Google Tag Manager (noscript) -->
+        
+        
+<div id="top"></div>
+
+<section id="panoramica" class="d-error d-intro">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10 text-center">
+                <div>
+                    <h1 class="p-section-error">404</h1>
+                    <div class="title-big text">
+                        <p style="margin: 0 auto;">¡ooops! <img class="lazy img-1" data-src="assets/themes/tastavents.com//img/medias/1.jpg" width="213" height="72" alt="descripción imagen"> has <br>
+							perdido <img class="lazy img-2" data-src="assets/themes/tastavents.com//img/medias/5.jpg" width="213" height="72" alt="descripción imagen"> el rumbo.</p>
+                    </div>
+					<a class="btn-border full-color" href="https://tastavents.com/">Volver</a>
+				</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        
+        <!-- CSS -->
+        <noscript id="deferred-styles">
+            <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css">
+            <!--<link rel="stylesheet" type="text/css" href="https://tastavents.com/assets/themes/tastavents.com/css/flickity.min.css">-->
+
+                    </noscript>
+        <script>
+            var loadDeferredStyles = function() {
+                var addStylesNode = document.getElementById("deferred-styles");
+                var replacement = document.createElement("div");
+                replacement.innerHTML = addStylesNode.textContent;
+                document.body.appendChild(replacement)
+                addStylesNode.parentElement.removeChild(addStylesNode);
+            };
+            var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+                window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+            if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 10); });
+            else window.addEventListener('load', loadDeferredStyles);
+        </script>
+
+		<!-- JS -->
+		<!--<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>-->
+		<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="//code.jquery.com/jquery-latest.js"></script>
+
+		<script src="https://tastavents.com/assets/themes/tastavents.com/js/flatpickr.js"></script>
+		<script src="https://tastavents.com/assets/themes/tastavents.com/js/swiper-bundle.min.js"></script>
+		<script src="https://tastavents.com/assets/themes/tastavents.com/js/gsap.min.js"></script>
+		<script src="https://tastavents.com/assets/themes/tastavents.com/js/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
+		<script src="https://tastavents.com/assets/themes/tastavents.com/js/aos.js"></script>
+		<script src="https://tastavents.com/assets/themes/tastavents.com/js/lazyload.js" defer ></script>
+		<script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="//cdn.jsdelivr.net/npm/featherlight@1.7.14/release/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://tastavents.com/assets/themes/tastavents.com/js/photoswipe.esm.min.js" ></script>
+		<script src="https://tastavents.com/assets/themes/tastavents.com/js/photoswipe-lightbox.esm.min.js" ></script>
+		<script src="https://tastavents.com/assets/themes/tastavents.com/js/bootstrap.min.js" async defer ></script>
+		<script src="https://tastavents.com/assets/themes/tastavents.com/js/custom.js?1784334107" async defer></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.4.1/pixi.min.js" ></script>
+
+
+		<script type="module">
+			import PhotoSwipeLightbox from 'https://tastavents.com/assets/themes/tastavents.com/js/photoswipe-lightbox.esm.min.js';
+			const lightbox = new PhotoSwipeLightbox({
+				gallery: '.gallery--getting-started',
+				children: 'a',
+				showHideAnimationType: 'fade',
+
+				pswpModule: () => import('https://tastavents.com/assets/themes/tastavents.com/js/photoswipe.esm.min.js')
+			});
+			lightbox.init();
+		</script>
+
+		<script>
+			if ($(window).width() > 991) {
+				AOS.init({
+					once: true,
+					duration: 900,
+					delay: 100,
+					/*disable: 'mobile'*/
+				});
+				$(window).scroll(function () {
+					AOS.refresh();
+				});
+			}
+			if ($(window).width() < 991) {
+				AOS.init({
+					once: true,
+					duration: 900,
+					/*disable: 'mobile'*/
+				});
+				$(window).scroll(function () {
+					AOS.refresh();
+				});
+			}
+		</script>
+
+		<script>
+			/*$(".b-checkin").flatpickr({
+				dateFormat: "d-m-Y",
+			});
+			$(".b-checkout").flatpickr({
+				dateFormat: "d-m-Y",
+			});*/
+            $(".date_reserve").flatpickr({
+                dateFormat: "d/m/Y",
+                minDate: "today",
+                                    locale: {
+                        firstDayOfWeek: 1,
+                        weekdays: {
+                                                        shorthand: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sa'],
+                            longhand: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+                        },
+                        months: {
+                            shorthand: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Оct', 'Nov', 'Dic'],
+                            longhand: ['Enero', 'Febrero', 'Мarzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                        },
+                                    },
+
+            });
+		</script>
+
+		<script>
+			window.onload = function () {
+				lax.init()
+
+				// Add a driver that we use to control our animations
+				lax.addDriver('scrollY', function () {
+					return window.scrollY
+				})
+
+				// Add animation bindings to elements
+				lax.addElements('.selector-figure', {
+					scrollY: {
+						translateY: [
+							["elInY", "elCenterY", "elOutY"],
+							[0, -100, -200],
+						]
+					}
+				})
+
+
+				lax.addElements('.selector-div-1', {
+					scrollY: {
+						translateY: [
+							["elInY", "elCenterY", "elOutY"],
+							[0, 100, 200],
+						]
+					}
+				})
+				lax.addElements('.selector-div-2', {
+					scrollY: {
+						translateY: [
+							["elInY", "elCenterY", "elOutY"],
+							[0, -150, -300],
+						]
+					}
+				})
+			}
+		</script>
+
+		<script>
+			if (document.querySelector('.d-text-center-img-two-col') !== null) {
+				const items = document.querySelectorAll('.item')
+				const image = document.querySelector('.hover-reveal')
+
+				items.forEach((el) => {
+					el.addEventListener('mouseover', (e) => {
+						imageData = e.target.getAttribute('data-image')
+						console.log(imageData)
+						e.target.style.zIndex = 99
+						image.setAttribute('src', imageData)
+					})
+					el.addEventListener('mousemove', (e) => {
+						/*image.style.top = e.clientY - 200 + 'px'
+						image.style.left = e.clientX - 100 + 'px'*/
+						image.style.top = e.clientY - 50 + 'px'
+						image.style.left = e.clientX - 0 + 'px'
+					})
+					el.addEventListener('mouseleave', (e) => {
+						e.target.style.zIndex = 1
+						image.setAttribute('src', '')
+					})
+				})
+
+				$(".d-text-center-img-two-col .item").hover(function () {
+					$(".position-cursor").addClass("d-none");
+				});
+			}
+		</script>
+<!--        <script src="--><!--" defer></script>-->
+
+        
+                
+        
+        <script>
+            let captchaReady = false;
+            function CaptchaCallback() {
+                captchaReady = true;
+            }
+        </script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+
+			var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+
+			if ("IntersectionObserver" in window) {
+				var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+					entries.forEach(function(video) {
+						if (video.isIntersecting) {
+							for (var source in video.target.children) {
+								var videoSource = video.target.children[source];
+								console.log(videoSource);
+								if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+									videoSource.src = videoSource.dataset.src;
+								}
+							}
+							video.target.load();
+							video.target.classList.remove("lazy");
+							lazyVideoObserver.unobserve(video.target);
+						}
+					});
+				});
+				lazyVideos.forEach(function(lazyVideo) {
+					lazyVideoObserver.observe(lazyVideo);
+				});
+			}
+		});
+	</script>
+	<script type="module" defer src="https://static.mirai.com/core/index.js" data-cookieconsent="necessary"></script>
+	<!--<script type="text/javascript" src="https://js.mirai.com/mirai-loader/mirai.loader.js" data-cookieconsent="necesary"></script>
+	<div id="mirai-tracking" data-mirai-engine="mirai_tr" data-idhotel="" data-init="false"></div>
+	<script type="text/javascript">
+		function CookiebotCallback_OnAccept() {
+			if (Cookiebot.consented) {
+				Mirai.mirai_engine.observer.publish("initTracking");
+			}
+		}
+	</script>-->
+    </body>
+
+    </html>

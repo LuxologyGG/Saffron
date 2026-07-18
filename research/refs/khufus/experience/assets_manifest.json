@@ -1,0 +1,602 @@
+[
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/cyrillic-ext/400/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 17372
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/math/500/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 21996
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/inter/5.2.8/cyrillic-ext/600/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 10484
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/inter/5.2.8/cyrillic-ext/400/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 10232
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/latin-ext/600/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 16284
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek/900/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 9616
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/vietnamese/500/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 8848
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/cyrillic/600/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 12288
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/inter/5.2.8/vietnamese/400/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 4972
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/latin/800/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 22128
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/cyrillic-ext/600/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 19364
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek-ext/900/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 3692
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/cyrillic/200/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 12904
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/cyrillic/100/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 11920
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/latin/400/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 23672
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek-ext/800/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 3728
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/math/100/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 19592
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/math/300/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 20092
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/math/400/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 21824
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/vietnamese/500/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 8540
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek/400/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 9556
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/vietnamese/300/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 8376
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/latin-ext/400/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 16068
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/math/100/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 20844
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/symbols/300/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 10704
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/latin-ext/300/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 15012
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/cyrillic-ext/500/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 19244
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/math/700/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 21996
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/vietnamese/400/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 8832
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/latin-ext/700/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 16384
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/math/400/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 20088
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/inter/5.2.8/cyrillic/600/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 7972
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek/500/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 10156
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek-ext/700/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 3692
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek/500/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 9616
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/vietnamese/600/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 8836
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek-ext/900/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 3696
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/cyrillic-ext/600/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 17628
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/latin/900/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 23616
+  },
+  {
+    "url": "https://khufus.com/wp-content/uploads/2026/02/IvyOraDisplay-LightItalic.woff2",
+    "local": "assets/IvyOraDisplay-LightItalic.woff2",
+    "bytes": 74824
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/vietnamese/200/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 8812
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/latin/200/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 23632
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/cyrillic/400/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 13000
+  },
+  {
+    "url": "https://khufus.com/wp-content/uploads/2026/02/BricolageGrotesque-VariableFont_opszwdthwght.ttf",
+    "local": "assets/BricolageGrotesque-VariableFont_opszwdthwght.ttf",
+    "bytes": 407844
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/latin/800/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 23888
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/symbols/700/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 10868
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/vietnamese/900/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 8368
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek-ext/600/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 3700
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/vietnamese/800/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 8444
+  },
+  {
+    "url": "https://khufus.com/wp-content/uploads/2026/02/Lander-Video-Pyramids-Camel-Compressed.mp4",
+    "local": "assets/Lander-Video-Pyramids-Camel-Compressed.mp4",
+    "bytes": 4018347
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/inter/5.2.8/vietnamese/600/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 5100
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/symbols/900/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 11712
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek/600/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 10156
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/vietnamese/600/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 8472
+  },
+  {
+    "url": "https://khufus.com/wp-content/uploads/2026/02/IvyOraDisplay-BoldItalic.woff2",
+    "local": "assets/IvyOraDisplay-BoldItalic.woff2",
+    "bytes": 71036
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/vietnamese/200/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 8456
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/latin/100/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 22844
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek-ext/100/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 3656
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek/400/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 10032
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek-ext/800/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 3716
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek/200/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 10040
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek/600/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 9704
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/math/300/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 21716
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/vietnamese/700/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 8416
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/inter/5.2.8/latin-ext/600/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 36260
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/inter/5.2.8/cyrillic/400/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 7712
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/inter/5.2.8/latin/600/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 24452
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek-ext/200/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 3684
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/cyrillic/700/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 13196
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/latin/600/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 22240
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/symbols/100/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 10540
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/latin/500/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 22200
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek/300/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 10064
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/cyrillic/700/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 12416
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/cyrillic/900/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 13148
+  },
+  {
+    "url": "https://khufus.com/wp-content/uploads/2026/02/Logo-in-White.svg",
+    "local": "assets/Logo-in-White.svg",
+    "bytes": 14484
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/plus-jakarta-sans/5.2.8/cyrillic-ext/600/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 1052
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/symbols/600/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 11692
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/symbols/500/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 11680
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek/900/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 10072
+  },
+  {
+    "url": "https://khufus.com/wp-content/uploads/2026/02/IvyOraDisplay-Medium.woff2",
+    "local": "assets/IvyOraDisplay-Medium.woff2",
+    "bytes": 60764
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/symbols/800/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 11772
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/math/900/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 21756
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/latin/300/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 22072
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek/300/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 9500
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/cyrillic-ext/900/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 19208
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek-ext/500/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 3672
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/symbols/100/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 11164
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/vietnamese/800/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 8840
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/latin/700/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 23988
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/latin-ext/700/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 15196
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/latin-ext/900/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 16252
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/cyrillic-ext/100/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 16628
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/cyrillic/600/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 13188
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/latin/200/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 22024
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/latin/500/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 23896
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek-ext/300/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 3684
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/plus-jakarta-sans/5.2.8/latin/600/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 12188
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/math/600/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 20360
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek-ext/400/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 3680
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/symbols/300/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 11548
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek-ext/400/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 3672
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/inter/5.2.8/greek/400/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 7776
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/inter/5.2.8/greek-ext/600/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 5432
+  },
+  {
+    "url": "https://khufus.com/wp-content/uploads/2026/02/IvyOraDisplay-ThinItalic.woff2",
+    "local": "assets/IvyOraDisplay-ThinItalic.woff2",
+    "bytes": 66316
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/latin-ext/100/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 14676
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/latin-ext/900/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 15048
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/symbols/200/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 10748
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/cyrillic-ext/700/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 17620
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/latin-ext/100/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 15496
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/plus-jakarta-sans/5.2.8/vietnamese/600/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 4196
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/math/800/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 20300
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/latin-ext/500/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 15160
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/greek-ext/100/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 3692
+  },
+  {
+    "url": "https://khufus.com/wp-content/uploads/2026/02/GoldenHopes.woff2",
+    "local": "assets/GoldenHopes.woff2",
+    "bytes": 67804
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/cyrillic-ext/900/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 17448
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/cyrillic-ext/700/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 19348
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/vietnamese/400/normal.woff2",
+    "local": "assets/normal.woff2",
+    "bytes": 8368
+  },
+  {
+    "url": "https://khufus.com/cf-fonts/s/roboto/5.2.10/cyrillic/800/italic.woff2",
+    "local": "assets/italic.woff2",
+    "bytes": 13216
+  },
+  {
+    "url": "https://khufus.com/wp-content/uploads/2026/02/IvyOraDisplay-Regular.woff2",
+    "local": "assets/IvyOraDisplay-Regular.woff2",
+    "bytes": 60460
+  }
+]

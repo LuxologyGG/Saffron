@@ -1,0 +1,25 @@
+{
+  "scripts": [
+    "https://culinaryodissey.uprock.pro/g/libs/jquery/1.10.2/jquery.min.js",
+    "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js",
+    "https://culinaryodissey.uprock.pro/g/s3/mosaic/js/do/redesign/do.js?rnd=1784333425",
+    "https://culinaryodissey.uprock.pro/assets/site/s3/js/lang/ru.js",
+    "https://culinaryodissey.uprock.pro/assets/site/s3/js/common.min.js",
+    "https://counter.megagroup.ru/loader.js?1784333470055",
+    "https://culinaryodissey.uprock.pro/assets/site/vk-id/sdk/2.6.1/index.js",
+    "https://counter.megagroup.ru/api.js?v=6",
+    "https://counter.megagroup.ru/15319df16ea837b01f0d1160922eaf7a.js?r=&s=1440*1000*24&u=https%3A%2F%2Fculinaryodissey.uprock.pro%2F&t=LagunaAl-Sha%27ab&fv=0,0&en=1&rld=0&fr=0&callback=_sntnl1784333471749&1784333471749",
+    "https://smartcaptcha.yandexcloud.net/captcha.js?onload=onSmartCaptchaLoad&render=onload&hl=ru",
+    "https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js",
+    "https://culinaryodissey.uprock.pro/assets/site/main.min.js?1784263127"
+  ],
+  "fetched_count": 13,
+  "detected": {
+    "gsap": 67,
+    "ScrollTrigger": 6,
+    "swiper": 1,
+    "curtains/ogl": 11,
+    "react": 37
+  }
+}

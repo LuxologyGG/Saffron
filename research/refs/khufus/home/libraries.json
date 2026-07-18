@@ -1,0 +1,29 @@
+{
+  "scripts": [
+    "https://khufus.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+    "https://khufus.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+    "https://www.googletagmanager.com/gtag/js?id=GT-PL9FB4G",
+    "https://khufus.com/wp-includes/js/wp-emoji-release.min.js?ver=7.0.1",
+    "https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.10.1/lottie.min.js",
+    "https://khufus.com/wp-content/themes/astra/assets/js/minified/frontend.min.js?ver=4.13.4",
+    "https://khufus.com/wp-content/plugins/Khufus-Preloader-main/assets/js/khufus-intro-overlay.js?ver=1.2.2",
+    "https://khufus.com/wp-content/plugins/MLOG-main/assets/js/mlog-tracker.js?ver=1.1.1",
+    "https://khufus.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.1.4",
+    "https://khufus.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.1.4",
+    "https://khufus.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3",
+    "https://khufus.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.1.4",
+    "https://khufus.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=4.1.2",
+    "https://khufus.com/wp-includes/js/dist/hooks.min.js?ver=7496969728ca0f95732d",
+    "https://khufus.com/wp-includes/js/dist/i18n.min.js?ver=781d11515ad3d91786ec",
+    "https://khufus.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=4.1.2",
+    "https://khufus.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=4.1.2",
+    "https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496",
+    "https://khufus.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.9.3"
+  ],
+  "fetched_count": 19,
+  "detected": {
+    "lottie": 44,
+    "swiper": 68,
+    "curtains/ogl": 160
+  }
+}
