@@ -14,6 +14,7 @@
      warm cream    #f0e2ce  (rice mound highlight)
      script ink    #0e110f  (calligraphic S, near-black with green cast)
    House rules: no em dashes anywhere; zero-build; self-hosted only.
+   Every token has a stated consumer; dead tokens are deleted, not kept.
    ============================================================= */
 
 :root {
@@ -22,27 +23,24 @@
   --ink-1:      #141a16;   /* one step up, dark panels                    */
   --ink-2:      #1b241f;   /* raised surface on dark                      */
   --ink-3:      #25332e;   /* bowl green, borders/cards on dark           */
-  --steel:      #5f5a4c;   /* muted warm stone, captions on light         */
-  --steel-2:    #8a8271;
-  --steel-3:    #b3a993;
 
   /* ---- Paper scale: day ground, warm rice cream --------------------- */
   --paper:      #f6efe1;   /* primary light ground                        */
   --paper-1:    #f0e2ce;   /* rice-mound cream, alt section bg            */
-  --paper-2:    #e6d5ba;
-  --paper-3:    #d6c09d;
+  --paper-2:    #e6d5ba;   /* pressed cream: chips, table stripes         */
+  --paper-3:    #d6c09d;   /* deep cream: arch-panel inner shadow ground  */
 
   /* ---- Accent family: saffron gold (PRIMARY, sampled) --------------- */
-  --accent-base: #b68b4a;  /* saffron gold                                */
-  --accent-1:    #c2984f;
+  --accent-base: #b68b4a;  /* saffron gold, fills/ornament only (2.71:1 on cream, never small text) */
   --accent-lite: #d4a95d;  /* brighter gold for dark grounds              */
-  --accent-deep: #7a5c26;  /* AA-safe gold text/focus on cream            */
+  --accent-deep: #6e5322;  /* AA gold text/focus, verified on BOTH creams (4.9:1 on #f0e2ce, 5.6:1 on #f6efe1) */
   --accent-wash: rgba(182,139,74,.12);  /* faint glaze/hover fill         */
 
   /* ---- Secondary accents (used sparingly, never as a third ground) -- */
   --red:        #970e0d;   /* saffron-thread red: price rules, ticks, seals */
   --red-deep:   #741010;   /* red on light, hover state                   */
-  --red-lite:   #c1403a;   /* red on dark grounds                         */
+  --red-lite:   #c1403a;   /* red FILLS/ticks on dark grounds; never text on ink (3.67:1) */
+  --red-text-dark: #e0736c;/* red TEXT on ink, 5.6:1 AA (.on-dark --accent-2-text) */
   --red-wash:   rgba(151,14,13,.10);
   --crocus:     #7b3397;   /* crocus purple: ornament, eyebrow accents    */
   --crocus-deep:#57266d;   /* AA-safe purple on cream                     */
@@ -51,15 +49,15 @@
   --crocus-wash:rgba(123,51,151,.10);
   --leaf:       #3b4c3e;   /* leaf green, quiet supporting tone           */
 
-  --white:      #ffffff;
-  --black:      #070907;
+  --white:      #ffffff;   /* polaroid card stock, form fields on dark    */
 
   /* ---- Semantic tokens (components read THESE, not the raw scale) --- */
+  /* Browser floor: 2023 evergreen (color-mix, overflow: clip). No fallbacks by design. */
   --bg:         var(--paper);
   --bg-2:       var(--paper-1);
   --fg:         var(--ink);
   --fg-soft:    color-mix(in srgb, var(--ink) 74%, var(--paper));
-  --fg-faint:   color-mix(in srgb, var(--ink) 60%, var(--paper));   /* AA on cream */
+  --fg-faint:   color-mix(in srgb, var(--ink) 64%, var(--paper));   /* AA on BOTH --bg and --bg-2 (~5.5:1 / ~4.9:1) */
   --line:       color-mix(in srgb, var(--ink) 15%, transparent);
   --line-soft:  color-mix(in srgb, var(--ink) 8%, transparent);
   --accent:     var(--accent-base);
@@ -71,26 +69,29 @@
   --focus:      var(--accent-deep);
 
   /* ---- Typography (self-hosted in fonts.css) ------------------------ */
-  --font-display: "Clash Display", "Arial Narrow", sans-serif;   /* 500/600/700 */
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif; /* variable 100-900 + true italic (emphasis words) */
   --font-body:    "General Sans", system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; /* 400/500/600 */
   --font-mono:    "Chivo Mono", ui-monospace, "SFMono-Regular", Menlo, monospace; /* 400/500 */
 
   /* ---- Fluid type scale --------------------------------------------- */
-  --fs-eyebrow: clamp(10px, .76vw, 12px);
-  --fs-mono:    clamp(11px, .84vw, 13px);
-  --fs-body:    clamp(15px, 1.02vw, 17px);
-  --fs-lead:    clamp(18px, 1.5vw, 22px);
-  --fs-h4:      clamp(19px, 1.6vw, 24px);
-  --fs-h3:      clamp(26px, 3vw, 46px);
-  --fs-h2:      clamp(34px, 5vw, 78px);
-  --fs-h1:      clamp(44px, 7.4vw, 128px);
-  --fs-display: clamp(60px, 12.5vw, 230px);  /* ghost words, cropped wordmark */
+  /* rem + vw hybrids so browser text zoom and user font-size prefs work
+     (WCAG 1.4.4). Endpoints in comments are the px design targets at
+     400px / 1440px viewports. Floors: nothing renders below 12px. */
+  --fs-eyebrow: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);   /* 12 -> 13   */
+  --fs-mono:    clamp(0.75rem, 0.69rem + 0.28vw, 0.8125rem);   /* 12 -> 13   */
+  --fs-body:    clamp(0.9375rem, 0.85rem + 0.45vw, 1.0625rem); /* 15 -> 17   */
+  --fs-lead:    clamp(1.125rem, 1.03rem + 0.38vw, 1.375rem);   /* 18 -> 22   */
+  --fs-h4:      clamp(1.1875rem, 1.07rem + 0.48vw, 1.5rem);    /* 19 -> 24   */
+  --fs-h3s:     clamp(1.375rem, 1.13rem + 0.96vw, 2rem);       /* 22 -> 32, menu item names + card titles */
+  --fs-h3:      clamp(1.625rem, 1.14rem + 1.92vw, 2.875rem);   /* 26 -> 46   */
+  --fs-h2:      clamp(2.125rem, 1.07rem + 4.23vw, 4.875rem);   /* 34 -> 78   */
+  --fs-h1:      clamp(2.75rem, 1.2rem + 6.2vw, 8rem);          /* 44 -> 128  */
+  --fs-display: clamp(3.75rem, -0.35rem + 16.4vw, 14.375rem);  /* 60 -> 230, ghost words, cropped wordmark */
 
   --lh-tight:   0.96;
   --lh-snug:    1.08;
   --lh-body:    1.62;
-  --tracking-mono: .16em;
-  --tracking-wide: .3em;
+  --tracking-mono: .16em;  /* consumed by .eyebrow and mono HUD labels */
 
   /* ---- Spacing ------------------------------------------------------ */
   --u:      8px;
@@ -99,6 +100,7 @@
   --sect-sm:clamp(48px, 7vw, 110px);
   --maxw:   1560px;
   --measure: 62ch;
+  --tap:    44px;          /* minimum touch target, consumed by .tap-44 */
 
   /* ---- Form language: soft heritage, pills + Persian arches --------- */
   --radius:    8px;                        /* cards, inputs               */
@@ -106,9 +108,15 @@
   --radius-pill: 999px;                    /* CTAs, chips                 */
   --border:    1px solid var(--line);
 
+  /* Elevation + texture (hover lifts, archival grain overlays) */
+  --shadow-1: 0 10px 30px rgba(14,17,15,.10);  /* card hover lift         */
+  --shadow-2: 0 24px 60px rgba(14,17,15,.16);  /* raised panels/overlays  */
+  --grain-url: url("../img/ornament/grain.png"); /* self-generated noise tile, <= 64KB */
+  --grain-opacity: .06;
+
   /* Persian arch mask family (top corners only). Apply to images/panels:
      border-radius: var(--arch) var(--arch) 0 0;  or use --arch-radius.  */
-  --arch:      clamp(120px, 16vw, 220px);  /* hero/full-bleed arch        */
+  --arch:      clamp(72px, 15vw, 220px);   /* hero/full-bleed arch (72px floor keeps the arch an arch at 390px) */
   --arch-sm:   clamp(64px, 8vw, 120px);    /* card/inline image arch      */
   --arch-dome: 50% 50% 0 0;                /* full half-dome variant      */
   --arch-radius:    var(--arch) var(--arch) 0 0;
@@ -118,10 +126,10 @@
   --e-reveal: cubic-bezier(.18,1,.25,1);   /* luxury out-expo, hero line reveals (Khufu's) */
   --e-ui:     cubic-bezier(.645,.045,.355,1); /* easeInOutCubic, UI/hover (Tastavents)     */
   --e-out:    cubic-bezier(.215,.61,.355,1);  /* easeOutCubic, secondary reveals           */
-  --e-expo:   cubic-bezier(.16,1,.3,1);
+  --e-expo:   cubic-bezier(.16,1,.3,1);    /* scrub catch-up settles                      */
   --e-inout:  cubic-bezier(.77,0,.18,1);   /* wipes/curtains                              */
-  --e-osmo:   cubic-bezier(.19,1,.22,1);
   --t-fast:  .3s;
+  --t-ui:    .4s;                           /* Tastavents primary UI rhythm: hover, roll-ups, sliders */
   --t-med:   .6s;
   --t-reveal:.82s;                          /* masked line reveal duration */
   --t-slow:  1.1s;
@@ -131,7 +139,7 @@
   --z-base:    1;
   --z-float:   5;          /* sine-float cutouts               */
   --z-nav:     60;
-  --z-overlay: 80;         /* carte menu overlay               */
+  --z-overlay: 80;         /* counter menu overlay             */
   --z-transition: 95;      /* page transition wipe             */
   --z-loader:  100;        /* poetic preloader                 */
 
@@ -139,20 +147,20 @@
 }
 
 /* ---- Night scope ------------------------------------------------ */
-/* Add class="on-dark" to any night section (hero bands, menu carte,  */
+/* Add class="on-dark" to any night section (hero bands, menu counter, */
 /* CTA, footer). Re-points the SAME semantic tokens; accents brighten. */
 .on-dark {
   --bg:       var(--ink);
   --bg-2:     var(--ink-1);
   --fg:       var(--paper);
   --fg-soft:  color-mix(in srgb, var(--paper) 70%, var(--ink));
-  --fg-faint: color-mix(in srgb, var(--paper) 52%, var(--ink));   /* AA on ink */
+  --fg-faint: color-mix(in srgb, var(--paper) 56%, var(--ink));   /* AA on both --bg and --bg-2 on dark */
   --line:     color-mix(in srgb, var(--paper) 15%, transparent);
   --line-soft:color-mix(in srgb, var(--paper) 8%, transparent);
   --accent:      var(--accent-lite);
   --accent-text: var(--accent-lite);
-  --accent-2:      var(--red-lite);
-  --accent-2-text: var(--red-lite);
+  --accent-2:      var(--red-lite);          /* fills/ticks only on dark */
+  --accent-2-text: var(--red-text-dark);     /* red TEXT on ink, 5.6:1 AA */
   --ornament:      var(--crocus-lite);
   --focus:    var(--accent-lite);
   color-scheme: dark;
@@ -161,7 +169,7 @@
 /* ============================ Reset ============================ */
 *,*::before,*::after { box-sizing: border-box; }
 * { margin: 0; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; overflow-x: clip; }
 body {
   font-family: var(--font-body);
   font-size: var(--fs-body);
@@ -171,7 +179,7 @@ body {
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  overflow-x: clip;  /* clip, not hidden: avoids spawning a scroll container under Lenis */
 }
 img,svg,video,canvas { display: block; max-width: 100%; }
 img,video { height: auto; }
@@ -182,11 +190,24 @@ ul,ol { list-style: none; padding: 0; }
 h1,h2,h3,h4 { font-weight: 500; line-height: var(--lh-snug); }
 ::selection { background: var(--accent); color: var(--accent-ink); }
 
+/* Global keyboard focus ring. app.css may refine per component but this
+   baseline must never be removed. */
+:where(a,button,input,select,textarea,[tabindex]):focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+:where(a,button,input,select,textarea):focus:not(:focus-visible) { outline: none; }
+
 /* Reduced-motion guard: kills every animation/transition/smooth-scroll.
    The JS motion engine ALSO checks this; keep the CSS guard so the site
    is calm even if JS never runs. Do not remove. */
 @media (prefers-reduced-motion: reduce) {
-  *,*::before,*::after { animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important; }
+  *,*::before,*::after { animation-duration:.001ms !important; animation-delay:0ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important; }
+  /* Marquees must not freeze half-shifted showing the duplicate track:
+     markup includes the line once in a .marquee-static fallback; the
+     duplicated animated track hides here and the static line shows. */
+  [class*="marquee"] { animation: none !important; transform: none !important; }
 }
 
 /* ============================ Type utilities ============================ */
@@ -194,6 +215,8 @@ h1,h2,h3,h4 { font-weight: 500; line-height: var(--lh-snug); }
 .mono    { font-family: var(--font-mono); }
 
 /* .eyebrow: mono label with a small khatam diamond tick before it.
+   The tick is decorative (color never carries meaning alone); it still
+   uses the AA text variants so it clears 3:1 as a bonus.
    Add class="eyebrow--plain" to drop the tick. */
 .eyebrow {
   font-family: var(--font-mono);
@@ -206,21 +229,23 @@ h1,h2,h3,h4 { font-weight: 500; line-height: var(--lh-snug); }
   gap: .7em;
 }
 .eyebrow::before {
-  content:""; width: 7px; height: 7px; background: var(--accent);
+  content:""; width: 7px; height: 7px; background: var(--accent-text);
   transform: rotate(45deg); flex: none;      /* khatam diamond, not a square */
 }
 .eyebrow--plain::before { display:none; }
-.eyebrow--red::before    { background: var(--accent-2); }
+.eyebrow--red::before    { background: var(--accent-2-text); }
 .eyebrow--crocus::before { background: var(--ornament); }
 
 .h1 { font-family: var(--font-display); font-size: var(--fs-h1); line-height: var(--lh-tight); font-weight: 600; letter-spacing: -.02em; }
 .h2 { font-family: var(--font-display); font-size: var(--fs-h2); line-height: var(--lh-tight); font-weight: 600; letter-spacing: -.02em; }
 .h3 { font-family: var(--font-display); font-size: var(--fs-h3); line-height: var(--lh-snug); font-weight: 600; letter-spacing: -.01em; }
+.h3s{ font-family: var(--font-display); font-size: var(--fs-h3s); line-height: var(--lh-snug); font-weight: 500; letter-spacing: -.01em; } /* menu item names, card titles */
 .h4 { font-family: var(--font-display); font-size: var(--fs-h4); line-height: 1.14; font-weight: 500; letter-spacing: -.01em; }
 .lead { font-size: var(--fs-lead); line-height: 1.45; color: var(--fg-soft); font-weight: 400; }
 .measure { max-width: var(--measure); }
 
-/* Ghost display word (Khufu's chapter numerals, Tastavents watermarks) */
+/* Ghost display word (Khufu's chapter numerals, Tastavents watermarks).
+   Decorative only: always aria-hidden="true" in markup. */
 .ghost {
   font-family: var(--font-display); font-size: var(--fs-display);
   font-weight: 600; line-height: 1; letter-spacing: -.02em;
@@ -245,6 +270,13 @@ h1,h2,h3,h4 { font-weight: 500; line-height: var(--lh-snug); }
   .cols-3.keep-2, .cols-4.keep-2 { grid-template-columns: repeat(2,1fr); }
 }
 
+/* Minimum touch target. Applied to: nav links, category chips, testimonial
+   arrows, category rail items, Skip pill, sticky tel: bar. */
+.tap-44 {
+  min-height: var(--tap); min-width: var(--tap);
+  display: inline-flex; align-items: center; justify-content: center;
+}
+
 /* Arch mask helpers */
 .arch    { border-radius: var(--arch-radius); overflow: hidden; }
 .arch-sm { border-radius: var(--arch-radius-sm); overflow: hidden; }
@@ -258,6 +290,6 @@ h1,h2,h3,h4 { font-weight: 500; line-height: var(--lh-snug); }
 @keyframes k-blink { 0%,100%{opacity:1} 50%{opacity:.25} }
 @keyframes k-marquee { to { transform: translate3d(-50%,0,0); } }
 @keyframes k-chev { 0%,100%{ transform: translateY(0); opacity:.9 } 50%{ transform: translateY(6px); opacity:.35 } }
-@keyframes k-spin { to { transform: rotate(360deg); } }               /* shamse medallion */
+@keyframes k-spin { to { transform: rotate(360deg); } }               /* shamse medallion (404 only) */
 @keyframes k-float { 0%,100%{ transform: translateY(-8px) } 50%{ transform: translateY(8px) } } /* sine-float cutouts */
 @keyframes k-kenburns { 0%{transform:scale(1.02) translate(0,0)} 100%{transform:scale(1.14) translate(-1.5%,-1.5%)} }

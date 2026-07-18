@@ -24,9 +24,8 @@ All runtime dependencies are self-hosted. No CDN references at runtime.
 
 | File | Family / weight | Source |
 |---|---|---|
-| ClashDisplay-500.woff2 | Clash Display 500 | Fontshare API: https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700 (cdn.fontshare.com) |
-| ClashDisplay-600.woff2 | Clash Display 600 | Fontshare API (as above) |
-| ClashDisplay-700.woff2 | Clash Display 700 | Fontshare API (as above) |
+| Fraunces-Variable.woff2 | Fraunces variable, wght 100-900, opsz 9-144, normal (v38, latin) | Google Fonts (via google-webfonts-helper family lookup / fonts.gstatic.com): https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900 (OFL) |
+| Fraunces-Italic-Variable.woff2 | Fraunces variable, wght 100-900, opsz 9-144, italic (v38, latin) | Google Fonts (as above, OFL) |
 | GeneralSans-400.woff2 | General Sans 400 | Fontshare API: https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600 |
 | GeneralSans-500.woff2 | General Sans 500 | Fontshare API (as above) |
 | GeneralSans-600.woff2 | General Sans 600 | Fontshare API (as above) |

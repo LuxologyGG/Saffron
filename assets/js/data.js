@@ -36,6 +36,7 @@ window.SITE = {
       beef: "100% Certified Grass Fed Halal, Black Angus Beef",
       chicken: "100% All Natural, No Added Hormone, Halal Chicken",
     },
+    halalNote: "Ask us about our halal sourcing.", // short line for surfaces where the full supplier statements do not fit; claims render as quoted supplier statements, never as certification seals
     hours: null, // filled from verified listings post-discovery; render "Call for hours" when null
     intro: "A Persian and Middle Eastern kitchen in Torrance serving charcoal-kissed kababs, fragrant rice, and slow-simmered stews. Dine in, pick up, get it delivered, or let us cater your next gathering.",
   },
@@ -86,15 +87,26 @@ window.SITE = {
     },
   ],
 
-  /* Verbatim Yelp quotes from the location's listing (old name, same kitchen
-     location; source: research/business/reviews.md). Attributed honestly. */
-  testimonials: [
-    { quote: "We had a fantastic lunch here with delicious authentic tasting Persian food and excellent service!", who: "Yelp reviewer", src: "Yelp" },
-    { quote: "Incredibly kind and quick service and consistently the most flavorful dishes I've had in the South Bay. The menu is limited, but what's offered is exceptional!", who: "Yelp reviewer", src: "Yelp" },
-    { quote: "Super quaint and has the best, most saffron-y, and rich rice ever. The meat was juicy and flavorful in the beef koobideh.", who: "Yelp reviewer", src: "Yelp" },
+  /* Story timeline: VERIFIED facts only (see research/business/facts.md).
+     Unverified lineage years are omitted, never approximated. */
+  story: [
+    { year: "2020-2021", label: "The kitchen earns local blog love as Saffron Food Mart", provenance: "Discovering LA (2020) and Eat the World LA (2021) coverage of this location" },
+    { year: "2026", label: "Saffron & Rice opens under new management", provenance: "Saffron & Rice LLC filed 2026-03-16 (public filing)" },
   ],
 
-  /* Photography: blog-sourced representative imagery of this location
-     (pre-transition era). Disclosure required wherever rendered. */
+  /* Verbatim Yelp quotes from the location's listing under its prior name
+     (source: research/business/reviews.md). All quotes PREDATE the
+     ownership transition; the era attribution below must render with the
+     quote and old-era praise is never attributed to "Saffron & Rice". */
+  testimonials: [
+    { quote: "We had a fantastic lunch here with delicious authentic tasting Persian food and excellent service!", who: "Yelp reviewer, on the kitchen in its Saffron Food Mart era", src: "Yelp" },
+    { quote: "Incredibly kind and quick service and consistently the most flavorful dishes I've had in the South Bay. The menu is limited, but what's offered is exceptional!", who: "Yelp reviewer, on the kitchen in its Saffron Food Mart era", src: "Yelp" },
+    { quote: "Super quaint and has the best, most saffron-y, and rich rice ever. The meat was juicy and flavorful in the beef koobideh.", who: "Yelp reviewer, on the kitchen in its Saffron Food Mart era", src: "Yelp" },
+  ],
+
+  /* Photography: production images must be owner-supplied or licensed
+     (see research/business/assets/manifest.md license column). The
+     research blog photos are reference only and never ship. Disclosure
+     required wherever representative (non-owner) imagery renders. */
   imagesDisclosure: "Photography is representative of the kitchen and its dishes.",
 };
