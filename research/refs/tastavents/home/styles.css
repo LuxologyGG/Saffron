@@ -1,6 +1,6 @@
 /* ===== inline ===== */
-.cookieconsent-optin-preferences, .cookieconsent-optin-statistics, .cookieconsent-optin-marketing, .cookieconsent-optin { display: none; }
-.cookieconsent-optout-preferences, .cookieconsent-optout-statistics, .cookieconsent-optout-marketing, .cookieconsent-optout { display: initial; }
+.cookieconsent-optin, .cookieconsent-optin-preferences, .cookieconsent-optout-statistics, .cookieconsent-optout-marketing { display: initial; }
+.cookieconsent-optout-preferences, .cookieconsent-optin-statistics, .cookieconsent-optin-marketing, .cookieconsent-optout { display: none; }
 
 /* ===== https://tastavents.com/assets/themes/tastavents.com/utils-58ef1ed0.css ===== */
 *, ::before, ::after { box-sizing: border-box; }
@@ -2906,6 +2906,9 @@ footer .icons-div a img { width: 80px; height: auto; margin-top: 10px; margin-bo
 @media screen and (max-width: 992px) {
   footer .icons-div a img { margin-top: 0px; margin-bottom: 0px; }
 }
+
+/* ===== inline ===== */
+#CybotCookiebotDialog, #CybotCookiebotDialogBodyUnderlay { display: none !important; }
 
 /* ===== inline ===== */
 .bar { fill: rgb(229, 36, 33); }

@@ -1,237 +1,8 @@
 [
   {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/sliders/img63-thumb.jpg",
-    "local": "assets/img63-thumb.jpg",
-    "bytes": 28272
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-6.jpg",
-    "local": "assets/marquee-left-6.jpg",
-    "bytes": 49489
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-11.jpg",
-    "local": "assets/marquee-right-11.jpg",
-    "bytes": 46143
-  },
-  {
-    "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAYAAABXuSs3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASHSURBVGhD7VjrbxRVFB/xgRpFUYIPBEXR4CMErUC7O/fe3dLu3nm1FKhUxQ98aYhEjGlisIU0mqiEqpFEJQVku/PaRwuaaPhiDSZGP6H+K/4H+jvDae1mLZpUKkPml0xmf/fcx7nnnnvOmTUy3Cj4wzBuoodpehDaua1VWz7NND3wbZELXPEC0/Qg0PnO0FZbmaYHmeLLjdQq7pe6crGWzzNND5pK3TXpuncyzXBdolLq2hxZ5gGm6UFoKTe0zDzTq6Oi1O3Y5WjDkWcCLU76ntjIohZEJbU5tMQhpi2oWurFuCwcpm3wtXg10OoRpi2IHHN1YMmJ2BYfR5Y4XrPlB3gfI724i1FHBo5s81Tdlqehw8GkETs8gY6fNDy1KcICEFyiyRLhAtDk2Njvf7cx31IHAm1+xLQNgZZ1PNuYtiDW5pawLGZjbB7rdlA/amsODt5M8vNl8RB0+qHmmjsjNzFeTIbGpOKbSEsvmQWggZV+dS/TBD5typKVSJtDtElunkdoyVdCbb7HtA1Y7MvFQiMVY1D8c6ZtIHlgiR+ZJlUnTq8TxZC5AxPP4hhOTXvFl1jeAgw8TqdBv9H3QtPNb0gEjKUoXrXMpwLL/Dl25AjmGak78u2qbb7GYmN83FgR2uJo01Vfz7iFMToNFiHmDj5z27Sn3BmveDK0zZmFrnJ+oGstFr5U7clvaJQ67yP/g3t9yOIES1Gc785szRL78N7XsNXLsSV7WTwPcuVpVx1En+/g768bkS2OTLod84kCivlI1wNMsWh+JLblL7D6F3Cr05jUh/V/a/b03MNdDDoN+PgY0zaQ4lGPfJJpCypwBbjqZ0zbEDliO+TDTI3qzm33w0jfG6EWn+Iovmp4ortuiT1Q4iIs/jh1CvhinOne8cDCL5rQluOIFO/TbwIpjgvzbVCWfZirH5Fh98IogoVmarY6Anfog+UHorIojyt1C8n83q7nIP+phnE0luRwX315uOPWRI5gAKP9ijv2Zt0r5PGeQP8TJMPC5lDTKUzUHfVu5PxlGfoNN7CYzgO3ew0svJepUSurx2qOHMUm37kSWtWxqXL+WRYjHOY9aiM5wt5RjH1jsuOKYmf7cnfDPd9CUBiDr4+SHPzwwnBIBqT2C24Rd00Oz43NcN3D7xUbyU9jS3Qv5alijimncx1Pe+1BGczHvcAl3X3Vp/wPD4W/RUqMDDcEEHvX0pvCIr0rtnqQfJY4xd/AyRciV3ZR2KLvTqp/Gns776Bxc/G7iTHJfy9aryK+LCD/pBSORDVESgdILH5JbYKCA0mZ7Eov0gV1UeuV8ONDSCySFKecMPc5h3i/K7DN/YuVu9cEdKlw+Yo+vlbOlcR6yoiB3r4K5cIeUpwsTDXIZVgcWfBwpJVJ7Sh/d011d6+jkjX2zC1IRPtDq/DvPhz+C1CmTN79Yv24YaxIKjy2OrVTiIuUWkMy2uCc4nRKKNBcKuKmdO6JJKT25R6mMRkypA0UbebCZaoQ6bwZOcUOpulB9m/tciNTfLlRTevlPEcf2nbxUaYZMvw/MIw/AYmxCZV51qjuAAAAAElFTkSuQmCC",
-    "error": "No connection adapters were found for 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAYAAABXuSs3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASHSURBVGhD7VjrbxRVFB/xgRpFUYIPBEXR4CMErUC7O/fe3dLu3nm1FKhUxQ98aYhEjGlisIU0mqiEqpFEJQVku/PaRwuaaPhiDSZGP6H+K/4H+jvDae1mLZpUKkPml0xmf/fcx7nnnnvOmTUy3Cj4wzBuoodpehDaua1VWz7NND3wbZELXPEC0/Qg0PnO0FZbmaYHmeLLjdQq7pe6crGWzzNND5pK3TXpuncyzXBdolLq2hxZ5gGm6UFoKTe0zDzTq6Oi1O3Y5WjDkWcCLU76ntjIohZEJbU5tMQhpi2oWurFuCwcpm3wtXg10OoRpi2IHHN1YMmJ2BYfR5Y4XrPlB3gfI724i1FHBo5s81Tdlqehw8GkETs8gY6fNDy1KcICEFyiyRLhAtDk2Njvf7cx31IHAm1+xLQNgZZ1PNuYtiDW5pawLGZjbB7rdlA/amsODt5M8vNl8RB0+qHmmjsjNzFeTIbGpOKbSEsvmQWggZV+dS/TBD5typKVSJtDtElunkdoyVdCbb7HtA1Y7MvFQiMVY1D8c6ZtIHlgiR+ZJlUnTq8TxZC5AxPP4hhOTXvFl1jeAgw8TqdBv9H3QtPNb0gEjKUoXrXMpwLL/Dl25AjmGak78u2qbb7GYmN83FgR2uJo01Vfz7iFMToNFiHmDj5z27Sn3BmveDK0zZmFrnJ+oGstFr5U7clvaJQ67yP/g3t9yOIES1Gc785szRL78N7XsNXLsSV7WTwPcuVpVx1En+/g768bkS2OTLod84kCivlI1wNMsWh+JLblL7D6F3Cr05jUh/V/a/b03MNdDDoN+PgY0zaQ4lGPfJJpCypwBbjqZ0zbEDliO+TDTI3qzm33w0jfG6EWn+Iovmp4ortuiT1Q4iIs/jh1CvhinOne8cDCL5rQluOIFO/TbwIpjgvzbVCWfZirH5Fh98IogoVmarY6Anfog+UHorIojyt1C8n83q7nIP+phnE0luRwX315uOPWRI5gAKP9ijv2Zt0r5PGeQP8TJMPC5lDTKUzUHfVu5PxlGfoNN7CYzgO3ew0svJepUSurx2qOHMUm37kSWtWxqXL+WRYjHOY9aiM5wt5RjH1jsuOKYmf7cnfDPd9CUBiDr4+SHPzwwnBIBqT2C24Rd00Oz43NcN3D7xUbyU9jS3Qv5alijimncx1Pe+1BGczHvcAl3X3Vp/wPD4W/RUqMDDcEEHvX0pvCIr0rtnqQfJY4xd/AyRciV3ZR2KLvTqp/Gns776Bxc/G7iTHJfy9aryK+LCD/pBSORDVESgdILH5JbYKCA0mZ7Eov0gV1UeuV8ONDSCySFKecMPc5h3i/K7DN/YuVu9cEdKlw+Yo+vlbOlcR6yoiB3r4K5cIeUpwsTDXIZVgcWfBwpJVJ7Sh/d011d6+jkjX2zC1IRPtDq/DvPhz+C1CmTN79Yv24YaxIKjy2OrVTiIuUWkMy2uCc4nRKKNBcKuKmdO6JJKT25R6mMRkypA0UbebCZaoQ6bwZOcUOpulB9m/tciNTfLlRTevlPEcf2nbxUaYZMvw/MIw/AYmxCZV51qjuAAAAAElFTkSuQmCC'"
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/sliders/img64-thumb.jpg",
-    "local": "assets/img64-thumb.jpg",
-    "bytes": 42567
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/uploads/img/tastaventsheader/img51.jpg",
-    "local": "assets/img51.jpg",
-    "bytes": 84359
-  },
-  {
-    "url": "https://tastavents.com/optima-bold-3d8ba13d.woff",
-    "local": "assets/optima-bold-3d8ba13d.woff",
-    "bytes": 15195
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-1.jpg",
-    "local": "assets/marquee-left-1.jpg",
-    "bytes": 80462
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-6.jpg",
-    "local": "assets/marquee-right-6.jpg",
-    "bytes": 58764
-  },
-  {
-    "url": "https://tastavents.com/optima-bold-4dec31d1.woff2",
-    "local": "assets/optima-bold-4dec31d1.woff2",
-    "bytes": 15195
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/experiencias_tastavents/es/img28.jpg",
-    "local": "assets/img28.jpg",
-    "bytes": 267950
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/uploads/img/tastaventsfooter/Restaurante_seleccionado_MICHELIN_2026_Redondo_Rojo.png",
-    "local": "assets/Restaurante_seleccionado_MICHELIN_2026_Redondo_Rojo.png",
-    "bytes": 130006
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img64-thumb.jpg",
-    "local": "assets/img64-thumb.jpg",
-    "bytes": 42567
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-2.png",
-    "local": "assets/marquee-left-2.png",
-    "bytes": 76421
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/sliders/img70.jpg",
-    "local": "assets/img70.jpg",
-    "bytes": 441422
-  },
-  {
-    "url": "https://tastavents.com/optima-regular-f9ce19a9.woff2",
-    "local": "assets/optima-regular-f9ce19a9.woff2",
-    "bytes": 15195
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/oasis/es/img36-thumb.jpg",
-    "local": "assets/img36-thumb.jpg",
-    "bytes": 42455
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-7.jpg",
-    "local": "assets/marquee-right-7.jpg",
-    "bytes": 45648
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/tastaventsspace/img13.thigh.jpg",
-    "local": "assets/img13.thigh.jpg",
-    "bytes": 71050
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/oasis/es/img35-thumb.jpg",
-    "local": "assets/img35-thumb.jpg",
-    "bytes": 51526
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_grande/es/img40.jpg",
-    "local": "assets/img40.jpg",
-    "bytes": 300452
-  },
-  {
-    "url": "https://tastavents.com/optima-regular-db50ba2b.woff",
-    "local": "assets/optima-regular-db50ba2b.woff",
-    "bytes": 15195
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/tastaventsreservation/img48.thigh.jpg",
-    "local": "assets/img48.thigh.jpg",
-    "bytes": 90582
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/carta/es/img18.jpg",
-    "local": "assets/img18.jpg",
-    "bytes": 148436
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-5.jpg",
-    "local": "assets/marquee-left-5.jpg",
-    "bytes": 71934
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/carta/es/img19.jpg",
-    "local": "assets/img19.jpg",
-    "bytes": 134425
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/uploads/img/tastaventsheader/img52.jpg",
-    "local": "assets/img52.jpg",
-    "bytes": 48658
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/carta/es/img21.jpg",
-    "local": "assets/img21.jpg",
-    "bytes": 179637
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/oasis/es/img38-thumb.jpg",
-    "local": "assets/img38-thumb.jpg",
-    "bytes": 4230
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img68-thumb.jpg",
-    "local": "assets/img68-thumb.jpg",
-    "bytes": 3556
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/tastaventsfeatured/chef-img.thigh.jpg",
-    "local": "assets/chef-img.thigh.jpg",
-    "bytes": 218978
-  },
-  {
-    "url": "https://tastavents.com/icomoon-5ee3f3f2.woff?kdjt6z",
-    "local": "assets/icomoon-5ee3f3f2.woff",
-    "bytes": 15195
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/tastaventsspace/img14.thigh.jpg",
-    "local": "assets/img14.thigh.jpg",
-    "bytes": 158409
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/tastaventshorizontal/img31.thigh.jpg",
-    "local": "assets/img31.thigh.jpg",
-    "bytes": 268925
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/tastaventshorizontal/img04.thigh.jpg",
-    "local": "assets/img04.thigh.jpg",
-    "bytes": 66356
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/experiencias_tastavents/es/img65.jpg",
-    "local": "assets/img65.jpg",
-    "bytes": 176827
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/uploads/img/tastaventsfooter/footer-img.jpg",
-    "local": "assets/footer-img.jpg",
-    "bytes": 84886
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/espacio_singular/es/img21.jpg",
-    "local": "assets/img21.jpg",
-    "bytes": 179637
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img67-thumb.jpg",
-    "local": "assets/img67-thumb.jpg",
-    "bytes": 3191
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/logo.svg",
-    "local": "assets/logo.svg",
-    "bytes": 2426
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-8.jpg",
-    "local": "assets/marquee-right-8.jpg",
-    "bytes": 65410
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery_text/img50.jpg",
-    "local": "assets/img50.jpg",
-    "bytes": 191299
-  },
-  {
-    "url": "https://tastavents.com/",
-    "local": "assets/asset_42",
-    "bytes": 137015
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/tastaventskitchen/img03.thigh.jpg",
-    "local": "assets/img03.thigh.jpg",
-    "bytes": 468465
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-4.jpg",
-    "local": "assets/marquee-left-4.jpg",
-    "bytes": 76110
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_grande/es/img39.jpg",
-    "local": "assets/img39.jpg",
-    "bytes": 200911
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-7.jpg",
-    "local": "assets/marquee-left-7.jpg",
-    "bytes": 45246
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/tastaventshorizontal/img02.jpg",
+    "local": "assets/img02.jpg",
+    "bytes": 531339
   },
   {
     "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-8.jpg",
@@ -239,133 +10,34 @@
     "bytes": 56703
   },
   {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_pequena/es/img41.jpg",
-    "local": "assets/img41.jpg",
-    "bytes": 81414
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/carta/es/img17.jpg",
-    "local": "assets/img17.jpg",
-    "bytes": 179571
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/sliders/img35-thumb.jpg",
-    "local": "assets/img35-thumb.jpg",
-    "bytes": 51526
-  },
-  {
     "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-3.jpg",
     "local": "assets/marquee-left-3.jpg",
     "bytes": 49908
   },
   {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-31.jpg",
-    "local": "assets/marquee-right-31.jpg",
-    "bytes": 39415
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-6.jpg",
+    "local": "assets/marquee-left-6.jpg",
+    "bytes": 49489
   },
   {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/experiencias_tastavents/es/img69.jpg",
-    "local": "assets/img69.jpg",
-    "bytes": 214355
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/oasis/es/img35-thumb.jpg",
+    "local": "assets/img35-thumb.jpg",
+    "bytes": 51526
   },
   {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery_text/img49.jpg",
-    "local": "assets/img49.jpg",
-    "bytes": 94308
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/oasis/es/img38-thumb.jpg",
+    "local": "assets/img38-thumb.jpg",
+    "bytes": 4230
   },
   {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/tastaventshorizontal/img02.jpg",
-    "local": "assets/img02.jpg",
-    "bytes": 531339
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-2.png",
+    "local": "assets/marquee-left-2.png",
+    "bytes": 76421
   },
   {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/experiencias_tastavents/es/img26.jpg",
-    "local": "assets/img26.jpg",
-    "bytes": 189779
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/espacio_singular/es/img33.jpg",
-    "local": "assets/img33.jpg",
-    "bytes": 84429
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/oasis/es/img37-thumb.jpg",
-    "local": "assets/img37-thumb.jpg",
-    "bytes": 3085
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img65-thumb.jpg",
-    "local": "assets/img65-thumb.jpg",
-    "bytes": 3663
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/sliders/img32.jpg",
-    "local": "assets/img32.jpg",
-    "bytes": 38154
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-21.jpg",
-    "local": "assets/marquee-right-21.jpg",
-    "bytes": 55016
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_pequena/es/img32.jpg",
-    "local": "assets/img32.jpg",
-    "bytes": 38154
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/espacio_singular/es/img04.jpg",
-    "local": "assets/img04.jpg",
-    "bytes": 66356
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/tastaventshorizontal/img44.thigh.jpg",
-    "local": "assets/img44.thigh.jpg",
-    "bytes": 239007
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_grande/es/img01.jpg",
-    "local": "assets/img01.jpg",
-    "bytes": 214134
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_pequena/es/img03.jpg",
-    "local": "assets/img03.jpg",
-    "bytes": 468465
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/carta/es/img43.jpg",
-    "local": "assets/img43.jpg",
-    "bytes": 131267
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-5.jpg",
-    "local": "assets/marquee-right-5.jpg",
-    "bytes": 27957
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/tastaventsfeatured/didac-jose.thigh.jpg",
-    "local": "assets/didac-jose.thigh.jpg",
-    "bytes": 56680
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-41.jpg",
-    "local": "assets/marquee-right-41.jpg",
-    "bytes": 48808
-  },
-  {
-    "url": "https://tastavents.com/assets/themes/tastavents.com/img/sliders/img36-thumb.jpg",
-    "local": "assets/img36-thumb.jpg",
-    "bytes": 42455
-  },
-  {
-    "url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAC6SURBVHgBpdTdCcMgEAdwT/vk04EOkBG6QifpHH3rCF2hk3SVvBaEuoDYu4IgRRMv/iEkD/Hn+QnOuatS6gEAqDoJIQC/vfe594+m576FjAZKL6XXkSDiYox5UQFLXZEoNZJzXg9B/0hK6SKGWkiMcRVBewjnNIuURdIzyFBFo0jZPnoGqaMbCEqRJkSNIiFPCfILj7F1GLkySfvuqnFlShDxWesF6D76zF4jPJ/GWvum7/NRjBCegtsXQuuTY/odOJIAAAAASUVORK5CYII=",
-    "error": "No connection adapters were found for 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAC6SURBVHgBpdTdCcMgEAdwT/vk04EOkBG6QifpHH3rCF2hk3SVvBaEuoDYu4IgRRMv/iEkD/Hn+QnOuatS6gEAqDoJIQC/vfe594+m576FjAZKL6XXkSDiYox5UQFLXZEoNZJzXg9B/0hK6SKGWkiMcRVBewjnNIuURdIzyFBFo0jZPnoGqaMbCEqRJkSNIiFPCfILj7F1GLkySfvuqnFlShDxWesF6D76zF4jPJ/GWvum7/NRjBCegtsXQuuTY/odOJIAAAAASUVORK5CYII='"
-  },
-  {
-    "url": "https://tastavents.com/icomoon-6d58490d.ttf?kdjt6z",
-    "local": "assets/icomoon-6d58490d.ttf",
-    "bytes": 15195
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/carta/es/img19.jpg",
+    "local": "assets/img19.jpg",
+    "bytes": 134425
   },
   {
     "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/espacio_singular/es/img34.jpg",
@@ -373,8 +45,328 @@
     "bytes": 204369
   },
   {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-5.jpg",
+    "local": "assets/marquee-left-5.jpg",
+    "bytes": 71934
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-11.jpg",
+    "local": "assets/marquee-right-11.jpg",
+    "bytes": 46143
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/sliders/img63-thumb.jpg",
+    "local": "assets/img63-thumb.jpg",
+    "bytes": 28272
+  },
+  {
+    "url": "https://tastavents.com/",
+    "local": "assets/asset_12",
+    "bytes": 137015
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/sliders/img35-thumb.jpg",
+    "local": "assets/img35-thumb.jpg",
+    "bytes": 51526
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/carta/es/img17.jpg",
+    "local": "assets/img17.jpg",
+    "bytes": 179571
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-4.jpg",
+    "local": "assets/marquee-left-4.jpg",
+    "bytes": 76110
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/experiencias_tastavents/es/img69.jpg",
+    "local": "assets/img69.jpg",
+    "bytes": 214355
+  },
+  {
+    "url": "https://tastavents.com/optima-regular-f9ce19a9.woff2",
+    "local": "assets/optima-regular-f9ce19a9.woff2",
+    "bytes": 15195
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-8.jpg",
+    "local": "assets/marquee-right-8.jpg",
+    "bytes": 65410
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/sliders/img32.jpg",
+    "local": "assets/img32.jpg",
+    "bytes": 38154
+  },
+  {
     "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img66-thumb.jpg",
     "local": "assets/img66-thumb.jpg",
     "bytes": 3733
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/experiencias_tastavents/es/img65.jpg",
+    "local": "assets/img65.jpg",
+    "bytes": 176827
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/sliders/img64-thumb.jpg",
+    "local": "assets/img64-thumb.jpg",
+    "bytes": 42567
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/uploads/img/tastaventsfooter/footer-img.jpg",
+    "local": "assets/footer-img.jpg",
+    "bytes": 84886
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/sliders/img36-thumb.jpg",
+    "local": "assets/img36-thumb.jpg",
+    "bytes": 42455
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery_text/img49.jpg",
+    "local": "assets/img49.jpg",
+    "bytes": 94308
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/uploads/img/tastaventsheader/img51.jpg",
+    "local": "assets/img51.jpg",
+    "bytes": 84359
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img65-thumb.jpg",
+    "local": "assets/img65-thumb.jpg",
+    "bytes": 3663
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-1.jpg",
+    "local": "assets/marquee-left-1.jpg",
+    "bytes": 80462
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-left-7.jpg",
+    "local": "assets/marquee-left-7.jpg",
+    "bytes": 45246
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-5.jpg",
+    "local": "assets/marquee-right-5.jpg",
+    "bytes": 27957
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/espacio_singular/es/img33.jpg",
+    "local": "assets/img33.jpg",
+    "bytes": 84429
+  },
+  {
+    "url": "https://tastavents.com/icomoon-6d58490d.ttf?kdjt6z",
+    "local": "assets/icomoon-6d58490d.ttf",
+    "bytes": 15195
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/logo.svg",
+    "local": "assets/logo.svg",
+    "bytes": 2426
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-6.jpg",
+    "local": "assets/marquee-right-6.jpg",
+    "bytes": 58764
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/experiencias_tastavents/es/img28.jpg",
+    "local": "assets/img28.jpg",
+    "bytes": 267950
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/oasis/es/img37-thumb.jpg",
+    "local": "assets/img37-thumb.jpg",
+    "bytes": 3085
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/oasis/es/img36-thumb.jpg",
+    "local": "assets/img36-thumb.jpg",
+    "bytes": 42455
+  },
+  {
+    "url": "https://tastavents.com/optima-bold-3d8ba13d.woff",
+    "local": "assets/optima-bold-3d8ba13d.woff",
+    "bytes": 15195
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/tastaventsspace/img13.thigh.jpg",
+    "local": "assets/img13.thigh.jpg",
+    "bytes": 71050
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/tastaventsspace/img14.thigh.jpg",
+    "local": "assets/img14.thigh.jpg",
+    "bytes": 158409
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/sliders/img70.jpg",
+    "local": "assets/img70.jpg",
+    "bytes": 441422
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_pequena/es/img03.jpg",
+    "local": "assets/img03.jpg",
+    "bytes": 468465
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/carta/es/img18.jpg",
+    "local": "assets/img18.jpg",
+    "bytes": 148436
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/tastaventskitchen/img03.thigh.jpg",
+    "local": "assets/img03.thigh.jpg",
+    "bytes": 468465
+  },
+  {
+    "url": "https://tastavents.com/optima-bold-4dec31d1.woff2",
+    "local": "assets/optima-bold-4dec31d1.woff2",
+    "bytes": 15195
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/uploads/img/tastaventsheader/img52.jpg",
+    "local": "assets/img52.jpg",
+    "bytes": 48658
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/tastaventsreservation/img48.thigh.jpg",
+    "local": "assets/img48.thigh.jpg",
+    "bytes": 90582
+  },
+  {
+    "url": "https://tastavents.com/optima-regular-db50ba2b.woff",
+    "local": "assets/optima-regular-db50ba2b.woff",
+    "bytes": 15195
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/espacio_singular/es/img04.jpg",
+    "local": "assets/img04.jpg",
+    "bytes": 66356
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_pequena/es/img32.jpg",
+    "local": "assets/img32.jpg",
+    "bytes": 38154
+  },
+  {
+    "url": "https://tastavents.com/icomoon-5ee3f3f2.woff?kdjt6z",
+    "local": "assets/icomoon-5ee3f3f2.woff",
+    "bytes": 15195
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_grande/es/img40.jpg",
+    "local": "assets/img40.jpg",
+    "bytes": 300452
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_grande/es/img01.jpg",
+    "local": "assets/img01.jpg",
+    "bytes": 214134
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-21.jpg",
+    "local": "assets/marquee-right-21.jpg",
+    "bytes": 55016
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-41.jpg",
+    "local": "assets/marquee-right-41.jpg",
+    "bytes": 48808
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/tastaventshorizontal/img31.thigh.jpg",
+    "local": "assets/img31.thigh.jpg",
+    "bytes": 268925
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/tastaventshorizontal/img44.thigh.jpg",
+    "local": "assets/img44.thigh.jpg",
+    "bytes": 239007
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-7.jpg",
+    "local": "assets/marquee-right-7.jpg",
+    "bytes": 45648
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/tastaventsfeatured/didac-jose.thigh.jpg",
+    "local": "assets/didac-jose.thigh.jpg",
+    "bytes": 56680
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/tastaventshorizontal/img04.thigh.jpg",
+    "local": "assets/img04.thigh.jpg",
+    "bytes": 66356
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery_text/img50.jpg",
+    "local": "assets/img50.jpg",
+    "bytes": 191299
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/uploads/img/tastaventsfooter/Restaurante_seleccionado_MICHELIN_2026_Redondo_Rojo.png",
+    "local": "assets/Restaurante_seleccionado_MICHELIN_2026_Redondo_Rojo.png",
+    "bytes": 130006
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/experiencias_tastavents/es/img26.jpg",
+    "local": "assets/img26.jpg",
+    "bytes": 189779
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img64-thumb.jpg",
+    "local": "assets/img64-thumb.jpg",
+    "bytes": 42567
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img67-thumb.jpg",
+    "local": "assets/img67-thumb.jpg",
+    "bytes": 3191
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/carta/es/img43.jpg",
+    "local": "assets/img43.jpg",
+    "bytes": 131267
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/espacio_singular/es/img21.jpg",
+    "local": "assets/img21.jpg",
+    "bytes": 179637
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_grande/es/img39.jpg",
+    "local": "assets/img39.jpg",
+    "bytes": 200911
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/food/marquee-right-31.jpg",
+    "local": "assets/marquee-right-31.jpg",
+    "bytes": 39415
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/propuesta_de_autor/es/img68-thumb.jpg",
+    "local": "assets/img68-thumb.jpg",
+    "bytes": 3556
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/carta/es/img21.jpg",
+    "local": "assets/img21.jpg",
+    "bytes": 179637
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/gallery/cabecera_pequena/es/img41.jpg",
+    "local": "assets/img41.jpg",
+    "bytes": 81414
+  },
+  {
+    "url": "https://tastavents.com/assets/themes/tastavents.com/img/tastaventsfeatured/chef-img.thigh.jpg",
+    "local": "assets/chef-img.thigh.jpg",
+    "bytes": 218978
   }
 ]

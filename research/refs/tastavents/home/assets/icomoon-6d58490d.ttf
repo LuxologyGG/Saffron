@@ -186,7 +186,7 @@
 		<script src="https://tastavents.com/assets/themes/tastavents.com/js/photoswipe.esm.min.js" ></script>
 		<script src="https://tastavents.com/assets/themes/tastavents.com/js/photoswipe-lightbox.esm.min.js" ></script>
 		<script src="https://tastavents.com/assets/themes/tastavents.com/js/bootstrap.min.js" async defer ></script>
-		<script src="https://tastavents.com/assets/themes/tastavents.com/js/custom.js?1784334107" async defer></script>
+		<script src="https://tastavents.com/assets/themes/tastavents.com/js/custom.js?1784334259" async defer></script>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.4.1/pixi.min.js" ></script>
